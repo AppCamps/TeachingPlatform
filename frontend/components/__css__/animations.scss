@@ -1,0 +1,7 @@
+
+$fast: .30s;
+$all: all;
+
+@mixin animation-ease-in-out($property: $all , $speed: $fast) {
+  transition: $property $speed ease-in-out;
+}

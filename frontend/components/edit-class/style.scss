@@ -1,0 +1,29 @@
+@import '../__css__/grid.scss';
+@import '../__css__/colors.scss';
+@import '../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.edit-class {
+  @include span(12);
+}
+
+.heading {
+  @include span(10 no-gutters);
+}
+
+.cancel {
+  @include span(2 no-gutters);
+  text-align: right;
+  margin: 1em 0;
+  line-height: calc(#{$font-size-large} * 1.2);
+
+  a {
+    color: $color-font-light;
+    text-decoration: underline;
+  }
+}

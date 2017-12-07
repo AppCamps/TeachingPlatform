@@ -1,0 +1,7 @@
+@import '../../__css__/grid.scss';
+
+.logo {
+  display: block;
+  width: 200px;
+  margin: (($header-height - 32px) / 2) 0;
+}

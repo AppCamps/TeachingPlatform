@@ -1,0 +1,8 @@
+@import '../../__css__/typography.scss';
+
+.label {
+  @include font-size-small;
+  font-weight: bold;
+
+  margin-right: .5em;
+}

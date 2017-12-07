@@ -1,0 +1,46 @@
+@import '../../__css__/grid.scss';
+@import '../../__css__/colors.scss';
+@import '../../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.locality {
+  @include span(12);
+}
+
+.heading {
+  @include span(12 no-gutters);
+}
+
+.locality-form {
+  @include span(12);
+  background-color: $color-bg-white;
+  padding: 1em;
+}
+
+.info,
+.profession {
+  @include span(12);
+}
+
+.school-name {
+  @include span(6);
+}
+
+.school-subjects,
+.school-type,
+.country,
+.state,
+.postal-code,
+.city {
+  @include span(3);
+}
+
+.buttonContainer {
+  @include span(12);
+  text-align: right;
+}

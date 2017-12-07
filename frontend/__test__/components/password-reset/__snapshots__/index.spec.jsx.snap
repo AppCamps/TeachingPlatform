@@ -1,0 +1,610 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PasswordResetRequest /> renders form correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ReduxForm>
+    <Connect(Form(PasswordResetRequest))
+      destroyOnUnmount={true}
+      enableReinitialize={false}
+      forceUnregisterOnUnmount={false}
+      form="passwordResetRequestForm"
+      getFormState={[Function]}
+      initialValues={undefined}
+      keepDirtyOnReinitialize={false}
+      persistentSubmitErrors={false}
+      pure={true}
+      shouldAsyncValidate={[Function]}
+      shouldError={[Function]}
+      shouldValidate={[Function]}
+      shouldWarn={[Function]}
+      touchOnBlur={true}
+      touchOnChange={false}
+      validate={[Function]}
+    >
+      <Form(PasswordResetRequest)
+        anyTouched={false}
+        array={
+          Object {
+            "insert": [Function],
+            "move": [Function],
+            "pop": [Function],
+            "push": [Function],
+            "remove": [Function],
+            "removeAll": [Function],
+            "shift": [Function],
+            "splice": [Function],
+            "swap": [Function],
+            "unshift": [Function],
+          }
+        }
+        arrayInsert={[Function]}
+        arrayMove={[Function]}
+        arrayPop={[Function]}
+        arrayPush={[Function]}
+        arrayRemove={[Function]}
+        arrayRemoveAll={[Function]}
+        arrayShift={[Function]}
+        arraySplice={[Function]}
+        arraySwap={[Function]}
+        arrayUnshift={[Function]}
+        asyncErrors={undefined}
+        asyncValidating={false}
+        autofill={[Function]}
+        blur={[Function]}
+        change={[Function]}
+        clearAsyncError={[Function]}
+        clearSubmit={[Function]}
+        clearSubmitErrors={[Function]}
+        destroy={[Function]}
+        destroyOnUnmount={true}
+        dirty={false}
+        dispatch={[Function]}
+        enableReinitialize={false}
+        error={undefined}
+        focus={[Function]}
+        forceUnregisterOnUnmount={false}
+        form="passwordResetRequestForm"
+        getFormState={[Function]}
+        initialValues={undefined}
+        initialize={[Function]}
+        initialized={false}
+        invalid={true}
+        keepDirtyOnReinitialize={false}
+        persistentSubmitErrors={false}
+        pristine={true}
+        pure={true}
+        registerField={[Function]}
+        registeredFields={
+          Object {
+            "email": Object {
+              "count": 1,
+              "name": "email",
+              "type": "Field",
+            },
+          }
+        }
+        reset={[Function]}
+        setSubmitFailed={[Function]}
+        setSubmitSucceeded={[Function]}
+        shouldAsyncValidate={[Function]}
+        shouldError={[Function]}
+        shouldValidate={[Function]}
+        shouldWarn={[Function]}
+        startAsyncValidation={[Function]}
+        startSubmit={[Function]}
+        stopAsyncValidation={[Function]}
+        stopSubmit={[Function]}
+        submit={[Function]}
+        submitFailed={false}
+        submitSucceeded={false}
+        submitting={false}
+        syncErrors={
+          Object {
+            "email": "Required",
+          }
+        }
+        syncWarnings={Object {}}
+        touch={[Function]}
+        touchOnBlur={true}
+        touchOnChange={false}
+        triggerSubmit={undefined}
+        unregisterField={[Function]}
+        untouch={[Function]}
+        updateSyncErrors={[Function]}
+        updateSyncWarnings={[Function]}
+        valid={false}
+        validExceptSubmit={false}
+        validate={[Function]}
+        values={Object {}}
+        warning={undefined}
+      >
+        <PasswordResetRequest
+          anyTouched={false}
+          array={
+            Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            }
+          }
+          asyncValidate={[Function]}
+          asyncValidating={false}
+          autofill={[Function]}
+          blur={[Function]}
+          change={[Function]}
+          clearAsyncError={[Function]}
+          clearSubmit={[Function]}
+          clearSubmitErrors={[Function]}
+          destroy={[Function]}
+          dirty={false}
+          dispatch={[Function]}
+          error={undefined}
+          form="passwordResetRequestForm"
+          handleSubmit={[Function]}
+          initialValues={undefined}
+          initialize={[Function]}
+          initialized={false}
+          invalid={true}
+          pristine={true}
+          pure={true}
+          reset={[Function]}
+          submit={[Function]}
+          submitFailed={false}
+          submitSucceeded={false}
+          submitting={false}
+          touch={[Function]}
+          triggerSubmit={undefined}
+          untouch={[Function]}
+          valid={false}
+          validate={[Function]}
+          warning={undefined}
+        >
+          <div
+            className="container"
+          >
+            <Container
+              centered={false}
+              transparent={false}
+            >
+              <div
+                className="container"
+              >
+                <h1
+                  className="heading"
+                >
+                  Password reset
+                </h1>
+                <Link
+                  className="loginLink"
+                  onlyActiveOnIndex={false}
+                  style={Object {}}
+                  to="/"
+                >
+                  <a
+                    className="loginLink"
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    cancel
+                  </a>
+                </Link>
+                <form
+                  className="passwordResetRequestForm"
+                  onSubmit={[Function]}
+                >
+                  <Field
+                    component={[Function]}
+                    disabled={false}
+                    label="Email"
+                    name="email"
+                    required={true}
+                  >
+                    <Connect(ConnectedField)
+                      _reduxForm={
+                        Object {
+                          "anyTouched": false,
+                          "array": Object {
+                            "insert": [Function],
+                            "move": [Function],
+                            "pop": [Function],
+                            "push": [Function],
+                            "remove": [Function],
+                            "removeAll": [Function],
+                            "shift": [Function],
+                            "splice": [Function],
+                            "swap": [Function],
+                            "unshift": [Function],
+                          },
+                          "arrayInsert": [Function],
+                          "arrayMove": [Function],
+                          "arrayPop": [Function],
+                          "arrayPush": [Function],
+                          "arrayRemove": [Function],
+                          "arrayRemoveAll": [Function],
+                          "arrayShift": [Function],
+                          "arraySplice": [Function],
+                          "arraySwap": [Function],
+                          "arrayUnshift": [Function],
+                          "asyncErrors": undefined,
+                          "asyncValidate": [Function],
+                          "asyncValidating": false,
+                          "autofill": [Function],
+                          "blur": [Function],
+                          "change": [Function],
+                          "clearAsyncError": [Function],
+                          "clearSubmit": [Function],
+                          "clearSubmitErrors": [Function],
+                          "destroy": [Function],
+                          "destroyOnUnmount": true,
+                          "dirty": false,
+                          "dispatch": [Function],
+                          "enableReinitialize": false,
+                          "error": undefined,
+                          "focus": [Function],
+                          "forceUnregisterOnUnmount": false,
+                          "form": "passwordResetRequestForm",
+                          "getFormState": [Function],
+                          "getValues": [Function],
+                          "initialValues": undefined,
+                          "initialize": [Function],
+                          "initialized": false,
+                          "invalid": true,
+                          "keepDirtyOnReinitialize": false,
+                          "persistentSubmitErrors": false,
+                          "pristine": true,
+                          "pure": true,
+                          "register": [Function],
+                          "registerField": [Function],
+                          "registerInnerOnSubmit": [Function],
+                          "registeredFields": Object {
+                            "email": Object {
+                              "count": 1,
+                              "name": "email",
+                              "type": "Field",
+                            },
+                          },
+                          "reset": [Function],
+                          "sectionPrefix": undefined,
+                          "setSubmitFailed": [Function],
+                          "setSubmitSucceeded": [Function],
+                          "shouldAsyncValidate": [Function],
+                          "shouldError": [Function],
+                          "shouldValidate": [Function],
+                          "shouldWarn": [Function],
+                          "startAsyncValidation": [Function],
+                          "startSubmit": [Function],
+                          "stopAsyncValidation": [Function],
+                          "stopSubmit": [Function],
+                          "submit": [Function],
+                          "submitFailed": false,
+                          "submitSucceeded": false,
+                          "submitting": false,
+                          "syncErrors": Object {
+                            "email": "Required",
+                          },
+                          "syncWarnings": Object {},
+                          "touch": [Function],
+                          "touchOnBlur": true,
+                          "touchOnChange": false,
+                          "triggerSubmit": undefined,
+                          "unregister": [Function],
+                          "unregisterField": [Function],
+                          "untouch": [Function],
+                          "updateSyncErrors": [Function],
+                          "updateSyncWarnings": [Function],
+                          "valid": false,
+                          "validExceptSubmit": false,
+                          "validate": [Function],
+                          "values": Object {},
+                          "warning": undefined,
+                        }
+                      }
+                      component={[Function]}
+                      disabled={false}
+                      label="Email"
+                      name="email"
+                      normalize={[Function]}
+                      required={true}
+                    >
+                      <ConnectedField
+                        _reduxForm={
+                          Object {
+                            "anyTouched": false,
+                            "array": Object {
+                              "insert": [Function],
+                              "move": [Function],
+                              "pop": [Function],
+                              "push": [Function],
+                              "remove": [Function],
+                              "removeAll": [Function],
+                              "shift": [Function],
+                              "splice": [Function],
+                              "swap": [Function],
+                              "unshift": [Function],
+                            },
+                            "arrayInsert": [Function],
+                            "arrayMove": [Function],
+                            "arrayPop": [Function],
+                            "arrayPush": [Function],
+                            "arrayRemove": [Function],
+                            "arrayRemoveAll": [Function],
+                            "arrayShift": [Function],
+                            "arraySplice": [Function],
+                            "arraySwap": [Function],
+                            "arrayUnshift": [Function],
+                            "asyncErrors": undefined,
+                            "asyncValidate": [Function],
+                            "asyncValidating": false,
+                            "autofill": [Function],
+                            "blur": [Function],
+                            "change": [Function],
+                            "clearAsyncError": [Function],
+                            "clearSubmit": [Function],
+                            "clearSubmitErrors": [Function],
+                            "destroy": [Function],
+                            "destroyOnUnmount": true,
+                            "dirty": false,
+                            "dispatch": [Function],
+                            "enableReinitialize": false,
+                            "error": undefined,
+                            "focus": [Function],
+                            "forceUnregisterOnUnmount": false,
+                            "form": "passwordResetRequestForm",
+                            "getFormState": [Function],
+                            "getValues": [Function],
+                            "initialValues": undefined,
+                            "initialize": [Function],
+                            "initialized": false,
+                            "invalid": true,
+                            "keepDirtyOnReinitialize": false,
+                            "persistentSubmitErrors": false,
+                            "pristine": true,
+                            "pure": true,
+                            "register": [Function],
+                            "registerField": [Function],
+                            "registerInnerOnSubmit": [Function],
+                            "registeredFields": Object {
+                              "email": Object {
+                                "count": 1,
+                                "name": "email",
+                                "type": "Field",
+                              },
+                            },
+                            "reset": [Function],
+                            "sectionPrefix": undefined,
+                            "setSubmitFailed": [Function],
+                            "setSubmitSucceeded": [Function],
+                            "shouldAsyncValidate": [Function],
+                            "shouldError": [Function],
+                            "shouldValidate": [Function],
+                            "shouldWarn": [Function],
+                            "startAsyncValidation": [Function],
+                            "startSubmit": [Function],
+                            "stopAsyncValidation": [Function],
+                            "stopSubmit": [Function],
+                            "submit": [Function],
+                            "submitFailed": false,
+                            "submitSucceeded": false,
+                            "submitting": false,
+                            "syncErrors": Object {
+                              "email": "Required",
+                            },
+                            "syncWarnings": Object {},
+                            "touch": [Function],
+                            "touchOnBlur": true,
+                            "touchOnChange": false,
+                            "triggerSubmit": undefined,
+                            "unregister": [Function],
+                            "unregisterField": [Function],
+                            "untouch": [Function],
+                            "updateSyncErrors": [Function],
+                            "updateSyncWarnings": [Function],
+                            "valid": false,
+                            "validExceptSubmit": false,
+                            "validate": [Function],
+                            "values": Object {},
+                            "warning": undefined,
+                          }
+                        }
+                        _value={undefined}
+                        asyncError={undefined}
+                        asyncValidating={false}
+                        component={[Function]}
+                        dirty={false}
+                        disabled={false}
+                        dispatch={[Function]}
+                        initial={undefined}
+                        label="Email"
+                        name="email"
+                        normalize={[Function]}
+                        pristine={true}
+                        required={true}
+                        state={undefined}
+                        submitError={undefined}
+                        submitFailed={undefined}
+                        submitting={undefined}
+                        syncError="Required"
+                        syncWarning={undefined}
+                        value={undefined}
+                      >
+                        <InputWithLabel
+                          autoFocus={false}
+                          className={null}
+                          disabled={false}
+                          input={
+                            Object {
+                              "name": "email",
+                              "onBlur": [Function],
+                              "onChange": [Function],
+                              "onDragStart": [Function],
+                              "onDrop": [Function],
+                              "onFocus": [Function],
+                              "value": "",
+                            }
+                          }
+                          label="Email"
+                          max={null}
+                          meta={
+                            Object {
+                              "active": false,
+                              "asyncValidating": false,
+                              "autofilled": false,
+                              "dirty": false,
+                              "dispatch": [Function],
+                              "error": "Required",
+                              "form": "passwordResetRequestForm",
+                              "initial": undefined,
+                              "invalid": true,
+                              "pristine": true,
+                              "submitFailed": false,
+                              "submitting": false,
+                              "touched": false,
+                              "valid": false,
+                              "visited": false,
+                              "warning": undefined,
+                            }
+                          }
+                          min={null}
+                          placeholder={null}
+                          required={true}
+                        >
+                          <div
+                            className="inputWithLabel"
+                          >
+                            <Label
+                              for="email"
+                              required={true}
+                              text="Email"
+                            >
+                              <label
+                                className="label"
+                                htmlFor="email"
+                              >
+                                Email
+                                 
+                                <abbr
+                                  title="Required"
+                                >
+                                  *
+                                </abbr>
+                              </label>
+                            </Label>
+                            <Input
+                              autoFocus={false}
+                              disabled={false}
+                              hasError={false}
+                              max={null}
+                              min={null}
+                              name="email"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onDragStart={[Function]}
+                              onDrop={[Function]}
+                              onFocus={[Function]}
+                              placeholder={null}
+                              type="text"
+                              value=""
+                            >
+                              <input
+                                autoFocus={false}
+                                className="input"
+                                disabled={false}
+                                max={null}
+                                min={null}
+                                name="email"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onDragStart={[Function]}
+                                onDrop={[Function]}
+                                onFocus={[Function]}
+                                placeholder={null}
+                                type="text"
+                                value=""
+                              />
+                            </Input>
+                          </div>
+                        </InputWithLabel>
+                      </ConnectedField>
+                    </Connect(ConnectedField)>
+                  </Field>
+                  <p>
+                    We will send you an email containing a link to reset your password.
+                  </p>
+                  <div
+                    className="actions"
+                  >
+                    <span
+                      className="submit"
+                    >
+                      <Spinner
+                        visible={false}
+                      >
+                        <div
+                          className="spinner"
+                        />
+                      </Spinner>
+                      <Button
+                        className={null}
+                        disabled={false}
+                        isAction={true}
+                        isFullWidth={false}
+                        isGreen={false}
+                        isSecondary={false}
+                        leftIcon={null}
+                        onClick={[Function]}
+                        rightIcon="angle-right"
+                        style={Object {}}
+                        type="submit"
+                      >
+                        <button
+                          className="button buttonAction buttonClickable"
+                          disabled={false}
+                          onClick={[Function]}
+                          style={Object {}}
+                          type="submit"
+                        >
+                          Send
+                          <span
+                            className="rightIcon large"
+                          >
+                            <FaIcon
+                              className={null}
+                              icon="angle-right"
+                            >
+                              <i
+                                aria-hidden="true"
+                                className="fa fa-angle-right"
+                              />
+                            </FaIcon>
+                          </span>
+                        </button>
+                      </Button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </Container>
+          </div>
+        </PasswordResetRequest>
+      </Form(PasswordResetRequest)>
+    </Connect(Form(PasswordResetRequest))>
+  </ReduxForm>
+</Provider>
+`;

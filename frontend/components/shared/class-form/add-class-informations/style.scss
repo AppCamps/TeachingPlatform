@@ -1,0 +1,32 @@
+@import '../../../__css__/grid.scss';
+@import '../../../__css__/typography.scss';
+
+.add-class-information {
+  @include span(12);
+}
+
+.class-name,
+.school-year,
+.plannedSchoolUsage {
+  @include span(3);
+}
+
+.grade,
+.girl-count,
+.boy-count {
+  @include span(2);
+}
+
+.schoolSubject {
+  @include span(9);
+}
+
+.actions {
+  @include span(12 nest);
+  margin: .5rem 0;
+}
+
+.next-button,
+.back-button {
+  @include span(last 2);
+}

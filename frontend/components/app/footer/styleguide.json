@@ -1,0 +1,7 @@
+{
+  "category": "Molecules",
+  "title": "Footer",
+  "description": "Page Footer",
+  "code": "<Footer />",
+  "className": "footer"
+}

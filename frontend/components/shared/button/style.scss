@@ -1,0 +1,71 @@
+@import '../../__css__/animations.scss';
+@import '../../__css__/colors.scss';
+@import '../../__css__/font-families.scss';
+@import '../../__css__/typography.scss';
+
+.button {
+  @include font-family-OpenSans;
+  @include font-size-default;
+  @include animation-ease-in-out(box-shadow);
+
+  outline: none;
+  box-sizing: border-box;
+  padding: 0 1em;
+  background: none;
+  border: 1px solid $color-font-dark;
+  color: $color-black;
+  background-color: $color-font-white;
+  line-height: 2.5em;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 0;
+
+  &--action {
+    border-color: $color-primary;
+    color: $color-font-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  &--secondary {
+    border-color: $color-gray-light-2;
+    color: $color-font-dark;
+    background-color: $color-gray-light-2;
+  }
+
+  &--green {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+
+  &:disabled {
+    border-color: $color-gray-light-1;
+    color: $color-gray-light-1;
+    background-color: $color-gray-light-4;
+    cursor: not-allowed;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}
+
+@mixin buttonIcon {
+  display: inline-block;
+  font-weight: lighter;
+
+  &.large {
+    @include font-size-large;
+    vertical-align: sub;
+  }
+}
+
+.rightIcon {
+  @include buttonIcon;
+  margin-left: 0.5em;
+}
+
+.leftIcon {
+  @include buttonIcon;
+  margin-right: 0.5em;
+}

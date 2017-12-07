@@ -1,0 +1,65 @@
+@import '../../__css__/animations.scss';
+@import '../../__css__/colors.scss';
+@import '../../__css__/typography.scss';
+
+:global {
+
+  // input
+  $select-input-bg:                   $color-gray-light-4;
+  $select-input-bg-disabled:          $color-gray-light-2;
+  $select-input-border-color:         $color-gray-light-2;
+  $select-input-border-radius:        2px;
+  $select-input-border-focus:         $color-green-light-1;
+  $select-input-height:               36px;
+  $select-text-color:                 $color-font-default;
+
+  // menu options
+  $select-option-color:               $color-font-default;
+  $select-option-bg:                  $color-gray-light-4;
+  $select-option-focused-color:       $color-font-default;
+  $select-option-focused-bg:          $color-green-light-1;
+  $select-option-selected-color:      $color-font-default;
+  $select-option-selected-bg:         $color-green-light-2;
+  $select-option-disabled-color:      $color-gray-light-1;
+
+  $select-noresults-color:            $color-font-default;
+
+  // clear "x" button
+  $select-clear-color:                $color-gray-dark-1;
+  $select-clear-hover-color:          $color-red;
+
+  // arrow indicator
+  $select-arrow-color:                $color-gray-dark-1;
+  $select-arrow-color-hover:          $color-gray-dark-1;
+
+  // loading indicator
+  $select-loading-color:              $color-primary;
+  $select-loading-color-bg:           $color-gray-light-2;
+
+  // multi-select item
+  $select-item-border-radius:         2px;
+  $select-item-color:                 $color-font-default;
+  $select-item-bg:                    $color-green-light-1;
+  $select-item-border-color:          inherit;
+  $select-item-hover-color:           inherit;
+  $select-item-hover-bg:              inherit;
+  $select-item-disabled-color:        $color-gray-light-1;
+  $select-item-disabled-bg:           $color-gray-light-2;
+  $select-item-disabled-border-color: $color-gray-light-2;
+
+  @import '~react-select/scss/default';
+
+  .Select-control {
+    @include animation-ease-in-out(box-shadow);
+  }
+
+  .Select-control:hover,
+  .is-focused > .Select-control {
+    box-shadow: 0 0 5px $color-bg-action;
+    border-color: $color-bg-action;
+  }
+}
+
+.error :global(.Select-control) {
+  box-shadow: 0 0 5px $color-red ! important;
+}

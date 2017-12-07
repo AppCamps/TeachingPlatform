@@ -1,0 +1,15 @@
+{
+  "rootDir": "..",
+  "collectCoverageFrom": ["frontend/**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"],
+  "coverageReporters": ["text-summary"],
+  "moduleFileExtensions": ["js", "jsx"],
+  "moduleDirectories": ["node_modules"],
+  "moduleNameMapper": {
+    "\\.(png|svg)$": "<rootDir>/frontend/__test__/__mocks__/file-mock.js",
+    "\\.(css|scss)$": "identity-obj-proxy"
+  },
+  "roots": ["<rootDir>/frontend/__test__/"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "setupFiles": ["raf/polyfill"],
+  "setupTestFrameworkScriptFile": "<rootDir>/frontend/__test__/spec_helper.js"
+}

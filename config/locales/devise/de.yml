@@ -1,0 +1,120 @@
+de:
+  activerecord:
+    attributes:
+      user:
+        current_password: Aktuelles Passwort
+        current_sign_in_at: Angemeldet am
+        email: E-Mail
+        last_sign_in_at: Zuletzt angemeldet am
+        password: Passwort
+        password_confirmation: Passwort wiederholen
+        remember_me: Anmeldedaten merken
+    models:
+      user: Benutzer
+  devise:
+    confirmations:
+      user:
+        confirmed: Dein Benutzerkonto für App Camps wurde freigeschaltet. Du kannst dich jetzt anmelden.
+      confirmed:
+      new:
+        resend_confirmation_instructions: "Bestätigung-E-Mail erneut versenden"
+      send_instructions: "Wir haben dir deine Bestätigung-E-Mail erneut zugeschickt."
+      send_paranoid_instructions:
+    failure:
+      already_authenticated: Du bist schon angemeldet.
+      inactive: Dein Konto ist noch nicht aktiviert.
+      invalid: Ungültige E-Mail-Adresse oder Passwort.
+      invalid_token: Ungültiger Authentifikations-Schlüssel.
+      locked: Dein Konto ist gesperrt.
+      not_found_in_database: Ungültige E-Mail-Adresse oder Passwort.
+      timeout: Deine Sitzung ist abgelaufen. Bitte melde dich erneut an, um fortzufahren.
+      unauthenticated: Du musst dich anmelden oder registrieren, um fortfahren zu können.
+      unconfirmed: Du musst dein Konto bestätigen, um fortfahren zu können.
+    mailer:
+      confirmation_instructions:
+        action: E-Mail-Adresse bestätigen
+        greeting: Hallo %{recipient}.
+        username_text: 'Danke, dass du dich bei App Camps registriert hast.'
+        instruction: 'Bevor es richtig los geht, musst du deine E-Mail bestätigen. Bitte klicke dazu hier:'
+        info: 'Wir prüfen die Bewerbungen zeitnah und melden uns bei dir.'
+        subject: Bewerbung eingegangen. Bitte E-Mail bestätigen.
+      reset_password_instructions:
+        action: Passwort ändern
+        greeting: Hallo %{recipient}!
+        instruction: Jemand hat einen Link angefordert, um Ihr Passwort zu ändern. Klicken Sie auf den unten aufgeführten Link um das Passwort zu ändern.
+        instruction_2: Bitte ignorieren Sie diese E-Mail, wenn Sie kein neues Passwort angefordert haben.
+        instruction_3: Das Passwort wird nicht geändert bis Sie den obenstehenden Link abrufen und ein neues Passwort bestimmen.
+        subject: Anleitung um das Passwort zurückzusetzten
+      unlock_instructions:
+        action: Mein Konto entsperren
+        greeting: Hallo %{recipient}!
+        instruction: 'Folge bitte dem untenstehenden Link, um dein Konto zu entsperren:'
+        message: Dein Konto wurde aufgrund einer großen Anzahl von fehlgeschlagenen Anmeldeversuchen gesperrt.
+        subject: Anleitung um dein Konto zu entsperren
+    omniauth_callbacks:
+      failure: Du konntest nicht über %{kind} authentifiziert werden, da "%{reason}".
+      success: Erfolgreich über %{kind} authentifiziert.
+    passwords:
+      edit:
+        change_my_password: "Ändere mein Passwort"
+        change_your_password: Passwort ändern
+        confirm_new_password: Neues Passwort bestätigen
+        new_password: Neues Passwort
+      new:
+        forgot_your_password: "Hast du dein Passwort vergessen?"
+        send_me_reset_password_instructions: Schicke mir die Anleitung, mein Passwort zurückzusetzen
+      no_token: Du kannst diese Seite nicht ohne Link zum Zurücksetzen deines Passworts aufrufen. Wenn du dein Passwort zurücksetzen willst, stelle bitte sicher, dass du die vollständige Adresse benutzt haben, die du mit der E-Mail erhalten hast.
+      send_instructions: Du wirst eine E-Mail mit der Anleitung, wie du dein Passwort zurücksetzen kannst, in wenigen Minuten erhalten.
+      send_paranoid_instructions: Falls deine E-Mail-Adresse bei uns registriert ist, wirst du in wenigen Minuten eine E-Mail mit einem Link zum Zurücksetzen deines Passworts erhalten.
+      updated: Dein Passwort wurde erfolgreich geändert. Du kannst dich nun mit deinen Benutzerdaten anmelden.
+      updated_not_active: Dein Passwort wurde erfolgreich geändert.
+    registrations:
+      destroyed: Auf Wiedersehen! Dein Benutzerkonto wurde erfolreich gelöscht. Wir hoffen dich bald wiederzusehen.
+      edit_user: Nutzerdaten bearbeiten
+      edit:
+        are_you_sure: Bist du sicher?
+        cancel_my_account: Konto löschen
+        currently_waiting_confirmation_for_email:
+        leave_blank_if_you_don_t_want_to_change_it: freilassen, wenn du das nicht ändern willst
+        title: "%{resource} bearbeiten"
+        unhappy: Wenn du unglücklich mit unserem Angebot bist kannst du hier dein Konto löschen. Dabei werden alle deine Daten aus unserer Datenbank entfernt
+        update: Aktualisieren
+      new:
+        sign_up: Registrieren
+        phone_help_text: Für eventuelle Rückfragen ist es hilfreich, wenn wir Sie telefonisch erreichen können.
+      signed_up: Willkommen! Du hast dich erfolgreich registriert.
+      signed_up_but_inactive: Du hast dich erfolgreich registriert. Aber wir konnten dich nicht anmelden, da dein Konto noch nicht aktiviert ist.
+      signed_up_but_locked: Du hast dich erfolgreich registriert. Aber wir konnten dich nicht anmelden, da dein Konto gesperrt ist.
+      signed_up_but_unconfirmed: Eine Nachricht mit einem Aktivierungs-Link wurde an Deine E-Mail-Adresse geschickt. Bitte öffne diesen Link, um Dein Konto zu aktivieren.
+      update_needs_confirmation: Dein Konto wurde erfolgreich aktualisiert, aber wir müssen deine E-Mail-Adresse verifizieren. Bitte überprüfen deine E-Mails und klicke auf den Bestätigungs-Link, um deine E-Mail-Adresse abschliessend zu bestätigen. Falls du keine E-Mail erhalten hast, schaue bitte auch im Spam-Ordner nach.
+      updated: Dein Konto wurde erfolgreich aktualisiert.
+    sessions:
+      new:
+        sign_in: Anmelden
+      signed_in: Du bist jetzt angemeldet.
+      signed_out: Du bist jetzt abgemeldet.
+    shared:
+      links:
+        back: Zurück
+        didn_t_receive_confirmation_instructions: Keine Anleitung zur Bestätigung erhalten?
+        didn_t_receive_unlock_instructions: Keine Anleitung zum Entsperren erhalten?
+        forgot_your_password: Passwort vergessen?
+        sign_in: Anmelden
+        sign_in_with_provider: Mit %{provider} anmelden
+        sign_up: Registrieren
+    unlocks:
+      new:
+        resend_unlock_instructions: Anleitung zum Entsperren noch mal schicken
+      send_instructions: Du wirst eine E-Mail mit der Anleitung, wie du dein Konto entsperren kannst, in wenigen Minuten erhalten.
+      send_paranoid_instructions: Falls dein Konto existiert, wirst du eine E-Mail mit der Anleitung, wie du dein Konto entsperren kannst, in wenigen Minuten erhalten.
+      unlocked: Dein Konto wurde erfolreich entsperrt. Bitte melden dich an, um fortfahren zu können.
+  errors:
+    messages:
+      already_confirmed: wurde schon bestätigt - bitte versuche dich anzumelden
+      confirmation_period_expired: muss innerhalb %{period} bestätigt werden - bitte fordere den Link erneut an
+      expired: ist ausgelaufen - bitte fordere den Link erneut an
+      not_found: nicht gefunden
+      not_locked: war nicht gesperrt
+      not_saved:
+        one: '1 Fehler ist aufgetreten:'
+        other: "%{count} Fehler sind aufgetreten:"

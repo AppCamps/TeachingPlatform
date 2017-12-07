@@ -1,0 +1,29 @@
+@import '../__css__/colors';
+@import '../__css__/grid';
+
+.back-button {
+  @include span(3 no-gutter);
+}
+
+.complete-lesson-button {
+  @include span(4 no-gutter last);
+  text-align: right;
+}
+
+.completed-lesson {
+  @include span(4 no-gutter last);
+  text-align: right;
+  height: 39px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.incomplete-link {
+  color: $color-font-light;
+  text-decoration: underline;
+}
+
+.spinner {
+  margin: .45em 0;
+}

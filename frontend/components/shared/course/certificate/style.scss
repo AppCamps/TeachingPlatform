@@ -1,0 +1,42 @@
+@import '../../../__css__/colors.scss';
+@import '../../../__css__/grid.scss';
+@import '../../../__css__/typography.scss';
+
+.certificate {
+  @include gallery(3 no-gutters);
+  margin: 1em 0;
+}
+
+.number-container {
+  width: 100%;
+  height: 0.75em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: 1.25em;
+}
+
+.certificate-title,
+.info {
+  @include font-size-small;
+  color: $color-font-dark;
+  display: block;
+  padding-right: gutter(1);
+}
+
+.certificate-title {
+  color: $color-font-dark;
+  font-weight: bold;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.help {
+  @include font-size-small;
+  margin-top: 2.5em;
+  margin-right: gutter(2);
+  display: inline-block;
+  float: right;
+  width: auto;
+}

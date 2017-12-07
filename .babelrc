@@ -1,0 +1,14 @@
+{
+  "presets": [["env", { "modules": false }], "stage-0", "react"],
+  "plugins": ["react-hot-loader/babel", "transform-runtime", "transform-decorators-legacy"],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-async-to-generator",
+        "transform-react-remove-prop-types",
+        "rewire",
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}

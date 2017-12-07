@@ -1,0 +1,5 @@
+@import '../../__css__/grid.scss';
+
+.container {
+  @include container;
+}

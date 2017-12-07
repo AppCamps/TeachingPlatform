@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+CERTIFICATES_DIR=./certs/www
+
+invoker start --certificate $CERTIFICATES_DIR/rails.crt --private_key=$CERTIFICATES_DIR/rails.key

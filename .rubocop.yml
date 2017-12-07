@@ -1,0 +1,18 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  Exclude:
+    - '**/templates/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'bin/**/*'
+    - 'actionpack/lib/action_dispatch/journey/parser.rb'
+    - 'db/schema.rb'
+
+Metrics/LineLength:
+  Max: 100
+Rails:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: single_quotes

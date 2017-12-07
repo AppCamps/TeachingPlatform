@@ -1,0 +1,44 @@
+span.CodeRay {
+  white-space: pre;
+  border: 0;
+  padding: 2px
+}
+
+table.CodeRay {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 2px;
+  td {
+    padding: 1em 0.5em;
+    vertical-align: top;
+  }
+}
+
+.CodeRay {
+  margin: 0 0 0.75rem 0;
+
+  pre {
+    margin: 0;
+  }
+
+  .line-numbers {
+    text-align: right;
+    user-select: none;
+    pre {
+      word-break: normal;
+    }
+  }
+
+  .line {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+  .code {
+    width: 100%;
+    pre {
+      overflow: auto;
+    }
+  }
+}

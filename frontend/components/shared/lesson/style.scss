@@ -1,0 +1,157 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/font-families.scss';
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+}
+
+.lesson-container,
+.lesson-info-container {
+  @include span(12 nested);
+  margin-bottom: 1.5em;
+
+  &:not(:last-child) {
+    margin-bottom: 0.35em;
+  }
+}
+
+.lesson,
+.lesson-info {
+  @include span(12);
+  background-color: $color-white;
+  padding: 2em 3em;
+
+  h1 {
+    margin: 0 0 1em;
+    padding: 0;
+    @include font-size-large;
+  }
+}
+
+.header-title {
+  @include span(6 no-gutters);
+}
+
+.course-progress {
+  line-height: $line-height-large;
+  font-size: $font-size-default;
+  margin-left: 0.5rem;
+}
+
+.lesson-navigation {
+  @include span(6 no-gutters);
+  line-height: $font-size-large;
+  text-align: right;
+
+  &,
+  & a {
+    color: $color-font-light;
+  }
+
+  &--farther {
+    margin-right: 1.5em;
+  }
+}
+
+.topic-title,
+.title {
+  @include font-family-OpenSans;
+  @include font-size-larger;
+  color: $color-primary;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+.topic-title {
+  @include span(12 no-gutters);
+  font-weight: bold;
+}
+
+.course-title {
+  font-weight: bold;
+}
+
+.lesson-title {
+  margin-bottom: 1em;
+}
+
+.lesson-description {
+  margin-bottom: 3em;
+}
+
+.lesson-material {
+  @include span(1 of 3 before);
+  margin-top: 1em;
+
+  &:nth-child(3n + 1) {
+    @include span(first 1 of 3 before);
+  }
+}
+
+.lesson-content,
+.lesson-actions {
+  @include span(12 no-gutters);
+}
+
+.lesson-actions {
+  margin-top: 2em;
+}
+
+.lesson-hint-title,
+.lesson-hint-description {
+  display: block;
+  line-height: $font-size-larger;
+}
+
+.lesson-hint-icon {
+  @include font-size-large;
+  color: $color-primary;
+  padding-right: 0.5em;
+  vertical-align: sub;
+}
+
+.lesson-hint {
+  margin-top: 1em;
+  @include span(last 12 no-gutters);
+}
+
+.lesson-hint-title {
+  display: flex;
+  @include span(3 no-gutters);
+
+  dfn {
+    font-style: normal;
+  }
+}
+
+.lesson-hint-description {
+  @include span(last 9);
+}
+
+.back-icon i {
+  display: inline-block;
+  margin-right: 0.5em;
+  @include font-size-large;
+  vertical-align: sub;
+}
+
+.lesson-common-mistake-problem {
+  color: $color-font-light;
+}
+
+.lesson-common-mistake-solution {
+  line-height: 14px;
+  margin-bottom: 0.5em;
+
+  p {
+    margin: 0 0 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Certificate/> should render isAvailable false state 1`] = `
+<Certificate
+  certificateUrl={null}
+  color="red"
+  courseSchoolClass={null}
+  downloadCertificate={[Function]}
+  isAvailable={false}
+  isCompleted={false}
+  isProgressIndicator={false}
+  number={42}
+>
+  <div
+    className="certificate"
+  >
+    <span
+      className="help"
+    >
+      <Link
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        title="Click to get help"
+        to="/help/certificates"
+      >
+        <a
+          onClick={[Function]}
+          style={Object {}}
+          title="Click to get help"
+        >
+          <HelpIcon>
+            <FaIcon
+              className="helpIcon"
+              icon="question"
+            >
+              <i
+                aria-hidden="true"
+                className="fa fa-question helpIcon"
+              />
+            </FaIcon>
+          </HelpIcon>
+        </a>
+      </Link>
+    </span>
+    <div
+      className="disabled"
+      style={
+        Object {
+          "borderColor": "colorGray",
+          "certColor": "colorGray",
+        }
+      }
+    >
+      <div
+        className="numberContainer"
+        style={
+          Object {
+            "borderColor": "colorGray",
+          }
+        }
+      >
+        <Number
+          color="colorGray"
+          invert={null}
+          number={42}
+        >
+          <span
+            className="number"
+            style={
+              Object {
+                "borderColor": "colorGray",
+                "color": "colorGray",
+              }
+            }
+          >
+            42
+          </span>
+        </Number>
+      </div>
+      <div
+        className="certificateTitle"
+      >
+        <span>
+          <FaIcon
+            className={null}
+            icon="lock"
+          >
+            <i
+              aria-hidden="true"
+              className="fa fa-lock"
+            />
+          </FaIcon>
+           
+        </span>
+        Certificates
+      </div>
+      <div
+        className="info"
+      >
+        Available when all lessons are completed.
+      </div>
+    </div>
+  </div>
+</Certificate>
+`;
+
+exports[`<Certificate/> should render isAvailable true state 1`] = `
+<Certificate
+  certificateUrl={null}
+  color="red"
+  courseSchoolClass={null}
+  downloadCertificate={[Function]}
+  isAvailable={true}
+  isCompleted={false}
+  isProgressIndicator={false}
+  number={42}
+>
+  <div
+    className="certificate"
+  >
+    <span
+      className="help"
+    >
+      <Link
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        title="Click to get help"
+        to="/help/certificates"
+      >
+        <a
+          onClick={[Function]}
+          style={Object {}}
+          title="Click to get help"
+        >
+          <HelpIcon>
+            <FaIcon
+              className="helpIcon"
+              icon="question"
+            >
+              <i
+                aria-hidden="true"
+                className="fa fa-question helpIcon"
+              />
+            </FaIcon>
+          </HelpIcon>
+        </a>
+      </Link>
+    </span>
+    <a
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className=""
+        style={
+          Object {
+            "borderColor": "red",
+            "certColor": "red",
+          }
+        }
+      >
+        <div
+          className="numberContainer"
+          style={
+            Object {
+              "borderColor": "red",
+            }
+          }
+        >
+          <Number
+            color="red"
+            invert={null}
+            number={42}
+          >
+            <span
+              className="number"
+              style={
+                Object {
+                  "borderColor": "red",
+                  "color": "red",
+                }
+              }
+            >
+              42
+            </span>
+          </Number>
+        </div>
+        <div
+          className="certificateTitle"
+        >
+          Certificates
+        </div>
+        <div
+          className="info"
+        >
+          Click here to download your template.
+        </div>
+      </div>
+    </a>
+  </div>
+</Certificate>
+`;
+
+exports[`<Certificate/> should render isCompleted true state 1`] = `
+<Certificate
+  certificateUrl={null}
+  color="red"
+  courseSchoolClass={null}
+  downloadCertificate={[Function]}
+  isAvailable={false}
+  isCompleted={true}
+  isProgressIndicator={false}
+  number={42}
+>
+  <div
+    className="certificate"
+  >
+    <span
+      className="help"
+    >
+      <Link
+        onlyActiveOnIndex={false}
+        style={Object {}}
+        title="Click to get help"
+        to="/help/certificates"
+      >
+        <a
+          onClick={[Function]}
+          style={Object {}}
+          title="Click to get help"
+        >
+          <HelpIcon>
+            <FaIcon
+              className="helpIcon"
+              icon="question"
+            >
+              <i
+                aria-hidden="true"
+                className="fa fa-question helpIcon"
+              />
+            </FaIcon>
+          </HelpIcon>
+        </a>
+      </Link>
+    </span>
+    <div
+      className="disabled"
+      style={
+        Object {
+          "borderColor": "colorGray",
+          "certColor": "colorGray",
+        }
+      }
+    >
+      <div
+        className="numberContainer"
+        style={
+          Object {
+            "borderColor": "colorGray",
+          }
+        }
+      >
+        <Number
+          color="colorGray"
+          invert={null}
+          number={42}
+        >
+          <span
+            className="number"
+            style={
+              Object {
+                "borderColor": "colorGray",
+                "color": "colorGray",
+              }
+            }
+          >
+            42
+          </span>
+        </Number>
+      </div>
+      <div
+        className="certificateTitle"
+      >
+        <span>
+          <FaIcon
+            className={null}
+            icon="lock"
+          >
+            <i
+              aria-hidden="true"
+              className="fa fa-lock"
+            />
+          </FaIcon>
+           
+        </span>
+        Certificates
+      </div>
+      <div
+        className="info"
+      >
+        Available when all lessons are completed.
+      </div>
+    </div>
+  </div>
+</Certificate>
+`;

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EditLocality /> renders includes 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="editUserPassword"
+  >
+    <h1
+      className="heading"
+    >
+      Edit your data
+    </h1>
+    <div
+      className="cancel"
+    >
+      <LinkWrapper
+        button={false}
+        className={null}
+        href={null}
+        isAction={false}
+        isGreen={false}
+        isSecondary={false}
+        leftIcon={null}
+        rightIcon={null}
+        to="/"
+      >
+        cancel
+      </LinkWrapper>
+    </div>
+    <div
+      className="editUserPasswordForm"
+    >
+      <h2>
+        Change address
+      </h2>
+      <LocalityForm
+        user={
+          Object {
+            "email": "test1@appcamps.de",
+            "firstName": "Test",
+            "lastName": "User",
+            "password": "testtest",
+            "passwordConfirmation": "testtest",
+            "privacyPolicyAccepted": true,
+            "referal": "test123",
+            "role": "role_teacher",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

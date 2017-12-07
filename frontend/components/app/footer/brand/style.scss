@@ -1,0 +1,21 @@
+@import '../../../__css__/colors.scss';
+@import '../../../__css__/typography.scss';
+
+.brand {
+  margin-left: 20px;
+  cursor: pointer;
+
+  i {
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    line-height: 1.8em;
+    width: 1.7em;
+    height: 1.7em;
+    text-align: center;
+    border-radius: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    vertical-align: middle;
+  }
+}

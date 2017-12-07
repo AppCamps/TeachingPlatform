@@ -1,0 +1,6 @@
+@import '../__css__/grid.scss';
+
+.container {
+  @extend .container;
+  flex: 1 0 auto;
+}

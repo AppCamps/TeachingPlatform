@@ -1,0 +1,22 @@
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+.heading {
+  margin-top: 2em;
+}
+
+.info {
+  margin-bottom: 2em;
+  @include span(12);
+}
+
+.email,
+.first-name,
+.last-name,
+.subscribe {
+  @include span(3);
+}
+
+.subscribe {
+  margin-top: calc(#{$line-height-default} + .5em);
+}

@@ -1,0 +1,151 @@
+version: 2
+
+configure_container: &configure_container
+  docker:
+    - image: appcamps/www-test:r2.4.2-n8.8.1
+      environment:
+        PGHOST: localhost
+        PGUSER: appcamps
+        DATABASE_URL: "postgres://appcamps@localhost:5432/appcamps_test"
+        RAILS_ENV: test
+    - image: circleci/postgres:9.6
+      environment:
+        POSTGRES_USER: appcamps
+        POSTGRES_DB: appcamps_test
+        POSTGRES_PASSWORD: ""
+  working_directory: ~/www
+
+jobs:
+  setup:
+    <<: *configure_container
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "88:16:d8:c1:65:71:b3:9d:00:9e:eb:64:be:74:5e:d2"
+      - checkout
+      - attach_workspace:
+          at: ~/www
+      - restore_cache:
+          name: Restore bundle cache
+          keys:
+            - r2.4.2-www-bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - r2.4.2-www-bundler-{{ .Branch }}-
+            - r2.4.2-www-bundler-master-{{ checksum "Gemfile.lock" }}
+            - r2.4.2-www-bundler-master
+            - r2.4.2-www-bundler
+      - restore_cache:
+          name: Restore yarn cache
+          keys:
+            - n8.8.1-www-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - n8.8.1-www-yarn-{{ .Branch }}-
+            - n8.8.1-www-yarn-master-{{ checksum "yarn.lock" }}
+            - n8.8.1-www-yarn-master
+            - n8.8.1-www-yarn
+      - run:
+          name: Bundle Install
+          command: bin/bundle check --path vendor/bundle ||  bin/bundle install --path vendor/bundle --jobs 4 --retry 3
+      - run:
+          name: Greenkeeper update Lockfile
+          command: greenkeeper-lockfile-update
+      - run:
+          name: Yarn Install
+          command: yarn install --pure-lockfile
+      - run:
+          name: Greenkeeper upload Lockfile
+          command: greenkeeper-lockfile-upload
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Database setup
+          command: bin/rails db:schema:load --trace
+      - persist_to_workspace:
+          root: .
+          paths:
+            - vendor/bundle
+            - node_modules
+
+  ruby_tests:
+    <<: *configure_container
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/www
+      - run:
+          name: Run ruby tests
+          command: COVERAGE=true bundle exec rspec --format doc
+      - save_cache:
+          name: Store bundle cache
+          key: myapp-bundle-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+
+  node_tests:
+    <<: *configure_container
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/www
+      - run:
+          name: Run node tests
+          command: yarn run test:coverage -- --maxWorkers=1
+      - save_cache:
+          name: Store yarn cache
+          key: myapp-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.yarn-cache
+
+  node_lint:
+    <<: *configure_container
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/www
+      - run:
+          name: Lint javascript
+          command: yarn run eslint
+
+  ruby_lint:
+    <<: *configure_container
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/www
+      - run:
+          name: Lint ruby
+          command: bundle exec rubocop -DP
+
+  deploy:
+    <<: *configure_container
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/www
+      - run:
+          name: Build
+          command: |
+            yarn run build
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - setup
+      - ruby_tests:
+          requires:
+            - setup
+      - node_tests:
+          requires:
+            - setup
+      - node_lint:
+          requires:
+            - setup
+      - ruby_lint:
+          requires:
+            - setup
+      - deploy:
+          requires:
+            - ruby_tests
+            - node_tests
+            - node_lint

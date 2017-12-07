@@ -1,0 +1,23 @@
+@import "~susy/sass/susy";
+
+$header-height: 64px;
+$footer-height: $header-height;
+$top-margin: 100px;
+
+$container-max-width: 960px;
+
+$susy: (
+  columns: 12,
+  gutters: .25,
+  gutter-position: inside
+);
+
+@include layout($susy float inside);
+
+@mixin site-container {
+  @include container($container-max-width);
+}
+
+@mixin site-container--full {
+  @include container();
+}

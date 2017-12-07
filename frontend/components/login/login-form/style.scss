@@ -1,0 +1,80 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+$min-height: #{(400px + $header-height + $footer-height)};
+
+.container {
+  @include susy-media(min-height $min-height) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+  }
+  margin: $top-margin auto 2em;
+  width: 500px;
+}
+
+.login-form {
+  @include span(12 break);
+}
+
+.login {
+  @include span(6 no-gutters);
+}
+
+.heading {
+  @include span(6);
+}
+
+.forgot-password {
+  display: block;
+  @include span(6);
+  text-align: right;
+  margin: $font-size-default 0;
+  line-height: $font-size-large;
+  color: $color-font-light;
+}
+
+.actions {
+  @include span(12 break no-gutters);
+  margin: .5rem 0;
+}
+
+.login-error {
+  float: left;
+  line-height: 2.5em;
+
+  span {
+    line-height: $line-height-default;
+    vertical-align: middle;
+  }
+}
+
+.submit {
+  width: auto;
+  float: right;
+}
+
+.spinner {
+  float: right;
+}
+
+.submit-icon i {
+  display: inline-block;
+  margin-left: .25em;
+  @include font-size-large;
+  vertical-align: sub;
+  font-weight: lighter;
+}
+
+.links>div {
+  @include container($container-max-width after);
+  
+  margin-top: 1em;
+  
+  &:last-child {
+    margin-bottom: 2em;
+  }
+}

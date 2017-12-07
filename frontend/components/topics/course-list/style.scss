@@ -1,0 +1,17 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/font-families.scss';
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+.course-list {
+  background-color: $color-bg-white;
+  padding-top: 1.5em;
+  margin-bottom: 2em;
+  clear: fix;
+}
+
+.course-container {
+  @include span(12);
+  @include pad(3em);
+  margin-bottom: 1.5em;
+}

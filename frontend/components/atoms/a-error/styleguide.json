@@ -1,0 +1,9 @@
+{
+  "category": "Atoms",
+  "title": "Error",
+  "description": "Error tag",
+  "code": "<Error>Message</Error>",
+  "props": {
+    "children": "Message"
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+.container {
+  $min-height: #{(420px + $header-height + $footer-height)};
+  @include susy-media(min-height $min-height) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+  }
+  margin: $top-margin auto 2em;
+}
+
+.privacy-policy-change, .heading {
+  @include span(12 break);
+}
+
+.actions {
+  @include span(12 break no-gutters);
+  text-align: center;
+  margin-top: 1em;
+
+  button {
+    margin: 0 .5em;
+  }
+}

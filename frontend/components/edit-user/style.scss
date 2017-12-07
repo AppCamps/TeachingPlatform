@@ -1,0 +1,63 @@
+@import '../__css__/grid.scss';
+@import '../__css__/colors.scss';
+@import '../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.edit-user {
+  @include span(12);
+}
+
+.heading {
+  @include span(8 no-gutters);
+}
+
+.cancel {
+  @include span(4 no-gutters);
+  text-align: right;
+  margin: 1em 0 0;
+  line-height: calc(#{$font-size-large} * 1.3);
+  text-decoration: underline;
+
+  a {
+    color: $color-font-light !important;
+  }
+}
+
+.edit-user-form {
+  @include span(12);
+
+  background-color: $color-bg-white;
+  padding: 1em;
+
+  h2 {
+    @include span(12);
+  }
+}
+
+
+.email,
+.first-name,
+.last-name {
+  @include span(4);
+}
+
+.unconfirmed {
+  @include span(12);
+  @include font-size-small;
+  margin-top: -.5rem;
+}
+
+.saved {
+  margin-right: -1.5em;
+}
+
+.actions {
+  @include span(12);
+  margin: .5em 0;
+  text-align: right;
+}

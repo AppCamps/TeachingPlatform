@@ -1,0 +1,72 @@
+@import '../__css__/colors.scss';
+@import '../__css__/grid.scss';
+@import '../__css__/font-families.scss';
+@import '../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+}
+
+.posts {
+  @include span(12);
+  margin-bottom: 3em;
+}
+
+.post {
+  @include span(12);
+  padding: 1em;
+  background-color: $color-white;
+  margin-bottom: 2em;
+
+  ul,
+  ol {
+    overflow: hidden;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .pinned-icon {
+    color: $color-primary;
+    transform: rotate(-30deg);
+    margin-right: 0.5em;
+  }
+
+  .title {
+    @include font-family-BreeSerif--light;
+    @include font-size-larger;
+    line-height: $line-height-larger;
+    margin-bottom: 1em;
+  }
+
+  .releaseDate {
+    color: $color-gray-light-1;
+    line-height: $line-height-larger;
+    float: right;
+  }
+
+  .image,
+  .content {
+    float: left;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .image {
+    width: 30%;
+    margin-right: 1em;
+  }
+}
+
+.pagination {
+  margin-top: 2em;
+  text-align: right;
+
+  .pagination-link {
+    margin-left: 2em;
+  }
+}

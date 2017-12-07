@@ -1,0 +1,10 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/typography.scss';
+
+.error {
+  display: inline-block;
+
+  @include font-size-small;
+  font-weight: bold;
+  color: $color-red;
+}

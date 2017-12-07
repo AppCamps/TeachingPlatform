@@ -1,0 +1,8 @@
+@import '../button/style.scss';
+
+.button {
+  @extend .button;
+
+  display: inline-block;
+  overflow: visible;
+}

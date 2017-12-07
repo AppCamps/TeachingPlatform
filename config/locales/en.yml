@@ -1,0 +1,13 @@
+en:
+  mailers:
+    user_mailer:
+      welcome:
+        subject: Welcome to App Camps
+      confirmation_instructions:
+        subject: Confirm your email
+      password_reset_link:
+        subject: Reset your App Camps password
+      password_reset_notification:
+        subject: Your App Camps password was changed
+      email_changed_notification:
+        subject: Your App Camps email was changed

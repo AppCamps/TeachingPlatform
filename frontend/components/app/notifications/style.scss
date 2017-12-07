@@ -1,0 +1,33 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/grid.scss';
+
+.notifications-container {
+  @include container($container-max-width after);
+  width: 100%;
+}
+
+.notifications {
+  @include span(12);
+}
+
+.absolution {
+  $gutter-width: gutter(12);
+  width: calc(#{$container-max-width} - #{$gutter-width} - 3px);
+  position: absolute;
+}
+
+.notification {
+  @include span(12);
+  margin-top: 0.6em;
+  padding: 0.75em;
+
+  &.success {
+    background-color: $color-bg-action;
+    color: $color-primary;
+  }
+
+  &.failure {
+    background-color: $color-bg-failure;
+    color: $color-font-failure;
+  }
+}

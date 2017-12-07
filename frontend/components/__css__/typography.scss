@@ -1,0 +1,31 @@
+$font-size-default: 14px;
+$font-size-small: calc(#{$font-size-default} * .8);
+$font-size-larger: calc(#{$font-size-default} * 1.2);
+$font-size-large: calc(#{$font-size-default} * 1.8);
+$font-size-extra-large: calc(#{$font-size-default} * 2.5);
+
+$line-height-default: $font-size-default;
+$line-height-small: calc(#{$font-size-small} * 1.1);
+$line-height-larger: $font-size-larger;
+$line-height-large: $font-size-large;
+
+@mixin font-size-small {
+  font-size: $font-size-small;
+  line-height: 1.1rem;
+}
+
+@mixin font-size-default {
+  font-size: $font-size-default;
+}
+
+@mixin font-size-larger {
+  font-size: $font-size-larger;
+}
+
+@mixin font-size-large {
+  font-size: $font-size-large;
+}
+
+@mixin font-size-extra-large {
+  font-size: $font-size-extra-large;
+}

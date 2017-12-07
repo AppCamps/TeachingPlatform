@@ -1,0 +1,19 @@
+@import '../../../__css__/grid.scss';
+@import '../../../__css__/typography.scss';
+
+.choose-class-type {
+  @include span(12);
+}
+
+.buttonContainer {
+  text-align: center;
+  @include span(5 no-gutters);
+  &:first-child {
+    @include pre(1);
+  }
+
+  button {
+    @include font-size-larger;
+    margin: 1.5em 0;
+  }
+}

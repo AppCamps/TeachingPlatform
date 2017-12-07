@@ -1,0 +1,39 @@
+# ignore bundler stuff
+/.bundle
+/vendor/bundle
+
+# ignore the default SQLite database.
+/db/*.sqlite3
+
+# ignore all logfiles and tempfiles.
+/log/
+/tmp
+
+# Vim swap files
+.*.sw*
+
+.byebug_history
+
+.DS_Store
+.rbenv-gemsets
+config/database.yml
+
+.project
+.env
+.localhost-ssl
+/coverage
+
+.certs/
+certs/
+
+dev/certificates/generated/
+.srl
+
+node_modules
+.module-cache
+*.log*
+
+public/frontend
+coverage
+
+app/views/teach/index.erb

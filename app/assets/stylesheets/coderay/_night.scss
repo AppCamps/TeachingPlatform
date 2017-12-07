@@ -1,0 +1,382 @@
+@import "./layout";
+
+.CodeRay {
+  $bg: hsl(220, 13%, 18%);
+  $comment: hsl(240, 0%, 39%);
+  $fg: hsl(220, 14%, 71%);
+  $line-number: hsl(218, 5%, 37%);
+  $yellow: hsl(39, 67%, 69%);
+  $orange: hsl(29, 54%, 61%);
+  $red: hsl(5, 48%, 51%);
+  $magenta: hsl(355, 65%, 65%);
+  $purple: hsl(286, 60%, 67%);
+  $blue: hsl(207, 82%, 66%);
+  $cyan: hsl(187, 47%, 55%);
+  $green: hsl(95, 38%, 62%);
+  $border: hsl(221, 9%, 26%);
+
+  background-color: $bg;
+  border: 1px solid $border;
+  border-radius: 5px;
+  color: $fg;
+
+  pre {
+    background-color: $bg;
+    color: $fg;
+    border: 0 solid $border;
+    padding: 0.7em 1em;
+  }
+
+  .line-numbers {
+    color: $line-number;
+    a {
+      background-color: $line-number !important;
+      color: $comment !important;
+      text-decoration: none !important;
+      &:target {
+        color: $blue !important;
+      }
+    }
+    .highlighted {
+      color: $red !important;
+      a {
+        color: $red !important;
+      }
+    }
+  }
+  span.line-numbers {
+    padding: 0 13px 0 0;
+  }
+
+  .debug {
+    color: $bg !important;
+    background: $blue !important;
+  }
+  .annotation {
+    color: $blue;
+  }
+  .attribute{
+    &-name {
+      color: $orange;
+    }
+    &-value {
+      color: $green;
+    }
+  }
+  .binary {
+    color: $purple;
+    .char {
+      color: $purple;
+    }
+    .delimiter {
+      color: $purple;
+    }
+  }
+
+  .char {
+    color: $red;
+    .content {
+      color: $red;
+    }
+    .delimiter {
+      color: $red;
+    }
+  }
+
+  .class {
+    color: $yellow;
+    &-variable {
+      color: $red;
+    }
+  }
+
+  .color {
+    color: $green;
+  }
+
+  .comment {
+    color: $comment;
+    font-style: italic;
+    .char {
+      color: $fg;
+    }
+    .delimiter {
+      color: $fg;
+    }
+  }
+
+  .constant {
+    color: $yellow;
+  }
+
+  .decorator {
+    color: $magenta;
+  }
+
+  .definition {
+    color: $cyan;
+  }
+
+  .delimiter {
+    color: $comment;
+  }
+
+  .directive {
+    color: $cyan;
+  }
+
+  .docstring {
+    color: $orange;
+  }
+
+  .doctype {
+    color: $blue;
+  }
+
+  .done {
+    text-decoration: line-through;
+    color: $comment;
+  }
+
+  .entity {
+    color: $red;
+  }
+
+  .error {
+    color: $bg;
+    background-color: $red;
+  }
+
+  .escape {
+    color: $comment;
+  }
+
+  .exception {
+    color: $red;
+  }
+
+  .float {
+    color: $orange;
+  }
+
+  .function {
+    color: $blue;
+    .delimiter {
+      color: $blue;
+    }
+  }
+
+  .global-variable {
+    color: $orange;
+  }
+
+  .hex {
+    color: $blue;
+  }
+
+  .id {
+    color: $blue;
+  }
+
+  .include {
+    color: $magenta;
+  }
+
+  .inline {
+    color: $green;
+    &-delimiter {
+      color: $magenta;
+    }
+  }
+
+  .instance-variable {
+    color: $magenta;
+  }
+
+  .integer {
+    color: $orange;
+  }
+
+  .imaginary {
+    color: $red;
+  }
+
+  .important {
+    color: $red;
+  }
+
+  .key {
+    color: $cyan;
+    .char {
+      color: $cyan;
+    }
+    .delimiter {
+      color: $cyan;
+    }
+  }
+
+  .keyword {
+    color: $purple;
+  }
+
+  .label {
+    color: $yellow;
+  }
+
+  .local-variable {
+    color: $fg;
+  }
+
+  .map {
+    .content {
+      color: $purple;
+    }
+    .delimiter {
+      color: $purple;
+    }
+  }
+
+  .namespace {
+    color: $purple;
+  }
+
+  .octal {
+    color: $purple;
+  }
+
+  .operator {
+  }
+
+  .predefined {
+    color: $blue;
+    &-constant {
+      color: $orange;
+    }
+    &-type {
+      color: $green;
+    }
+  }
+
+  .preprocessor {
+    color: $purple;
+  }
+
+  .pseudo-class {
+    color: $blue;
+  }
+
+  .regexp {
+    .content {
+      color: $purple;
+    }
+    .delimiter {
+      color: $purple;
+    }
+    .modifier {
+      color: $purple;
+    }
+  }
+
+  .reserved {
+    color: $green;
+  }
+
+  .shell {
+    .content {
+      color: $green;
+    }
+    .delimiter {
+      color: $green;
+    }
+  }
+
+  .string {
+    .char {
+      color: $green;
+    }
+    .content {
+      color: $green;
+    }
+    .delimiter {
+      color: $green;
+    }
+    .modifier {
+      color: $orange;
+    }
+  }
+
+  .symbol {
+    color: $cyan;
+    .content {
+      color: $cyan;
+    }
+    .delimiter {
+      color: $cyan;
+    }
+  }
+
+  .tag {
+    color: $red;
+  }
+
+  .type {
+    color: $purple;
+  }
+
+  .value {
+    color: $orange;
+  }
+
+  .variable {
+    color: $blue;
+  }
+
+  .insert {
+    background-color: hsla(120, 100%, 50%, 0.2);
+    .insert {
+      color: $green;
+    }
+    .eyecatcher {
+      background-color: hsla(120, 100%, 50%, 0.2);
+      border: 1px solid hsla(120, 100%, 25%, 0.5);
+      margin: -1px;
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  .delete {
+    background: hsla(0, 100%, 50%, 0.12);
+    .delete {
+      color: $red;
+      background: transparent;
+    }
+    .eyecatcher {
+      background-color: hsla(0, 100%, 50%, 0.2);
+      border: 1px solid hsla(0, 100%, 45%, 0.5);
+      margin: -1px;
+      border-bottom: none;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  .change {
+    color: $purple;
+    background: $blue;
+    .change {
+      color: $purple;
+    }
+  }
+
+  .head {
+    color: $purple;
+    .head {
+      color: $purple;
+    }
+    .filename {
+      color: $purple;
+    }
+  }
+}

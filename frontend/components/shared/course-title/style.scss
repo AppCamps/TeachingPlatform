@@ -1,0 +1,28 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/font-families.scss';
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+.course-title {
+  @include font-family-OpenSans;
+  @include font-size-larger;
+
+  height: 31px;
+  margin: .25rem 0 0 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 31px;
+
+  img {
+    height: 31px;
+    width: auto;
+    visibility: hidden;
+    margin-right: .75em;
+    vertical-align: middle;
+  }
+  
+  small {
+    color: $color-font-light;
+    padding-left: 16px;
+  }
+}

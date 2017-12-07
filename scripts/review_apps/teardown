@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+SUBDOMAIN=${HEROKU_APP_NAME/appcamps-staging-pr-/}
+echo "Removing subdomains for $SUBDOMAIN.appcampsstaging.de"
+
+echo "Install dependencies"
+gem install 'nori'
+echo ""
+
+echo "Removing domains in KAS"
+./scripts/utils/kas_dns_settings delete_dns community.$SUBDOMAIN
+./scripts/utils/kas_dns_settings delete_dns admin.$SUBDOMAIN
+./scripts/utils/kas_dns_settings delete_dns teach.$SUBDOMAIN
+echo ""

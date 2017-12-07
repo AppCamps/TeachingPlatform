@@ -1,0 +1,84 @@
+@import '../__css__/colors.scss';
+@import '../__css__/grid.scss';
+@import '../__css__/typography.scss';
+
+$min-height: #{(500px + $header-height + $footer-height)};
+
+.container {
+  @include susy-media(min-height $min-height) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+  }
+  margin: $top-margin auto 2em;
+  width: 500px;
+}
+
+.token-validation-info {
+  text-align: center;
+  color: $color-font-light;
+}
+
+.password-reset-request-form {
+  @include span(12 break);
+}
+
+.password-reset-request {
+  @include span(6 no-gutters);
+}
+
+.heading {
+  @include span(8 no-gutters);
+}
+
+.loginLink {
+  display: block;
+  @include span(4);
+  text-align: right;
+  margin: $font-size-default 0;
+  line-height: calc(#{$line-height-large} * 1.1);
+  color: $color-font-light;
+}
+
+.actions {
+  @include span(12 break no-gutters);
+  margin: .5rem 0;
+}
+
+.password-reset-request-error {
+  float: left;
+  line-height: 2.5em;
+
+  span {
+    line-height: $line-height-default;
+    vertical-align: middle;
+  }
+}
+
+.submit {
+  width: auto;
+  float: right;
+}
+
+.spinner {
+  float: right;
+}
+
+.submit-icon i {
+  display: inline-block;
+  margin-left: .25em;
+  @include font-size-large;
+  vertical-align: sub;
+  font-weight: lighter;
+}
+
+.registrationLink {
+  @include container($container-max-width after);
+  @include susy-media(min-height $min-height) {
+    position: absolute;
+  }
+  margin-top: 1em;
+  margin-bottom: 2em;
+}

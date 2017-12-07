@@ -1,0 +1,42 @@
+@import '../../__css__/grid.scss';
+@import '../../__css__/colors.scss';
+
+.container {
+  @include site-container;
+}
+
+.footer {
+  flex: 0 0 auto;
+  background-color: $color-bg-dark;
+  color: $color-font-white;
+}
+
+.old-plattform-link {
+  color: $color-font-white;
+}
+
+.appcamps-link {
+  color: $color-font-white;
+}
+
+.info, .share {
+  height: $footer-height;
+  line-height: $footer-height;
+}
+
+.info {
+  @include span(4);
+}
+
+.share {
+  @include span(8);
+  text-align: right;
+}
+
+.love {
+  color: $color-primary;
+}
+
+.link {
+  color: $color-green;
+}

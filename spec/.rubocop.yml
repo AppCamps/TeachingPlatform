@@ -1,0 +1,16 @@
+inherit_from: ../.rubocop.yml
+
+require: rubocop-rspec
+
+Metrics/BlockLength:
+  Enabled: false
+Rails/SkipsModelValidations:
+  Enabled: false
+RSpec/AnyInstance:
+  Enabled: false
+RSpec/ExampleLength:
+  Max: 15
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+RSpec/MultipleExpectations:
+  Max: 5

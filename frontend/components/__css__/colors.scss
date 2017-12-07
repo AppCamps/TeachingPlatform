@@ -1,0 +1,39 @@
+// common color definition
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-red: #ff877f;
+$color-red-light: #f9f1f0;
+
+$color-green: #7ab51e;
+$color-green-light-1: #c8e39d;
+$color-green-light-2: #e9f0de;
+
+$color-gray: #a4a9af;
+$color-gray-light-1: #c8cbcc;
+$color-gray-light-2: #e6e5e5;
+$color-gray-light-3: #f8f8f9;
+$color-gray-light-4: #fcfcfc;
+$color-gray-dark-1: #656869;
+$color-gray-dark-2: #282f3f;
+
+// specific-colors
+
+$color-primary: $color-green;
+
+$color-font-default: $color-black;
+$color-font-dark: $color-gray-dark-1;
+$color-font-light: $color-gray;
+$color-font-white: $color-white;
+$color-font-warning: $color-red;
+$color-font-failure: $color-red;
+
+$color-bg-default: $color-gray-light-3;
+$color-bg-action: $color-green-light-2;
+$color-bg-dark: $color-gray-dark-2;
+$color-bg-white: $color-white;
+$color-bg-warning: $color-red-light;
+$color-bg-failure: $color-red-light;
+
+$color-input-bg: $color-gray-light-2;
+$color-input-border: $color-gray-light-4;

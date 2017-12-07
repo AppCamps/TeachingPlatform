@@ -1,0 +1,1069 @@
+{
+	"info": {
+		"name": "App Camps",
+		"_postman_id": "3234e0e2-f07d-7526-89b1-d75a7f85b4e1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"test1@appcamps.de\",\n            \"first-name\": \"Test\",\n            \"last-name\": \"User\",\n            \"role\": \"role_teacher\",\n            \"privacy-policy-accepted\": \"true\",\n            \"referal\": \"test123\",\n            \"password\": \"password123\",\n            \"password-confirmation\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				},
+				"description": "Create a user"
+			},
+			"response": [
+				{
+					"id": "09d3419d-78c2-48d3-af0b-e4641b96034d",
+					"name": "Create Session",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/session",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"session"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.api+json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"2e891f7690ea9f036e2a87dc7b4213e5\"",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "thin 1.5.1 codename Straight Razor",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-Request-Id",
+							"key": "X-Request-Id",
+							"value": "7d1d66bb-28ad-47af-9dbf-fd03b1d5d8c9",
+							"description": ""
+						},
+						{
+							"name": "X-Runtime",
+							"key": "X-Runtime",
+							"value": "1.142627",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "1528",
+					"body": "{\"data\":{\"id\":\"\",\"type\":\"sessions\",\"attributes\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwcGNhbXBzLmRldiIsImlhdCI6MTQ3NDI4NDE5OCwiZXhwIjoxNDc0MzcwNTk4LCJzdWIiOjkyMn0.-XZaC5QNiyLi5VQYOxDlx7n5Ig1Xmywbn5uuaX0Ndsg\"},\"relationships\":{\"user\":{\"data\":{\"id\":\"922\",\"type\":\"users\"}}}},\"included\":[{\"id\":\"922\",\"type\":\"users\",\"attributes\":{\"email\":\"admin@appcamps.de\",\"full-name\":\"Armin Admin\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"privacy-policy-accepted\": false\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				},
+				"description": "Update a user"
+			},
+			"response": [
+				{
+					"id": "f7a7eb4f-4aae-48c7-8221-1f0d326ffd62",
+					"name": "Create Session",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/session",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"session"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.api+json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"2e891f7690ea9f036e2a87dc7b4213e5\"",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "thin 1.5.1 codename Straight Razor",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-Request-Id",
+							"key": "X-Request-Id",
+							"value": "7d1d66bb-28ad-47af-9dbf-fd03b1d5d8c9",
+							"description": ""
+						},
+						{
+							"name": "X-Runtime",
+							"key": "X-Runtime",
+							"value": "1.142627",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "1528",
+					"body": "{\"data\":{\"id\":\"\",\"type\":\"sessions\",\"attributes\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwcGNhbXBzLmRldiIsImlhdCI6MTQ3NDI4NDE5OCwiZXhwIjoxNDc0MzcwNTk4LCJzdWIiOjkyMn0.-XZaC5QNiyLi5VQYOxDlx7n5Ig1Xmywbn5uuaX0Ndsg\"},\"relationships\":{\"user\":{\"data\":{\"id\":\"922\",\"type\":\"users\"}}}},\"included\":[{\"id\":\"922\",\"type\":\"users\",\"attributes\":{\"email\":\"admin@appcamps.de\",\"full-name\":\"Armin Admin\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "/session",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.data.attributes.token);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/session",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"session"
+					]
+				},
+				"description": "Create a session token"
+			},
+			"response": [
+				{
+					"id": "7e2e15d5-2968-4cc9-a78a-232f40084916",
+					"name": "Create Session",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/session",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"session"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.api+json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"2e891f7690ea9f036e2a87dc7b4213e5\"",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "thin 1.5.1 codename Straight Razor",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-Request-Id",
+							"key": "X-Request-Id",
+							"value": "7d1d66bb-28ad-47af-9dbf-fd03b1d5d8c9",
+							"description": ""
+						},
+						{
+							"name": "X-Runtime",
+							"key": "X-Runtime",
+							"value": "1.142627",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "1528",
+					"body": "{\"data\":{\"id\":\"\",\"type\":\"sessions\",\"attributes\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwcGNhbXBzLmRldiIsImlhdCI6MTQ3NDI4NDE5OCwiZXhwIjoxNDc0MzcwNTk4LCJzdWIiOjkyMn0.-XZaC5QNiyLi5VQYOxDlx7n5Ig1Xmywbn5uuaX0Ndsg\"},\"relationships\":{\"user\":{\"data\":{\"id\":\"922\",\"type\":\"users\"}}}},\"included\":[{\"id\":\"922\",\"type\":\"users\",\"attributes\":{\"email\":\"admin@appcamps.de\",\"full-name\":\"Armin Admin\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "/session",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/session",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"session"
+					]
+				},
+				"description": "Test authorization of a session"
+			},
+			"response": [
+				{
+					"id": "ad5665ce-1a63-416a-8a3d-4a8582612916",
+					"name": "Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"enabled": true,
+								"description": "The mime type of this content"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwcGNhbXBzLmRldiIsImlhdCI6MTQ3MzMzNDA4NSwiZXhwIjoxNDczNDIwNDg1LCJzdWIiOjkyMn0.Fku1gB5OiPAn1Sbo7ywhUAlpCdDSuhAc7jL9mTdihx8",
+								"enabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/session",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"session"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "html",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "text/html",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "thin 1.5.1 codename Straight Razor",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-Request-Id",
+							"key": "X-Request-Id",
+							"value": "de62c647-5f93-4ff4-9ed3-fb047dff077a",
+							"description": ""
+						},
+						{
+							"name": "X-Runtime",
+							"key": "X-Runtime",
+							"value": "0.919554",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "931",
+					"body": ""
+				},
+				{
+					"id": "902e0e96-b774-40da-a2d3-fd7e8d340dd0",
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"enabled": true,
+								"description": "The mime type of this content",
+								"warning": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwcGNhbXBzLmRldiIsImlhdCI6MTQ3NDI4NDI4MSwiZXhwIjoxNDc0MzcwNjgxLCJzdWIiOjkyMn0.bVUfQeVYym4ZuND2K0-VTrU5HZ5YZnfZ7oz0Ey3-JJc",
+								"enabled": true,
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/session",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"session"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Cache-Control",
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate",
+							"description": ""
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "close",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/vnd.api+json; charset=utf-8",
+							"description": ""
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"eca413d23aded31d3e3e46f1da7745b4\"",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "thin 1.5.1 codename Straight Razor",
+							"description": ""
+						},
+						{
+							"name": "X-Content-Type-Options",
+							"key": "X-Content-Type-Options",
+							"value": "nosniff",
+							"description": ""
+						},
+						{
+							"name": "X-Frame-Options",
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN",
+							"description": ""
+						},
+						{
+							"name": "X-Request-Id",
+							"key": "X-Request-Id",
+							"value": "07964ccc-b5cd-4860-a24a-8feb6d3a5c0d",
+							"description": ""
+						},
+						{
+							"name": "X-Runtime",
+							"key": "X-Runtime",
+							"value": "0.466747",
+							"description": ""
+						},
+						{
+							"name": "X-XSS-Protection",
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "478",
+					"body": "{\"data\":{\"id\":\"\",\"type\":\"sessions\",\"attributes\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwcGNhbXBzLmRldiIsImlhdCI6MTQ3NDI4NDI4MSwiZXhwIjoxNDc0MzcwNjgxLCJzdWIiOjkyMn0.bVUfQeVYym4ZuND2K0-VTrU5HZ5YZnfZ7oz0Ey3-JJc\"},\"relationships\":{\"user\":{\"data\":{\"id\":\"922\",\"type\":\"users\"}}}},\"included\":[{\"id\":\"922\",\"type\":\"users\",\"attributes\":{\"email\":\"admin@appcamps.de\",\"full-name\":\"Armin Admin\"}}]}"
+				}
+			]
+		},
+		{
+			"name": "/courses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"someCourse\", jsonData.data[0].id);",
+							"postman.setEnvironmentVariable(\"someLesson\", jsonData.data[0].relationships.lessons.data[0].id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/courses",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"courses"
+					]
+				},
+				"description": "Get all courses"
+			},
+			"response": []
+		},
+		{
+			"name": "/posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/posts",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"posts"
+					]
+				},
+				"description": "Get all posts"
+			},
+			"response": []
+		},
+		{
+			"name": "/preparation_materials",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/preparation_materials",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"preparation_materials"
+					]
+				},
+				"description": "Get all preparations"
+			},
+			"response": []
+		},
+		{
+			"name": "/classes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/classes",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"classes"
+					]
+				},
+				"description": "Get all classes for current_user"
+			},
+			"response": []
+		},
+		{
+			"name": "/classes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"lastCreatedLesson\", jsonData.data.id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n    \t\"type\": \"classes\",\n        \"attributes\": {\n            \"resource-type\": \"school_class\",\n            \"class-name\": \"Klasse 7A\",\n            \"school-year\": \"2015 / 2016\"\n        },\n        \"relationships\": {\n        \t\"courses\": {\n        \t\t\"data\": [\n        \t\t\t{ \"type\": \"courses\", \"id\": \"{{someCourse}}\" }\n        \t\t]\n        \t}\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/classes",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"classes"
+					]
+				},
+				"description": "Get all classes for current_user"
+			},
+			"response": []
+		},
+		{
+			"name": "/classes/:id/relationships/completed_lessons",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": [{ \"type\": \"lessons\", \"id\": \"{{someLesson}}\" }]\n}"
+				},
+				"url": {
+					"raw": "{{host}}/classes/{{lastCreatedLesson}}/relationships/completed_lessons",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"classes",
+						"{{lastCreatedLesson}}",
+						"relationships",
+						"completed_lessons"
+					]
+				},
+				"description": "Update completed_lessons relations"
+			},
+			"response": []
+		},
+		{
+			"name": "/classes/:id/relationships/completed_lessons",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": [\n    \t{ \"type\": \"lessons\", \"id\": \"{{someLesson}}\" }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{host}}/classes/{{lastCreatedLesson}}/relationships/completed_lessons",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"classes",
+						"{{lastCreatedLesson}}",
+						"relationships",
+						"completed_lessons"
+					]
+				},
+				"description": "Delete completed_lessons relations"
+			},
+			"response": []
+		},
+		{
+			"name": "/locality",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"school-type\": \"school_type_university\",\n            \"school-name\": \"App Camps\",\n            \"country\": \"country_de\",\n            \"state\": \"HH\",\n            \"postal-code\": \"20357\",\n            \"city\": \"Hamburg\"\n        }\n    }\n}\n"
+				},
+				"url": {
+					"raw": "{{host}}/locality",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"locality"
+					]
+				},
+				"description": "Create a locality for current_user"
+			},
+			"response": []
+		},
+		{
+			"name": "/countries",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"admin@appcamps.de\",\n            \"password\": \"password123\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}/countries",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"countries"
+					]
+				},
+				"description": "Get all available country definitions"
+			},
+			"response": []
+		},
+		{
+			"name": "/password-reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"hans@wurst.de\"\n        }\n    }\n}\n"
+				},
+				"url": {
+					"raw": "{{host}}/password-reset",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"password-reset"
+					]
+				},
+				"description": "Create a password reset email"
+			},
+			"response": []
+		},
+		{
+			"name": "/password-reset/:token",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"password\": \"asdasd123\",\n            \"password-confirmation\": \"asdasd123\"\n        }\n    }\n}\n"
+				},
+				"url": {
+					"raw": "{{host}}/password-reset/_1sNKVyqbyj5uFHF5Bfh",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"password-reset",
+						"_1sNKVyqbyj5uFHF5Bfh"
+					]
+				},
+				"description": "Reset a password by token"
+			},
+			"response": []
+		},
+		{
+			"name": "/confirmations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"email\": \"hans@wurst.de\"\n        }\n    }\n}\n"
+				},
+				"url": {
+					"raw": "{{host}}/confirmations",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"confirmations"
+					]
+				},
+				"description": "Create a password reset email"
+			},
+			"response": []
+		},
+		{
+			"name": "/confirmations/:token",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"attributes\": {\n            \"password\": \"asdasd123\",\n            \"password-confirmation\": \"asdasd123\"\n        }\n    }\n}\n"
+				},
+				"url": {
+					"raw": "{{host}}/confirmations/k7J2NspaKs6gGv2Hi2wx",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"confirmations",
+						"k7J2NspaKs6gGv2Hi2wx"
+					]
+				},
+				"description": "Reset a password by token"
+			},
+			"response": []
+		}
+	]
+}

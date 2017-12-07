@@ -1,0 +1,68 @@
+@import '../../__css__/grid.scss';
+@import '../../__css__/colors.scss';
+@import '../../__css__/typography.scss';
+
+.number {
+  padding-right: 0.75em;
+}
+
+.progress-bar-step {
+  @include span(1 of 3 no-gutter);
+  border-style: none;
+  background-color: $color-gray-light-2;
+  border-right: 1px solid $color-bg-white;
+  padding: gutter(12);
+  color: $color-font-dark;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+
+  .done-icon {
+    display: none;
+    margin-right: 0.5em;
+    color: $color-primary;
+  }
+
+  &--active {
+    background-color: $color-primary;
+    color: $color-font-white;
+  }
+
+  &--done {
+    background-color: $color-bg-action;
+
+    .done-icon {
+      display: inline-block;
+    }
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.form {
+  padding: 1em 0;
+  @include span(12);
+  background-color: $color-bg-white;
+}
+
+@mixin class-container {
+  padding: 1.5em 3em;
+}
+
+.no-classes {
+  @include class-container;
+  margin-bottom: 0.5em;
+  background-color: $color-bg-white;
+}
+
+.no-classes {
+  text-align: center;
+  color: $color-font-light;
+}

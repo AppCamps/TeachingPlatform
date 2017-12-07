@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  database: appcamps_development
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: appcamps_test
+  host: localhost

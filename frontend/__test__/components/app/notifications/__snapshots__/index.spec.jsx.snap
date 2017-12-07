@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notifcations /> renders empty state 1`] = `
+<div
+  className="notificationsContainer"
+>
+  <div
+    className="notifications"
+  >
+    <div
+      className="absolution"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Notifcations /> renders notifications 1`] = `
+<div
+  className="notificationsContainer"
+>
+  <div
+    className="notifications"
+  >
+    <div
+      className="absolution"
+    >
+      <div
+        className="notification failure"
+        key="1234567"
+      >
+        Something failed.
+      </div>
+      <div
+        className="notification success"
+        key="7654321"
+      >
+        Yay!
+      </div>
+    </div>
+  </div>
+</div>
+`;

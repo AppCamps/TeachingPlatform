@@ -1,0 +1,25 @@
+@import "../../__css__/colors";
+@import "../../__css__/font-families";
+
+.no-classes {
+  color: $color-font-dark;
+  background-color: white;
+  padding: 2px 8px;
+
+  &>p>* {
+    vertical-align: middle;
+    margin-right: 16px;
+  }
+
+  img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color-green;
+  }
+}
+
+.boxed-text {
+  display: inline-block;
+  max-width: 200px;
+  text-align: justify;
+}

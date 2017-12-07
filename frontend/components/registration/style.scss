@@ -1,0 +1,88 @@
+@import '../__css__/grid.scss';
+@import '../__css__/colors.scss';
+@import '../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.registration {
+  @include span(12);
+}
+
+.heading {
+  @include span(8 no-gutters);
+}
+
+.signInLink {
+  @include span(4 no-gutters);
+  text-align: right;
+  margin: 1em 0 0;
+  line-height: calc(#{$font-size-large} * 1.3);
+}
+
+.registration-form {
+  @include span(12);
+
+  background-color: $color-bg-white;
+  padding: 1em;
+
+  h2 {
+    @include span(12);
+  }
+}
+
+.referal,
+.additional-terms,
+.comment,
+.privacy-policy,
+.role {
+  @include span(12);
+}
+
+.privacy-policy-option {
+  @include span(12 after last);
+}
+
+.role-option {
+  @include span(3 after);
+
+  &:nth-child(4n + 1) {
+    @include span(last 3 after);
+  }
+}
+
+.additional-terms {
+  ul { margin: .5em 0; }
+  li {
+    list-style: none;
+    padding-left: 1.5em;
+    border-left: 1px solid $color-gray-light-1;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+
+.email,
+.first-name,
+.last-name,
+.password-confirmation,
+.password {
+  @include span(3);
+}
+
+.last-name {
+  @include post(6)
+}
+
+.password-confirmation {
+  @include post(3);
+}
+
+.actions {
+  @include span(12);
+  margin: .5em 0;
+  text-align: right;
+}

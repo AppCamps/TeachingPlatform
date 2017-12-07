@@ -1,0 +1,20 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/grid.scss';
+
+.container {
+  @include container($container-max-width after);
+
+  box-sizing: border-box;
+  border: none;
+  background-color: $color-bg-white;
+  padding: 2em 3em;
+
+  &--centered {
+    width: 500px;
+    position: fixed;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

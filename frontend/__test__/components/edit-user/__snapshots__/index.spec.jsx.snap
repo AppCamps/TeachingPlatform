@@ -1,0 +1,2931 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EditUser /> renders form correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ReduxForm
+    user={
+      Object {
+        "createdAt": 1483271259,
+        "email": "Darby.Prohaska26@gmail.com",
+        "firstName": "Friedrich",
+        "fullName": "Friedrich Deckow",
+        "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+        "intercomHash": "s",
+      }
+    }
+  >
+    <Connect(Form(EditUser))
+      destroyOnUnmount={true}
+      enableReinitialize={false}
+      forceUnregisterOnUnmount={false}
+      form="editUserForm"
+      getFormState={[Function]}
+      initialValues={undefined}
+      keepDirtyOnReinitialize={false}
+      persistentSubmitErrors={false}
+      pure={true}
+      shouldAsyncValidate={[Function]}
+      shouldError={[Function]}
+      shouldValidate={[Function]}
+      shouldWarn={[Function]}
+      touchOnBlur={true}
+      touchOnChange={false}
+      user={
+        Object {
+          "createdAt": 1483271259,
+          "email": "Darby.Prohaska26@gmail.com",
+          "firstName": "Friedrich",
+          "fullName": "Friedrich Deckow",
+          "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+          "intercomHash": "s",
+        }
+      }
+      validate={[Function]}
+    >
+      <Form(EditUser)
+        anyTouched={false}
+        array={
+          Object {
+            "insert": [Function],
+            "move": [Function],
+            "pop": [Function],
+            "push": [Function],
+            "remove": [Function],
+            "removeAll": [Function],
+            "shift": [Function],
+            "splice": [Function],
+            "swap": [Function],
+            "unshift": [Function],
+          }
+        }
+        arrayInsert={[Function]}
+        arrayMove={[Function]}
+        arrayPop={[Function]}
+        arrayPush={[Function]}
+        arrayRemove={[Function]}
+        arrayRemoveAll={[Function]}
+        arrayShift={[Function]}
+        arraySplice={[Function]}
+        arraySwap={[Function]}
+        arrayUnshift={[Function]}
+        asyncErrors={undefined}
+        asyncValidating={false}
+        autofill={[Function]}
+        blur={[Function]}
+        change={[Function]}
+        clearAsyncError={[Function]}
+        clearSubmit={[Function]}
+        clearSubmitErrors={[Function]}
+        destroy={[Function]}
+        destroyOnUnmount={true}
+        dirty={false}
+        dispatch={[Function]}
+        enableReinitialize={false}
+        error={undefined}
+        focus={[Function]}
+        forceUnregisterOnUnmount={false}
+        form="editUserForm"
+        getFormState={[Function]}
+        initialValues={undefined}
+        initialize={[Function]}
+        initialized={false}
+        invalid={true}
+        keepDirtyOnReinitialize={false}
+        persistentSubmitErrors={false}
+        pristine={true}
+        pure={true}
+        registerField={[Function]}
+        registeredFields={
+          Object {
+            "email": Object {
+              "count": 1,
+              "name": "email",
+              "type": "Field",
+            },
+            "firstName": Object {
+              "count": 1,
+              "name": "firstName",
+              "type": "Field",
+            },
+            "lastName": Object {
+              "count": 1,
+              "name": "lastName",
+              "type": "Field",
+            },
+          }
+        }
+        reset={[Function]}
+        setSubmitFailed={[Function]}
+        setSubmitSucceeded={[Function]}
+        shouldAsyncValidate={[Function]}
+        shouldError={[Function]}
+        shouldValidate={[Function]}
+        shouldWarn={[Function]}
+        startAsyncValidation={[Function]}
+        startSubmit={[Function]}
+        stopAsyncValidation={[Function]}
+        stopSubmit={[Function]}
+        submit={[Function]}
+        submitFailed={false}
+        submitSucceeded={false}
+        submitting={false}
+        syncErrors={
+          Object {
+            "email": "Required",
+            "firstName": "Required",
+            "lastName": "Required",
+          }
+        }
+        syncWarnings={Object {}}
+        touch={[Function]}
+        touchOnBlur={true}
+        touchOnChange={false}
+        triggerSubmit={undefined}
+        unregisterField={[Function]}
+        untouch={[Function]}
+        updateSyncErrors={[Function]}
+        updateSyncWarnings={[Function]}
+        user={
+          Object {
+            "createdAt": 1483271259,
+            "email": "Darby.Prohaska26@gmail.com",
+            "firstName": "Friedrich",
+            "fullName": "Friedrich Deckow",
+            "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+            "intercomHash": "s",
+          }
+        }
+        valid={false}
+        validExceptSubmit={false}
+        validate={[Function]}
+        values={Object {}}
+        warning={undefined}
+      >
+        <EditUser
+          anyTouched={false}
+          array={
+            Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            }
+          }
+          asyncValidate={[Function]}
+          asyncValidating={false}
+          autofill={[Function]}
+          blur={[Function]}
+          change={[Function]}
+          clearAsyncError={[Function]}
+          clearSubmit={[Function]}
+          clearSubmitErrors={[Function]}
+          destroy={[Function]}
+          dirty={false}
+          dispatch={[Function]}
+          error={undefined}
+          form="editUserForm"
+          handleSubmit={[Function]}
+          initialValues={undefined}
+          initialize={[Function]}
+          initialized={false}
+          invalid={true}
+          pristine={true}
+          pure={true}
+          reset={[Function]}
+          submit={[Function]}
+          submitFailed={false}
+          submitSucceeded={false}
+          submitting={false}
+          touch={[Function]}
+          triggerSubmit={undefined}
+          untouch={[Function]}
+          user={
+            Object {
+              "createdAt": 1483271259,
+              "email": "Darby.Prohaska26@gmail.com",
+              "firstName": "Friedrich",
+              "fullName": "Friedrich Deckow",
+              "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+              "intercomHash": "s",
+            }
+          }
+          valid={false}
+          validate={[Function]}
+          warning={undefined}
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="editUser"
+            >
+              <h1
+                className="heading"
+              >
+                Edit your data
+              </h1>
+              <div
+                className="cancel"
+              >
+                <LinkWrapper
+                  button={false}
+                  className={null}
+                  href={null}
+                  isAction={false}
+                  isGreen={false}
+                  isSecondary={false}
+                  leftIcon={null}
+                  rightIcon={null}
+                  to="/"
+                >
+                  <Link
+                    className=""
+                    href={null}
+                    onlyActiveOnIndex={false}
+                    style={Object {}}
+                    to="/"
+                  >
+                    <a
+                      className=""
+                      href={null}
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      cancel
+                    </a>
+                  </Link>
+                </LinkWrapper>
+              </div>
+              <div
+                className="editUserForm"
+              >
+                <h2>
+                  Edit user information
+                </h2>
+                <form
+                  onSubmit={[Function]}
+                >
+                  <div>
+                    <div
+                      className="email"
+                    >
+                      <Field
+                        component={[Function]}
+                        label="Email"
+                        name="email"
+                        required={true}
+                      >
+                        <Connect(ConnectedField)
+                          _reduxForm={
+                            Object {
+                              "anyTouched": false,
+                              "array": Object {
+                                "insert": [Function],
+                                "move": [Function],
+                                "pop": [Function],
+                                "push": [Function],
+                                "remove": [Function],
+                                "removeAll": [Function],
+                                "shift": [Function],
+                                "splice": [Function],
+                                "swap": [Function],
+                                "unshift": [Function],
+                              },
+                              "arrayInsert": [Function],
+                              "arrayMove": [Function],
+                              "arrayPop": [Function],
+                              "arrayPush": [Function],
+                              "arrayRemove": [Function],
+                              "arrayRemoveAll": [Function],
+                              "arrayShift": [Function],
+                              "arraySplice": [Function],
+                              "arraySwap": [Function],
+                              "arrayUnshift": [Function],
+                              "asyncErrors": undefined,
+                              "asyncValidate": [Function],
+                              "asyncValidating": false,
+                              "autofill": [Function],
+                              "blur": [Function],
+                              "change": [Function],
+                              "clearAsyncError": [Function],
+                              "clearSubmit": [Function],
+                              "clearSubmitErrors": [Function],
+                              "destroy": [Function],
+                              "destroyOnUnmount": true,
+                              "dirty": false,
+                              "dispatch": [Function],
+                              "enableReinitialize": false,
+                              "error": undefined,
+                              "focus": [Function],
+                              "forceUnregisterOnUnmount": false,
+                              "form": "editUserForm",
+                              "getFormState": [Function],
+                              "getValues": [Function],
+                              "initialValues": undefined,
+                              "initialize": [Function],
+                              "initialized": false,
+                              "invalid": true,
+                              "keepDirtyOnReinitialize": false,
+                              "persistentSubmitErrors": false,
+                              "pristine": true,
+                              "pure": true,
+                              "register": [Function],
+                              "registerField": [Function],
+                              "registerInnerOnSubmit": [Function],
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
+                              "reset": [Function],
+                              "sectionPrefix": undefined,
+                              "setSubmitFailed": [Function],
+                              "setSubmitSucceeded": [Function],
+                              "shouldAsyncValidate": [Function],
+                              "shouldError": [Function],
+                              "shouldValidate": [Function],
+                              "shouldWarn": [Function],
+                              "startAsyncValidation": [Function],
+                              "startSubmit": [Function],
+                              "stopAsyncValidation": [Function],
+                              "stopSubmit": [Function],
+                              "submit": [Function],
+                              "submitFailed": false,
+                              "submitSucceeded": false,
+                              "submitting": false,
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
+                              "syncWarnings": Object {},
+                              "touch": [Function],
+                              "touchOnBlur": true,
+                              "touchOnChange": false,
+                              "triggerSubmit": undefined,
+                              "unregister": [Function],
+                              "unregisterField": [Function],
+                              "untouch": [Function],
+                              "updateSyncErrors": [Function],
+                              "updateSyncWarnings": [Function],
+                              "user": Object {
+                                "createdAt": 1483271259,
+                                "email": "Darby.Prohaska26@gmail.com",
+                                "firstName": "Friedrich",
+                                "fullName": "Friedrich Deckow",
+                                "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                "intercomHash": "s",
+                              },
+                              "valid": false,
+                              "validExceptSubmit": false,
+                              "validate": [Function],
+                              "values": Object {},
+                              "warning": undefined,
+                            }
+                          }
+                          component={[Function]}
+                          label="Email"
+                          name="email"
+                          normalize={[Function]}
+                          required={true}
+                        >
+                          <ConnectedField
+                            _reduxForm={
+                              Object {
+                                "anyTouched": false,
+                                "array": Object {
+                                  "insert": [Function],
+                                  "move": [Function],
+                                  "pop": [Function],
+                                  "push": [Function],
+                                  "remove": [Function],
+                                  "removeAll": [Function],
+                                  "shift": [Function],
+                                  "splice": [Function],
+                                  "swap": [Function],
+                                  "unshift": [Function],
+                                },
+                                "arrayInsert": [Function],
+                                "arrayMove": [Function],
+                                "arrayPop": [Function],
+                                "arrayPush": [Function],
+                                "arrayRemove": [Function],
+                                "arrayRemoveAll": [Function],
+                                "arrayShift": [Function],
+                                "arraySplice": [Function],
+                                "arraySwap": [Function],
+                                "arrayUnshift": [Function],
+                                "asyncErrors": undefined,
+                                "asyncValidate": [Function],
+                                "asyncValidating": false,
+                                "autofill": [Function],
+                                "blur": [Function],
+                                "change": [Function],
+                                "clearAsyncError": [Function],
+                                "clearSubmit": [Function],
+                                "clearSubmitErrors": [Function],
+                                "destroy": [Function],
+                                "destroyOnUnmount": true,
+                                "dirty": false,
+                                "dispatch": [Function],
+                                "enableReinitialize": false,
+                                "error": undefined,
+                                "focus": [Function],
+                                "forceUnregisterOnUnmount": false,
+                                "form": "editUserForm",
+                                "getFormState": [Function],
+                                "getValues": [Function],
+                                "initialValues": undefined,
+                                "initialize": [Function],
+                                "initialized": false,
+                                "invalid": true,
+                                "keepDirtyOnReinitialize": false,
+                                "persistentSubmitErrors": false,
+                                "pristine": true,
+                                "pure": true,
+                                "register": [Function],
+                                "registerField": [Function],
+                                "registerInnerOnSubmit": [Function],
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
+                                "reset": [Function],
+                                "sectionPrefix": undefined,
+                                "setSubmitFailed": [Function],
+                                "setSubmitSucceeded": [Function],
+                                "shouldAsyncValidate": [Function],
+                                "shouldError": [Function],
+                                "shouldValidate": [Function],
+                                "shouldWarn": [Function],
+                                "startAsyncValidation": [Function],
+                                "startSubmit": [Function],
+                                "stopAsyncValidation": [Function],
+                                "stopSubmit": [Function],
+                                "submit": [Function],
+                                "submitFailed": false,
+                                "submitSucceeded": false,
+                                "submitting": false,
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
+                                "syncWarnings": Object {},
+                                "touch": [Function],
+                                "touchOnBlur": true,
+                                "touchOnChange": false,
+                                "triggerSubmit": undefined,
+                                "unregister": [Function],
+                                "unregisterField": [Function],
+                                "untouch": [Function],
+                                "updateSyncErrors": [Function],
+                                "updateSyncWarnings": [Function],
+                                "user": Object {
+                                  "createdAt": 1483271259,
+                                  "email": "Darby.Prohaska26@gmail.com",
+                                  "firstName": "Friedrich",
+                                  "fullName": "Friedrich Deckow",
+                                  "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                  "intercomHash": "s",
+                                },
+                                "valid": false,
+                                "validExceptSubmit": false,
+                                "validate": [Function],
+                                "values": Object {},
+                                "warning": undefined,
+                              }
+                            }
+                            _value={undefined}
+                            asyncError={undefined}
+                            asyncValidating={false}
+                            component={[Function]}
+                            dirty={false}
+                            dispatch={[Function]}
+                            initial={undefined}
+                            label="Email"
+                            name="email"
+                            normalize={[Function]}
+                            pristine={true}
+                            required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
+                            syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
+                          >
+                            <InputWithLabel
+                              autoFocus={false}
+                              className={null}
+                              disabled={null}
+                              input={
+                                Object {
+                                  "name": "email",
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onDragStart": [Function],
+                                  "onDrop": [Function],
+                                  "onFocus": [Function],
+                                  "value": "",
+                                }
+                              }
+                              label="Email"
+                              max={null}
+                              meta={
+                                Object {
+                                  "active": false,
+                                  "asyncValidating": false,
+                                  "autofilled": false,
+                                  "dirty": false,
+                                  "dispatch": [Function],
+                                  "error": "Required",
+                                  "form": "editUserForm",
+                                  "initial": undefined,
+                                  "invalid": true,
+                                  "pristine": true,
+                                  "submitFailed": false,
+                                  "submitting": false,
+                                  "touched": false,
+                                  "valid": false,
+                                  "visited": false,
+                                  "warning": undefined,
+                                }
+                              }
+                              min={null}
+                              placeholder={null}
+                              required={true}
+                            >
+                              <div
+                                className="inputWithLabel"
+                              >
+                                <Label
+                                  for="email"
+                                  required={true}
+                                  text="Email"
+                                >
+                                  <label
+                                    className="label"
+                                    htmlFor="email"
+                                  >
+                                    Email
+                                     
+                                    <abbr
+                                      title="Required"
+                                    >
+                                      *
+                                    </abbr>
+                                  </label>
+                                </Label>
+                                <Input
+                                  autoFocus={false}
+                                  disabled={null}
+                                  hasError={false}
+                                  max={null}
+                                  min={null}
+                                  name="email"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onDragStart={[Function]}
+                                  onDrop={[Function]}
+                                  onFocus={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
+                                >
+                                  <input
+                                    autoFocus={false}
+                                    className="input"
+                                    disabled={null}
+                                    max={null}
+                                    min={null}
+                                    name="email"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onDragStart={[Function]}
+                                    onDrop={[Function]}
+                                    onFocus={[Function]}
+                                    placeholder={null}
+                                    type="text"
+                                    value=""
+                                  />
+                                </Input>
+                              </div>
+                            </InputWithLabel>
+                          </ConnectedField>
+                        </Connect(ConnectedField)>
+                      </Field>
+                    </div>
+                    <div
+                      className="firstName"
+                    >
+                      <Field
+                        component={[Function]}
+                        label="First name"
+                        name="firstName"
+                        required={true}
+                      >
+                        <Connect(ConnectedField)
+                          _reduxForm={
+                            Object {
+                              "anyTouched": false,
+                              "array": Object {
+                                "insert": [Function],
+                                "move": [Function],
+                                "pop": [Function],
+                                "push": [Function],
+                                "remove": [Function],
+                                "removeAll": [Function],
+                                "shift": [Function],
+                                "splice": [Function],
+                                "swap": [Function],
+                                "unshift": [Function],
+                              },
+                              "arrayInsert": [Function],
+                              "arrayMove": [Function],
+                              "arrayPop": [Function],
+                              "arrayPush": [Function],
+                              "arrayRemove": [Function],
+                              "arrayRemoveAll": [Function],
+                              "arrayShift": [Function],
+                              "arraySplice": [Function],
+                              "arraySwap": [Function],
+                              "arrayUnshift": [Function],
+                              "asyncErrors": undefined,
+                              "asyncValidate": [Function],
+                              "asyncValidating": false,
+                              "autofill": [Function],
+                              "blur": [Function],
+                              "change": [Function],
+                              "clearAsyncError": [Function],
+                              "clearSubmit": [Function],
+                              "clearSubmitErrors": [Function],
+                              "destroy": [Function],
+                              "destroyOnUnmount": true,
+                              "dirty": false,
+                              "dispatch": [Function],
+                              "enableReinitialize": false,
+                              "error": undefined,
+                              "focus": [Function],
+                              "forceUnregisterOnUnmount": false,
+                              "form": "editUserForm",
+                              "getFormState": [Function],
+                              "getValues": [Function],
+                              "initialValues": undefined,
+                              "initialize": [Function],
+                              "initialized": false,
+                              "invalid": true,
+                              "keepDirtyOnReinitialize": false,
+                              "persistentSubmitErrors": false,
+                              "pristine": true,
+                              "pure": true,
+                              "register": [Function],
+                              "registerField": [Function],
+                              "registerInnerOnSubmit": [Function],
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
+                              "reset": [Function],
+                              "sectionPrefix": undefined,
+                              "setSubmitFailed": [Function],
+                              "setSubmitSucceeded": [Function],
+                              "shouldAsyncValidate": [Function],
+                              "shouldError": [Function],
+                              "shouldValidate": [Function],
+                              "shouldWarn": [Function],
+                              "startAsyncValidation": [Function],
+                              "startSubmit": [Function],
+                              "stopAsyncValidation": [Function],
+                              "stopSubmit": [Function],
+                              "submit": [Function],
+                              "submitFailed": false,
+                              "submitSucceeded": false,
+                              "submitting": false,
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
+                              "syncWarnings": Object {},
+                              "touch": [Function],
+                              "touchOnBlur": true,
+                              "touchOnChange": false,
+                              "triggerSubmit": undefined,
+                              "unregister": [Function],
+                              "unregisterField": [Function],
+                              "untouch": [Function],
+                              "updateSyncErrors": [Function],
+                              "updateSyncWarnings": [Function],
+                              "user": Object {
+                                "createdAt": 1483271259,
+                                "email": "Darby.Prohaska26@gmail.com",
+                                "firstName": "Friedrich",
+                                "fullName": "Friedrich Deckow",
+                                "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                "intercomHash": "s",
+                              },
+                              "valid": false,
+                              "validExceptSubmit": false,
+                              "validate": [Function],
+                              "values": Object {},
+                              "warning": undefined,
+                            }
+                          }
+                          component={[Function]}
+                          label="First name"
+                          name="firstName"
+                          normalize={[Function]}
+                          required={true}
+                        >
+                          <ConnectedField
+                            _reduxForm={
+                              Object {
+                                "anyTouched": false,
+                                "array": Object {
+                                  "insert": [Function],
+                                  "move": [Function],
+                                  "pop": [Function],
+                                  "push": [Function],
+                                  "remove": [Function],
+                                  "removeAll": [Function],
+                                  "shift": [Function],
+                                  "splice": [Function],
+                                  "swap": [Function],
+                                  "unshift": [Function],
+                                },
+                                "arrayInsert": [Function],
+                                "arrayMove": [Function],
+                                "arrayPop": [Function],
+                                "arrayPush": [Function],
+                                "arrayRemove": [Function],
+                                "arrayRemoveAll": [Function],
+                                "arrayShift": [Function],
+                                "arraySplice": [Function],
+                                "arraySwap": [Function],
+                                "arrayUnshift": [Function],
+                                "asyncErrors": undefined,
+                                "asyncValidate": [Function],
+                                "asyncValidating": false,
+                                "autofill": [Function],
+                                "blur": [Function],
+                                "change": [Function],
+                                "clearAsyncError": [Function],
+                                "clearSubmit": [Function],
+                                "clearSubmitErrors": [Function],
+                                "destroy": [Function],
+                                "destroyOnUnmount": true,
+                                "dirty": false,
+                                "dispatch": [Function],
+                                "enableReinitialize": false,
+                                "error": undefined,
+                                "focus": [Function],
+                                "forceUnregisterOnUnmount": false,
+                                "form": "editUserForm",
+                                "getFormState": [Function],
+                                "getValues": [Function],
+                                "initialValues": undefined,
+                                "initialize": [Function],
+                                "initialized": false,
+                                "invalid": true,
+                                "keepDirtyOnReinitialize": false,
+                                "persistentSubmitErrors": false,
+                                "pristine": true,
+                                "pure": true,
+                                "register": [Function],
+                                "registerField": [Function],
+                                "registerInnerOnSubmit": [Function],
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
+                                "reset": [Function],
+                                "sectionPrefix": undefined,
+                                "setSubmitFailed": [Function],
+                                "setSubmitSucceeded": [Function],
+                                "shouldAsyncValidate": [Function],
+                                "shouldError": [Function],
+                                "shouldValidate": [Function],
+                                "shouldWarn": [Function],
+                                "startAsyncValidation": [Function],
+                                "startSubmit": [Function],
+                                "stopAsyncValidation": [Function],
+                                "stopSubmit": [Function],
+                                "submit": [Function],
+                                "submitFailed": false,
+                                "submitSucceeded": false,
+                                "submitting": false,
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
+                                "syncWarnings": Object {},
+                                "touch": [Function],
+                                "touchOnBlur": true,
+                                "touchOnChange": false,
+                                "triggerSubmit": undefined,
+                                "unregister": [Function],
+                                "unregisterField": [Function],
+                                "untouch": [Function],
+                                "updateSyncErrors": [Function],
+                                "updateSyncWarnings": [Function],
+                                "user": Object {
+                                  "createdAt": 1483271259,
+                                  "email": "Darby.Prohaska26@gmail.com",
+                                  "firstName": "Friedrich",
+                                  "fullName": "Friedrich Deckow",
+                                  "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                  "intercomHash": "s",
+                                },
+                                "valid": false,
+                                "validExceptSubmit": false,
+                                "validate": [Function],
+                                "values": Object {},
+                                "warning": undefined,
+                              }
+                            }
+                            _value={undefined}
+                            asyncError={undefined}
+                            asyncValidating={false}
+                            component={[Function]}
+                            dirty={false}
+                            dispatch={[Function]}
+                            initial={undefined}
+                            label="First name"
+                            name="firstName"
+                            normalize={[Function]}
+                            pristine={true}
+                            required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
+                            syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
+                          >
+                            <InputWithLabel
+                              autoFocus={false}
+                              className={null}
+                              disabled={null}
+                              input={
+                                Object {
+                                  "name": "firstName",
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onDragStart": [Function],
+                                  "onDrop": [Function],
+                                  "onFocus": [Function],
+                                  "value": "",
+                                }
+                              }
+                              label="First name"
+                              max={null}
+                              meta={
+                                Object {
+                                  "active": false,
+                                  "asyncValidating": false,
+                                  "autofilled": false,
+                                  "dirty": false,
+                                  "dispatch": [Function],
+                                  "error": "Required",
+                                  "form": "editUserForm",
+                                  "initial": undefined,
+                                  "invalid": true,
+                                  "pristine": true,
+                                  "submitFailed": false,
+                                  "submitting": false,
+                                  "touched": false,
+                                  "valid": false,
+                                  "visited": false,
+                                  "warning": undefined,
+                                }
+                              }
+                              min={null}
+                              placeholder={null}
+                              required={true}
+                            >
+                              <div
+                                className="inputWithLabel"
+                              >
+                                <Label
+                                  for="firstName"
+                                  required={true}
+                                  text="First name"
+                                >
+                                  <label
+                                    className="label"
+                                    htmlFor="firstName"
+                                  >
+                                    First name
+                                     
+                                    <abbr
+                                      title="Required"
+                                    >
+                                      *
+                                    </abbr>
+                                  </label>
+                                </Label>
+                                <Input
+                                  autoFocus={false}
+                                  disabled={null}
+                                  hasError={false}
+                                  max={null}
+                                  min={null}
+                                  name="firstName"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onDragStart={[Function]}
+                                  onDrop={[Function]}
+                                  onFocus={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
+                                >
+                                  <input
+                                    autoFocus={false}
+                                    className="input"
+                                    disabled={null}
+                                    max={null}
+                                    min={null}
+                                    name="firstName"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onDragStart={[Function]}
+                                    onDrop={[Function]}
+                                    onFocus={[Function]}
+                                    placeholder={null}
+                                    type="text"
+                                    value=""
+                                  />
+                                </Input>
+                              </div>
+                            </InputWithLabel>
+                          </ConnectedField>
+                        </Connect(ConnectedField)>
+                      </Field>
+                    </div>
+                    <div
+                      className="lastName"
+                    >
+                      <Field
+                        component={[Function]}
+                        label="Last name"
+                        name="lastName"
+                        required={true}
+                      >
+                        <Connect(ConnectedField)
+                          _reduxForm={
+                            Object {
+                              "anyTouched": false,
+                              "array": Object {
+                                "insert": [Function],
+                                "move": [Function],
+                                "pop": [Function],
+                                "push": [Function],
+                                "remove": [Function],
+                                "removeAll": [Function],
+                                "shift": [Function],
+                                "splice": [Function],
+                                "swap": [Function],
+                                "unshift": [Function],
+                              },
+                              "arrayInsert": [Function],
+                              "arrayMove": [Function],
+                              "arrayPop": [Function],
+                              "arrayPush": [Function],
+                              "arrayRemove": [Function],
+                              "arrayRemoveAll": [Function],
+                              "arrayShift": [Function],
+                              "arraySplice": [Function],
+                              "arraySwap": [Function],
+                              "arrayUnshift": [Function],
+                              "asyncErrors": undefined,
+                              "asyncValidate": [Function],
+                              "asyncValidating": false,
+                              "autofill": [Function],
+                              "blur": [Function],
+                              "change": [Function],
+                              "clearAsyncError": [Function],
+                              "clearSubmit": [Function],
+                              "clearSubmitErrors": [Function],
+                              "destroy": [Function],
+                              "destroyOnUnmount": true,
+                              "dirty": false,
+                              "dispatch": [Function],
+                              "enableReinitialize": false,
+                              "error": undefined,
+                              "focus": [Function],
+                              "forceUnregisterOnUnmount": false,
+                              "form": "editUserForm",
+                              "getFormState": [Function],
+                              "getValues": [Function],
+                              "initialValues": undefined,
+                              "initialize": [Function],
+                              "initialized": false,
+                              "invalid": true,
+                              "keepDirtyOnReinitialize": false,
+                              "persistentSubmitErrors": false,
+                              "pristine": true,
+                              "pure": true,
+                              "register": [Function],
+                              "registerField": [Function],
+                              "registerInnerOnSubmit": [Function],
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
+                              "reset": [Function],
+                              "sectionPrefix": undefined,
+                              "setSubmitFailed": [Function],
+                              "setSubmitSucceeded": [Function],
+                              "shouldAsyncValidate": [Function],
+                              "shouldError": [Function],
+                              "shouldValidate": [Function],
+                              "shouldWarn": [Function],
+                              "startAsyncValidation": [Function],
+                              "startSubmit": [Function],
+                              "stopAsyncValidation": [Function],
+                              "stopSubmit": [Function],
+                              "submit": [Function],
+                              "submitFailed": false,
+                              "submitSucceeded": false,
+                              "submitting": false,
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
+                              "syncWarnings": Object {},
+                              "touch": [Function],
+                              "touchOnBlur": true,
+                              "touchOnChange": false,
+                              "triggerSubmit": undefined,
+                              "unregister": [Function],
+                              "unregisterField": [Function],
+                              "untouch": [Function],
+                              "updateSyncErrors": [Function],
+                              "updateSyncWarnings": [Function],
+                              "user": Object {
+                                "createdAt": 1483271259,
+                                "email": "Darby.Prohaska26@gmail.com",
+                                "firstName": "Friedrich",
+                                "fullName": "Friedrich Deckow",
+                                "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                "intercomHash": "s",
+                              },
+                              "valid": false,
+                              "validExceptSubmit": false,
+                              "validate": [Function],
+                              "values": Object {},
+                              "warning": undefined,
+                            }
+                          }
+                          component={[Function]}
+                          label="Last name"
+                          name="lastName"
+                          normalize={[Function]}
+                          required={true}
+                        >
+                          <ConnectedField
+                            _reduxForm={
+                              Object {
+                                "anyTouched": false,
+                                "array": Object {
+                                  "insert": [Function],
+                                  "move": [Function],
+                                  "pop": [Function],
+                                  "push": [Function],
+                                  "remove": [Function],
+                                  "removeAll": [Function],
+                                  "shift": [Function],
+                                  "splice": [Function],
+                                  "swap": [Function],
+                                  "unshift": [Function],
+                                },
+                                "arrayInsert": [Function],
+                                "arrayMove": [Function],
+                                "arrayPop": [Function],
+                                "arrayPush": [Function],
+                                "arrayRemove": [Function],
+                                "arrayRemoveAll": [Function],
+                                "arrayShift": [Function],
+                                "arraySplice": [Function],
+                                "arraySwap": [Function],
+                                "arrayUnshift": [Function],
+                                "asyncErrors": undefined,
+                                "asyncValidate": [Function],
+                                "asyncValidating": false,
+                                "autofill": [Function],
+                                "blur": [Function],
+                                "change": [Function],
+                                "clearAsyncError": [Function],
+                                "clearSubmit": [Function],
+                                "clearSubmitErrors": [Function],
+                                "destroy": [Function],
+                                "destroyOnUnmount": true,
+                                "dirty": false,
+                                "dispatch": [Function],
+                                "enableReinitialize": false,
+                                "error": undefined,
+                                "focus": [Function],
+                                "forceUnregisterOnUnmount": false,
+                                "form": "editUserForm",
+                                "getFormState": [Function],
+                                "getValues": [Function],
+                                "initialValues": undefined,
+                                "initialize": [Function],
+                                "initialized": false,
+                                "invalid": true,
+                                "keepDirtyOnReinitialize": false,
+                                "persistentSubmitErrors": false,
+                                "pristine": true,
+                                "pure": true,
+                                "register": [Function],
+                                "registerField": [Function],
+                                "registerInnerOnSubmit": [Function],
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
+                                "reset": [Function],
+                                "sectionPrefix": undefined,
+                                "setSubmitFailed": [Function],
+                                "setSubmitSucceeded": [Function],
+                                "shouldAsyncValidate": [Function],
+                                "shouldError": [Function],
+                                "shouldValidate": [Function],
+                                "shouldWarn": [Function],
+                                "startAsyncValidation": [Function],
+                                "startSubmit": [Function],
+                                "stopAsyncValidation": [Function],
+                                "stopSubmit": [Function],
+                                "submit": [Function],
+                                "submitFailed": false,
+                                "submitSucceeded": false,
+                                "submitting": false,
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
+                                "syncWarnings": Object {},
+                                "touch": [Function],
+                                "touchOnBlur": true,
+                                "touchOnChange": false,
+                                "triggerSubmit": undefined,
+                                "unregister": [Function],
+                                "unregisterField": [Function],
+                                "untouch": [Function],
+                                "updateSyncErrors": [Function],
+                                "updateSyncWarnings": [Function],
+                                "user": Object {
+                                  "createdAt": 1483271259,
+                                  "email": "Darby.Prohaska26@gmail.com",
+                                  "firstName": "Friedrich",
+                                  "fullName": "Friedrich Deckow",
+                                  "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                  "intercomHash": "s",
+                                },
+                                "valid": false,
+                                "validExceptSubmit": false,
+                                "validate": [Function],
+                                "values": Object {},
+                                "warning": undefined,
+                              }
+                            }
+                            _value={undefined}
+                            asyncError={undefined}
+                            asyncValidating={false}
+                            component={[Function]}
+                            dirty={false}
+                            dispatch={[Function]}
+                            initial={undefined}
+                            label="Last name"
+                            name="lastName"
+                            normalize={[Function]}
+                            pristine={true}
+                            required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
+                            syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
+                          >
+                            <InputWithLabel
+                              autoFocus={false}
+                              className={null}
+                              disabled={null}
+                              input={
+                                Object {
+                                  "name": "lastName",
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onDragStart": [Function],
+                                  "onDrop": [Function],
+                                  "onFocus": [Function],
+                                  "value": "",
+                                }
+                              }
+                              label="Last name"
+                              max={null}
+                              meta={
+                                Object {
+                                  "active": false,
+                                  "asyncValidating": false,
+                                  "autofilled": false,
+                                  "dirty": false,
+                                  "dispatch": [Function],
+                                  "error": "Required",
+                                  "form": "editUserForm",
+                                  "initial": undefined,
+                                  "invalid": true,
+                                  "pristine": true,
+                                  "submitFailed": false,
+                                  "submitting": false,
+                                  "touched": false,
+                                  "valid": false,
+                                  "visited": false,
+                                  "warning": undefined,
+                                }
+                              }
+                              min={null}
+                              placeholder={null}
+                              required={true}
+                            >
+                              <div
+                                className="inputWithLabel"
+                              >
+                                <Label
+                                  for="lastName"
+                                  required={true}
+                                  text="Last name"
+                                >
+                                  <label
+                                    className="label"
+                                    htmlFor="lastName"
+                                  >
+                                    Last name
+                                     
+                                    <abbr
+                                      title="Required"
+                                    >
+                                      *
+                                    </abbr>
+                                  </label>
+                                </Label>
+                                <Input
+                                  autoFocus={false}
+                                  disabled={null}
+                                  hasError={false}
+                                  max={null}
+                                  min={null}
+                                  name="lastName"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onDragStart={[Function]}
+                                  onDrop={[Function]}
+                                  onFocus={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
+                                >
+                                  <input
+                                    autoFocus={false}
+                                    className="input"
+                                    disabled={null}
+                                    max={null}
+                                    min={null}
+                                    name="lastName"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onDragStart={[Function]}
+                                    onDrop={[Function]}
+                                    onFocus={[Function]}
+                                    placeholder={null}
+                                    type="text"
+                                    value=""
+                                  />
+                                </Input>
+                              </div>
+                            </InputWithLabel>
+                          </ConnectedField>
+                        </Connect(ConnectedField)>
+                      </Field>
+                    </div>
+                  </div>
+                  <div
+                    className="unconfirmed"
+                  />
+                  <div
+                    className="actions"
+                  >
+                    <Spinner
+                      visible={false}
+                    >
+                      <div
+                        className="spinner"
+                      />
+                    </Spinner>
+                    <Button
+                      className={null}
+                      disabled={false}
+                      isAction={true}
+                      isFullWidth={false}
+                      isGreen={false}
+                      isSecondary={false}
+                      leftIcon={null}
+                      onClick={[Function]}
+                      rightIcon={null}
+                      style={Object {}}
+                      type="submit"
+                    >
+                      <button
+                        className="button buttonAction buttonClickable"
+                        disabled={false}
+                        onClick={[Function]}
+                        style={Object {}}
+                        type="submit"
+                      >
+                        Save
+                      </button>
+                    </Button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </EditUser>
+      </Form(EditUser)>
+    </Connect(Form(EditUser))>
+  </ReduxForm>
+</Provider>
+`;
+
+exports[`<EditUser /> shows info for unconfirmed email 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ReduxForm
+    user={
+      Object {
+        "createdAt": 1483271259,
+        "email": "Darby.Prohaska26@gmail.com",
+        "firstName": "Friedrich",
+        "fullName": "Friedrich Deckow",
+        "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+        "intercomHash": "s",
+        "unconfirmedEmail": "testy.hihi@gmail.com",
+      }
+    }
+  >
+    <Connect(Form(EditUser))
+      destroyOnUnmount={true}
+      enableReinitialize={false}
+      forceUnregisterOnUnmount={false}
+      form="editUserForm"
+      getFormState={[Function]}
+      initialValues={undefined}
+      keepDirtyOnReinitialize={false}
+      persistentSubmitErrors={false}
+      pure={true}
+      shouldAsyncValidate={[Function]}
+      shouldError={[Function]}
+      shouldValidate={[Function]}
+      shouldWarn={[Function]}
+      touchOnBlur={true}
+      touchOnChange={false}
+      user={
+        Object {
+          "createdAt": 1483271259,
+          "email": "Darby.Prohaska26@gmail.com",
+          "firstName": "Friedrich",
+          "fullName": "Friedrich Deckow",
+          "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+          "intercomHash": "s",
+          "unconfirmedEmail": "testy.hihi@gmail.com",
+        }
+      }
+      validate={[Function]}
+    >
+      <Form(EditUser)
+        anyTouched={false}
+        array={
+          Object {
+            "insert": [Function],
+            "move": [Function],
+            "pop": [Function],
+            "push": [Function],
+            "remove": [Function],
+            "removeAll": [Function],
+            "shift": [Function],
+            "splice": [Function],
+            "swap": [Function],
+            "unshift": [Function],
+          }
+        }
+        arrayInsert={[Function]}
+        arrayMove={[Function]}
+        arrayPop={[Function]}
+        arrayPush={[Function]}
+        arrayRemove={[Function]}
+        arrayRemoveAll={[Function]}
+        arrayShift={[Function]}
+        arraySplice={[Function]}
+        arraySwap={[Function]}
+        arrayUnshift={[Function]}
+        asyncErrors={undefined}
+        asyncValidating={false}
+        autofill={[Function]}
+        blur={[Function]}
+        change={[Function]}
+        clearAsyncError={[Function]}
+        clearSubmit={[Function]}
+        clearSubmitErrors={[Function]}
+        destroy={[Function]}
+        destroyOnUnmount={true}
+        dirty={false}
+        dispatch={[Function]}
+        enableReinitialize={false}
+        error={undefined}
+        focus={[Function]}
+        forceUnregisterOnUnmount={false}
+        form="editUserForm"
+        getFormState={[Function]}
+        initialValues={undefined}
+        initialize={[Function]}
+        initialized={false}
+        invalid={true}
+        keepDirtyOnReinitialize={false}
+        persistentSubmitErrors={false}
+        pristine={true}
+        pure={true}
+        registerField={[Function]}
+        registeredFields={
+          Object {
+            "email": Object {
+              "count": 2,
+              "name": "email",
+              "type": "Field",
+            },
+            "firstName": Object {
+              "count": 2,
+              "name": "firstName",
+              "type": "Field",
+            },
+            "lastName": Object {
+              "count": 2,
+              "name": "lastName",
+              "type": "Field",
+            },
+          }
+        }
+        reset={[Function]}
+        setSubmitFailed={[Function]}
+        setSubmitSucceeded={[Function]}
+        shouldAsyncValidate={[Function]}
+        shouldError={[Function]}
+        shouldValidate={[Function]}
+        shouldWarn={[Function]}
+        startAsyncValidation={[Function]}
+        startSubmit={[Function]}
+        stopAsyncValidation={[Function]}
+        stopSubmit={[Function]}
+        submit={[Function]}
+        submitFailed={false}
+        submitSucceeded={false}
+        submitting={false}
+        syncErrors={
+          Object {
+            "email": "Required",
+            "firstName": "Required",
+            "lastName": "Required",
+          }
+        }
+        syncWarnings={Object {}}
+        touch={[Function]}
+        touchOnBlur={true}
+        touchOnChange={false}
+        triggerSubmit={undefined}
+        unregisterField={[Function]}
+        untouch={[Function]}
+        updateSyncErrors={[Function]}
+        updateSyncWarnings={[Function]}
+        user={
+          Object {
+            "createdAt": 1483271259,
+            "email": "Darby.Prohaska26@gmail.com",
+            "firstName": "Friedrich",
+            "fullName": "Friedrich Deckow",
+            "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+            "intercomHash": "s",
+            "unconfirmedEmail": "testy.hihi@gmail.com",
+          }
+        }
+        valid={false}
+        validExceptSubmit={false}
+        validate={[Function]}
+        values={Object {}}
+        warning={undefined}
+      >
+        <EditUser
+          anyTouched={false}
+          array={
+            Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            }
+          }
+          asyncValidate={[Function]}
+          asyncValidating={false}
+          autofill={[Function]}
+          blur={[Function]}
+          change={[Function]}
+          clearAsyncError={[Function]}
+          clearSubmit={[Function]}
+          clearSubmitErrors={[Function]}
+          destroy={[Function]}
+          dirty={false}
+          dispatch={[Function]}
+          error={undefined}
+          form="editUserForm"
+          handleSubmit={[Function]}
+          initialValues={undefined}
+          initialize={[Function]}
+          initialized={false}
+          invalid={true}
+          pristine={true}
+          pure={true}
+          reset={[Function]}
+          submit={[Function]}
+          submitFailed={false}
+          submitSucceeded={false}
+          submitting={false}
+          touch={[Function]}
+          triggerSubmit={undefined}
+          untouch={[Function]}
+          user={
+            Object {
+              "createdAt": 1483271259,
+              "email": "Darby.Prohaska26@gmail.com",
+              "firstName": "Friedrich",
+              "fullName": "Friedrich Deckow",
+              "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+              "intercomHash": "s",
+              "unconfirmedEmail": "testy.hihi@gmail.com",
+            }
+          }
+          valid={false}
+          validate={[Function]}
+          warning={undefined}
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="editUser"
+            >
+              <h1
+                className="heading"
+              >
+                Edit your data
+              </h1>
+              <div
+                className="cancel"
+              >
+                <LinkWrapper
+                  button={false}
+                  className={null}
+                  href={null}
+                  isAction={false}
+                  isGreen={false}
+                  isSecondary={false}
+                  leftIcon={null}
+                  rightIcon={null}
+                  to="/"
+                >
+                  <Link
+                    className=""
+                    href={null}
+                    onlyActiveOnIndex={false}
+                    style={Object {}}
+                    to="/"
+                  >
+                    <a
+                      className=""
+                      href={null}
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      cancel
+                    </a>
+                  </Link>
+                </LinkWrapper>
+              </div>
+              <div
+                className="editUserForm"
+              >
+                <h2>
+                  Edit user information
+                </h2>
+                <form
+                  onSubmit={[Function]}
+                >
+                  <div>
+                    <div
+                      className="email"
+                    >
+                      <Field
+                        component={[Function]}
+                        label="Email"
+                        name="email"
+                        required={true}
+                      >
+                        <Connect(ConnectedField)
+                          _reduxForm={
+                            Object {
+                              "anyTouched": false,
+                              "array": Object {
+                                "insert": [Function],
+                                "move": [Function],
+                                "pop": [Function],
+                                "push": [Function],
+                                "remove": [Function],
+                                "removeAll": [Function],
+                                "shift": [Function],
+                                "splice": [Function],
+                                "swap": [Function],
+                                "unshift": [Function],
+                              },
+                              "arrayInsert": [Function],
+                              "arrayMove": [Function],
+                              "arrayPop": [Function],
+                              "arrayPush": [Function],
+                              "arrayRemove": [Function],
+                              "arrayRemoveAll": [Function],
+                              "arrayShift": [Function],
+                              "arraySplice": [Function],
+                              "arraySwap": [Function],
+                              "arrayUnshift": [Function],
+                              "asyncErrors": undefined,
+                              "asyncValidate": [Function],
+                              "asyncValidating": false,
+                              "autofill": [Function],
+                              "blur": [Function],
+                              "change": [Function],
+                              "clearAsyncError": [Function],
+                              "clearSubmit": [Function],
+                              "clearSubmitErrors": [Function],
+                              "destroy": [Function],
+                              "destroyOnUnmount": true,
+                              "dirty": false,
+                              "dispatch": [Function],
+                              "enableReinitialize": false,
+                              "error": undefined,
+                              "focus": [Function],
+                              "forceUnregisterOnUnmount": false,
+                              "form": "editUserForm",
+                              "getFormState": [Function],
+                              "getValues": [Function],
+                              "initialValues": undefined,
+                              "initialize": [Function],
+                              "initialized": false,
+                              "invalid": true,
+                              "keepDirtyOnReinitialize": false,
+                              "persistentSubmitErrors": false,
+                              "pristine": true,
+                              "pure": true,
+                              "register": [Function],
+                              "registerField": [Function],
+                              "registerInnerOnSubmit": [Function],
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
+                              "reset": [Function],
+                              "sectionPrefix": undefined,
+                              "setSubmitFailed": [Function],
+                              "setSubmitSucceeded": [Function],
+                              "shouldAsyncValidate": [Function],
+                              "shouldError": [Function],
+                              "shouldValidate": [Function],
+                              "shouldWarn": [Function],
+                              "startAsyncValidation": [Function],
+                              "startSubmit": [Function],
+                              "stopAsyncValidation": [Function],
+                              "stopSubmit": [Function],
+                              "submit": [Function],
+                              "submitFailed": false,
+                              "submitSucceeded": false,
+                              "submitting": false,
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
+                              "syncWarnings": Object {},
+                              "touch": [Function],
+                              "touchOnBlur": true,
+                              "touchOnChange": false,
+                              "triggerSubmit": undefined,
+                              "unregister": [Function],
+                              "unregisterField": [Function],
+                              "untouch": [Function],
+                              "updateSyncErrors": [Function],
+                              "updateSyncWarnings": [Function],
+                              "user": Object {
+                                "createdAt": 1483271259,
+                                "email": "Darby.Prohaska26@gmail.com",
+                                "firstName": "Friedrich",
+                                "fullName": "Friedrich Deckow",
+                                "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                "intercomHash": "s",
+                                "unconfirmedEmail": "testy.hihi@gmail.com",
+                              },
+                              "valid": false,
+                              "validExceptSubmit": false,
+                              "validate": [Function],
+                              "values": Object {},
+                              "warning": undefined,
+                            }
+                          }
+                          component={[Function]}
+                          label="Email"
+                          name="email"
+                          normalize={[Function]}
+                          required={true}
+                        >
+                          <ConnectedField
+                            _reduxForm={
+                              Object {
+                                "anyTouched": false,
+                                "array": Object {
+                                  "insert": [Function],
+                                  "move": [Function],
+                                  "pop": [Function],
+                                  "push": [Function],
+                                  "remove": [Function],
+                                  "removeAll": [Function],
+                                  "shift": [Function],
+                                  "splice": [Function],
+                                  "swap": [Function],
+                                  "unshift": [Function],
+                                },
+                                "arrayInsert": [Function],
+                                "arrayMove": [Function],
+                                "arrayPop": [Function],
+                                "arrayPush": [Function],
+                                "arrayRemove": [Function],
+                                "arrayRemoveAll": [Function],
+                                "arrayShift": [Function],
+                                "arraySplice": [Function],
+                                "arraySwap": [Function],
+                                "arrayUnshift": [Function],
+                                "asyncErrors": undefined,
+                                "asyncValidate": [Function],
+                                "asyncValidating": false,
+                                "autofill": [Function],
+                                "blur": [Function],
+                                "change": [Function],
+                                "clearAsyncError": [Function],
+                                "clearSubmit": [Function],
+                                "clearSubmitErrors": [Function],
+                                "destroy": [Function],
+                                "destroyOnUnmount": true,
+                                "dirty": false,
+                                "dispatch": [Function],
+                                "enableReinitialize": false,
+                                "error": undefined,
+                                "focus": [Function],
+                                "forceUnregisterOnUnmount": false,
+                                "form": "editUserForm",
+                                "getFormState": [Function],
+                                "getValues": [Function],
+                                "initialValues": undefined,
+                                "initialize": [Function],
+                                "initialized": false,
+                                "invalid": true,
+                                "keepDirtyOnReinitialize": false,
+                                "persistentSubmitErrors": false,
+                                "pristine": true,
+                                "pure": true,
+                                "register": [Function],
+                                "registerField": [Function],
+                                "registerInnerOnSubmit": [Function],
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
+                                "reset": [Function],
+                                "sectionPrefix": undefined,
+                                "setSubmitFailed": [Function],
+                                "setSubmitSucceeded": [Function],
+                                "shouldAsyncValidate": [Function],
+                                "shouldError": [Function],
+                                "shouldValidate": [Function],
+                                "shouldWarn": [Function],
+                                "startAsyncValidation": [Function],
+                                "startSubmit": [Function],
+                                "stopAsyncValidation": [Function],
+                                "stopSubmit": [Function],
+                                "submit": [Function],
+                                "submitFailed": false,
+                                "submitSucceeded": false,
+                                "submitting": false,
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
+                                "syncWarnings": Object {},
+                                "touch": [Function],
+                                "touchOnBlur": true,
+                                "touchOnChange": false,
+                                "triggerSubmit": undefined,
+                                "unregister": [Function],
+                                "unregisterField": [Function],
+                                "untouch": [Function],
+                                "updateSyncErrors": [Function],
+                                "updateSyncWarnings": [Function],
+                                "user": Object {
+                                  "createdAt": 1483271259,
+                                  "email": "Darby.Prohaska26@gmail.com",
+                                  "firstName": "Friedrich",
+                                  "fullName": "Friedrich Deckow",
+                                  "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                  "intercomHash": "s",
+                                  "unconfirmedEmail": "testy.hihi@gmail.com",
+                                },
+                                "valid": false,
+                                "validExceptSubmit": false,
+                                "validate": [Function],
+                                "values": Object {},
+                                "warning": undefined,
+                              }
+                            }
+                            _value={undefined}
+                            asyncError={undefined}
+                            asyncValidating={false}
+                            component={[Function]}
+                            dirty={false}
+                            dispatch={[Function]}
+                            initial={undefined}
+                            label="Email"
+                            name="email"
+                            normalize={[Function]}
+                            pristine={true}
+                            required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
+                            syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
+                          >
+                            <InputWithLabel
+                              autoFocus={false}
+                              className={null}
+                              disabled={null}
+                              input={
+                                Object {
+                                  "name": "email",
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onDragStart": [Function],
+                                  "onDrop": [Function],
+                                  "onFocus": [Function],
+                                  "value": "",
+                                }
+                              }
+                              label="Email"
+                              max={null}
+                              meta={
+                                Object {
+                                  "active": false,
+                                  "asyncValidating": false,
+                                  "autofilled": false,
+                                  "dirty": false,
+                                  "dispatch": [Function],
+                                  "error": "Required",
+                                  "form": "editUserForm",
+                                  "initial": undefined,
+                                  "invalid": true,
+                                  "pristine": true,
+                                  "submitFailed": false,
+                                  "submitting": false,
+                                  "touched": false,
+                                  "valid": false,
+                                  "visited": false,
+                                  "warning": undefined,
+                                }
+                              }
+                              min={null}
+                              placeholder={null}
+                              required={true}
+                            >
+                              <div
+                                className="inputWithLabel"
+                              >
+                                <Label
+                                  for="email"
+                                  required={true}
+                                  text="Email"
+                                >
+                                  <label
+                                    className="label"
+                                    htmlFor="email"
+                                  >
+                                    Email
+                                     
+                                    <abbr
+                                      title="Required"
+                                    >
+                                      *
+                                    </abbr>
+                                  </label>
+                                </Label>
+                                <Input
+                                  autoFocus={false}
+                                  disabled={null}
+                                  hasError={false}
+                                  max={null}
+                                  min={null}
+                                  name="email"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onDragStart={[Function]}
+                                  onDrop={[Function]}
+                                  onFocus={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
+                                >
+                                  <input
+                                    autoFocus={false}
+                                    className="input"
+                                    disabled={null}
+                                    max={null}
+                                    min={null}
+                                    name="email"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onDragStart={[Function]}
+                                    onDrop={[Function]}
+                                    onFocus={[Function]}
+                                    placeholder={null}
+                                    type="text"
+                                    value=""
+                                  />
+                                </Input>
+                              </div>
+                            </InputWithLabel>
+                          </ConnectedField>
+                        </Connect(ConnectedField)>
+                      </Field>
+                    </div>
+                    <div
+                      className="firstName"
+                    >
+                      <Field
+                        component={[Function]}
+                        label="First name"
+                        name="firstName"
+                        required={true}
+                      >
+                        <Connect(ConnectedField)
+                          _reduxForm={
+                            Object {
+                              "anyTouched": false,
+                              "array": Object {
+                                "insert": [Function],
+                                "move": [Function],
+                                "pop": [Function],
+                                "push": [Function],
+                                "remove": [Function],
+                                "removeAll": [Function],
+                                "shift": [Function],
+                                "splice": [Function],
+                                "swap": [Function],
+                                "unshift": [Function],
+                              },
+                              "arrayInsert": [Function],
+                              "arrayMove": [Function],
+                              "arrayPop": [Function],
+                              "arrayPush": [Function],
+                              "arrayRemove": [Function],
+                              "arrayRemoveAll": [Function],
+                              "arrayShift": [Function],
+                              "arraySplice": [Function],
+                              "arraySwap": [Function],
+                              "arrayUnshift": [Function],
+                              "asyncErrors": undefined,
+                              "asyncValidate": [Function],
+                              "asyncValidating": false,
+                              "autofill": [Function],
+                              "blur": [Function],
+                              "change": [Function],
+                              "clearAsyncError": [Function],
+                              "clearSubmit": [Function],
+                              "clearSubmitErrors": [Function],
+                              "destroy": [Function],
+                              "destroyOnUnmount": true,
+                              "dirty": false,
+                              "dispatch": [Function],
+                              "enableReinitialize": false,
+                              "error": undefined,
+                              "focus": [Function],
+                              "forceUnregisterOnUnmount": false,
+                              "form": "editUserForm",
+                              "getFormState": [Function],
+                              "getValues": [Function],
+                              "initialValues": undefined,
+                              "initialize": [Function],
+                              "initialized": false,
+                              "invalid": true,
+                              "keepDirtyOnReinitialize": false,
+                              "persistentSubmitErrors": false,
+                              "pristine": true,
+                              "pure": true,
+                              "register": [Function],
+                              "registerField": [Function],
+                              "registerInnerOnSubmit": [Function],
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
+                              "reset": [Function],
+                              "sectionPrefix": undefined,
+                              "setSubmitFailed": [Function],
+                              "setSubmitSucceeded": [Function],
+                              "shouldAsyncValidate": [Function],
+                              "shouldError": [Function],
+                              "shouldValidate": [Function],
+                              "shouldWarn": [Function],
+                              "startAsyncValidation": [Function],
+                              "startSubmit": [Function],
+                              "stopAsyncValidation": [Function],
+                              "stopSubmit": [Function],
+                              "submit": [Function],
+                              "submitFailed": false,
+                              "submitSucceeded": false,
+                              "submitting": false,
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
+                              "syncWarnings": Object {},
+                              "touch": [Function],
+                              "touchOnBlur": true,
+                              "touchOnChange": false,
+                              "triggerSubmit": undefined,
+                              "unregister": [Function],
+                              "unregisterField": [Function],
+                              "untouch": [Function],
+                              "updateSyncErrors": [Function],
+                              "updateSyncWarnings": [Function],
+                              "user": Object {
+                                "createdAt": 1483271259,
+                                "email": "Darby.Prohaska26@gmail.com",
+                                "firstName": "Friedrich",
+                                "fullName": "Friedrich Deckow",
+                                "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                "intercomHash": "s",
+                                "unconfirmedEmail": "testy.hihi@gmail.com",
+                              },
+                              "valid": false,
+                              "validExceptSubmit": false,
+                              "validate": [Function],
+                              "values": Object {},
+                              "warning": undefined,
+                            }
+                          }
+                          component={[Function]}
+                          label="First name"
+                          name="firstName"
+                          normalize={[Function]}
+                          required={true}
+                        >
+                          <ConnectedField
+                            _reduxForm={
+                              Object {
+                                "anyTouched": false,
+                                "array": Object {
+                                  "insert": [Function],
+                                  "move": [Function],
+                                  "pop": [Function],
+                                  "push": [Function],
+                                  "remove": [Function],
+                                  "removeAll": [Function],
+                                  "shift": [Function],
+                                  "splice": [Function],
+                                  "swap": [Function],
+                                  "unshift": [Function],
+                                },
+                                "arrayInsert": [Function],
+                                "arrayMove": [Function],
+                                "arrayPop": [Function],
+                                "arrayPush": [Function],
+                                "arrayRemove": [Function],
+                                "arrayRemoveAll": [Function],
+                                "arrayShift": [Function],
+                                "arraySplice": [Function],
+                                "arraySwap": [Function],
+                                "arrayUnshift": [Function],
+                                "asyncErrors": undefined,
+                                "asyncValidate": [Function],
+                                "asyncValidating": false,
+                                "autofill": [Function],
+                                "blur": [Function],
+                                "change": [Function],
+                                "clearAsyncError": [Function],
+                                "clearSubmit": [Function],
+                                "clearSubmitErrors": [Function],
+                                "destroy": [Function],
+                                "destroyOnUnmount": true,
+                                "dirty": false,
+                                "dispatch": [Function],
+                                "enableReinitialize": false,
+                                "error": undefined,
+                                "focus": [Function],
+                                "forceUnregisterOnUnmount": false,
+                                "form": "editUserForm",
+                                "getFormState": [Function],
+                                "getValues": [Function],
+                                "initialValues": undefined,
+                                "initialize": [Function],
+                                "initialized": false,
+                                "invalid": true,
+                                "keepDirtyOnReinitialize": false,
+                                "persistentSubmitErrors": false,
+                                "pristine": true,
+                                "pure": true,
+                                "register": [Function],
+                                "registerField": [Function],
+                                "registerInnerOnSubmit": [Function],
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
+                                "reset": [Function],
+                                "sectionPrefix": undefined,
+                                "setSubmitFailed": [Function],
+                                "setSubmitSucceeded": [Function],
+                                "shouldAsyncValidate": [Function],
+                                "shouldError": [Function],
+                                "shouldValidate": [Function],
+                                "shouldWarn": [Function],
+                                "startAsyncValidation": [Function],
+                                "startSubmit": [Function],
+                                "stopAsyncValidation": [Function],
+                                "stopSubmit": [Function],
+                                "submit": [Function],
+                                "submitFailed": false,
+                                "submitSucceeded": false,
+                                "submitting": false,
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
+                                "syncWarnings": Object {},
+                                "touch": [Function],
+                                "touchOnBlur": true,
+                                "touchOnChange": false,
+                                "triggerSubmit": undefined,
+                                "unregister": [Function],
+                                "unregisterField": [Function],
+                                "untouch": [Function],
+                                "updateSyncErrors": [Function],
+                                "updateSyncWarnings": [Function],
+                                "user": Object {
+                                  "createdAt": 1483271259,
+                                  "email": "Darby.Prohaska26@gmail.com",
+                                  "firstName": "Friedrich",
+                                  "fullName": "Friedrich Deckow",
+                                  "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                  "intercomHash": "s",
+                                  "unconfirmedEmail": "testy.hihi@gmail.com",
+                                },
+                                "valid": false,
+                                "validExceptSubmit": false,
+                                "validate": [Function],
+                                "values": Object {},
+                                "warning": undefined,
+                              }
+                            }
+                            _value={undefined}
+                            asyncError={undefined}
+                            asyncValidating={false}
+                            component={[Function]}
+                            dirty={false}
+                            dispatch={[Function]}
+                            initial={undefined}
+                            label="First name"
+                            name="firstName"
+                            normalize={[Function]}
+                            pristine={true}
+                            required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
+                            syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
+                          >
+                            <InputWithLabel
+                              autoFocus={false}
+                              className={null}
+                              disabled={null}
+                              input={
+                                Object {
+                                  "name": "firstName",
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onDragStart": [Function],
+                                  "onDrop": [Function],
+                                  "onFocus": [Function],
+                                  "value": "",
+                                }
+                              }
+                              label="First name"
+                              max={null}
+                              meta={
+                                Object {
+                                  "active": false,
+                                  "asyncValidating": false,
+                                  "autofilled": false,
+                                  "dirty": false,
+                                  "dispatch": [Function],
+                                  "error": "Required",
+                                  "form": "editUserForm",
+                                  "initial": undefined,
+                                  "invalid": true,
+                                  "pristine": true,
+                                  "submitFailed": false,
+                                  "submitting": false,
+                                  "touched": false,
+                                  "valid": false,
+                                  "visited": false,
+                                  "warning": undefined,
+                                }
+                              }
+                              min={null}
+                              placeholder={null}
+                              required={true}
+                            >
+                              <div
+                                className="inputWithLabel"
+                              >
+                                <Label
+                                  for="firstName"
+                                  required={true}
+                                  text="First name"
+                                >
+                                  <label
+                                    className="label"
+                                    htmlFor="firstName"
+                                  >
+                                    First name
+                                     
+                                    <abbr
+                                      title="Required"
+                                    >
+                                      *
+                                    </abbr>
+                                  </label>
+                                </Label>
+                                <Input
+                                  autoFocus={false}
+                                  disabled={null}
+                                  hasError={false}
+                                  max={null}
+                                  min={null}
+                                  name="firstName"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onDragStart={[Function]}
+                                  onDrop={[Function]}
+                                  onFocus={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
+                                >
+                                  <input
+                                    autoFocus={false}
+                                    className="input"
+                                    disabled={null}
+                                    max={null}
+                                    min={null}
+                                    name="firstName"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onDragStart={[Function]}
+                                    onDrop={[Function]}
+                                    onFocus={[Function]}
+                                    placeholder={null}
+                                    type="text"
+                                    value=""
+                                  />
+                                </Input>
+                              </div>
+                            </InputWithLabel>
+                          </ConnectedField>
+                        </Connect(ConnectedField)>
+                      </Field>
+                    </div>
+                    <div
+                      className="lastName"
+                    >
+                      <Field
+                        component={[Function]}
+                        label="Last name"
+                        name="lastName"
+                        required={true}
+                      >
+                        <Connect(ConnectedField)
+                          _reduxForm={
+                            Object {
+                              "anyTouched": false,
+                              "array": Object {
+                                "insert": [Function],
+                                "move": [Function],
+                                "pop": [Function],
+                                "push": [Function],
+                                "remove": [Function],
+                                "removeAll": [Function],
+                                "shift": [Function],
+                                "splice": [Function],
+                                "swap": [Function],
+                                "unshift": [Function],
+                              },
+                              "arrayInsert": [Function],
+                              "arrayMove": [Function],
+                              "arrayPop": [Function],
+                              "arrayPush": [Function],
+                              "arrayRemove": [Function],
+                              "arrayRemoveAll": [Function],
+                              "arrayShift": [Function],
+                              "arraySplice": [Function],
+                              "arraySwap": [Function],
+                              "arrayUnshift": [Function],
+                              "asyncErrors": undefined,
+                              "asyncValidate": [Function],
+                              "asyncValidating": false,
+                              "autofill": [Function],
+                              "blur": [Function],
+                              "change": [Function],
+                              "clearAsyncError": [Function],
+                              "clearSubmit": [Function],
+                              "clearSubmitErrors": [Function],
+                              "destroy": [Function],
+                              "destroyOnUnmount": true,
+                              "dirty": false,
+                              "dispatch": [Function],
+                              "enableReinitialize": false,
+                              "error": undefined,
+                              "focus": [Function],
+                              "forceUnregisterOnUnmount": false,
+                              "form": "editUserForm",
+                              "getFormState": [Function],
+                              "getValues": [Function],
+                              "initialValues": undefined,
+                              "initialize": [Function],
+                              "initialized": false,
+                              "invalid": true,
+                              "keepDirtyOnReinitialize": false,
+                              "persistentSubmitErrors": false,
+                              "pristine": true,
+                              "pure": true,
+                              "register": [Function],
+                              "registerField": [Function],
+                              "registerInnerOnSubmit": [Function],
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
+                              "reset": [Function],
+                              "sectionPrefix": undefined,
+                              "setSubmitFailed": [Function],
+                              "setSubmitSucceeded": [Function],
+                              "shouldAsyncValidate": [Function],
+                              "shouldError": [Function],
+                              "shouldValidate": [Function],
+                              "shouldWarn": [Function],
+                              "startAsyncValidation": [Function],
+                              "startSubmit": [Function],
+                              "stopAsyncValidation": [Function],
+                              "stopSubmit": [Function],
+                              "submit": [Function],
+                              "submitFailed": false,
+                              "submitSucceeded": false,
+                              "submitting": false,
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
+                              "syncWarnings": Object {},
+                              "touch": [Function],
+                              "touchOnBlur": true,
+                              "touchOnChange": false,
+                              "triggerSubmit": undefined,
+                              "unregister": [Function],
+                              "unregisterField": [Function],
+                              "untouch": [Function],
+                              "updateSyncErrors": [Function],
+                              "updateSyncWarnings": [Function],
+                              "user": Object {
+                                "createdAt": 1483271259,
+                                "email": "Darby.Prohaska26@gmail.com",
+                                "firstName": "Friedrich",
+                                "fullName": "Friedrich Deckow",
+                                "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                "intercomHash": "s",
+                                "unconfirmedEmail": "testy.hihi@gmail.com",
+                              },
+                              "valid": false,
+                              "validExceptSubmit": false,
+                              "validate": [Function],
+                              "values": Object {},
+                              "warning": undefined,
+                            }
+                          }
+                          component={[Function]}
+                          label="Last name"
+                          name="lastName"
+                          normalize={[Function]}
+                          required={true}
+                        >
+                          <ConnectedField
+                            _reduxForm={
+                              Object {
+                                "anyTouched": false,
+                                "array": Object {
+                                  "insert": [Function],
+                                  "move": [Function],
+                                  "pop": [Function],
+                                  "push": [Function],
+                                  "remove": [Function],
+                                  "removeAll": [Function],
+                                  "shift": [Function],
+                                  "splice": [Function],
+                                  "swap": [Function],
+                                  "unshift": [Function],
+                                },
+                                "arrayInsert": [Function],
+                                "arrayMove": [Function],
+                                "arrayPop": [Function],
+                                "arrayPush": [Function],
+                                "arrayRemove": [Function],
+                                "arrayRemoveAll": [Function],
+                                "arrayShift": [Function],
+                                "arraySplice": [Function],
+                                "arraySwap": [Function],
+                                "arrayUnshift": [Function],
+                                "asyncErrors": undefined,
+                                "asyncValidate": [Function],
+                                "asyncValidating": false,
+                                "autofill": [Function],
+                                "blur": [Function],
+                                "change": [Function],
+                                "clearAsyncError": [Function],
+                                "clearSubmit": [Function],
+                                "clearSubmitErrors": [Function],
+                                "destroy": [Function],
+                                "destroyOnUnmount": true,
+                                "dirty": false,
+                                "dispatch": [Function],
+                                "enableReinitialize": false,
+                                "error": undefined,
+                                "focus": [Function],
+                                "forceUnregisterOnUnmount": false,
+                                "form": "editUserForm",
+                                "getFormState": [Function],
+                                "getValues": [Function],
+                                "initialValues": undefined,
+                                "initialize": [Function],
+                                "initialized": false,
+                                "invalid": true,
+                                "keepDirtyOnReinitialize": false,
+                                "persistentSubmitErrors": false,
+                                "pristine": true,
+                                "pure": true,
+                                "register": [Function],
+                                "registerField": [Function],
+                                "registerInnerOnSubmit": [Function],
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
+                                "reset": [Function],
+                                "sectionPrefix": undefined,
+                                "setSubmitFailed": [Function],
+                                "setSubmitSucceeded": [Function],
+                                "shouldAsyncValidate": [Function],
+                                "shouldError": [Function],
+                                "shouldValidate": [Function],
+                                "shouldWarn": [Function],
+                                "startAsyncValidation": [Function],
+                                "startSubmit": [Function],
+                                "stopAsyncValidation": [Function],
+                                "stopSubmit": [Function],
+                                "submit": [Function],
+                                "submitFailed": false,
+                                "submitSucceeded": false,
+                                "submitting": false,
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
+                                "syncWarnings": Object {},
+                                "touch": [Function],
+                                "touchOnBlur": true,
+                                "touchOnChange": false,
+                                "triggerSubmit": undefined,
+                                "unregister": [Function],
+                                "unregisterField": [Function],
+                                "untouch": [Function],
+                                "updateSyncErrors": [Function],
+                                "updateSyncWarnings": [Function],
+                                "user": Object {
+                                  "createdAt": 1483271259,
+                                  "email": "Darby.Prohaska26@gmail.com",
+                                  "firstName": "Friedrich",
+                                  "fullName": "Friedrich Deckow",
+                                  "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
+                                  "intercomHash": "s",
+                                  "unconfirmedEmail": "testy.hihi@gmail.com",
+                                },
+                                "valid": false,
+                                "validExceptSubmit": false,
+                                "validate": [Function],
+                                "values": Object {},
+                                "warning": undefined,
+                              }
+                            }
+                            _value={undefined}
+                            asyncError={undefined}
+                            asyncValidating={false}
+                            component={[Function]}
+                            dirty={false}
+                            dispatch={[Function]}
+                            initial={undefined}
+                            label="Last name"
+                            name="lastName"
+                            normalize={[Function]}
+                            pristine={true}
+                            required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
+                            syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
+                          >
+                            <InputWithLabel
+                              autoFocus={false}
+                              className={null}
+                              disabled={null}
+                              input={
+                                Object {
+                                  "name": "lastName",
+                                  "onBlur": [Function],
+                                  "onChange": [Function],
+                                  "onDragStart": [Function],
+                                  "onDrop": [Function],
+                                  "onFocus": [Function],
+                                  "value": "",
+                                }
+                              }
+                              label="Last name"
+                              max={null}
+                              meta={
+                                Object {
+                                  "active": false,
+                                  "asyncValidating": false,
+                                  "autofilled": false,
+                                  "dirty": false,
+                                  "dispatch": [Function],
+                                  "error": "Required",
+                                  "form": "editUserForm",
+                                  "initial": undefined,
+                                  "invalid": true,
+                                  "pristine": true,
+                                  "submitFailed": false,
+                                  "submitting": false,
+                                  "touched": false,
+                                  "valid": false,
+                                  "visited": false,
+                                  "warning": undefined,
+                                }
+                              }
+                              min={null}
+                              placeholder={null}
+                              required={true}
+                            >
+                              <div
+                                className="inputWithLabel"
+                              >
+                                <Label
+                                  for="lastName"
+                                  required={true}
+                                  text="Last name"
+                                >
+                                  <label
+                                    className="label"
+                                    htmlFor="lastName"
+                                  >
+                                    Last name
+                                     
+                                    <abbr
+                                      title="Required"
+                                    >
+                                      *
+                                    </abbr>
+                                  </label>
+                                </Label>
+                                <Input
+                                  autoFocus={false}
+                                  disabled={null}
+                                  hasError={false}
+                                  max={null}
+                                  min={null}
+                                  name="lastName"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onDragStart={[Function]}
+                                  onDrop={[Function]}
+                                  onFocus={[Function]}
+                                  placeholder={null}
+                                  type="text"
+                                  value=""
+                                >
+                                  <input
+                                    autoFocus={false}
+                                    className="input"
+                                    disabled={null}
+                                    max={null}
+                                    min={null}
+                                    name="lastName"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onDragStart={[Function]}
+                                    onDrop={[Function]}
+                                    onFocus={[Function]}
+                                    placeholder={null}
+                                    type="text"
+                                    value=""
+                                  />
+                                </Input>
+                              </div>
+                            </InputWithLabel>
+                          </ConnectedField>
+                        </Connect(ConnectedField)>
+                      </Field>
+                    </div>
+                  </div>
+                  <div
+                    className="unconfirmed"
+                  >
+                    {email} is still unconfirmed. {emailConfirmationRequestLink}
+                  </div>
+                  <div
+                    className="actions"
+                  >
+                    <Spinner
+                      visible={false}
+                    >
+                      <div
+                        className="spinner"
+                      />
+                    </Spinner>
+                    <Button
+                      className={null}
+                      disabled={false}
+                      isAction={true}
+                      isFullWidth={false}
+                      isGreen={false}
+                      isSecondary={false}
+                      leftIcon={null}
+                      onClick={[Function]}
+                      rightIcon={null}
+                      style={Object {}}
+                      type="submit"
+                    >
+                      <button
+                        className="button buttonAction buttonClickable"
+                        disabled={false}
+                        onClick={[Function]}
+                        style={Object {}}
+                        type="submit"
+                      >
+                        Save
+                      </button>
+                    </Button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </EditUser>
+      </Form(EditUser)>
+    </Connect(Form(EditUser))>
+  </ReduxForm>
+</Provider>
+`;

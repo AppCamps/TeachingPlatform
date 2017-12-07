@@ -1,0 +1,1086 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: teach.appcamps.de\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: frontend/actions/email-confirmation.js
+msgid ""
+"If the email is registered with App Camps and not confirmed yet you will "
+"soon receive a link to confirm it."
+msgstr ""
+"Falls die angegebene E-Mail-Adresse bei uns existiert bekommst du gleich "
+"einen Link zum Bestätigen deiner E-Mail-Adresse zugeschickt."
+
+#: frontend/actions/email-confirmation.js
+msgid "Email confirmed. You may now login using your email and password."
+msgstr ""
+"Deine E-Mail-Adresse ist nun bestätigt. Du kannst dich jetzt mit deinem "
+"neuen Passwort anmelden."
+
+#: frontend/actions/email-confirmation.js
+msgid ""
+"The confirmation of your email address was not successful. Please, contact "
+"us via philipp@appcamps.de so that we can confirm your account."
+msgstr ""
+"Die Bestätigung deiner E-Mail-Adresse war nicht erfolgreich. Bitte melde "
+"dich bei philipp@appcamps.de. Dann können wir deine E-Mail Adresse "
+"freischalten."
+
+#: frontend/actions/email-confirmation.js
+msgid ""
+"Your confirmation link has expired. Please restart the confirmation process."
+msgstr ""
+"Dein Bestätigungslink ist abgelaufen. Bitte starte denn Prozess erneut."
+
+#: frontend/actions/password-reset.js
+msgid ""
+"If the email you provided is registered with App Camps you will soon receive "
+"an email containing a link to the reset form."
+msgstr ""
+"Falls die angegebene E-Mail-Adresse bei uns existiert bekommst du gleich "
+"einen Link zum zurücksetzen deines Passworts zugeschickt."
+
+#: frontend/actions/password-reset.js
+msgid ""
+"Password successfully changed. You can now login with your new password."
+msgstr ""
+"Dein Passwort wurde erfolgreich geändert. Du kannst dich jetzt mit deinem "
+"neuen Passwort anmelden."
+
+#: frontend/actions/password-reset.js
+msgid ""
+"There was an error with your reset link. Please restart the password "
+"recovery process."
+msgstr ""
+"Die Änderung deines Passworts war leider nicht erfolgreich. Bitte starte "
+"denn Prozess erneut."
+
+#: frontend/actions/password-reset.js
+msgid ""
+"Your password reset link has expired. Please restart the password recovery "
+"process."
+msgstr ""
+"Die Zeit zum Ändern deines Passworts ist abgelaufen. Bitte starte denn "
+"Prozess erneut."
+
+#: frontend/components/app/footer/brand/index.jsx
+msgid "Appcamps on {name}"
+msgstr "Appcamps bei {name}"
+
+#: frontend/components/app/footer/index.jsx
+msgid "With {love} from {brand}"
+msgstr "Mit {love} von {brand}"
+
+#: frontend/components/app/footer/index.jsx
+msgid "Imprint"
+msgstr "Impressum"
+
+#: frontend/components/app/footer/index.jsx
+#: frontend/components/registration/index.jsx
+msgid "Privacy Policy"
+msgstr "Datenschutzerklärung"
+
+#: frontend/components/app/footer/index.jsx
+msgid "facebook"
+msgstr "Facebook"
+
+#: frontend/components/app/footer/index.jsx
+msgid "twitter"
+msgstr "Twitter"
+
+#: frontend/components/app/header/actions/index.jsx
+#: frontend/components/edit-user/locality/index.jsx
+msgid "Change address"
+msgstr "Adresse ändern"
+
+#: frontend/components/app/header/actions/index.jsx
+#: frontend/components/edit-user/locality/index.jsx
+msgid "Edit school information"
+msgstr "Schuldaten ändern"
+
+#: frontend/components/app/header/actions/index.jsx
+msgid "Help"
+msgstr "Hilfe"
+
+#: frontend/components/app/header/actions/index.jsx
+msgid "Platform tips"
+msgstr "Tipps zur Plattform"
+
+#: frontend/components/app/header/actions/index.jsx
+#: frontend/components/help/faq.jsx
+msgid "Frequently asked questions"
+msgstr "Häufige Fragen"
+
+#: frontend/components/app/header/actions/index.jsx
+#: frontend/components/help/contact/index.jsx
+msgid "Contact team"
+msgstr "Kontakt zum Team"
+
+#: frontend/components/app/header/actions/index.jsx
+#: frontend/components/shared/course/certificate/index.jsx
+msgid "Certificates"
+msgstr "Zertifikate"
+
+#: frontend/components/app/header/actions/index.jsx
+#: frontend/components/edit-user/index.jsx
+msgid "Edit user information"
+msgstr "Nutzerdaten ändern"
+
+#: frontend/components/app/header/actions/index.jsx
+#: frontend/components/edit-user/password/index.jsx
+msgid "Edit password"
+msgstr "Passwort ändern"
+
+#: frontend/components/app/header/actions/index.jsx
+msgid "Logout"
+msgstr "Abmelden"
+
+#: frontend/components/class-lesson/index.jsx
+msgid "This lesson was tagged as completed."
+msgstr "Diese Lektion wurde als erledigt makiert."
+
+#: frontend/components/class-lesson/index.jsx
+msgid "Undo"
+msgstr "Rückgangig machen"
+
+#: frontend/components/class-lesson/index.jsx
+msgid "Tag lesson as completed"
+msgstr "Lektion als erledigt markieren"
+
+#: frontend/components/class-lesson/index.jsx
+msgid "back to my classes"
+msgstr "zur Klassenübersicht"
+
+#: frontend/components/classes/index.jsx
+msgid "You did not add any courses yet"
+msgstr "Du hast noch keine Kurse hinzugefügt"
+
+#: frontend/components/classes/index.jsx
+#: frontend/components/edit-class/index.jsx
+msgid "Edit class"
+msgstr "Klasse bearbeiten"
+
+#: frontend/components/classes/index.jsx
+msgid "Not yet started"
+msgstr "Noch nicht gestartet"
+
+#: frontend/components/classes/index.jsx
+msgid ""
+"As soon as you mark the first lession as completed, you will see in the "
+"progress bar how far are you in the class."
+msgstr ""
+"Sobald du die erste Lektion als erledigt markiert hast, siehst du am Balken, "
+"wie weit du mit der Klasse bist"
+
+#: frontend/components/classes/index.jsx
+msgid "Continue course"
+msgstr "Kurs fortsetzen"
+
+#: frontend/components/classes/index.jsx
+msgid "Start course"
+msgstr "Kurs starten"
+
+#: frontend/components/classes/index.jsx
+msgid "Successfully concluded"
+msgstr "Erfolgreich beendet!"
+
+#: frontend/components/classes/index.jsx
+msgid "Show all classes"
+msgstr "Alle Klassen anzeigen"
+
+#: frontend/components/classes/index.jsx
+#: frontend/components/dashboard/index.jsx
+msgid "My classes"
+msgstr "Meine Klassen"
+
+#: frontend/components/classes/index.jsx
+msgid "Add a new class"
+msgstr "Neue Klasse anlegen"
+
+#: frontend/components/classes/no-classes/index.jsx
+msgid "Why to add classes?"
+msgstr "Warum Klassen anlegen?"
+
+#: frontend/components/classes/no-classes/index.jsx
+msgid "Helpful for you:"
+msgstr "Hilfreich für dich:"
+
+#: frontend/components/classes/no-classes/index.jsx
+msgid "you can manage more classes and see their progress."
+msgstr "Du kannst mehrere Klassen verwalten und siehst den Fortschritt."
+
+#: frontend/components/classes/no-classes/index.jsx
+msgid "Helpful for us:"
+msgstr "Hilfreich für uns:"
+
+#: frontend/components/classes/no-classes/index.jsx
+msgid ""
+"through the existing classes we see how many students we could reach. When "
+"we show that we reach many students, we can keep our offer by financing "
+"ourselves via funding and providing support also in the future for free."
+msgstr ""
+"Durch angelegte Klassen erfahren wir, wie viele Schüler/innen wir erreichen. "
+"Es geht uns um die Anzahl der Schüler. Namen oder persönliche Daten fragen "
+"wir nicht ab. Wenn wir zeigen, dass wir viele Schüler erreichen, können wir "
+"unser Angebot über Stiftungen finanzieren und die Unterlagen auch in Zukunft "
+"kostenlos anbieten."
+
+#: frontend/components/course-lesson/index.jsx
+msgid "back to course overview"
+msgstr "zurück zum Kursangebot"
+
+#: frontend/components/course-lesson/index.jsx
+msgid "Course preview"
+msgstr "Kursvorschau"
+
+#: frontend/components/create-class/index.jsx
+msgid "You did not save your data! Do you still want to leave the page?"
+msgstr ""
+"Du hast deine Angaben nicht gespeichert. Willst du die Seite trotzdem "
+"verlassen?"
+
+#: frontend/components/create-class/index.jsx
+msgid "(You can save the class in the third step, please scroll down.)"
+msgstr ""
+"(Die Klasse kannst du im dritten Schritt anlegen, bitte runter scrollen.)"
+
+#: frontend/components/create-class/index.jsx
+msgid "Create class"
+msgstr "Klasse anlegen"
+
+#: frontend/components/create-class/index.jsx
+msgid "Create a new class"
+msgstr "Neue Klasse anlegen"
+
+#: frontend/components/create-class/index.jsx
+#: frontend/components/edit-class/index.jsx
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/edit-user/locality/index.jsx
+#: frontend/components/edit-user/password/index.jsx
+#: frontend/components/email-confirmation/index.jsx
+#: frontend/components/password-reset/index.jsx
+#: frontend/components/password-reset/reset-form.jsx
+msgid "cancel"
+msgstr "Abbrechen"
+
+#: frontend/components/dashboard/index.jsx
+msgid "Teaching material"
+msgstr "Unterrichtsmaterial"
+
+#: frontend/components/dashboard/index.jsx frontend/components/posts/index.jsx
+msgid "News"
+msgstr "Neuigkeiten"
+
+#: frontend/components/edit-class/index.jsx
+msgid "You did not save your changes! Do you still want to leave the page?"
+msgstr ""
+"Du hast deine Änderungen nicht gespeichert. Willst du die Seite trotzdem "
+"verlassen?"
+
+#: frontend/components/edit-class/index.jsx
+msgid "(You can save in the third step, please scroll down.)"
+msgstr "(Speichern kannst du im dritten Schritt, bitte runter scrollen.)"
+
+#: frontend/components/edit-class/index.jsx
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/edit-user/password/index.jsx
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Save"
+msgstr "Speichern"
+
+#: frontend/components/edit-user/index.jsx
+msgid "{email} is still unconfirmed. {emailConfirmationRequestLink}"
+msgstr "{email} ist noch nicht bestätigt. {emailConfirmationRequestLink}"
+
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/login/login-form/index.jsx
+msgid "Resend confirmation link"
+msgstr "Bestätigungslink erneut zusenden"
+
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/edit-user/password/index.jsx
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Saved"
+msgstr "Gespeichert"
+
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/email-confirmation/index.jsx
+#: frontend/components/login/login-form/index.jsx
+#: frontend/components/password-reset/index.jsx
+#: frontend/components/registration/index.jsx
+#: frontend/components/registration/newsletters/index.jsx
+msgid "Email"
+msgstr "E-Mail"
+
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/registration/index.jsx
+#: frontend/components/registration/newsletters/index.jsx
+msgid "First name"
+msgstr "Vorname"
+
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/registration/index.jsx
+#: frontend/components/registration/newsletters/index.jsx
+msgid "Last name"
+msgstr "Nachname"
+
+#: frontend/components/edit-user/index.jsx
+#: frontend/components/edit-user/locality/index.jsx
+#: frontend/components/edit-user/password/index.jsx
+msgid "Edit your data"
+msgstr "Ändere deine Daten"
+
+#: frontend/components/edit-user/password/index.jsx
+msgid "Current password"
+msgstr "Aktuelles Passwort"
+
+#: frontend/components/edit-user/password/index.jsx
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: frontend/components/edit-user/password/index.jsx
+msgid "Confirm new password"
+msgstr "Neues Passwort bestätigen"
+
+#: frontend/components/email-confirmation/index.jsx
+msgid "Email confirmation"
+msgstr "E-Mail bestätigen"
+
+#: frontend/components/email-confirmation/index.jsx
+msgid "We will send you an email containing a link to confirm your email."
+msgstr "Wir schicken dir eine E-Mail mit einem Link zum Bestätigen zu."
+
+#: frontend/components/email-confirmation/index.jsx
+#: frontend/components/login/login-form/index.jsx
+#: frontend/components/password-reset/index.jsx
+#: frontend/components/password-reset/reset-form.jsx
+msgid "Send"
+msgstr "Absenden"
+
+#: frontend/components/email-confirmation/validate-token.jsx
+msgid "Validating email confirmation link..."
+msgstr "Bestätigungslink wird überprüft..."
+
+#: frontend/components/help/certificates.jsx
+msgid "Information about certificates"
+msgstr "Infos zu den Zertifikaten"
+
+#: frontend/components/help/certificates.jsx
+msgid "How can I download certificates?"
+msgstr "Wie kann ich Zertifikate herunterladen?"
+
+#: frontend/components/help/certificates.jsx
+msgid ""
+"In this video you will learn how and where you can dowload the certificates "
+"for your pupils"
+msgstr ""
+"Im Video erklären wir dir, wie und wo du Zertifikate für deine Schülerinnen "
+"und Schüler findest"
+
+#: frontend/components/help/platform-tips.jsx
+msgid "Tips for the usage of the platform"
+msgstr "Tipps zur Nutzung der Plattform"
+
+#: frontend/components/help/platform-tips.jsx
+msgid ""
+"Are you new here or would you like to know how can you optimally work with "
+"the platform and the documents?"
+msgstr ""
+"Du bist neu hier oder willst gerne wissen, wie du optimal mit unserer "
+"Plattform und den Unterlagen arbeiten kannst?"
+
+#: frontend/components/help/platform-tips.jsx
+msgid "In the video, we introduce the platform and give some usage tips"
+msgstr "In dem Video stellen wir die Plattform vor und geben Tipps zur Nutzung"
+
+#: frontend/components/help/platform-tips.jsx
+msgid "Do you prefer to read? Here you can find the PDF"
+msgstr "Du liest dir das lieber durch? Hier findest du ein PDF"
+
+#: frontend/components/help/platform-tips.jsx
+msgid "please, click"
+msgstr "bitte anklicken"
+
+#: frontend/components/login/locality/index.jsx
+msgid "Welcome to App Camps"
+msgstr "Willkommen bei App Camps"
+
+#: frontend/components/login/locality/index.jsx
+msgid ""
+"It is crucial for us to know, where our materials are used. Before you can "
+"setup your classes, we need you to tell us a bit more about you."
+msgstr ""
+"Für uns ist es wichtig zu wissen, wo unsere Unterlagen eingesetzt werden. "
+"Bitte fülle daher dieses kurze Formular aus."
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Invalid email or password"
+msgstr "E-Mail oder Passwort ungültig"
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Your session has expired"
+msgstr "Deine Sitzung ist abgelaufen"
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Unconfirmed email."
+msgstr "E-Mail-Adresse unbestätigt."
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Did not sign up yet? {registrationLink}"
+msgstr "Du bist neu hier? {registrationLink}"
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Register here"
+msgstr "Hier geht’s zur Registrierung"
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Did not receive a confirmation email? {confirmationLink}"
+msgstr "Keine Bestätigungsmail erhalten? {confirmationLink}"
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Click here"
+msgstr "Hier klicken"
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Login"
+msgstr "Anmelden"
+
+#: frontend/components/login/login-form/index.jsx
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+
+#: frontend/components/login/login-form/index.jsx
+#: frontend/components/password-reset/reset-form.jsx
+#: frontend/components/registration/index.jsx
+msgid "Password"
+msgstr "Passwort"
+
+#: frontend/components/pages/p-cards/input-code.jsx
+msgid "Code"
+msgstr "Code"
+
+#: frontend/components/pages/p-cards/input-code.jsx
+msgid "To the card"
+msgstr "Zu den Karten"
+
+#: frontend/components/pages/p-cards/show-code.jsx
+msgid "Here you go to the learning cards"
+msgstr "So geht's zu den Lernkarten"
+
+#: frontend/components/pages/p-cards/show-code.jsx
+msgid "Open the URL in the browser"
+msgstr "URL in den Browser eingeben"
+
+#: frontend/components/pages/p-cards/show-code.jsx
+msgid "Submit this code"
+msgstr "Mit diesem Code freischalten"
+
+#: frontend/components/password-reset/index.jsx
+#: frontend/components/password-reset/reset-form.jsx
+msgid "Password reset"
+msgstr "Passwort zurücksetzen"
+
+#: frontend/components/password-reset/index.jsx
+msgid "We will send you an email containing a link to reset your password."
+msgstr ""
+"Wir schicken dir eine E-Mail mit einem Link zum zurücksetzen deines "
+"Passworts zu."
+
+#: frontend/components/password-reset/reset-form.jsx
+#: frontend/components/registration/index.jsx
+msgid "Password confirmation"
+msgstr "Passwort bestätigen"
+
+#: frontend/components/posts/index.jsx
+msgid "previous posts"
+msgstr "vorherige Beiträge"
+
+#: frontend/components/posts/index.jsx
+msgid "next posts"
+msgstr "weitere Beiträge"
+
+#: frontend/components/posts/index.jsx
+msgid "Released on {releaseDate}"
+msgstr "Veröffentlicht am {releaseDate}"
+
+#: frontend/components/posts/index.jsx
+msgid "Soon we will provide interesting news from us and our partners here."
+msgstr "Bald findest du hier Neuigkeiten von uns und unseren Partnern."
+
+#: frontend/components/registration/index.jsx
+msgid "How did you hear from us?"
+msgstr "Wie hast du von uns erfahren?"
+
+#: frontend/components/registration/index.jsx
+msgid "Comment"
+msgstr "Anmerkungen"
+
+#: frontend/components/registration/index.jsx
+msgid "By registrating I accept the following terms:"
+msgstr "Mit deiner Registrierung stimmst du den folgenden Bedingungen zu:"
+
+#: frontend/components/registration/index.jsx
+msgid ""
+"I will not forward any data or teaching materials to third parties. My "
+"colleagues may register themselves on interest."
+msgstr ""
+"Ich gebe meine Anmeldedaten nicht an Dritte weiter. Meine Kollegen können "
+"sich bei Interesse ebenfalls registrieren."
+
+#: frontend/components/registration/index.jsx
+msgid ""
+"I accept to receive our newsletter per email (e.g notifications about new "
+"teaching materials). You may revoke this any time by clicking the provided "
+"links in the email or by sending an email to {email}."
+msgstr ""
+"Ich stimme zu über Neuigkeiten per E-Mail informiert zu werden (z.B. "
+"Ankündigung neue Unterlagen). Die Zustimmung kann jederzeit per E-Mail an "
+"{email} widerrufen werden."
+
+#: frontend/components/registration/index.jsx
+msgid ""
+"I will answer questionnaires to evaluate the quality of our teaching "
+"materials. Before and after the execution of every course there will be "
+"short questionnaires (approx. 5 minutes). To be able to provide our platform "
+"for free we need to collect metrics to prove that our teaching materials are "
+"working."
+msgstr ""
+"Ich beteilige mich an den Fragebögen zur Evaluation der Unterlagen. Vor und "
+"nach jeder Durchführung eines Kurses gibt es kurze Fragebögen (ca. 5 "
+"Minuten). Damit wir unser Angebot weiterhin kostenlos anbieten können "
+"brauchen wir Zahlen die belegen, wie die Unterlagen eingesetzt werden."
+
+#: frontend/components/registration/index.jsx
+msgid "Data protection"
+msgstr "Datenschutz"
+
+#: frontend/components/registration/index.jsx
+msgid "I have read and accept the {privacyPolicy} of App Camps."
+msgstr "Ich habe die {privacyPolicy} von App Camps gelesen und stimme zu."
+
+#: frontend/components/registration/index.jsx
+msgid "Sign up free of charge"
+msgstr "Jetzt kostenlos registrieren"
+
+#: frontend/components/registration/index.jsx
+msgid "student"
+msgstr "Schüler"
+
+#: frontend/components/registration/index.jsx
+msgid ""
+"We are sorry, but this platform was built with teachers and course "
+"instructors in mind. Nonetheless we provide a newsletter for students like "
+"you, where we will keep you informed about programming, computer science and "
+"technology."
+msgstr ""
+"Unsere Plattform ist für Lehrkräfte und Kursleiter*innen gedacht. Für "
+"Schüler*innen haben bieten wir allerdings einen Newsletter an. Wir "
+"informieren über interessante Themen und Neuigkeiten rund um die Themen "
+"Programmieren, Informatik und Technologie."
+
+#: frontend/components/registration/index.jsx
+msgid "parent"
+msgstr "Eltern"
+
+#: frontend/components/registration/index.jsx
+msgid ""
+"We are sorry, but this platform was built with teachers and course "
+"instructors in mind. Nonetheless we provide a newsletter for parents, where "
+"we will keep you informed about programming, computer science and technology."
+msgstr ""
+"Unsere Plattform ist für Lehrkräfte und Kursleiter*innen gedacht. Für Eltern "
+"bieten wir allerdings einen Newsletter an. Wir informieren über interessante "
+"Themen und Neuigkeiten rund um die Themen Programmieren, Informatik und "
+"Technologie."
+
+#: frontend/components/registration/index.jsx
+msgid "Teacher"
+msgstr "Lehrer*in"
+
+#: frontend/components/registration/index.jsx
+msgid "Course instructor"
+msgstr "Kursleiter*in"
+
+#: frontend/components/registration/index.jsx
+msgid "Parent"
+msgstr "ein Elternteil"
+
+#: frontend/components/registration/index.jsx
+msgid "Student"
+msgstr "Schüler*in"
+
+#: frontend/components/registration/index.jsx
+msgid "Please sign up for free access"
+msgstr "Registriere dich, um kostenlos Zugang zu erhalten"
+
+#: frontend/components/registration/index.jsx
+msgid "Already registered? {signIn}"
+msgstr "Bereits registriert? {signIn}"
+
+#: frontend/components/registration/index.jsx
+#: frontend/components/registration/success/index.jsx
+msgid "Sign in"
+msgstr "Hier gehts zur Anmeldung"
+
+#: frontend/components/registration/index.jsx
+msgid "I am a"
+msgstr "Ich bin"
+
+#: frontend/components/registration/newsletters/index.jsx
+msgid "Thank you for you interest in App Camps"
+msgstr "Danke für dein Interesse an App Camps"
+
+#: frontend/components/registration/newsletters/index.jsx
+msgid "Subscribe to our {resourceName} newsletter"
+msgstr "Abonniere unseren {resourceName}newsletter"
+
+#: frontend/components/registration/newsletters/index.jsx
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+#: frontend/components/registration/success/index.jsx
+msgid "Registration success"
+msgstr "Registrierung erfolgreich"
+
+#: frontend/components/registration/success/index.jsx
+msgid "Welcome to App Camps, {firstName}!"
+msgstr "Herzlich willkommen bei App Camps, {firstName}!"
+
+#: frontend/components/registration/success/index.jsx
+msgid ""
+"You will soon receive an confirmation email. To complete your registration, "
+"please click on the confirmation link in the email. Afterwards you will be "
+"able to sign in."
+msgstr ""
+"Du wirst bald eine Bestätigungs-E-Mail erhalten. Klicke bitte auf den Link "
+"in der E-Mail um deine Registrierung abzuschließen. Danach kannst du dich "
+"einloggen."
+
+#: frontend/components/registration/success/index.jsx
+msgid ""
+"If the email does not arrive within the next minutes please "
+"{resendConfirmationLink} it or {supportEmailLink}."
+msgstr ""
+"Falls die E-Mail nicht innerhalb der nächsten Minuten ankommt "
+"{resendConfirmationLink} oder {supportEmailLink}."
+
+#: frontend/components/registration/success/index.jsx
+msgid "send us an email"
+msgstr "melde dich bei uns"
+
+#: frontend/components/registration/success/index.jsx
+msgid "click here to resend"
+msgstr "lass sie dir erneut zuschicken"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "In a lesson (duty)"
+msgstr "Im regulären Unterricht (Pflichtbereich)"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "In a lesson (choice)"
+msgstr "Im regulären Unterricht (Wahlbereich)"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "With a project group"
+msgstr "In einer AG"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "On project days"
+msgstr "Während der Projekttage"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "In which project group will you use the materials?"
+msgstr "In welcher AG findet der Kurs statt?"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "In what kind of project will you use the materials?"
+msgstr "Um was für ein Projekt handelt es sich?"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "In which school subject will you use the materials?"
+msgstr "In welchem Fach findet der Kurs statt?"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Add information about your class"
+msgstr "Angaben zu diesem Klassenprofil"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "Class name"
+msgstr "Name der Klasse"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "School year"
+msgstr "Schuljahr"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "Grade"
+msgstr "Klassenstufe"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Girl count"
+msgstr "Anzahl der Mädchen"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Boy count"
+msgstr "Anzahl der Jungen"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+msgid "Where will you use the materials?"
+msgstr "Einsatzrahmen"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Next"
+msgstr "Weiter"
+
+#: frontend/components/shared/class-form/add-class-informations/index.jsx
+#: frontend/components/shared/class-form/add-courses/index.jsx
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Back"
+msgstr "Zurück"
+
+#: frontend/components/shared/class-form/add-courses/index.jsx
+msgid "No Courses found for topic {topic}"
+msgstr "Für {topic} konnten keine Kurse gefunden werden"
+
+#: frontend/components/shared/class-form/add-courses/index.jsx
+msgid "remove"
+msgstr "entfernen"
+
+#: frontend/components/shared/class-form/add-courses/index.jsx
+msgid "added"
+msgstr "hinzugefügt"
+
+#: frontend/components/shared/class-form/add-courses/index.jsx
+msgid "add"
+msgstr "hinzufügen"
+
+#: frontend/components/shared/class-form/add-courses/index.jsx
+msgid "Choose topics and courses for class"
+msgstr "Auswahl von Themen und Kursen"
+
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Group name"
+msgstr "Name der Gruppe"
+
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Year"
+msgstr "Kalenderjahr"
+
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "Age"
+msgstr "Alter der Teilnehmer"
+
+#: frontend/components/shared/class-form/add-extracurricular-informations/index.jsx
+msgid "In what setting will you teach the courses?"
+msgstr "In welchem Rahmen findet der Kurs statt?"
+
+#: frontend/components/shared/class-form/choose-class-type/index.jsx
+msgid "Where will the class take place"
+msgstr "In welchem Rahmen findet der Kurs statt"
+
+#: frontend/components/shared/class-form/choose-class-type/index.jsx
+msgid "School class"
+msgstr "In der Schule"
+
+#: frontend/components/shared/class-form/choose-class-type/index.jsx
+msgid "Extracurricular"
+msgstr "Außerschulisch"
+
+#: frontend/components/shared/class-form/index.jsx
+msgid "Choose class type"
+msgstr "Geplante Nutzung"
+
+#: frontend/components/shared/class-form/index.jsx
+msgid "Add class information"
+msgstr "Informationen zur Klasse"
+
+#: frontend/components/shared/class-form/index.jsx
+msgid "Choose courses"
+msgstr "Kursauswahl"
+
+#: frontend/components/shared/course/certificate/index.jsx
+msgid "Available when all lessons are completed."
+msgstr "Verfügbar sobald alle Lektionen als erledigt markiert wurden."
+
+#: frontend/components/shared/course/certificate/index.jsx
+msgid "Click here to download your template."
+msgstr "Klicke hier um die Zertifikatvorlage herunterzuladen."
+
+#: frontend/components/shared/course/certificate/index.jsx
+msgid "Click to get help"
+msgstr "Klicke um zur Hilfe zu gelangen"
+
+#: frontend/components/shared/lesson/index.jsx
+msgid "Lesson content"
+msgstr "Inhalte der Lektion"
+
+#: frontend/components/shared/lesson/index.jsx
+msgid "Common mistakes"
+msgstr "Häufige Fehler"
+
+#: frontend/components/shared/lesson/index.jsx
+msgid "Lesson links & hints"
+msgstr "Links & Hinweise zur Lektion"
+
+#: frontend/components/shared/lesson/index.jsx
+msgid "previous lesson"
+msgstr "vorherige Lektion"
+
+#: frontend/components/shared/lesson/index.jsx
+msgid "next lesson"
+msgstr "nächste Lektion"
+
+#: frontend/components/shared/lesson/index.jsx
+msgid "completed {completedLessons} of {totalLessons} lessons"
+msgstr "{completedLessons} von {totalLessons} Lektionen erledigt"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Enter school type"
+msgstr "Schultyp eingeben…"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "School type"
+msgstr "Schulart"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "School name"
+msgstr "Schulname"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Subjects"
+msgstr "Fächer"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Profession / professional background"
+msgstr "Beruf bzw. beruflicher Hinterund"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Enter country"
+msgstr "Land eingeben..."
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Canton"
+msgstr "Kanton"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Federal state"
+msgstr "Bundesland"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "State"
+msgstr "Bundesstaat"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "District"
+msgstr "Distrikt"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Region"
+msgstr "Region"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Choose {entity}"
+msgstr "{entity} auswählen"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Country"
+msgstr "Land"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "Postal code"
+msgstr "Postleitzahl"
+
+#: frontend/components/shared/locality-form/index.jsx
+msgid "City"
+msgstr "Stadt"
+
+#: frontend/components/shared/select/index.jsx
+msgid "Clear all"
+msgstr "Alle löschen"
+
+#: frontend/components/shared/select/index.jsx
+msgid "Clear"
+msgstr "Löschen"
+
+#: frontend/components/shared/select/index.jsx
+msgid "Add label"
+msgstr "Label hinzufügen"
+
+#: frontend/components/shared/select/index.jsx
+msgid "No results found"
+msgstr "Keine Ergebnisse"
+
+#: frontend/components/shared/select/index.jsx
+msgid "Please select"
+msgstr "Bitte auswählen"
+
+#: frontend/components/shared/select/index.jsx
+msgid "Type to search"
+msgstr "Tippen um zu suchen"
+
+#: frontend/components/shared/select/index.jsx
+msgid "Add {label}"
+msgstr "{label} auswählen"
+
+#: frontend/components/topics/index.jsx
+msgid "Preparation"
+msgstr "Vorbereitung"
+
+#: frontend/components/topics/index.jsx
+msgid "Course offering"
+msgstr "Kursangebot"
+
+#: frontend/components/topics/preparation-materials/index.jsx
+msgid "There are no preparation materials for this topic."
+msgstr ""
+"Für dieses Thema sind keine Materialien zur Kursvorbereitung vorhanden."
+
+#: frontend/components/topics/preparation-materials/index.jsx
+msgid "Here are important informations and materials to prepare your lessons."
+msgstr ""
+"Hier findest du wichtige Informationen und Unterlagen zur Vorbereitung."
+
+#: frontend/config.js
+msgid "Elementary school"
+msgstr "Grundschule"
+
+#: frontend/config.js
+msgid "Main school"
+msgstr "Hauptschule"
+
+#: frontend/config.js
+msgid "Middle school"
+msgstr "Realschule"
+
+#: frontend/config.js
+msgid "Comprehensive school"
+msgstr "Gesamtschule / Gemeinschaftschule / Stadtteilschule"
+
+#: frontend/config.js
+msgid "Academic high school"
+msgstr "Gymnasium"
+
+#: frontend/config.js
+msgid "Vocational school"
+msgstr "Berufliche Schule"
+
+#: frontend/config.js
+msgid "University"
+msgstr "Hochschule / Universität"
+
+#: frontend/config.js
+msgid "Special school"
+msgstr "Förderschule"
+
+#: frontend/sagas/index.js
+msgid "Login successful. You will now be redirected..."
+msgstr "Login erfolgreich. Sie werden jetzt weitergeleitet."
+
+#: frontend/services/api/helpers.js
+msgid "Too many requests. Please try again in a few seconds."
+msgstr "Zu viele Anfragen. Bitte versuchen sie es in ein paar Sekunden erneut."
+
+#: frontend/services/api/helpers.js
+msgid ""
+"There was an Error processing your request. Please contact philipp@appcamps."
+"de if the problem persists."
+msgstr ""
+"Leider ist ein Fehler aufgetreten. Wende dich bitte an philipp@appcamps.de "
+"falls das Problem weiterhin besteht."
+
+#: frontend/utils/translations.js
+msgid "Required"
+msgstr "Erforderlich"
+
+#: frontend/utils/translations.js
+msgid "Invalid"
+msgstr "Ungültig"
+
+#: frontend/utils/translations.js
+msgid "Not an email"
+msgstr "Keine E-Mail"
+
+#: frontend/utils/translations.js
+msgid "Not equal"
+msgstr "Nicht identisch"
+
+#: frontend/utils/translations.js
+msgid "You need to confirm our privacy policy"
+msgstr "Du musst die Datenschutzbedingungen bestätigen"
+
+#: frontend/utils/translations.js
+msgid "At least 8 chars"
+msgstr "Mindestens 8 Zeichen"
+
+#: frontend/utils/translations.js
+msgid "has already been taken"
+msgstr "Bereits vorhanden"
+
+#~ msgid "News & announcements"
+#~ msgstr "Neuigkeiten & Ankündigungen"
+
+#~ msgid "Training & skills"
+#~ msgstr "Weiterbildung & Qualifikation"
+
+#~ msgid "Community"
+#~ msgstr "Community"
+
+#~ msgid "back to dashboard"
+#~ msgstr "zum Dashboard"
+
+#~ msgid "What are certificates and where can i find them?"
+#~ msgstr "Was sind Zertifikate und wie kann ich sie herunterladen?"
+
+#~ msgid "Topics"
+#~ msgstr "Themenüberblick"
+
+#~ msgid "Topics and teaching materials"
+#~ msgstr "Themenüberblick und Unterlagen"
+
+#~ msgid "An overview of our topics"
+#~ msgstr "Unsere Themen im Überblick"
+
+#~ msgid "Selected topic not found."
+#~ msgstr "Das gewählte Thema wurde nicht gefunden."
+
+#~ msgid "An error occurred"
+#~ msgstr "Es ist ein Fehler aufgetreten"
+
+#~ msgid "Loading"
+#~ msgstr "Lade"
+
+#~ msgid "Lesson preparations and printable documents"
+#~ msgstr "Unterrichtsvorbereitung und Druckvorlagen"
+
+#~ msgid "Lesson materials"
+#~ msgstr "Unterrichtsmaterial"
+
+#~ msgid "App Camps Community"
+#~ msgstr "App Camps Community"
+
+#~ msgid "NEW:"
+#~ msgstr "NEU:"
+
+#~ msgid "App development"
+#~ msgstr "App Entwicklung"
+
+#~ msgid "HTML & CSS"
+#~ msgstr "Webseiten mit HTML & CSS"
+
+#~ msgid "Scratch"
+#~ msgstr "Scratch"

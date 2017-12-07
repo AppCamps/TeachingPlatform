@@ -1,0 +1,14 @@
+#!/bin/bash
+DOMAIN=$1
+
+curl -n https://api.heroku.com/apps/$HEROKU_APP_NAME/config-vars \
+  -X PATCH \
+  -d '{
+        "API_DOMAIN": "api.'$DOMAIN'",
+        "DOMAIN": "'$DOMAIN'",
+        "TEACH_URL": "https://teach.'$DOMAIN'",
+        "WWW_URL": "https://'$DOMAIN'"
+      }' \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/vnd.heroku+json; version=3" \
+  -H "Authorization: Bearer $HEROKU_AUTH_TOKEN"

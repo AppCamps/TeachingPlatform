@@ -1,0 +1,22 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/grid.scss';
+
+.container {
+  @include site-container;
+}
+
+.header {
+  flex: 0 0 auto;
+  background-color: $color-bg-white;
+  border-bottom: 1px solid $color-gray-light-2;
+  height: $header-height;
+}
+
+.logo {
+  @include span(3);
+}
+
+.actions {
+  @include span(9);
+  text-align: right;
+}

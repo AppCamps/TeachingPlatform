@@ -1,0 +1,58 @@
+@import '../__css__/colors.scss';
+@import '../__css__/grid.scss';
+
+.navigation,
+.info {
+  @include site-container;
+  margin-top: $top-margin;
+}
+
+.list {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  @include span(4 of 12);
+  display: inline-block;
+
+  a {
+    display: inline-block;
+    box-sizing: border-box;
+    padding-bottom: 0.75em;
+    color: $color-gray-dark-1;
+    border-bottom: 1px solid $color-gray-dark-1;
+    width: 100%;
+  }
+
+  &--is-active a {
+    color: $color-green;
+    border-color: $color-green;
+    box-shadow: inset 0 -1px, 0 1px;
+  }
+}
+
+.activity-indicator {
+  display: inline-block;
+  margin: 0 0.5em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background: $color-green;
+  box-shadow: 0 0 0 rgba($color-green, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($color-green, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 0.5em rgba($color-green, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($color-green, 0);
+  }
+}

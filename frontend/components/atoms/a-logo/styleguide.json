@@ -1,0 +1,8 @@
+{
+  "index": "1.1",
+  "category": "Atoms",
+  "title": "Logo",
+  "description": "Appcamps Logo",
+  "code": "<Logo />",
+  "className": "logo"
+}

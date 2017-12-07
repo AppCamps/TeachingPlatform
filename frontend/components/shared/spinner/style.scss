@@ -1,0 +1,19 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/typography.scss';
+
+$spinkit-spinner-margin: 1em 1em 0;
+$spinkit-size: $font-size-small;
+$spinkit-spinner-color: $color-primary;
+
+@import '~spinkit/scss/spinners/1-rotating-plane.scss';
+
+.spinner {
+  @extend .sk-rotating-plane;
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 0.2s;
+}
+
+.spinner--visible {
+  opacity: 1;
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+CERTIFICATES_DIR=./dev/certificates
+GENERATED_DIR=certs/www
+
+mkdir -p $GENERATED_DIR
+
+openssl genrsa -des3 -passout pass:appcamps -out $GENERATED_DIR/rootCA.key 2048
+openssl req -x509 -new -nodes -key $GENERATED_DIR/rootCA.key -sha256 -days 365 -passin pass:appcamps -out $GENERATED_DIR/rootCA.pem -config <( cat $CERTIFICATES_DIR/rootCA.csr.cnf )
+
+openssl req -new -sha256 -nodes -out $GENERATED_DIR/rails.csr -newkey rsa:2048 -keyout $GENERATED_DIR/rails.key -config <( cat $CERTIFICATES_DIR/rails.csr.cnf )
+openssl x509 -req -in $GENERATED_DIR/rails.csr -CA $GENERATED_DIR/rootCA.pem -CAkey $GENERATED_DIR/rootCA.key -CAcreateserial -passin pass:appcamps -out $GENERATED_DIR/rails.crt -days 365 -sha256  -extfile $CERTIFICATES_DIR/rails.ext
+
+openssl req -new -sha256 -nodes -out $GENERATED_DIR/webpack.csr -newkey rsa:2048 -keyout $GENERATED_DIR/webpack.key -config <( cat $CERTIFICATES_DIR/webpack.csr.cnf )
+openssl x509 -req -in $GENERATED_DIR/webpack.csr -CA $GENERATED_DIR/rootCA.pem -CAkey $GENERATED_DIR/rootCA.key -CAcreateserial -passin pass:appcamps -out $GENERATED_DIR/webpack.crt -days 365 -sha256  -extfile $CERTIFICATES_DIR/webpack.ext

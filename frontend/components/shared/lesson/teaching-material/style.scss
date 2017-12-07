@@ -1,0 +1,18 @@
+@import '../../../__css__/colors.scss';
+@import '../../../__css__/typography.scss';
+
+.title,
+.subtitle {
+  color: $color-primary;
+  margin-left: 0.5em;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.previewImage {
+  margin-top: 0.5em;
+  width: 100%;
+  height: auto;
+}

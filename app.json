@@ -1,0 +1,162 @@
+{
+  "name": "LearningPlatform",
+  "scripts": {
+    "postdeploy": "./scripts/review_apps/bootstrap",
+    "pr-predestroy": "./scripts/review_apps/teardown"
+  },
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "HEROKU_AUTH_TOKEN": {
+      "required": true
+    },
+    "KAS_USER": {
+      "required": true
+    },
+    "KAS_PASSWORD": {
+      "required": true
+    },
+    "STAGING_DATABASE_URL": {
+      "required": true
+    },
+    "DOMAIN": {
+      "required": true
+    },
+    "API_DOMAIN": {
+      "required": true
+    },
+    "EXPIRE_SESSION_AFTER": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "MANDRILL_API_KEY": {
+      "required": true
+    },
+    "MANDRILL_USER": {
+      "required": true
+    },
+    "MAX_POOL_SIZE": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "ROLLBAR_ACCESS_TOKEN": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "AWS_ACCESS_KEY": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "AWS_REGION": {
+      "required": true
+    },
+    "AWS_BUCKET": {
+      "required": true
+    },
+    "INTERCOM_SECRET_KEY": {
+      "required": true
+    },
+    "LAST_PRIVACY_POLICY_UPDATE_AT": {
+      "required": true
+    },
+    "TEACH_URL": {
+      "required": true
+    },
+    "FROM_EMAIL": {
+      "required": true
+    },
+    "SHOW_SENSITIVE_DATA_LOGS": {
+      "value": "true"
+    },
+    "MAILCHIMP_API_KEY": {
+      "required": true
+    },
+    "MAILCHIMP_NEWSLETTER_LIST_ID": {
+      "required": true
+    },
+    "MYSQL_HOST": {
+      "required": true
+    },
+    "MYSQL_USERNAME": {
+      "required": true
+    },
+    "MYSQL_PASSWORD": {
+      "required": true
+    },
+    "MYSQL_DATABASE": {
+      "required": true
+    },
+    "MYSQL_SERVER_CERTIFICATE": {
+      "required": true
+    },
+    "MYSQL_CLIENT_CERTIFICATE": {
+      "required": true
+    },
+    "MYSQL_CLIENT_KEY": {
+      "required": true
+    },
+    "NPM_CONFIG_PRODUCTION": {
+      "required": true
+    },
+    "NODE_MODULES_CACHE": {
+      "required": true
+    },
+    "TRACKJS_APPLICATION": {
+      "required": true
+    },
+    "INTERCOM_APP_ID": {
+      "required": true
+    },
+    "WWW_URL": {
+      "required": true
+    },
+    "COMMUNITY_URL": {
+      "required": true
+    },
+    "SUPPORT_EMAIL": {
+      "required": true
+    },
+    "DOMAIN": {
+      "required": true
+    },
+    "NODE_ENV": {
+      "required": true
+    },
+    "STAGING_DOMAIN": {
+      "required": true
+    },
+    "BASIC_AUTH": {
+      "required": true
+    },
+    "PREVIEW_FEATURES": {
+      "value": "true"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "Hobby"
+    }
+  },
+  "addons": ["heroku-postgresql", "memcachedcloud:30"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+@import '../../__css__/typography.scss';
+
+.form-container {
+  margin-top: 128px;
+}
+
+.show-code-text {
+  font-size: $font-size-large;
+}
+
+.show-code-link {
+  font-size: calc(#{$font-size-default} * 1.5);
+  
+  span {
+    display: inline-block;
+    width: 400px;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../__css__/colors.scss';
+
+.help-icon {
+  color: $color-black;
+  border-bottom: $color-black 1px dashed;
+  width: 1.25em;
+  height: 1.25em;
+  text-align: center;
+  line-height: 1.25em !important;
+  vertical-align: middle;
+  margin-top: -.125em;
+}

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Registration /> renders correctly with user firstName 1`] = `
+<RegistrationSuccess
+  firstName="Thomas"
+  redirectToRegistrationPage={[Function]}
+>
+  <div
+    className="container"
+  >
+    <div
+      className="registration"
+    >
+      <h1
+        className="heading"
+      >
+        Registration success
+      </h1>
+      <div
+        className="signInLink"
+      >
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to="/login"
+        >
+          <a
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Sign in
+          </a>
+        </Link>
+      </div>
+      <div
+        className="registrationSuccess"
+      >
+        <div
+          className="registrationIcon"
+        >
+          <Check
+            color="white"
+          >
+            <svg
+              viewBox="-2232.818 -1235.338 10.293 9.852"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1383,1407.041l3.234,4.506,6.247-8.7"
+                fill="none"
+                stroke="white"
+                strokeWidth="1px"
+                transform="translate(-3615.412 -2637.89)"
+              />
+            </svg>
+          </Check>
+        </div>
+        <div
+          className="confirmationInfo"
+        >
+          <h2>
+            Welcome to App Camps, Thomas!
+          </h2>
+          <p>
+            You will soon receive an confirmation email. To complete your registration, please click on the confirmation link in the email. Afterwards you will be able to sign in.
+          </p>
+          <p>
+            If the email does not arrive within the next minutes please [object Object] it or [object Object].
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</RegistrationSuccess>
+`;

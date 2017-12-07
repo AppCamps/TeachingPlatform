@@ -1,0 +1,60 @@
+@import './components/__css__/colors.scss';
+@import './components/__css__/grid.scss';
+@import './components/__css__/font-families.scss';
+@import './components/__css__/typography.scss';
+
+:global {
+  @import '~normalize.css';
+}
+
+body,
+html,
+:global(#root),
+:global(#root) > div {
+  height: 100%;
+
+  @include font-family-OpenSans;
+  @include font-size-default;
+}
+
+body {
+  background-color: $color-bg-default;
+  color: $color-black;
+}
+
+:global(#root) {
+  @include site-container--full;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-family-BreeSerif--light;
+  vertical-align: middle;
+  line-height: 1.1em;
+}
+
+h1 {
+  @include font-size-large;
+  margin: 1rem 0;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  cursor: pointer;
+  outline-color: $color-primary;
+}
+
+dd,
+dt {
+  margin: 0;
+}

@@ -1,0 +1,166 @@
+@import '../__css__/colors.scss';
+@import '../__css__/grid.scss';
+@import '../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+}
+
+.classes {
+  @include span(12);
+}
+
+.classes,
+.class-info {
+  margin-bottom: 1em;
+}
+
+@mixin class-container {
+  padding: gutter(6) 3em;
+}
+
+.create-class,
+.class,
+.no-classes {
+  @include class-container;
+  margin-bottom: 0.5em;
+  background-color: $color-bg-white;
+  clear: fix;
+}
+
+.no-classes,
+.no-courses {
+  text-align: center;
+  color: $color-font-light;
+}
+
+.create-class {
+  background-color: $color-bg-action;
+}
+
+.create-class--text {
+  margin-left: 0.5em;
+}
+
+.head {
+  display: block;
+  cursor: pointer;
+  clear: fix;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.open {
+    padding-bottom: 1em;
+    border-bottom: 1px solid $color-gray-light-2;
+  }
+}
+
+.name {
+  @include span(4 no-gutter);
+  @include font-size-default;
+
+  .expandIcon {
+    @include font-size-default;
+    display: inline-block;
+    position: absolute;
+    line-height: 2.5rem;
+    color: $color-font-light;
+
+    .open & {
+      margin-left: -5px;
+    }
+  }
+
+  .title {
+    padding-left: 1em;
+    line-height: 2.5rem;
+    color: $color-font-dark;
+  }
+
+  .identifier {
+    color: $color-font-light;
+    padding-left: 0.5em;
+    line-height: 2.5rem;
+  }
+}
+
+.continue {
+  @include span(3 no-gutter);
+  text-align: right;
+
+  button {
+    margin: 0;
+  }
+}
+
+.progressBarContainer {
+  line-height: 2.5rem;
+}
+
+.progressBar {
+  margin-top: 0.7em;
+  @include span(5 no-gutter);
+  clear: fix;
+  background-color: $color-bg-default;
+  height: 1.1em;
+
+  .progress {
+    display: block;
+    width: 0%;
+    height: inherit;
+    background-color: $color-primary;
+  }
+
+  .placeholder {
+    color: $color-font-dark;
+    font-size: $font-size-small;
+    line-height: 1.4em;
+    text-align: center;
+  }
+}
+
+.body {
+  padding-top: 1em;
+}
+
+.body-actions {
+  @include span(12 last no-gutter);
+  color: $color-font-default;
+  text-align: right;
+}
+
+.course:not(:first-child) {
+  margin-top: 2em;
+}
+
+.menu-actions {
+  @include span(12);
+  padding: 1em 3em;
+}
+
+.bt-show-all {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+  color: $color-font-dark;
+  @include font-size-default;
+  text-decoration: underline;
+}
+
+.help-text {
+  font-size: $font-size-small;
+
+  span {
+    color: $color-font-dark;
+    padding-right: 1em;
+  }
+}
+
+.bt-course {
+  width: 160px;
+  text-align: center;
+}

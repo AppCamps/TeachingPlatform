@@ -1,0 +1,49 @@
+@import '../../../__css__/colors.scss';
+@import '../../../__css__/font-families.scss';
+@import '../../../__css__/grid.scss';
+@import '../../../__css__/typography.scss';
+
+.preparation-material {
+  color: $color-font-default;
+}
+
+.preparation-material--preview {
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 5em;
+  color: $color-white;
+  background-color: $color-gray-light-1;
+}
+
+.preparation-material--info-box {
+  @include span(4 of 4);
+  background-color: $color-bg-white;
+  padding: 1em;
+  height: 115px;
+}
+.preparation-material--title {
+  @include span(3 of 4 no-gutter);
+  @include font-size-default;
+  @include font-family-OpenSans;
+  display: inline-block;
+  margin: 0;
+  line-height: 1.2rem;
+}
+
+.preparation-material--subtitle {
+  @include span(1 of 4 no-gutter);
+  color: $color-primary;
+  display: inline-block;
+  text-align: right;
+  line-height: 1.2rem;
+}
+
+.preparation-material--description {
+  @include span(4 of 4 no-gutter);
+  @include font-size-small;
+  margin-top: 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 4.5em;
+}

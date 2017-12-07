@@ -1,0 +1,225 @@
+de:
+  activerecord:
+    attributes:
+      course:
+        created_at: Created at
+        description: Description
+        id: Id
+        lessons: Lessons
+        position: Position
+        slug: Slug
+        title: Title
+        topic: Topic
+        updated_at: Updated at
+        published: Published
+      lesson:
+        course: Kurs
+        created_at: Created at
+        description: Beschreibung
+        id: Id
+        position: Position
+        teaching_materials: Teaching materials
+        title: Titel
+        updated_at: Updated at
+        common_mistakes: Common mistakes
+        expertises: Expertises
+        published: Published
+      teaching_material:
+        created_at: Created at
+        id: Id
+        image: Image
+        image_data: Image data
+        lesson: Lesson
+        lesson_content: Lesson content
+        link: Link
+        listing_item: Listing item
+        listing_title: Listing title
+        medium_type: Medium type
+        position: Position
+        subtitle: Subtitle
+        title: Title
+        updated_at: Updated at
+        enum:
+          medium_type:
+            medium_type_video: Video
+            medium_type_other: Andere
+        listing_icon: Listing icon
+        media_type: Media type
+        type: Type
+      topic:
+        courses: Courses
+        created_at: Created at
+        id: Id
+        title: Title
+        updated_at: Updated at
+      user:
+        age: Alter
+        confirmation_sent_at: Confirmation sent at
+        confirmation_token: Confirmation token
+        confirmed_at: Confirmed at
+        created_at: Created at
+        current_sign_in_ip: Current sign in ip
+        email: E-Mail
+        enum:
+          role:
+            role_course_instructor: Kursleiter*in außerschulisch
+            role_custom: Sonstiges
+            role_teacher: Lehrkraft an einer Schule
+        first_name: Vorname
+        full_name: Full name
+        id: Id
+        admin: Is admin
+        beta: Is beta tester
+        last_name: Nachname
+        last_sign_in_ip: Last sign in ip
+        name: Name
+        password_confirmation: Password confirmation
+        remember_created_at: Remember created at
+        reset_password_sent_at: Reset password sent at
+        reset_password_token: Reset password token
+        role: Funktion
+        role_custom: Funktion (Eigene Angabe)
+        sign_in_count: Sign in count
+        subjects: Schulfächer bzw. beruflicher Hintergrund
+        teacher: Teacher
+        title: Titel
+        unconfirmed_email: Unconfirmed email
+        updated_at: Updated at
+        school_classes: School classes
+      common_mistake:
+        lesson: Lesson
+        position: Position
+        problem: Problem
+        solution: Solution
+      expertise:
+        lessons: Lessons
+        title: Title
+      preparation_material:
+        id: Id
+        title: Title
+        created_at: Created at
+        icon: Icon
+        link: Link
+        position: Position
+        published: Published
+        subtitle: Subtitle
+        updated_at: Updated at
+        description: Description
+        medium_type: Medium type
+        topic: Topic
+      school_class:
+        created_at: Created at
+        id: Id
+        metrics: Metrics
+        updated_at: Updated at
+        user: User
+        resource_type: Resource type
+    models:
+      chapter: Chapters
+      course: Courses
+      lesson: Lessons
+      teaching_material: Teaching material
+      topic: Topic
+      users: Benutzer
+      common_mistake: Common mistake
+      expertise: Expertise
+      preparation_material: Preparation material
+      school_class: School class
+  admin:
+    help:
+      course:
+        description: 'Pflichtfeld. '
+        lessons: 'optional. '
+        position: 'optional. '
+        slug: Pflichtfeld. Länge bis zu 255.
+        title: Pflichtfeld. Länge bis zu 255.
+        topic: 'Pflichtfeld. '
+        users: 'optional. '
+        published:
+      lesson:
+        chapters: 'optional. '
+        course: 'Pflichtfeld. '
+        description: 'Pflichtfeld. '
+        position: 'optional. '
+        teaching_materials: 'optional. '
+        title: Pflichtfeld. Länge bis zu 255.
+        common_mistakes: 'optional. '
+        expertises: 'optional. '
+      teaching_material:
+        image: 'optional. '
+        image_data: 'optional. '
+        lesson: 'optional. '
+        lesson_content:
+        link: 'optional. '
+        listing_item:
+        listing_title: 'optional. '
+        media_type: 'optional. '
+        medium_type: 'Pflichtfeld. '
+        position: 'optional. '
+        subtitle: 'optional. '
+        title: 'optional. '
+        type: 'Pflichtfeld. '
+        listing_icon: 'optional. '
+      topic:
+        courses: 'optional. '
+        title: 'Pflichtfeld. '
+      user:
+        confirmation_sent_at: 'optional. '
+        confirmation_token: optional. Länge bis zu 255.
+        confirmed_at: 'optional. '
+        courses: 'optional. '
+        current_sign_in_at: 'optional. '
+        current_sign_in_ip: optional. Länge bis zu 255.
+        email: Required. Length up to 255.
+        first_name: Pflichtfeld. Länge bis zu 255.
+        full_name: 'optional. '
+        admin:
+        last_name: Pflichtfeld. Länge bis zu 255.
+        last_sign_in_at: 'optional. '
+        last_sign_in_ip: optional. Länge bis zu 255.
+        password: Optional. Length of 7-128.
+        password_confirmation: Optional. Length up to 255.
+        remember_created_at: 'optional. '
+        reset_password_sent_at: 'optional. '
+        reset_password_token: optional. Länge bis zu 255.
+        role: 'Pflichtfeld. '
+        role_custom: optional. Länge bis zu 255.
+        sign_in_count: 'optional. '
+        subjects: optional. Länge bis zu 255.
+        teacher:
+        title: 'optional. '
+        unconfirmed_email: optional. Länge bis zu 255.
+        school_classes: 'optional. '
+        mmon_mistake:
+        lesson: 'Pflichtfeld. '
+        position: 'optional. '
+        problem: Pflichtfeld. Länge bis zu 255.
+        solution: 'Pflichtfeld. '
+      expertise:
+        lessons: 'optional. '
+        title: Pflichtfeld. Länge bis zu 255.
+      preparation_material:
+        description: 'optional. '
+        icon: Pflichtfeld. Länge bis zu 255.
+        link: Pflichtfeld. Länge bis zu 255.
+        medium_type: 'Pflichtfeld. '
+        position: 'optional. '
+        published:
+        subtitle: optional. Länge bis zu 255.
+        title: Pflichtfeld. Länge bis zu 255.
+        topic: 'optional. '
+      school_class:
+        metrics: 'optional. '
+        user: 'optional. '
+  mailers:
+    user_mailer:
+      welcome:
+        subject: Willkommen bei App Camps
+      confirmation_instructions:
+        subject: E-Mail-Adresse bestätigen
+      password_reset_link:
+        subject: Setze dein App Camps Passwort zurück
+      password_reset_notification:
+        subject: Dein App Camps Passwort wurde geändert
+      email_changed_notification:
+        subject: Deine App Camps E-Mail-Adresse wurde geändert

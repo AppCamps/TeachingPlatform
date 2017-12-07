@@ -1,0 +1,25 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/font-families.scss';
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+.number {
+  @include font-family-BreeSerif--light;
+  @include font-size-larger;
+
+  display: inline-block;
+
+  background-color: $color-bg-white;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: 100%;
+
+  width: 1.25em;
+  height: 1.25em;
+  line-height: 1.25em;
+  text-align: center;
+
+  &--inverted {
+    color: $color-font-white;
+  }
+}

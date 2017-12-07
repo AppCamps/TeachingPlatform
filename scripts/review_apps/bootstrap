@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+echo "Copy database from staging"
+pg_dump --no-acl --no-owner $STAGING_DATABASE_URL | psql $DATABASE_URL && bundle exec rake db:migrate db:seed
+echo ""
+
+SUBDOMAIN=${HEROKU_APP_NAME/appcamps-staging-pr-/}
+echo "Adding subdomains for $SUBDOMAIN.$STAGING_DOMAIN"
+
+echo "Install dependencies"
+gem install 'nori'
+echo ""
+
+echo "Setting up domains"
+./scripts/utils/kas_dns_settings add_dns community.$SUBDOMAIN community.$SUBDOMAIN.$STAGING_DOMAIN.herokudns.com
+./scripts/utils/kas_dns_settings add_dns admin.$SUBDOMAIN admin.$SUBDOMAIN.$STAGING_DOMAIN.herokudns.com
+./scripts/utils/kas_dns_settings add_dns teach.$SUBDOMAIN teach.$SUBDOMAIN.$STAGING_DOMAIN.herokudns.com
+
+./scripts/utils/heroku_add_domain community.$SUBDOMAIN.$STAGING_DOMAIN
+./scripts/utils/heroku_add_domain admin.$SUBDOMAIN.$STAGING_DOMAIN
+./scripts/utils/heroku_add_domain teach.$SUBDOMAIN.$STAGING_DOMAIN
+echo ""
+
+echo "Enabling SSL certs"
+./scripts/utils/heroku_enable_ssl_certs
+echo ""
+
+echo "Setting ENV vars"
+./scripts/utils/heroku_set_env_vars $SUBDOMAIN.$STAGING_DOMAIN
+echo ""

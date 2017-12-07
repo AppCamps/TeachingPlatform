@@ -1,0 +1,71 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# rubocop:disable all
+
+require 'json'
+require 'net/http'
+require 'nori'
+
+KAS_URI = URI('https://kasapi.kasserver.com/soap/KasApi.php')
+
+def build_request(request_type, params = {})
+  params['zone_host'] = 'appcampsstaging.de.'
+
+  <<-SOAP
+    <SOAP-ENV:Envelope xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/' xmlns:ns1='urn:xmethodsKasApi' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:SOAP-ENC='http://schemas.xmlsoap.org/soap/encoding/' SOAP-ENV:encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'>
+      <SOAP-ENV:Body>
+        <ns1:KasApi>
+          <Params xsi:type='xsd:string'>
+            {
+              "KasUser": "#{ENV.fetch('KAS_USER')}",
+              "KasAuthType": "sha1",
+              "KasAuthData": "#{ENV.fetch('KAS_PASSWORD')}",
+              "KasRequestType": "#{request_type}",
+              "KasRequestParams": #{JSON.dump(params)}
+            }
+          </Params>
+        </ns1:KasApi>
+      </SOAP-ENV:Body>
+    </SOAP-ENV:Envelope>
+  SOAP
+end
+
+def make_request(body)
+  req = Net::HTTP::Post.new(KAS_URI)
+  req.body = body
+
+  Net::HTTP.start(KAS_URI.hostname, KAS_URI.port, use_ssl: true) do |http|
+    http.request(req)
+  end
+end
+
+def add_dns(name, url)
+  make_request(
+    build_request(
+      'add_dns_settings',
+      'record_type' => 'CNAME',
+      'record_name' => name,
+      'record_data' => url,
+      'record_aux' => '0'
+    )
+  )
+  p 'Success.'
+end
+
+def delete_dns(name)
+  res = make_request(build_request('get_dns_settings'))
+  items = Nori.new.parse(res.body)['SOAP_ENV:Envelope']['SOAP_ENV:Body']['ns1:KasApiResponse']['return']['item'][1]['value']['item'][2]['value']['item']
+  items.map! do |item|
+    Hash[*item['item'].flat_map { |h| [h['key'], h['value']] }]
+  end
+  record_id = items.find { |i| i['record_type'] == 'CNAME' && i['record_name'] == name }['record_id']
+  make_request(build_request('delete_dns_settings', record_id: record_id))
+  p 'Success.'
+rescue
+  p "DNS Record #{name} not found"
+end
+
+send(ARGV[0].to_sym, *ARGV[1..-1])
+
+sleep 2

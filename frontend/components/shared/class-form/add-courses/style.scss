@@ -1,0 +1,77 @@
+@import '../../../__css__/colors.scss';
+@import '../../../__css__/grid.scss';
+@import '../../../__css__/typography.scss';
+
+.add-courses {
+  @include span(12);
+}
+
+.filter {
+  margin: 0 1em 1em 0;
+  padding: 0.5em 3em;
+  color: $color-white;
+}
+
+.link {
+  outline-color: none;
+  cursor: pointer;
+}
+
+.course-container {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 1em;
+  padding: 1em;
+  color: $color-font-default;
+
+  &.remove {
+    filter: grayscale(100%);
+    background-color: $color-gray-light-2;
+    color: $color-font-dark;
+  }
+}
+
+.add-course {
+  @include span(2);
+  align-self: center;
+  text-align: center;
+  color: $color-font-light;
+}
+
+.addCourseButton {
+  display: block;
+
+  width: 5em;
+  height: 5em;
+
+  margin: 1em auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+  border: 1px solid $color-black;
+  border-radius: 100%;
+  overflow: hidden;
+
+  &--remove-icon {
+    background-color: $color-gray;
+    border-color: $color-gray;
+  }
+}
+
+.spinner {
+  float: right;
+}
+
+.course-preview {
+  @include span(10);
+}
+
+.actions {
+  @include span(12 nest);
+}
+
+.next-button,
+.back-button {
+  @include span(last 2);
+}

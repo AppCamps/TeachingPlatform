@@ -1,0 +1,30 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/grid.scss';
+@import '../../__css__/typography.scss';
+
+.container {
+  @include site-container;
+  margin-top: 3em;
+
+  h1 {
+    margin-bottom: 1em;
+  }
+}
+
+.preparations {
+  @include span(12);
+  margin-bottom: 1em;
+}
+
+.content-container {
+  margin-top: 2em;
+}
+
+.preparation-material {
+  @include gallery(4 after);
+  margin-bottom: 1em;
+}
+
+.spinnerContainer {
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+@import '../../__css__/colors.scss';
+@import '../../__css__/typography.scss';
+
+.trophy {
+  
+  margin: 0px;
+  
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  span {
+    display: inline-block;
+    padding-right: 16px;
+    max-width: 90px;
+    
+    vertical-align: middle;
+    float: none;
+    
+    line-height: 1.5em;
+    text-align: center;
+    font-size: $font-size-small;
+    color: $color-font-dark;
+  }
+}
