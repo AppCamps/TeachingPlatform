@@ -15,8 +15,7 @@ const PlatformTips = (_props, { t }) => (
       </p>
       <div>
         <p>
-          {t('In the video, we introduce the platform and give some usage tips')}{' '}
-          <span className={style.mediaInfo}>(3:42)</span>:
+          {t('In the video, we introduce the platform and give some usage tips')}:
         </p>
         <div className={style.videoContainer}>
           <ReactPlayer
