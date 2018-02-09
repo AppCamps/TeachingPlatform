@@ -8,9 +8,9 @@ Run the following instructions in Terminal.
 1. Install dependencies  
 ```brew install postgresql@9.6 mysql rbenv ruby-build nvm openssl yarn```
 1. Checkout repo  
-```git clone git@github.com:AppCamps/www.git```
+```git clone git@github.com:AppCamps/TeachingPlatform.git```
 1. Change into project directory  
-```cd www```
+```cd TeachingPlatform```
 1. Install ruby & node  
 ```rbenv install && nvm install```
 1. Install bundler & needed gems  
@@ -22,7 +22,7 @@ Run the following instructions in Terminal.
 1. Configure config/database.yml
 ```cp config/database.yml.example config/database.yml && $EDITOR config/database.yml```
 1. Setup environment  
-```bin/rails db:environments:set RAILS_ENV=development && bin/rails db:environments:set RAILS_ENV=test```
+```bin/rails db:environment:set RAILS_ENV=development && bin/rails db:environment:set RAILS_ENV=test```
 1. [Setup database](http://edgeguides.rubyonrails.org/configuring.html#configuring-a-database) & create databases  
 ```bundle exec rake db:setup && RAILS_ENV=test bundle exec rake db:setup```
 1. Run tests to see if everything is working  
