@@ -24,7 +24,7 @@
       "NODE_ENV=development i18n_extract --source=frontend --locales=config/locales/frontend --pattern=t",
     "translations:import":
       "NODE_ENV=development i18n_import  --locales=config/locales/frontend --translations=frontend",
-    "auditjs": "auditjs -l error"
+    "auditjs": "auditjs -w .auditjs-whitelist -l error"
   },
   "license": "MIT",
   "devDependencies": {
