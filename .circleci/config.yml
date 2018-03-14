@@ -73,6 +73,11 @@ jobs:
             else
               echo 'skipping build'
             fi
+      - run:
+          name: Checking for vulnerabilities
+          command: |
+            bundle exec bundle audit check --update
+            yarn run auditjs
       - run: bash .circleci/setup-heroku.sh
       - deploy:
           name: Deploy to staging
@@ -93,3 +98,19 @@ jobs:
           paths:
             - ~/.yarn-cache
             - node_modules
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
