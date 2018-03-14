@@ -77,7 +77,7 @@ jobs:
           name: Checking for vulnerabilities
           command: |
             bundle exec bundle audit check --update
-            auditjs -l error
+            yarn run auditjs
       - run: bash .circleci/setup-heroku.sh
       - deploy:
           name: Deploy to staging
