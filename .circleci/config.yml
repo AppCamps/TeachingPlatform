@@ -82,10 +82,14 @@ jobs:
       - deploy:
           name: Deploy to staging
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              echo -ne '\n' | ./scripts/deploy staging
+            if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+              echo 'skipping deployment: nightly build'
             else
-              echo 'skipping deployment: not on master branch'
+              if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                echo -ne '\n' | ./scripts/deploy staging
+              else
+                echo 'skipping deployment: not on master branch'
+              fi
             fi
       - save_cache:
           name: Store bundle cache
@@ -98,19 +102,3 @@ jobs:
           paths:
             - ~/.yarn-cache
             - node_modules
-
-workflows:
-  version: 2
-  commit:
-    jobs:
-      - build
-  nightly:
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - build
