@@ -14,41 +14,6 @@ function StudentNewsletter(props, context) {
       <div className={style.info}>
         {props.children}
       </div>
-      <h2>{t('Subscribe to our {resourceName} newsletter', { resourceName: props.resourceName })}</h2>
-      <form action={`//appcamps.us9.list-manage.com/subscribe/post?u=9d7b8b6d7aa268c425ae6e5cf&id=${props.newsletterId}`} method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
-        <div className={style.email}>
-          <InputWithLabel
-            type="email"
-            name="EMAIL"
-            label={t('Email')}
-            required
-          />
-        </div>
-        <div className={style.firstName}>
-          <InputWithLabel
-            type="text"
-            name="FNAME"
-            label={t('First name')}
-            required
-          />
-        </div>
-        <div className={style.lastName}>
-          <InputWithLabel
-            type="text"
-            name="LNAME"
-            label={t('Last name')}
-            required
-          />
-        </div>
-        <div className={style.subscribe}>
-          <Button isAction isFullWidth value="Subscribe" name="subscribe" type="submit" rightIcon="envelope-o">
-            {t('Subscribe')}
-          </Button>
-        </div>
-        <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-          <input type="text" name={props.hiddenInputName} tabIndex="-1" value="" />
-        </div>
-      </form>
     </div>
   );
 }

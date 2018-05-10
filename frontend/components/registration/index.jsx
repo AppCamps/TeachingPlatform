@@ -100,11 +100,6 @@ class Registration extends Component {
                   { email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> },
                 )}
               </li>
-              <li>
-                {t(
-                  'I will answer questionnaires to evaluate the quality of our teaching materials. Before and after the execution of every course there will be short questionnaires (approx. 5 minutes). To be able to provide our platform for free we need to collect metrics to prove that our teaching materials are working.',
-                )}
-              </li>
             </ul>
           </div>
         </div>
@@ -152,7 +147,11 @@ class Registration extends Component {
         >
           {t(
             'We are sorry, but this platform was built with teachers and course instructors in mind. Nonetheless we provide a newsletter for students like you, where we will keep you informed about programming, computer science and technology.',
+            { email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> }
           )}
+          <p>
+            {t('Please read our blog post', {bloglink: <a href='https://appcamps.de/2018/01/19/informatik-ag-in-der-schule-von-schuelern-fuer-schueler/' target='_blank'>{t('To blog post')}</a>})}
+          </p>
         </NewsletterForm>
       );
       // t('parent')
