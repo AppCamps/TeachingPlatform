@@ -28,31 +28,6 @@ class Registration extends Component {
     return createUser(formValues);
   }
 
-  componentDidMount () {
-    const script = document.createElement("script");
-    script.type = 'text/javascript';
-    script.text = "!function(f,b,e,v,n,t,s)" +
-      "{if(f.fbq)return;n=f.fbq=function(){n.callMethod?" +
-      "n.callMethod.apply(n,arguments):n.queue.push(arguments)};" +
-      "if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';" +
-      "n.queue=[];t=b.createElement(e);t.async=!0;" +
-      "t.src=v;s=b.getElementsByTagName(e)[0];" +
-      "s.parentNode.insertBefore(t,s)}(window, document,'script'," +
-      "'https://connect.facebook.net/en_US/fbevents.js');" +
-      "fbq('init', '1774176022832775');" +
-      "fbq('track', 'PageView');";
-    document.body.appendChild(script);
-
-    const noscript = document.createElement("noscript");
-    const pixelImg = document.createElement("img");
-    pixelImg.height = 1;
-    pixelImg.width = 1;
-    pixelImg.style = 'display:none';
-    pixelImg.src = 'https://www.facebook.com/tr?id=1774176022832775&ev=PageView&noscript=1';
-    noscript.appendChild(pixelImg);
-    document.body.appendChild(noscript);
-  }
-
   registrationForm() {
     const { t } = this.context;
     const { selectedRole, submitting } = this.props;
@@ -125,11 +100,6 @@ class Registration extends Component {
                   { email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> },
                 )}
               </li>
-              <li>
-                {t(
-                  'I will answer questionnaires to evaluate the quality of our teaching materials. Before and after the execution of every course there will be short questionnaires (approx. 5 minutes). To be able to provide our platform for free we need to collect metrics to prove that our teaching materials are working.',
-                )}
-              </li>
             </ul>
           </div>
         </div>
@@ -177,7 +147,11 @@ class Registration extends Component {
         >
           {t(
             'We are sorry, but this platform was built with teachers and course instructors in mind. Nonetheless we provide a newsletter for students like you, where we will keep you informed about programming, computer science and technology.',
+            { email: <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> }
           )}
+          <p>
+            {t('Please read our blog post', {bloglink: <a href='https://appcamps.de/2018/01/19/informatik-ag-in-der-schule-von-schuelern-fuer-schueler/' target='_blank'>{t('To blog post')}</a>})}
+          </p>
         </NewsletterForm>
       );
       // t('parent')
