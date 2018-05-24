@@ -6,7 +6,7 @@ import IFrame from '../../atoms/a-iframe';
 import style from './style.scss';
 
 export default function Slides({ deck }) {
-  const src = `//appcamps.slides.com/appcamps/${deck}/embed`;
+  const src = `//appcamps.slides.com/appcamps/${deck}/embed?byline=hidden&share=hidden`;
   const width = 960;
   const height = 600;
 
