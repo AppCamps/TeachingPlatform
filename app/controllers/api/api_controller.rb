@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Api
-  class ApiController < ActionController::Base
+  class ApiController < ::ApplicationController
     AuthenticationError = Class.new(StandardError)
     AuthenticationMissingError = Class.new(AuthenticationError)
     AuthenticationPrivacyPolicyMissingError = Class.new(AuthenticationError)
