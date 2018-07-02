@@ -61,5 +61,12 @@ module Rack
 
       email.presence if req.path == '/api/session' && req.post?
     end
+
+    # Throttle POST requests to /api/user by ip
+    #
+    # Key: "rack::attack:#{Time.now.to_i/:period}:api/user/ip:#{req.ip}"
+    throttle('api/user/ip', limit: 10, period: 1.hour) do |req|
+      req.ip if req.path == '/api/user' && req.post?
+    end
   end
 end
