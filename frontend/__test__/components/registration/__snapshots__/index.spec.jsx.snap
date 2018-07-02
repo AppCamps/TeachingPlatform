@@ -4392,9 +4392,36 @@ exports[`<Registration /> renders form correctly 1`] = `
                       <div
                         className="nextButton"
                       >
-                        <span>
-                          Registrierung zur Zeit nicht möglich
-                        </span>
+                        <Spinner
+                          visible={false}
+                        >
+                          <div
+                            className="spinner"
+                          />
+                        </Spinner>
+                        <Button
+                          className={null}
+                          disabled={false}
+                          isAction={true}
+                          isFullWidth={false}
+                          isGreen={false}
+                          isSecondary={false}
+                          leftIcon={null}
+                          onClick={[Function]}
+                          rightIcon={null}
+                          style={Object {}}
+                          type="submit"
+                        >
+                          <button
+                            className="button buttonAction buttonClickable"
+                            disabled={false}
+                            onClick={[Function]}
+                            style={Object {}}
+                            type="submit"
+                          >
+                            Sign up free of charge
+                          </button>
+                        </Button>
                       </div>
                     </div>
                   </div>
