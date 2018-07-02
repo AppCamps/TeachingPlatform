@@ -129,27 +129,6 @@ describe('<Registration />', () => {
     });
   });
 
-  it('disables submit button while submitting', () => {
-    const createUser = () => {
-      const promise = new Promise(() => Promise.resolve());
-      setTimeout(() => promise.resolve({}), 10);
-      return promise;
-    };
-    const wrapper = setupWrapper(
-      <Registration
-        createUser={createUser}
-      />,
-    );
-
-    const userInput = factory.build('registration');
-
-    Object.keys(userInput).forEach((key) => {
-      changeInput(wrapper, key, userInput[key]);
-    });
-
-    wrapper.find('form').simulate('submit');
-    expect(wrapper.find('button').prop('disabled')).to.equal(true);
-  });
 
   describe('newsletters', () => {
     it('shows parent newsletter form for role parent', () => {
