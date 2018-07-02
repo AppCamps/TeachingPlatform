@@ -123,10 +123,7 @@ class Registration extends Component {
         </div>
         <div className={style.actions}>
           <div className={style.nextButton}>
-            <Spinner visible={submitting} />
-            <Button isAction disabled={submitting} type="submit">
-              {t('Sign up free of charge')}
-            </Button>
+            <span>Registrierung zur Zeit nicht möglich</span>
           </div>
         </div>
       </div>
