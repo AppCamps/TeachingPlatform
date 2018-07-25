@@ -18,6 +18,6 @@ class CatchJsonParseErrors
     error_response = {
       errors: [{ detail: 'Malformed JSON' }]
     }
-    return [400, { 'Content-Type' => 'application/vnd+json' }, [JSON.generate(error_response)]]
+    [400, { 'Content-Type' => 'application/vnd+json' }, [JSON.generate(error_response)]]
   end
 end

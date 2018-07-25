@@ -6,7 +6,7 @@ module Api
     skip_before_action :require_accepted_privacy_policy, only: %i[create update]
 
     # Create confirmation email
-    def create # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+    def create # rubocop:disable Metrics/AbcSize
       # Get user which email is either the email or the unconfirmed email
       # Priority to user with confirmed email
       user_table = User.arel_table

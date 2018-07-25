@@ -63,3 +63,4 @@ module Support
     end
   end
 end
+# rubocop:enable Metrics/MethodLength, Metrics/AbcSize

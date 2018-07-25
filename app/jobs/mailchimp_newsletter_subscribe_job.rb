@@ -3,7 +3,7 @@
 class MailchimpNewsletterSubscribeJob < ApplicationJob
   NEWSLETTER_ID = fetch_from_env('MAILCHIMP_NEWSLETTER_LIST_ID')
 
-  def perform(user_id, old_email = nil) # rubocop:disable Metrics/MethodLength
+  def perform(user_id, old_email = nil)
     user = User.find(user_id)
 
     gibbon

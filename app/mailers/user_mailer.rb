@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/MethodLength
-
 class UserMailer < BaseMailer
   # don't save email contents with sensitive data at mandrill
   SHOW_SENSITIVE_DATA_LOGS = (ENV['SHOW_SENSITIVE_DATA_LOGS'] || false).freeze

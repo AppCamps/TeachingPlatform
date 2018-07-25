@@ -13,7 +13,8 @@ class Course < ApplicationRecord
 
   belongs_to :topic,
              -> { merge(Topic.order(:title)) },
-             touch: true
+             touch: true,
+             inverse_of: :courses
 
   has_many :course_school_classes, dependent: :destroy
   has_many :school_classes, through: :course_school_classes
@@ -21,7 +22,8 @@ class Course < ApplicationRecord
   has_many :lessons, dependent: :destroy
   has_many :published_lessons,
            -> { where(published: true) },
-           class_name: Lesson.to_s
+           class_name: Lesson.name,
+           inverse_of: :course
 
   scope :published,
         (lambda do

@@ -6,7 +6,7 @@ class CourseSchoolClassSerializer < BaseSerializer
 
   attributes :certificate_downloaded, :certificate_url
 
-  def certificate_url # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
+  def certificate_url # rubocop:disable Metrics/AbcSize
     return if object.course.certificate.blank?
     return unless object.certificate_downloaded
 

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 # rubocop:disable Metrics/ClassLength
-
 class InitDb < ActiveRecord::Migration[4.2]
   def up
     enable_extension 'plpgsql'
@@ -236,3 +235,4 @@ class InitDb < ActiveRecord::Migration[4.2]
     raise ActiveRecord::IrreversibleMigration, 'The initial migration is not revertable'
   end
 end
+# rubocop:enable Metrics/ClassLength

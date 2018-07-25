@@ -251,5 +251,5 @@ class CreateThredded < Thredded::BaseMigration
                     :thredded_posts, column: :post_id, on_delete: :cascade
   end
 end
-# rubocop:enable Metrics/MethodLength
+
 # rubocop:enable Metrics/ClassLength

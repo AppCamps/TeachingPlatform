@@ -20,7 +20,7 @@ module ETL
           exporter.run!
         end
         @client.query('COMMIT')
-      rescue # rubocop:disable Lint/RescueWithoutErrorClass
+      rescue StandardError
         @client.query('ROLLBACK')
         raise
       end

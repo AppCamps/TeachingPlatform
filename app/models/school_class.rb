@@ -55,16 +55,17 @@ class SchoolClass < ApplicationRecord
               )
             SQL
           end),
-          class_name: Locality.to_s,
+          class_name: Locality.name,
           foreign_key: :user_id,
-          primary_key: :user_id
+          primary_key: :user_id,
+          inverse_of: false
 
   has_many :course_school_classes, dependent: :destroy
   has_many :courses, through: :course_school_classes
 
   # rubocop:disable Rails/HasAndBelongsToMany
   has_and_belongs_to_many :completed_lessons,
-                          class_name: Lesson.to_s,
+                          class_name: Lesson.name,
                           join_table: :completed_lessons_school_classes
   # rubocop:enable Rails/HasAndBelongsToMany
 
