@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: appcamps/www-test:r2.4.2-n8.8.1
+      - image: appcamps/www-test:r2.5.1-n8.11.3
         environment:
           PGHOST: localhost
           PGUSER: appcamps
@@ -23,19 +23,19 @@ jobs:
       - restore_cache:
           name: Restore bundle cache
           keys:
-            - r2.4.2-www-bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - r2.4.2-www-bundler-{{ .Branch }}-
-            - r2.4.2-www-bundler-master-{{ checksum "Gemfile.lock" }}
-            - r2.4.2-www-bundler-master
-            - r2.4.2-www-bundler
+            - r2.5.1-www-bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - r2.5.1-www-bundler-{{ .Branch }}-
+            - r2.5.1-www-bundler-master-{{ checksum "Gemfile.lock" }}
+            - r2.5.1-www-bundler-master
+            - r2.5.1-www-bundler
       - restore_cache:
           name: Restore yarn cache
           keys:
-            - n8.8.1-www-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - n8.8.1-www-yarn-{{ .Branch }}-
-            - n8.8.1-www-yarn-master-{{ checksum "yarn.lock" }}
-            - n8.8.1-www-yarn-master
-            - n8.8.1-www-yarn
+            - n8.11.3-www-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - n8.11.3-www-yarn-{{ .Branch }}-
+            - n8.11.3-www-yarn-master-{{ checksum "yarn.lock" }}
+            - n8.11.3-www-yarn-master
+            - n8.11.3-www-yarn
       - run:
           name: Bundle Install
           command: bundle check --path vendor/bundle ||  bundle install --path vendor/bundle --jobs 4 --retry 3
@@ -93,12 +93,12 @@ jobs:
             fi
       - save_cache:
           name: Store bundle cache
-          key: r2.4.2-www-bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          key: r2.5.1-www-bundler-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
       - save_cache:
           name: Store yarn cache
-          key: n8.8.1-www-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: n8.11.3-www-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.yarn-cache
             - node_modules
