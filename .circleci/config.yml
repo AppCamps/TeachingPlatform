@@ -11,7 +11,7 @@ jobs:
           RAILS_ENV: test
       - image: circleci/postgres:9.6
         environment:
-        POSTGRES_USER: appcamps
+          POSTGRES_USER: appcamps
           POSTGRES_DB: appcamps_test
           POSTGRES_PASSWORD: ""
     working_directory: ~/www
