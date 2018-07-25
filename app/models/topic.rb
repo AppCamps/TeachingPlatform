@@ -8,13 +8,13 @@ class Topic < ApplicationRecord
   has_many :published_courses,
            -> { published },
            class_name: Course.name,
-           inverse_of: false
+           inverse_of: :topic
 
   has_many :preparation_materials, dependent: :destroy
   has_many :published_preparation_materials,
            -> { where(published: true) },
            class_name: PreparationMaterial.name,
-           inverse_of: false
+           inverse_of: :topic
 
   validates :title, presence: true
   validates :slug, uniqueness: true

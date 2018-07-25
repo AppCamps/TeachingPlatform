@@ -15,7 +15,7 @@ describe User do
 
   describe 'relations' do
     it { is_expected.to have_many(:school_classes) }
-    it { is_expected.to have_one(:current_locality) }
+    it { is_expected.to have_one(:current_locality).inverse_of(:user) }
     it { is_expected.to have_many(:localities) }
   end
 

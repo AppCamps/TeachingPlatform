@@ -20,7 +20,7 @@ class User < ApplicationRecord
   has_one :current_locality,
           -> { order(created_at: :desc) },
           class_name: Locality.name,
-          inverse_of: false
+          inverse_of: :user
 
   has_many :localities, dependent: :destroy
   has_many :school_classes, dependent: :destroy

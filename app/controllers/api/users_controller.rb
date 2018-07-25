@@ -28,7 +28,7 @@ module Api
     def update # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/PerceivedComplexity
       current_user.validate_privacy_policy_accepted = true
 
-      attributes = update
+      attributes = user_attributes
       if current_user.email == user_attributes[:email]
         attributes[:unconfirmed_email] = nil
         attributes[:confirmation_token] = nil
@@ -72,7 +72,7 @@ module Api
     end
 
     def password_change?
-      update.any? do |(key)|
+      user_attributes.any? do |(key)|
         %i[current_password password password_confirmation].include?(key.to_sym)
       end
     end

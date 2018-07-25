@@ -23,7 +23,7 @@ class Course < ApplicationRecord
   has_many :published_lessons,
            -> { where(published: true) },
            class_name: Lesson.name,
-           inverse_of: false
+           inverse_of: :course
 
   scope :published,
         (lambda do

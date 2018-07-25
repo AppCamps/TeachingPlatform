@@ -7,7 +7,7 @@ describe Course do
 
   describe 'associations' do
     it 'belongs_to topic' do
-      is_expected.to belong_to(:topic).touch(true).order(:title)
+      is_expected.to belong_to(:topic).touch(true).order(:title).inverse_of(:courses)
     end
 
     describe 'has_many lessons' do
@@ -17,7 +17,7 @@ describe Course do
     describe 'has_many published_lessons' do
       it do
         is_expected.to(
-          have_many(:published_lessons).conditions(published: true)
+          have_many(:published_lessons).conditions(published: true).inverse_of(:course)
         )
       end
     end
