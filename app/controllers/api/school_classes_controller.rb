@@ -112,7 +112,7 @@ module Api
              status: :ok
     end
 
-    def destroy_completed_lessons_relationship # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/LineLength
+    def destroy_completed_lessons_relationship # rubocop:disable Metrics/AbcSize
       JSONAPI.parse_relationship!(params.permit!.to_h.except(:controller, :action, :id))
 
       # rails params parser translates data: [] to data: nil
@@ -144,7 +144,7 @@ module Api
       render json: { errors: [error] }, status: :unauthorized
     end
 
-    def find_course_relationships(course_relationships) # rubocop:disable Metrics/MethodLength
+    def find_course_relationships(course_relationships)
       courses_ids =
         course_relationships
         .select { |ref| ref['type'] == 'courses' }

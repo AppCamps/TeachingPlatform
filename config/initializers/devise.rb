@@ -8,6 +8,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
+
   # config.secret_key = '546dc5ae71f0ba520a648216f9c3818d3cf382273321bb06e7f7c91e1b27e4a7f0069f895dc1e2b0b1962031ca00b1da7cbaa787dfbcc93cf9b00b8e6d4d36ad'
 
   # ==> Mailer Configuration
@@ -268,3 +269,4 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 end
+# rubocop:enable Metrics/LineLength

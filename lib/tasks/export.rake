@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-def mysql_client # rubocop:disable Metrics/MethodLength
+def mysql_client
   Mysql2::Client.new(
     host: ENV.fetch('MYSQL_HOST'),
     database: ENV.fetch('MYSQL_DATABASE'),

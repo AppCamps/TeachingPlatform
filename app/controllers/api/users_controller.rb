@@ -5,7 +5,7 @@ module Api
     skip_before_action :authenticate, only: [:create]
     skip_before_action :require_accepted_privacy_policy, only: %i[create update]
 
-    def create # rubocop:disable Metrics/MethodLength
+    def create
       user = User.new(create_attributes)
 
       user.validate_privacy_policy_accepted = true
@@ -28,8 +28,8 @@ module Api
     def update # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/PerceivedComplexity
       current_user.validate_privacy_policy_accepted = true
 
-      attributes = update_attributes
-      if current_user.email == update_attributes[:email]
+      attributes = update
+      if current_user.email == user_attributes[:email]
         attributes[:unconfirmed_email] = nil
         attributes[:confirmation_token] = nil
       end
@@ -62,7 +62,7 @@ module Api
                 :privacy_policy_accepted)
     end
 
-    def update_attributes
+    def user_attributes
       params
         .require(:data).require(:attributes)
         .permit(
@@ -72,7 +72,7 @@ module Api
     end
 
     def password_change?
-      update_attributes.any? do |(key)|
+      update.any? do |(key)|
         %i[current_password password password_confirmation].include?(key.to_sym)
       end
     end
