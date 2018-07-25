@@ -1,4 +1,4 @@
-FROM circleci/ruby:2.4.2
+FROM circleci/ruby:2.5.1
 
 RUN ruby -v && bundle -v
 
@@ -24,7 +24,7 @@ RUN set -ex \
   done
 
 ENV NPM_CONFIG_LOGLEVEL info
-ENV NODE_VERSION 8.8.1
+ENV NODE_VERSION 8.11.3
 
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && case "${dpkgArch##*-}" in \
