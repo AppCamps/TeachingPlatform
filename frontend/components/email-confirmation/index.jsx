@@ -10,6 +10,7 @@ import Container from '../shared/container';
 import Button from '../shared/button';
 import Spinner from '../shared/spinner';
 import InputWithLabel from '../shared/input-with-label';
+import { constants } from '../../config';
 
 import style from './style.scss';
 
@@ -24,6 +25,8 @@ class EmailConfirmationRequest extends Component {
   render() {
     const { t } = this.context;
     const { handleSubmit, submitting } = this.props;
+    const { SUPPORT_EMAIL } = constants;
+    const supportEmailLink = `mailto:${SUPPORT_EMAIL}`;
 
     return (
       <div className={style.container}>
@@ -42,7 +45,8 @@ class EmailConfirmationRequest extends Component {
               required
             />
             <p>
-              {t('We will send you an email containing a link to confirm your email.')}
+              {t('We will send you an email containing a link to confirm your email. If you have not received an email, yet, please contact us at {supportEmail}', 
+              { supportEmail: <a href={supportEmailLink}>{SUPPORT_EMAIL}</a> })}
             </p>
             <div className={style.actions}>
               <span className={style.submit}>
