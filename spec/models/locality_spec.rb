@@ -30,7 +30,7 @@ describe Locality do
     end
 
     context 'with role_teacher' do
-      it 'validates locality' do # rubocop:disable RSpec/MultipleExpectations
+      it 'validates locality' do
         locality.user.role = :role_teacher
 
         expect(locality).to validate_presence_of(:school_type)

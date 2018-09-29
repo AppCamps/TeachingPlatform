@@ -59,7 +59,7 @@ class Locality < ApplicationRecord
   end
 
   def postal_code_must_match_country_format
-    if !postal_code.nil? 
+    unless postal_code.nil?
       regexp = CountryService.find(country).try(:postal_code_format)
       return if regexp.present? && postal_code.to_s.match?(regexp)
 
