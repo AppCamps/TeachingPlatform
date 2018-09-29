@@ -545,7 +545,7 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                     </Connect(ConnectedField)>
                   </Field>
                   <p>
-                    We will send you an email containing a link to reset your password.
+                    We will send you an email containing a link to reset your password. If you have not received an email, yet, please contact us at {supportEmail}
                   </p>
                   <div
                     className="actions"
