@@ -33,7 +33,6 @@ describe Locality do
       it 'validates locality' do # rubocop:disable RSpec/MultipleExpectations
         locality.user.role = :role_teacher
 
-        expect(locality).to validate_presence_of(:school_name)
         expect(locality).to validate_presence_of(:school_type)
         expect(locality).to validate_length_of(:school_name).is_at_most(255)
 
@@ -61,9 +60,6 @@ describe Locality do
       end
 
       it 'validates locality' do # rubocop:disable RSpec/MultipleExpectations
-        %i[city].each do |attribute_name|
-          expect(locality).to validate_presence_of(attribute_name)
-        end
         %i[state postal_code city].each do |attribute_name|
           expect(locality).to validate_length_of(attribute_name).is_at_most(255)
         end
@@ -91,8 +87,6 @@ describe Locality do
         expect(locality).to have(1).errors_on(:postal_code)
         locality.postal_code = 'abcdef'
         expect(locality).to have(1).errors_on(:postal_code)
-        locality.postal_code = nil
-        expect(locality).to have(1).errors_on(:postal_code)
       end
 
       it 'validates austrian postal_code' do
@@ -105,8 +99,6 @@ describe Locality do
         expect(locality).to have(1).errors_on(:postal_code)
         locality.postal_code = 'abcde'
         expect(locality).to have(1).errors_on(:postal_code)
-        locality.postal_code = nil
-        expect(locality).to have(1).errors_on(:postal_code)
       end
 
       it 'validates swiss postal_code' do
@@ -118,8 +110,6 @@ describe Locality do
         locality.postal_code = '12345'
         expect(locality).to have(1).errors_on(:postal_code)
         locality.postal_code = 'abcde'
-        expect(locality).to have(1).errors_on(:postal_code)
-        locality.postal_code = nil
         expect(locality).to have(1).errors_on(:postal_code)
       end
 
