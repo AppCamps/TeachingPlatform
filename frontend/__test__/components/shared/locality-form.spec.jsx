@@ -78,7 +78,7 @@ describe('<LocalityForm />', () => {
         <Field name="schoolTypeCustom" type="hidden" component="input" />,
       )).to.be.true;
       expect(wrapper.containsMatchingElement(
-        <Field name="schoolName" label="School name" component={InputWithLabel} required />,
+        <Field name="schoolName" label="School name" component={InputWithLabel} />,
       )).to.be.true;
       expect(wrapper.containsMatchingElement(
         <Field name="subjects" label="Subjects" component={InputWithLabel} required />,
@@ -89,11 +89,11 @@ describe('<LocalityForm />', () => {
       )).to.be.true;
 
       expect(wrapper.containsMatchingElement(
-        <Field name="postalCode" label="Postal code" component={InputWithLabel} required />,
+        <Field name="postalCode" label="Postal code" component={InputWithLabel} />,
       )).to.be.true;
 
       expect(wrapper.containsMatchingElement(
-        <Field name="city" label="City" component={InputWithLabel} required />,
+        <Field name="city" label="City" component={InputWithLabel} />,
       )).to.be.true;
 
       const button = wrapper.find(Button);
@@ -120,10 +120,10 @@ describe('<LocalityForm />', () => {
       )).to.be.true;
 
       expect(wrapper.containsMatchingElement(
-        <Field name="postalCode" label="Postal code" component={InputWithLabel} required />,
+        <Field name="postalCode" label="Postal code" component={InputWithLabel} />,
       )).to.be.true;
       expect(wrapper.containsMatchingElement(
-        <Field name="city" label="City" component={InputWithLabel} required />,
+        <Field name="city" label="City" component={InputWithLabel} />,
       )).to.be.true;
       expect(wrapper.containsMatchingElement(
         <Field name="subjects" label="Profession / professional background" component={InputWithLabel} required />,
@@ -158,16 +158,13 @@ describe('<LocalityForm />', () => {
 
         wrapper.find('form').simulate('submit');
 
-        expect(wrapper.find('Error')).to.have.length(7);
+        expect(wrapper.find('Error')).to.have.length(4);
 
         expect(wrapper.find(`.${style.schoolType} Error`)).to.have.text('Required');
-        expect(wrapper.find(`.${style.schoolName} Error`)).to.have.text('Required');
         expect(wrapper.find(`.${style.schoolSubjects} Error`)).to.have.text('Required');
 
         expect(wrapper.find(`.${style.country} Error`)).to.have.text('Required');
         expect(wrapper.find(`.${style.state} Error`)).to.have.text('Required');
-        expect(wrapper.find(`.${style.postalCode} Error`)).to.have.text('Required');
-        expect(wrapper.find(`.${style.city} Error`)).to.have.text('Required');
       });
     });
 
@@ -177,10 +174,9 @@ describe('<LocalityForm />', () => {
 
         wrapper.find('form').simulate('submit');
 
-        expect(wrapper.find('Error')).to.have.length(5);
+        expect(wrapper.find('Error')).to.have.length(3);
 
         expect(wrapper.find(`.${style.country} Error`)).to.have.text('Required');
-        expect(wrapper.find(`.${style.city} Error`)).to.have.text('Required');
         expect(wrapper.find(`.${style.profession} Error`)).to.have.text('Required');
       });
 
@@ -242,7 +238,6 @@ describe('<LocalityForm />', () => {
 
         wrapper.find('form').simulate('submit');
 
-        expect(wrapper.find(`.${style.postalCode} Error`)).to.have.text('Required');
 
         changeInput(wrapper, 'postalCode', '12345');
         expect(wrapper.find(`.${style.postalCode} Error`)).to.have.text('Invalid');
@@ -289,7 +284,6 @@ describe('<LocalityForm />', () => {
 
           changeInput(wrapper, 'postalCode', '');
           wrapper.find('form').simulate('submit');
-          expect(wrapper.find(`.${style.postalCode} Error`)).to.have.text('Required');
 
           changeInput(wrapper, 'postalCode', '1234');
           expect(wrapper.find(`.${style.postalCode} Error`)).to.have.length(0);
