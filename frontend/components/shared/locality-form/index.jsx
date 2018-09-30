@@ -87,7 +87,7 @@ class LocalityForm extends Component {
             <Field name="schoolTypeCustom" type="hidden" component="input" />
           </div>
           <div className={style.schoolName}>
-            <Field required name="schoolName" label={t('School name')} component={InputWithLabel} />
+            <Field name="schoolName" label={t('School name')} component={InputWithLabel} />
           </div>
           <div className={style.schoolSubjects}>
             <Field required name="subjects" label={t('Subjects')} component={InputWithLabel} />
@@ -173,7 +173,6 @@ class LocalityForm extends Component {
           </div>
           <div className={style.postalCode}>
             <Field
-              required={isPostalCodeRequired(selectedCountry)}
               name="postalCode"
               label={t('Postal code')}
               value="test"
@@ -182,7 +181,6 @@ class LocalityForm extends Component {
           </div>
           <div className={style.city}>
             <Field
-              required
               name="city"
               label={t('City')}
               component={InputWithLabel}
@@ -250,18 +248,14 @@ export const validate = (values, props) => {
   const errors = {};
   const { user: { teacher }, selectedCountry, hideProfession, stateOptions } = props;
 
-  const requiredAttributes = ['country', 'city'];
+  const requiredAttributes = ['country'];
   if (teacher) {
-    requiredAttributes.push('schoolType', 'schoolName', 'subjects');
+    requiredAttributes.push('schoolType', 'subjects');
   } else if (!hideProfession) {
     requiredAttributes.push('subjects');
   }
   if (stateOptions.length > 0) {
     requiredAttributes.push('state');
-  }
-
-  if (isPostalCodeRequired(selectedCountry)) {
-    requiredAttributes.push('postalCode');
   }
 
   requiredAttributes.forEach((key) => {
