@@ -146,7 +146,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
-    dalli (2.7.6)
+    dalli (2.7.8)
     database_cleaner (1.6.1)
     db_text_search (0.2.2)
       activerecord (>= 4.1.15, < 6.0)
