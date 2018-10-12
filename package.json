@@ -81,7 +81,7 @@
     "redux-mock-store": "^1.1.4",
     "redux-saga-test-plan": "^3.1.0",
     "rucksack-css": "^1.0.2",
-    "sass-loader": "^6.0.2",
+    "sass-loader": "^7.1.0",
     "sass-variable-loader": "0.1.2",
     "sinon": "^2.3.6",
     "style-loader": "^0.18.2",
