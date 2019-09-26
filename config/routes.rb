@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   constraints ->(request) { subdomain_constraint(request, :admin) } do
     authenticate :user, ->(user) { user.admin? } do
       mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+      mount Blazer::Engine, at: "blazer"
     end
   end
 

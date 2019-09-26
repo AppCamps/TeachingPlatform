@@ -52,6 +52,8 @@ gem 'thredded-markdown_coderay'
 
 gem 'scout_apm'
 
+gem 'blazer'
+
 group :development, :test do
   gem 'bundler-audit'
   gem 'byebug'
