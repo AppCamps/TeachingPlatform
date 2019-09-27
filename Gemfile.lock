@@ -110,6 +110,11 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    blazer (2.0.2)
+      activerecord (>= 4.2)
+      chartkick
+      railties (>= 4.2)
+      safely_block (>= 0.1.1)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -129,6 +134,7 @@ GEM
       xpath (~> 2.0)
     case_transform (0.2)
       activesupport
+    chartkick (3.0.2)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -164,6 +170,7 @@ GEM
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
     down (4.1.1)
+    errbase (0.1.1)
     erubi (1.7.1)
     erubis (2.7.0)
     excon (0.59.0)
@@ -263,7 +270,7 @@ GEM
     multi_json (1.12.2)
     multipart-post (2.0.0)
     mustache (1.0.5)
-    mysql2 (0.4.9)
+    mysql2 (0.4.10)
     nested_form (0.3.2)
     nio4r (2.3.1)
     nokogiri (1.8.5)
@@ -398,6 +405,8 @@ GEM
       rubocop (>= 0.51.0)
     ruby-progressbar (1.9.0)
     safe_yaml (1.0.4)
+    safely_block (0.2.1)
+      errbase
     sanitize (4.6.4)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
@@ -470,6 +479,7 @@ DEPENDENCIES
   aws-sdk-s3
   better_errors
   binding_of_caller
+  blazer
   bootstrap-sass
   bootstrap-wysihtml5-rails (> 0.3.1.24)
   bundler-audit
@@ -490,7 +500,7 @@ DEPENDENCIES
   lograge
   mandrill_mailer
   migration_data
-  mysql2
+  mysql2 (~> 0.4.10)
   passenger
   pg
   pry-remote
@@ -522,4 +532,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.4
+   1.17.3

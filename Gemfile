@@ -10,7 +10,7 @@ gem 'migration_data'
 gem 'pg'
 
 # user for data export
-gem 'mysql2'
+gem 'mysql2', '~> 0.4.10'
 
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
@@ -51,6 +51,8 @@ gem 'thredded',
 gem 'thredded-markdown_coderay'
 
 gem 'scout_apm'
+
+gem 'blazer'
 
 group :development, :test do
   gem 'bundler-audit'
