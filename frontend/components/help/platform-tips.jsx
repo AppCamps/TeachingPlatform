@@ -19,7 +19,7 @@ const PlatformTips = (_props, { t }) => (
         </p>
         <div className={style.videoContainer}>
           <ReactPlayer
-            url="https://appcamps.wistia.com/medias/8mgjy1slya"
+            url="https://player.vimeo.com/video/505620123"
             width="100%"
             height="534px"
           />
