@@ -8,7 +8,9 @@
     "node": "8.x"
   },
   "greenkeeper": {
-    "ignore": ["react-router"]
+    "ignore": [
+      "react-router"
+    ]
   },
   "scripts": {
     "eslint": "eslint frontend/",
@@ -16,14 +18,11 @@
     "test:coverage": "NODE_ENV=test jest --config config/jest.config.json --coverage",
     "test:watch": "NODE_ENV=test jest --config config/jest.config.json --watch",
     "start": "yarn run start:app",
-    "start:app":
-      "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --config config/webpack.config.dev.js --cert certs/www/webpack.crt --key certs/www/webpack.key",
+    "start:app": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --config config/webpack.config.dev.js --cert certs/www/webpack.crt --key certs/www/webpack.key",
     "build": "NODE_ENV=production webpack --colors --bail --config config/webpack.config.prod.js",
     "heroku-postbuild": "yarn run build",
-    "translations:extract":
-      "NODE_ENV=development i18n_extract --source=frontend --locales=config/locales/frontend --pattern=t",
-    "translations:import":
-      "NODE_ENV=development i18n_import  --locales=config/locales/frontend --translations=frontend",
+    "translations:extract": "NODE_ENV=development i18n_extract --source=frontend --locales=config/locales/frontend --pattern=t",
+    "translations:import": "NODE_ENV=development i18n_import  --locales=config/locales/frontend --translations=frontend",
     "auditjs": "auditjs -w .auditjs-whitelist -l error"
   },
   "license": "MIT",
@@ -65,6 +64,7 @@
     "favicons-webpack-plugin": "0.0.7",
     "fetch-mock": "^5.1.1",
     "file-loader": "^0.11.1",
+    "html-webpack-harddisk-plugin": "^0.1.0",
     "html-webpack-plugin": "^2.30.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.3",
@@ -88,13 +88,14 @@
     "susy": "^2.2.12",
     "url-loader": "^0.5.7",
     "uuid": "^3.0.1",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1",
+    "webpack": "^3.12.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^2.11.5",
     "webpack-hot-middleware": "^2.7.1"
   },
   "dependencies": {
     "autobind-decorator": "^2.0.0",
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "babel-preset-env": "^1.6.1",
     "bluebird": "^3.5.0",
     "camelize": "^1.0.0",
@@ -105,7 +106,6 @@
     "eslint-plugin-jsx-a11y": "5",
     "fetch": "^1.1.0",
     "html-react-parser": "0.4",
-    "html-webpack-harddisk-plugin": "^0.1.0",
     "jsonapi-serializer": "^3.3.0",
     "lodash.chunk": "^4.2.0",
     "lodash.flatmap": "^4.5.0",
