@@ -2,10 +2,10 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :user do
-    first_name            { Faker::Name.first_name }
-    last_name             { Faker::Name.last_name }
+    first_name { Faker::Name.first_name }
+    last_name  { Faker::Name.last_name }
 
     role do
       roles = User.roles.keys
@@ -17,9 +17,9 @@ FactoryGirl.define do
     end
 
     email { Faker::Internet.email }
-    password { Faker::Internet.password(10, 20, true, true) }
+    password { Faker::Internet.password(min_length: 10, max_length: 20, mix_case: true, special_characters: true) }
     confirmed_at { 1.day.ago }
-    privacy_policy_accepted true
+    privacy_policy_accepted { true }
 
     trait :with_locality do
       after_create do |user|
@@ -28,11 +28,11 @@ FactoryGirl.define do
     end
 
     trait :admin do
-      admin true
+      admin { true }
     end
 
     trait :beta do
-      beta true
+      beta { true }
     end
 
     trait :with_password_confirmation do
@@ -44,11 +44,11 @@ FactoryGirl.define do
     end
 
     trait :unconfirmed do
-      confirmed_at nil
+      confirmed_at { nil }
     end
 
     trait :without_accepted_privacy_policy do
-      privacy_policy_accepted_at nil
+      privacy_policy_accepted_at { nil }
     end
 
     factory :admin, traits: [:admin]

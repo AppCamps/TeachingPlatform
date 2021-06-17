@@ -95,7 +95,7 @@ module Api
       if data.blank?
         school_class.completed_lessons.clear
       else
-        ids_to_add = data.map { |lesson| lesson[:id] }
+        ids_to_add = data.map { |lesson| Integer(lesson[:id]) }
 
         if school_class.courses.joins(:lessons).where(lessons: { id: ids_to_add }).empty?
           return render json: {

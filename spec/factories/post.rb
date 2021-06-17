@@ -2,10 +2,10 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :post do
-    title { Faker::Lorem.words(4).join ' ' }
-    content { Faker::Lorem.paragraph(3) }
+    title { Faker::Lorem.words(number: 4).join ' ' }
+    content { Faker::Lorem.paragraph(sentence_count: 3) }
     released_at { Time.zone.now }
 
     trait :with_teaser_image do

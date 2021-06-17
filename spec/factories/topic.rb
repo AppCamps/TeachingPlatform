@@ -2,7 +2,7 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :topic do
     title { Faker::Company.buzzword }
     color { Faker::Color.hex_color[1...7] }

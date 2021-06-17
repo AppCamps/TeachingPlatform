@@ -27,7 +27,7 @@ end
 RSpec.configure do |config|
   config.profile_examples = ENV['RSPEC_PROFILE_EXAMPLES'] || false
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.include ActiveJob::TestHelper
   config.infer_spec_type_from_file_location!
   config.use_transactional_fixtures = false

@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 ruby '2.5.1'
 
-gem 'rails', '~> 5.1.7'
+gem 'rails', '~> 5.2.5'
 gem 'rails-i18n', '~> 5.0.0'
 
 gem 'migration_data'
@@ -24,7 +24,7 @@ gem 'rails_admin-i18n'
 gem 'devise'
 gem 'rack-attack'
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '0.10.6'
 gem 'jsonapi-parser'
 
 gem 'countries'
@@ -71,7 +71,7 @@ end
 group :test do
   gem 'capybara', '>= 2.4.0'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem "factory_bot_rails"
   gem 'faker'
   gem 'puma'
   gem 'rspec-collection_matchers'

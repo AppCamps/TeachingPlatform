@@ -2,7 +2,7 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :locality do
     school_name do
       Faker::Educator.university if user&.role_teacher?
