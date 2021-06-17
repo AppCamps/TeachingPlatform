@@ -2,16 +2,16 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :preparation_material do
     topic
 
     sequence(:position)
 
-    title     { Faker::Lorem.words(6).join ' ' }
-    subtitle  { Faker::Lorem.words(6).join ' ' }
+    title     { Faker::Lorem.words(number: 6).join ' ' }
+    subtitle  { Faker::Lorem.words(number: 6).join ' ' }
     link      { Faker::Internet.url }
-    published true
+    published { true }
 
     medium_type do
       medium_types = PreparationMaterial.medium_types.keys
@@ -32,7 +32,7 @@ FactoryGirl.define do
     end
 
     trait :unpublished do
-      published false
+      published { false }
     end
   end
 end

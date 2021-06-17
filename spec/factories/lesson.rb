@@ -2,19 +2,19 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :lesson do
     course
-    title       { Faker::Lorem.words(6).join ' ' }
-    description { Faker::Lorem.paragraph(_sentence_count = 3) }
+    title       { Faker::Lorem.words(number: 6).join ' ' }
+    description { Faker::Lorem.paragraph(sentence_count: 3) }
 
-    published true
+    published { true }
 
-    transient { teaching_materials_count 2 }
-    transient { common_mistakes_count 2 }
+    transient { teaching_materials_count { 2 } }
+    transient { common_mistakes_count { 2 } }
 
     trait :unpublished do
-      published false
+      published { false }
     end
 
     after(:build) do |lesson, evaluator|

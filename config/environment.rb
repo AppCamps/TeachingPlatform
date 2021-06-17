@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Load the Rails application.
-require File.expand_path('application', __dir__)
+require_relative 'application'
 
 require Rails.root.join('lib', 'object')
 

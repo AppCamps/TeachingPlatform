@@ -2,12 +2,12 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :course do
     topic
 
-    title       { Faker::Lorem.words(4).join ' ' }
-    description { Faker::Lorem.paragraph(3) }
+    title       { Faker::Lorem.words(number: 4).join ' ' }
+    description { Faker::Lorem.paragraph(sentence_count: 3) }
     slug        { title.to_s.parameterize }
 
     trait :unpublished do
@@ -23,7 +23,7 @@ FactoryGirl.define do
     end
 
     trait :with_lessons do
-      transient { lessons_count 3 }
+      transient { lessons_count { 3 } }
 
       after(:create) do |course, evaluator|
         create_list(:lesson, evaluator.lessons_count, course: course)

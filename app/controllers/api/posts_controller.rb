@@ -5,8 +5,8 @@ module Api
     def index # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
       posts = Post
               .where.not(released_at: nil)
-              .where(`posts.released_at < ?`, Time.zone.now)
-              .order('"posts"."pinned" DESC, "posts"."released_at" DESC')
+              .where(Arel.sql(`posts.released_at < ?`), Time.zone.now)
+              .order(Arel.sql('"posts"."pinned" DESC, "posts"."released_at" DESC'))
               .page(params[:page].try(:[], :number))
 
       serialization_context = ActiveModelSerializers::SerializationContext.new(request)

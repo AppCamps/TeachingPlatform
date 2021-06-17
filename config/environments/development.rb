@@ -24,6 +24,8 @@ Rails.application.configure do
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
+  # Highlight code that triggered database queries in logs.
+  config.active_record.verbose_query_logs = true
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
@@ -49,6 +51,9 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.generators do |g|
+    # Use an evented file watcher to asynchronously detect changes in source code,
+    # routes, locales, etc. This feature depends on the listen gem.
+    g.file_watcher = ActiveSupport::EventedFileUpdateChecker
     g.orm :active_record, primary_key_type: :uuid
     g.test_framework :rspec,
                      fixtures: true,
@@ -60,9 +65,19 @@ Rails.application.configure do
     g.fixture_replacement :factory_girl, dir: 'spec/factories'
   end
 
-  config.action_controller.perform_caching = true
-  config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=172800' }
-  config.cache_store = :memory_store
+   # Enable/disable caching. By default caching is disabled.
+   # Run rails dev:cache to toggle caching.
+   if Rails.root.join('tmp', 'caching-dev.txt').exist?
+     config.action_controller.perform_caching = true
+ 
+     config.cache_store = :memory_store
+     config.public_file_server.headers = {
+       'Cache-Control' => "public, max-age=172800"
+     }
+   else
+     config.action_controller.perform_caching = false
+     config.cache_store = :null_store
+   end
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true

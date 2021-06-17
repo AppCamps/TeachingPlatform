@@ -2,8 +2,8 @@
 
 require 'faker'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :expertise do
-    title { Faker::Shakespeare.hamlet_quote }
+    title { Faker::Quotes::Shakespeare.hamlet_quote }
   end
 end
