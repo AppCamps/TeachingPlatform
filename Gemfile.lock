@@ -550,7 +550,7 @@ DEPENDENCIES
   pry-remote
   puma
   rack-attack
-  rails (~> 5.2.5)
+  rails (~> 5.2.6)
   rails-i18n (~> 5.0.0)
   rails_12factor
   rails_admin

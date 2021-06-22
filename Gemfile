@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 ruby '2.6.7'
 
-gem 'rails', '~> 5.2.5'
+gem 'rails', '~> 5.2.6'
 gem 'rails-i18n', '~> 5.0.0'
 
 gem 'migration_data'
