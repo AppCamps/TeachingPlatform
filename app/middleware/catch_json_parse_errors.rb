@@ -7,12 +7,12 @@ class CatchJsonParseErrors
 
   def call(env)
     @app.call(env)
-  rescue ActionDispatch::ParamsParser::ParseError => exception
+  rescue ActionDispatch::Http::Parameters::ParseError => exception
     raise error unless env['CONTENT_TYPE'].match?(%r{application\/vnd\.api\+json})
 
     # raise error with shortened message (because body is included and
     # potentially leaks sensitive data)
-    error = ActionDispatch::ParamsParser::ParseError.new(exception.message[0..20], exception)
+    error = ActionDispatch::Http::Parameters::ParseError.new(exception.message[0..20], exception)
     Rollbar.error(error)
 
     error_response = {
