@@ -30,7 +30,7 @@ gem 'jsonapi-parser'
 gem 'countries'
 
 gem 'aws-sdk-s3'
-gem 'shrine', '2.8.0'
+gem 'shrine'
 
 gem 'lograge'
 gem 'passenger'

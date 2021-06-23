@@ -18,7 +18,6 @@ class CourseSchoolClassSerializer < BaseSerializer
     filename = "zertifikat-#{school_class.name.parameterize}-#{course.title.parameterize}"
     extension = course.certificate.metadata['filename'].split('.')[-1]
     object.course.certificate.url(
-      download: true,
       expires_in: 24.hours.to_i,
       response_content_disposition: "attachment;filename=#{filename}.#{extension}"
     )
