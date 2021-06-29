@@ -5,10 +5,12 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "8.x"
+    "node": "8.17.0"
   },
   "greenkeeper": {
-    "ignore": ["react-router"]
+    "ignore": [
+      "react-router"
+    ]
   },
   "scripts": {
     "eslint": "eslint frontend/",
@@ -16,14 +18,11 @@
     "test:coverage": "NODE_ENV=test jest --config config/jest.config.json --coverage",
     "test:watch": "NODE_ENV=test jest --config config/jest.config.json --watch",
     "start": "yarn run start:app",
-    "start:app":
-      "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --config config/webpack.config.dev.js --cert certs/www/webpack.crt --key certs/www/webpack.key",
+    "start:app": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --config config/webpack.config.dev.js --cert certs/www/webpack.crt --key certs/www/webpack.key",
     "build": "NODE_ENV=production webpack --colors --bail --config config/webpack.config.prod.js",
     "heroku-postbuild": "yarn run build",
-    "translations:extract":
-      "NODE_ENV=development i18n_extract --source=frontend --locales=config/locales/frontend --pattern=t",
-    "translations:import":
-      "NODE_ENV=development i18n_import  --locales=config/locales/frontend --translations=frontend",
+    "translations:extract": "NODE_ENV=development i18n_extract --source=frontend --locales=config/locales/frontend --pattern=t",
+    "translations:import": "NODE_ENV=development i18n_import  --locales=config/locales/frontend --translations=frontend",
     "auditjs": "auditjs -w .auditjs-whitelist -l error"
   },
   "license": "MIT",
@@ -94,7 +93,7 @@
   },
   "dependencies": {
     "autobind-decorator": "^2.0.0",
-    "axios": "^0.16.2",
+    "axios": "0.21.1",
     "babel-preset-env": "^1.6.1",
     "bluebird": "^3.5.0",
     "camelize": "^1.0.0",
