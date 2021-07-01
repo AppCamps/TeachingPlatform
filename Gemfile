@@ -44,13 +44,6 @@ gem 'sucker_punch'
 # deprecated in rails, but devise is calling it without declaring a dependency...
 gem 'erubis'
 
-# thredded + dependencies
-gem 'kaminari-i18n'
-gem 'thredded',
-    git: 'https://github.com/AppCamps/thredded.git',
-    branch: 'german-locales'
-gem 'thredded-markdown_coderay'
-
 gem 'scout_apm'
 
 gem 'blazer'
