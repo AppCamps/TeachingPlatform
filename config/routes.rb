@@ -15,11 +15,7 @@ Rails.application.routes.draw do
       mount Blazer::Engine, at: 'blazer'
     end
   end
-
-  constraints ->(request) { subdomain_constraint(request, :community) } do
-    mount Thredded::Engine => '/'
-  end
-
+  
   api_routes = proc do
     default_url_options host: Rails.application.secrets.api_domain
 
