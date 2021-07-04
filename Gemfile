@@ -30,7 +30,11 @@ gem 'jsonapi-parser'
 gem 'countries'
 
 gem 'aws-sdk-s3'
-gem 'shrine', '2.19.4' # version >= 3 causes an  ActiveModel::UnknownAttributeError
+
+# Shrine version >= 3 causes an  ActiveModel::UnknownAttributeError related to cached_attachment_data= setter which was removed in v3+
+# Deprecation of cached_attachment_data= setter: https://github.com/shrinerb/shrine/commit/0cf395b65d23c0cb89dea5368b86ce14f024f650
+# Remove deprecated cached_attachment_data= setter in v3.0.0 https://github.com/shrinerb/shrine/commit/013588ed08341fc5a6bdde60fb04bdaf9a2eb237
+gem 'shrine', '3.4.0'
 
 gem 'lograge'
 gem 'passenger'
