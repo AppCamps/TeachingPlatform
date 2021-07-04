@@ -30,7 +30,8 @@ gem 'jsonapi-parser'
 gem 'countries'
 
 gem 'aws-sdk-s3'
-gem 'shrine', '2.19.4' # version >= 3 causes an  ActiveModel::UnknownAttributeError
+#gem 'shrine', '2.19.4' # version >= 3 causes an  ActiveModel::UnknownAttributeError
+gem 'shrine', '3.0.1'
 
 gem 'lograge'
 gem 'passenger'
