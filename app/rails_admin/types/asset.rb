@@ -6,10 +6,6 @@ module Types
       "remove_#{name}"
     end
 
-    register_instance_option :cache_method do
-      "cached_#{name}_data"
-    end
-
     def resource_url(_thumb = nil)
       value.try(:url, public: true)
     end
