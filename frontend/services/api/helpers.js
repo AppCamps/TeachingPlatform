@@ -1,5 +1,4 @@
 import 'es6-promise/auto';
-import ExtendableError from 'es6-error';
 
 import axios from 'axios';
 
@@ -14,13 +13,6 @@ import { requestNotification } from '../../actions/notifications';
 import { normalize as normalizeFn, normalizeError as normalizeErrorFn } from './normalize';
 
 axios.defaults.xsrfHeaderName = 'X-CSRF-TOKEN';
-
-export class ApiRecordError extends ExtendableError {
-  constructor(errors) {
-    super('An api request failed');
-    this.errors = errors;
-  }
-}
 
 let dispatch = null;
 export function initializeApi(store) {
