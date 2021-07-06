@@ -3892,6 +3892,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                     <TextareaAutosize
                                       className="textarea"
                                       disabled={false}
+                                      inputRef={[Function]}
                                       onChange={[Function]}
                                       onHeightChange={[Function]}
                                       placeholder={null}
