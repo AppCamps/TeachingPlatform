@@ -63,7 +63,6 @@ const config = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle-[hash].js' }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
       'process.env.TRACKJS_APPLICATION': JSON.stringify(TRACKJS_APPLICATION),

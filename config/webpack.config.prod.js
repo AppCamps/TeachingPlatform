@@ -18,9 +18,5 @@ webpackConfig.module.rules.push({
     ],
   }),
 });
-webpackConfig.plugins.push(
-  extractCss,
-  new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
-);
 
 module.exports = webpackConfig;
