@@ -7,6 +7,8 @@ const devConfig = require('./webpack.config.base').config;
 devConfig.entry.jsx = ['react-hot-loader/patch', devConfig.entry.jsx];
 devConfig.output.publicPath = 'https://localhost:8080/frontend/';
 
+devConfig.mode = 'development';
+
 devConfig.module.rules.push({
   test: /\.s?css$/,
   include: /frontend/,

@@ -44,6 +44,7 @@ const config = {
     filename: 'bundle-[hash].js',
     publicPath: '/frontend/',
   },
+  mode: 'none',
   module: {
     rules: [
       {

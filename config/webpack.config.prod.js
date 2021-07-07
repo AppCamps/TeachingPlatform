@@ -5,6 +5,7 @@ const webpackConfig = require('./webpack.config.base').config;
 
 const extractCss = new ExtractTextPlugin('styles-[contenthash].css');
 
+webpackConfig.mode = 'production';
 webpackConfig.devtool = 'source-map';
 webpackConfig.module.rules.push({
   test: /\.s?css$/,
