@@ -19,7 +19,6 @@ exports[`<ResetForm /> renders form correctly 1`] = `
       forceUnregisterOnUnmount={false}
       form="passwordResetForm"
       getFormState={[Function]}
-      initialValues={undefined}
       keepDirtyOnReinitialize={false}
       persistentSubmitErrors={false}
       pure={true}
@@ -57,7 +56,6 @@ exports[`<ResetForm /> renders form correctly 1`] = `
         arraySplice={[Function]}
         arraySwap={[Function]}
         arrayUnshift={[Function]}
-        asyncErrors={undefined}
         asyncValidating={false}
         autofill={[Function]}
         blur={[Function]}
@@ -70,12 +68,10 @@ exports[`<ResetForm /> renders form correctly 1`] = `
         dirty={false}
         dispatch={[Function]}
         enableReinitialize={false}
-        error={undefined}
         focus={[Function]}
         forceUnregisterOnUnmount={false}
         form="passwordResetForm"
         getFormState={[Function]}
-        initialValues={undefined}
         initialize={[Function]}
         initialized={false}
         invalid={true}
@@ -123,7 +119,6 @@ exports[`<ResetForm /> renders form correctly 1`] = `
         touch={[Function]}
         touchOnBlur={true}
         touchOnChange={false}
-        triggerSubmit={undefined}
         unregisterField={[Function]}
         untouch={[Function]}
         updateSyncErrors={[Function]}
@@ -132,7 +127,6 @@ exports[`<ResetForm /> renders form correctly 1`] = `
         validExceptSubmit={false}
         validate={[Function]}
         values={Object {}}
-        warning={undefined}
       >
         <PasswordReset
           anyTouched={false}
@@ -161,10 +155,8 @@ exports[`<ResetForm /> renders form correctly 1`] = `
           destroy={[Function]}
           dirty={false}
           dispatch={[Function]}
-          error={undefined}
           form="passwordResetForm"
           handleSubmit={[Function]}
-          initialValues={undefined}
           initialize={[Function]}
           initialized={false}
           invalid={true}
@@ -176,11 +168,9 @@ exports[`<ResetForm /> renders form correctly 1`] = `
           submitSucceeded={false}
           submitting={false}
           touch={[Function]}
-          triggerSubmit={undefined}
           untouch={[Function]}
           valid={false}
           validate={[Function]}
-          warning={undefined}
         >
           <div
             className="container"
@@ -443,27 +433,18 @@ exports[`<ResetForm /> renders form correctly 1`] = `
                             "warning": undefined,
                           }
                         }
-                        _value={undefined}
-                        asyncError={undefined}
                         asyncValidating={false}
                         component={[Function]}
                         dirty={false}
                         disabled={false}
                         dispatch={[Function]}
-                        initial={undefined}
                         label="Password"
                         name="password"
                         normalize={[Function]}
                         pristine={true}
                         required={true}
-                        state={undefined}
-                        submitError={undefined}
-                        submitFailed={undefined}
-                        submitting={undefined}
                         syncError="Required"
-                        syncWarning={undefined}
                         type="password"
-                        value={undefined}
                       >
                         <InputWithLabel
                           autoFocus={false}
@@ -794,27 +775,18 @@ exports[`<ResetForm /> renders form correctly 1`] = `
                             "warning": undefined,
                           }
                         }
-                        _value={undefined}
-                        asyncError={undefined}
                         asyncValidating={false}
                         component={[Function]}
                         dirty={false}
                         disabled={false}
                         dispatch={[Function]}
-                        initial={undefined}
                         label="Password confirmation"
                         name="passwordConfirmation"
                         normalize={[Function]}
                         pristine={true}
                         required={true}
-                        state={undefined}
-                        submitError={undefined}
-                        submitFailed={undefined}
-                        submitting={undefined}
                         syncError="Required"
-                        syncWarning={undefined}
                         type="password"
-                        value={undefined}
                       >
                         <InputWithLabel
                           autoFocus={false}
