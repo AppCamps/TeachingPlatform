@@ -1,7 +1,7 @@
 # AppCamps Teaching Platform
 
 ## Dependencies
-- ruby 2.6.7 + bundler
+- ruby 2.7.4 + bundler
 - node 10.24.1 + yarn
 - postgres 9.6
 - mysql
