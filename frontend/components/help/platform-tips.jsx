@@ -22,7 +22,6 @@ const PlatformTips = (_props, { t }) => (
             url="https://player.vimeo.com/video/505620123"
             width="100%"
             height="534px"
-            controls={true}
           />
         </div>
         <p>

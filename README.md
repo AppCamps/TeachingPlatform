@@ -2,7 +2,7 @@
 
 ## Dependencies
 - ruby 2.7.4 + bundler
-- node 14.17.3 + yarn
+- node 8.17.0 + yarn
 - postgres 9.6
 - mysql
 - openssl

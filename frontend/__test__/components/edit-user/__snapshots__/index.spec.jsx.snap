@@ -30,6 +30,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
       forceUnregisterOnUnmount={false}
       form="editUserForm"
       getFormState={[Function]}
+      initialValues={undefined}
       keepDirtyOnReinitialize={false}
       persistentSubmitErrors={false}
       pure={true}
@@ -39,7 +40,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
       shouldWarn={[Function]}
       touchOnBlur={true}
       touchOnChange={false}
-      updateUnregisteredFields={false}
       user={
         Object {
           "createdAt": 1483271259,
@@ -78,12 +78,12 @@ exports[`<EditUser /> renders form correctly 1`] = `
         arraySplice={[Function]}
         arraySwap={[Function]}
         arrayUnshift={[Function]}
+        asyncErrors={undefined}
         asyncValidating={false}
         autofill={[Function]}
         blur={[Function]}
         change={[Function]}
         clearAsyncError={[Function]}
-        clearFields={[Function]}
         clearSubmit={[Function]}
         clearSubmitErrors={[Function]}
         destroy={[Function]}
@@ -91,10 +91,12 @@ exports[`<EditUser /> renders form correctly 1`] = `
         dirty={false}
         dispatch={[Function]}
         enableReinitialize={false}
+        error={undefined}
         focus={[Function]}
         forceUnregisterOnUnmount={false}
         form="editUserForm"
         getFormState={[Function]}
+        initialValues={undefined}
         initialize={[Function]}
         initialized={false}
         invalid={true}
@@ -123,7 +125,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
           }
         }
         reset={[Function]}
-        resetSection={[Function]}
         setSubmitFailed={[Function]}
         setSubmitSucceeded={[Function]}
         shouldAsyncValidate={[Function]}
@@ -149,11 +150,11 @@ exports[`<EditUser /> renders form correctly 1`] = `
         touch={[Function]}
         touchOnBlur={true}
         touchOnChange={false}
+        triggerSubmit={undefined}
         unregisterField={[Function]}
         untouch={[Function]}
         updateSyncErrors={[Function]}
         updateSyncWarnings={[Function]}
-        updateUnregisteredFields={false}
         user={
           Object {
             "createdAt": 1483271259,
@@ -168,6 +169,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
         validExceptSubmit={false}
         validate={[Function]}
         values={Object {}}
+        warning={undefined}
       >
         <EditUser
           anyTouched={false}
@@ -191,26 +193,27 @@ exports[`<EditUser /> renders form correctly 1`] = `
           blur={[Function]}
           change={[Function]}
           clearAsyncError={[Function]}
-          clearFields={[Function]}
           clearSubmit={[Function]}
           clearSubmitErrors={[Function]}
           destroy={[Function]}
           dirty={false}
           dispatch={[Function]}
+          error={undefined}
           form="editUserForm"
           handleSubmit={[Function]}
+          initialValues={undefined}
           initialize={[Function]}
           initialized={false}
           invalid={true}
           pristine={true}
           pure={true}
           reset={[Function]}
-          resetSection={[Function]}
           submit={[Function]}
           submitFailed={false}
           submitSucceeded={false}
           submitting={false}
           touch={[Function]}
+          triggerSubmit={undefined}
           untouch={[Function]}
           user={
             Object {
@@ -224,6 +227,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
           }
           valid={false}
           validate={[Function]}
+          warning={undefined}
         >
           <div
             className="container"
@@ -320,7 +324,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "blur": [Function],
                               "change": [Function],
                               "clearAsyncError": [Function],
-                              "clearFields": [Function],
                               "clearSubmit": [Function],
                               "clearSubmitErrors": [Function],
                               "destroy": [Function],
@@ -337,7 +340,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "initialValues": undefined,
                               "initialize": [Function],
                               "initialized": false,
-                              "invalid": false,
+                              "invalid": true,
                               "keepDirtyOnReinitialize": false,
                               "persistentSubmitErrors": false,
                               "pristine": true,
@@ -345,9 +348,24 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "register": [Function],
                               "registerField": [Function],
                               "registerInnerOnSubmit": [Function],
-                              "registeredFields": undefined,
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
                               "reset": [Function],
-                              "resetSection": [Function],
                               "sectionPrefix": undefined,
                               "setSubmitFailed": [Function],
                               "setSubmitSucceeded": [Function],
@@ -363,7 +381,11 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "submitFailed": false,
                               "submitSucceeded": false,
                               "submitting": false,
-                              "syncErrors": Object {},
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
                               "syncWarnings": Object {},
                               "touch": [Function],
                               "touchOnBlur": true,
@@ -374,7 +396,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "untouch": [Function],
                               "updateSyncErrors": [Function],
                               "updateSyncWarnings": [Function],
-                              "updateUnregisteredFields": false,
                               "user": Object {
                                 "createdAt": 1483271259,
                                 "email": "Darby.Prohaska26@gmail.com",
@@ -383,8 +404,8 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
                                 "intercomHash": "s",
                               },
-                              "valid": true,
-                              "validExceptSubmit": true,
+                              "valid": false,
+                              "validExceptSubmit": false,
                               "validate": [Function],
                               "values": Object {},
                               "warning": undefined,
@@ -429,7 +450,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -446,7 +466,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -454,9 +474,24 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -472,7 +507,11 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -483,7 +522,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
                                 "user": Object {
                                   "createdAt": 1483271259,
                                   "email": "Darby.Prohaska26@gmail.com",
@@ -492,23 +530,32 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                   "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
                                   "intercomHash": "s",
                                 },
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
                               }
                             }
+                            _value={undefined}
+                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
+                            initial={undefined}
                             label="Email"
                             name="email"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
                             syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -653,7 +700,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "blur": [Function],
                               "change": [Function],
                               "clearAsyncError": [Function],
-                              "clearFields": [Function],
                               "clearSubmit": [Function],
                               "clearSubmitErrors": [Function],
                               "destroy": [Function],
@@ -670,7 +716,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "initialValues": undefined,
                               "initialize": [Function],
                               "initialized": false,
-                              "invalid": false,
+                              "invalid": true,
                               "keepDirtyOnReinitialize": false,
                               "persistentSubmitErrors": false,
                               "pristine": true,
@@ -678,9 +724,24 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "register": [Function],
                               "registerField": [Function],
                               "registerInnerOnSubmit": [Function],
-                              "registeredFields": undefined,
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
                               "reset": [Function],
-                              "resetSection": [Function],
                               "sectionPrefix": undefined,
                               "setSubmitFailed": [Function],
                               "setSubmitSucceeded": [Function],
@@ -696,7 +757,11 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "submitFailed": false,
                               "submitSucceeded": false,
                               "submitting": false,
-                              "syncErrors": Object {},
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
                               "syncWarnings": Object {},
                               "touch": [Function],
                               "touchOnBlur": true,
@@ -707,7 +772,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "untouch": [Function],
                               "updateSyncErrors": [Function],
                               "updateSyncWarnings": [Function],
-                              "updateUnregisteredFields": false,
                               "user": Object {
                                 "createdAt": 1483271259,
                                 "email": "Darby.Prohaska26@gmail.com",
@@ -716,8 +780,8 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
                                 "intercomHash": "s",
                               },
-                              "valid": true,
-                              "validExceptSubmit": true,
+                              "valid": false,
+                              "validExceptSubmit": false,
                               "validate": [Function],
                               "values": Object {},
                               "warning": undefined,
@@ -762,7 +826,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -779,7 +842,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -787,9 +850,24 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -805,7 +883,11 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -816,7 +898,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
                                 "user": Object {
                                   "createdAt": 1483271259,
                                   "email": "Darby.Prohaska26@gmail.com",
@@ -825,23 +906,32 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                   "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
                                   "intercomHash": "s",
                                 },
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
                               }
                             }
+                            _value={undefined}
+                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
+                            initial={undefined}
                             label="First name"
                             name="firstName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
                             syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -986,7 +1076,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "blur": [Function],
                               "change": [Function],
                               "clearAsyncError": [Function],
-                              "clearFields": [Function],
                               "clearSubmit": [Function],
                               "clearSubmitErrors": [Function],
                               "destroy": [Function],
@@ -1003,7 +1092,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "initialValues": undefined,
                               "initialize": [Function],
                               "initialized": false,
-                              "invalid": false,
+                              "invalid": true,
                               "keepDirtyOnReinitialize": false,
                               "persistentSubmitErrors": false,
                               "pristine": true,
@@ -1011,9 +1100,24 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "register": [Function],
                               "registerField": [Function],
                               "registerInnerOnSubmit": [Function],
-                              "registeredFields": undefined,
+                              "registeredFields": Object {
+                                "email": Object {
+                                  "count": 1,
+                                  "name": "email",
+                                  "type": "Field",
+                                },
+                                "firstName": Object {
+                                  "count": 1,
+                                  "name": "firstName",
+                                  "type": "Field",
+                                },
+                                "lastName": Object {
+                                  "count": 1,
+                                  "name": "lastName",
+                                  "type": "Field",
+                                },
+                              },
                               "reset": [Function],
-                              "resetSection": [Function],
                               "sectionPrefix": undefined,
                               "setSubmitFailed": [Function],
                               "setSubmitSucceeded": [Function],
@@ -1029,7 +1133,11 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "submitFailed": false,
                               "submitSucceeded": false,
                               "submitting": false,
-                              "syncErrors": Object {},
+                              "syncErrors": Object {
+                                "email": "Required",
+                                "firstName": "Required",
+                                "lastName": "Required",
+                              },
                               "syncWarnings": Object {},
                               "touch": [Function],
                               "touchOnBlur": true,
@@ -1040,7 +1148,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                               "untouch": [Function],
                               "updateSyncErrors": [Function],
                               "updateSyncWarnings": [Function],
-                              "updateUnregisteredFields": false,
                               "user": Object {
                                 "createdAt": 1483271259,
                                 "email": "Darby.Prohaska26@gmail.com",
@@ -1049,8 +1156,8 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
                                 "intercomHash": "s",
                               },
-                              "valid": true,
-                              "validExceptSubmit": true,
+                              "valid": false,
+                              "validExceptSubmit": false,
                               "validate": [Function],
                               "values": Object {},
                               "warning": undefined,
@@ -1095,7 +1202,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -1112,7 +1218,7 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -1120,9 +1226,24 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -1138,7 +1259,11 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -1149,7 +1274,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
                                 "user": Object {
                                   "createdAt": 1483271259,
                                   "email": "Darby.Prohaska26@gmail.com",
@@ -1158,23 +1282,32 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                   "id": "ff3b9d6b-84c3-46ce-81cf-1a4acc1ff917",
                                   "intercomHash": "s",
                                 },
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
                               }
                             }
+                            _value={undefined}
+                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
+                            initial={undefined}
                             label="Last name"
                             name="lastName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
                             syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -1357,6 +1490,7 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
       forceUnregisterOnUnmount={false}
       form="editUserForm"
       getFormState={[Function]}
+      initialValues={undefined}
       keepDirtyOnReinitialize={false}
       persistentSubmitErrors={false}
       pure={true}
@@ -1366,7 +1500,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
       shouldWarn={[Function]}
       touchOnBlur={true}
       touchOnChange={false}
-      updateUnregisteredFields={false}
       user={
         Object {
           "createdAt": 1483271259,
@@ -1406,12 +1539,12 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         arraySplice={[Function]}
         arraySwap={[Function]}
         arrayUnshift={[Function]}
+        asyncErrors={undefined}
         asyncValidating={false}
         autofill={[Function]}
         blur={[Function]}
         change={[Function]}
         clearAsyncError={[Function]}
-        clearFields={[Function]}
         clearSubmit={[Function]}
         clearSubmitErrors={[Function]}
         destroy={[Function]}
@@ -1419,10 +1552,12 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         dirty={false}
         dispatch={[Function]}
         enableReinitialize={false}
+        error={undefined}
         focus={[Function]}
         forceUnregisterOnUnmount={false}
         form="editUserForm"
         getFormState={[Function]}
+        initialValues={undefined}
         initialize={[Function]}
         initialized={false}
         invalid={true}
@@ -1451,7 +1586,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
           }
         }
         reset={[Function]}
-        resetSection={[Function]}
         setSubmitFailed={[Function]}
         setSubmitSucceeded={[Function]}
         shouldAsyncValidate={[Function]}
@@ -1477,11 +1611,11 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         touch={[Function]}
         touchOnBlur={true}
         touchOnChange={false}
+        triggerSubmit={undefined}
         unregisterField={[Function]}
         untouch={[Function]}
         updateSyncErrors={[Function]}
         updateSyncWarnings={[Function]}
-        updateUnregisteredFields={false}
         user={
           Object {
             "createdAt": 1483271259,
@@ -1497,6 +1631,7 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         validExceptSubmit={false}
         validate={[Function]}
         values={Object {}}
+        warning={undefined}
       >
         <EditUser
           anyTouched={false}
@@ -1520,26 +1655,27 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
           blur={[Function]}
           change={[Function]}
           clearAsyncError={[Function]}
-          clearFields={[Function]}
           clearSubmit={[Function]}
           clearSubmitErrors={[Function]}
           destroy={[Function]}
           dirty={false}
           dispatch={[Function]}
+          error={undefined}
           form="editUserForm"
           handleSubmit={[Function]}
+          initialValues={undefined}
           initialize={[Function]}
           initialized={false}
           invalid={true}
           pristine={true}
           pure={true}
           reset={[Function]}
-          resetSection={[Function]}
           submit={[Function]}
           submitFailed={false}
           submitSucceeded={false}
           submitting={false}
           touch={[Function]}
+          triggerSubmit={undefined}
           untouch={[Function]}
           user={
             Object {
@@ -1554,6 +1690,7 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
           }
           valid={false}
           validate={[Function]}
+          warning={undefined}
         >
           <div
             className="container"
@@ -1650,7 +1787,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                               "blur": [Function],
                               "change": [Function],
                               "clearAsyncError": [Function],
-                              "clearFields": [Function],
                               "clearSubmit": [Function],
                               "clearSubmitErrors": [Function],
                               "destroy": [Function],
@@ -1693,7 +1829,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 },
                               },
                               "reset": [Function],
-                              "resetSection": [Function],
                               "sectionPrefix": undefined,
                               "setSubmitFailed": [Function],
                               "setSubmitSucceeded": [Function],
@@ -1724,7 +1859,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                               "untouch": [Function],
                               "updateSyncErrors": [Function],
                               "updateSyncWarnings": [Function],
-                              "updateUnregisteredFields": false,
                               "user": Object {
                                 "createdAt": 1483271259,
                                 "email": "Darby.Prohaska26@gmail.com",
@@ -1780,7 +1914,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -1823,7 +1956,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                   },
                                 },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -1854,7 +1986,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
                                 "user": Object {
                                   "createdAt": 1483271259,
                                   "email": "Darby.Prohaska26@gmail.com",
@@ -1871,16 +2002,25 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "warning": undefined,
                               }
                             }
+                            _value={undefined}
+                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
+                            initial={undefined}
                             label="Email"
                             name="email"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
                             syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -2025,7 +2165,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                               "blur": [Function],
                               "change": [Function],
                               "clearAsyncError": [Function],
-                              "clearFields": [Function],
                               "clearSubmit": [Function],
                               "clearSubmitErrors": [Function],
                               "destroy": [Function],
@@ -2068,7 +2207,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 },
                               },
                               "reset": [Function],
-                              "resetSection": [Function],
                               "sectionPrefix": undefined,
                               "setSubmitFailed": [Function],
                               "setSubmitSucceeded": [Function],
@@ -2099,7 +2237,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                               "untouch": [Function],
                               "updateSyncErrors": [Function],
                               "updateSyncWarnings": [Function],
-                              "updateUnregisteredFields": false,
                               "user": Object {
                                 "createdAt": 1483271259,
                                 "email": "Darby.Prohaska26@gmail.com",
@@ -2155,7 +2292,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -2198,7 +2334,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                   },
                                 },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -2229,7 +2364,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
                                 "user": Object {
                                   "createdAt": 1483271259,
                                   "email": "Darby.Prohaska26@gmail.com",
@@ -2246,16 +2380,25 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "warning": undefined,
                               }
                             }
+                            _value={undefined}
+                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
+                            initial={undefined}
                             label="First name"
                             name="firstName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
                             syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -2400,7 +2543,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                               "blur": [Function],
                               "change": [Function],
                               "clearAsyncError": [Function],
-                              "clearFields": [Function],
                               "clearSubmit": [Function],
                               "clearSubmitErrors": [Function],
                               "destroy": [Function],
@@ -2443,7 +2585,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 },
                               },
                               "reset": [Function],
-                              "resetSection": [Function],
                               "sectionPrefix": undefined,
                               "setSubmitFailed": [Function],
                               "setSubmitSucceeded": [Function],
@@ -2474,7 +2615,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                               "untouch": [Function],
                               "updateSyncErrors": [Function],
                               "updateSyncWarnings": [Function],
-                              "updateUnregisteredFields": false,
                               "user": Object {
                                 "createdAt": 1483271259,
                                 "email": "Darby.Prohaska26@gmail.com",
@@ -2530,7 +2670,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -2573,7 +2712,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                   },
                                 },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -2604,7 +2742,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
                                 "user": Object {
                                   "createdAt": 1483271259,
                                   "email": "Darby.Prohaska26@gmail.com",
@@ -2621,16 +2758,25 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "warning": undefined,
                               }
                             }
+                            _value={undefined}
+                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
+                            initial={undefined}
                             label="Last name"
                             name="lastName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
                             syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}

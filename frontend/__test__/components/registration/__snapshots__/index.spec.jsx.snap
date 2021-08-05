@@ -56,6 +56,7 @@ exports[`<Registration /> renders form correctly 1`] = `
       forceUnregisterOnUnmount={false}
       form="registration"
       getFormState={[Function]}
+      initialValues={undefined}
       keepDirtyOnReinitialize={false}
       persistentSubmitErrors={false}
       pure={true}
@@ -65,7 +66,6 @@ exports[`<Registration /> renders form correctly 1`] = `
       shouldWarn={[Function]}
       touchOnBlur={true}
       touchOnChange={false}
-      updateUnregisteredFields={false}
       validate={[Function]}
     >
       <Form(Registration)
@@ -94,12 +94,12 @@ exports[`<Registration /> renders form correctly 1`] = `
         arraySplice={[Function]}
         arraySwap={[Function]}
         arrayUnshift={[Function]}
+        asyncErrors={undefined}
         asyncValidating={false}
         autofill={[Function]}
         blur={[Function]}
         change={[Function]}
         clearAsyncError={[Function]}
-        clearFields={[Function]}
         clearSubmit={[Function]}
         clearSubmitErrors={[Function]}
         destroy={[Function]}
@@ -107,10 +107,12 @@ exports[`<Registration /> renders form correctly 1`] = `
         dirty={false}
         dispatch={[Function]}
         enableReinitialize={false}
+        error={undefined}
         focus={[Function]}
         forceUnregisterOnUnmount={false}
         form="registration"
         getFormState={[Function]}
+        initialValues={undefined}
         initialize={[Function]}
         initialized={false}
         invalid={true}
@@ -169,7 +171,6 @@ exports[`<Registration /> renders form correctly 1`] = `
           }
         }
         reset={[Function]}
-        resetSection={[Function]}
         setSubmitFailed={[Function]}
         setSubmitSucceeded={[Function]}
         shouldAsyncValidate={[Function]}
@@ -200,15 +201,16 @@ exports[`<Registration /> renders form correctly 1`] = `
         touch={[Function]}
         touchOnBlur={true}
         touchOnChange={false}
+        triggerSubmit={undefined}
         unregisterField={[Function]}
         untouch={[Function]}
         updateSyncErrors={[Function]}
         updateSyncWarnings={[Function]}
-        updateUnregisteredFields={false}
         valid={false}
         validExceptSubmit={false}
         validate={[Function]}
         values={Object {}}
+        warning={undefined}
       >
         <Registration
           anyTouched={false}
@@ -232,29 +234,31 @@ exports[`<Registration /> renders form correctly 1`] = `
           blur={[Function]}
           change={[Function]}
           clearAsyncError={[Function]}
-          clearFields={[Function]}
           clearSubmit={[Function]}
           clearSubmitErrors={[Function]}
           destroy={[Function]}
           dirty={false}
           dispatch={[Function]}
+          error={undefined}
           form="registration"
           handleSubmit={[Function]}
+          initialValues={undefined}
           initialize={[Function]}
           initialized={false}
           invalid={true}
           pristine={true}
           pure={true}
           reset={[Function]}
-          resetSection={[Function]}
           submit={[Function]}
           submitFailed={false}
           submitSucceeded={false}
           submitting={false}
           touch={[Function]}
+          triggerSubmit={undefined}
           untouch={[Function]}
           valid={false}
           validate={[Function]}
+          warning={undefined}
         >
           <div
             className="container"
@@ -343,7 +347,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                               "blur": [Function],
                               "change": [Function],
                               "clearAsyncError": [Function],
-                              "clearFields": [Function],
                               "clearSubmit": [Function],
                               "clearSubmitErrors": [Function],
                               "destroy": [Function],
@@ -416,7 +419,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 },
                               },
                               "reset": [Function],
-                              "resetSection": [Function],
                               "sectionPrefix": undefined,
                               "setSubmitFailed": [Function],
                               "setSubmitSucceeded": [Function],
@@ -452,7 +454,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                               "untouch": [Function],
                               "updateSyncErrors": [Function],
                               "updateSyncWarnings": [Function],
-                              "updateUnregisteredFields": false,
                               "valid": false,
                               "validExceptSubmit": false,
                               "validate": [Function],
@@ -521,7 +522,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -594,7 +594,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   },
                                 },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -630,7 +629,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
                                 "valid": false,
                                 "validExceptSubmit": false,
                                 "validate": [Function],
@@ -638,11 +636,14 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "warning": undefined,
                               }
                             }
+                            _value={undefined}
+                            asyncError={undefined}
                             asyncValidating={false}
                             autoFocus={true}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
+                            initial={undefined}
                             label="I am a"
                             name="role"
                             normalize={[Function]}
@@ -669,7 +670,13 @@ exports[`<Registration /> renders form correctly 1`] = `
                             }
                             pristine={true}
                             required={true}
+                            state={undefined}
+                            submitError={undefined}
+                            submitFailed={undefined}
+                            submitting={undefined}
                             syncError="Required"
+                            syncWarning={undefined}
+                            value={undefined}
                           >
                             <RadioWithLabel
                               autoFocus={true}
@@ -729,7 +736,9 @@ exports[`<Registration /> renders form correctly 1`] = `
                               required={true}
                             >
                               <div>
-                                <div>
+                                <div
+                                  className={undefined}
+                                >
                                   <Label
                                     for={null}
                                     required={true}
@@ -940,7 +949,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -957,7 +965,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -965,9 +973,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -983,7 +1036,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -994,9 +1056,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -1041,7 +1102,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -1058,7 +1118,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -1066,9 +1126,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -1084,7 +1189,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -1095,24 +1209,32 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="First name"
                               name="firstName"
                               normalize={[Function]}
                               pristine={true}
                               required={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
                               syncError="Required"
+                              syncWarning={undefined}
+                              value={undefined}
                             >
                               <InputWithLabel
                                 autoFocus={false}
@@ -1257,7 +1379,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -1274,7 +1395,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -1282,9 +1403,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -1300,7 +1466,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -1311,9 +1486,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -1358,7 +1532,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -1375,7 +1548,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -1383,9 +1556,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -1401,7 +1619,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -1412,24 +1639,32 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="Last name"
                               name="lastName"
                               normalize={[Function]}
                               pristine={true}
                               required={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
                               syncError="Required"
+                              syncWarning={undefined}
+                              value={undefined}
                             >
                               <InputWithLabel
                                 autoFocus={false}
@@ -1576,7 +1811,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -1593,7 +1827,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -1601,9 +1835,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -1619,7 +1898,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -1630,9 +1918,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -1677,7 +1964,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -1694,7 +1980,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -1702,9 +1988,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -1720,7 +2051,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -1731,24 +2071,32 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="Email"
                               name="email"
                               normalize={[Function]}
                               pristine={true}
                               required={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
                               syncError="Required"
+                              syncWarning={undefined}
+                              value={undefined}
                             >
                               <InputWithLabel
                                 autoFocus={false}
@@ -1894,7 +2242,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -1911,7 +2258,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -1919,9 +2266,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -1937,7 +2329,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -1948,9 +2349,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -1996,7 +2396,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -2013,7 +2412,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -2021,9 +2420,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -2039,7 +2483,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -2050,25 +2503,33 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="Password"
                               name="password"
                               normalize={[Function]}
                               pristine={true}
                               required={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
                               syncError="Required"
+                              syncWarning={undefined}
                               type="password"
+                              value={undefined}
                             >
                               <InputWithLabel
                                 autoFocus={false}
@@ -2215,7 +2676,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -2232,7 +2692,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -2240,9 +2700,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -2258,7 +2763,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -2269,9 +2783,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -2317,7 +2830,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -2334,7 +2846,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -2342,9 +2854,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -2360,7 +2917,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -2371,25 +2937,33 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="Password confirmation"
                               name="passwordConfirmation"
                               normalize={[Function]}
                               pristine={true}
                               required={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
                               syncError="Required"
+                              syncWarning={undefined}
                               type="password"
+                              value={undefined}
                             >
                               <InputWithLabel
                                 autoFocus={false}
@@ -2537,7 +3111,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -2554,7 +3127,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -2562,9 +3135,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -2580,7 +3198,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -2591,9 +3218,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -2638,7 +3264,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -2655,7 +3280,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -2663,9 +3288,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -2681,7 +3351,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -2692,24 +3371,32 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="How did you hear from us?"
                               name="referal"
                               normalize={[Function]}
                               pristine={true}
                               required={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
                               syncError="Required"
+                              syncWarning={undefined}
+                              value={undefined}
                             >
                               <InputWithLabel
                                 autoFocus={false}
@@ -2855,7 +3542,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -2872,7 +3558,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -2880,9 +3566,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -2898,7 +3629,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -2909,9 +3649,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -2955,7 +3694,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -2972,7 +3710,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -2980,9 +3718,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -2998,7 +3781,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -3009,22 +3801,31 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="Comment"
                               name="comment"
                               normalize={[Function]}
                               pristine={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
+                              syncError={undefined}
+                              syncWarning={undefined}
+                              value={undefined}
                             >
                               <TextAreaWithLabel
                                 input={
@@ -3091,7 +3892,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                     <TextareaAutosize
                                       className="textarea"
                                       disabled={false}
-                                      inputRef={[Function]}
                                       onChange={[Function]}
                                       onHeightChange={[Function]}
                                       placeholder={null}
@@ -3190,7 +3990,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "blur": [Function],
                                 "change": [Function],
                                 "clearAsyncError": [Function],
-                                "clearFields": [Function],
                                 "clearSubmit": [Function],
                                 "clearSubmitErrors": [Function],
                                 "destroy": [Function],
@@ -3207,7 +4006,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "initialValues": undefined,
                                 "initialize": [Function],
                                 "initialized": false,
-                                "invalid": false,
+                                "invalid": true,
                                 "keepDirtyOnReinitialize": false,
                                 "persistentSubmitErrors": false,
                                 "pristine": true,
@@ -3215,9 +4014,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "register": [Function],
                                 "registerField": [Function],
                                 "registerInnerOnSubmit": [Function],
-                                "registeredFields": undefined,
+                                "registeredFields": Object {
+                                  "comment": Object {
+                                    "count": 1,
+                                    "name": "comment",
+                                    "type": "Field",
+                                  },
+                                  "email": Object {
+                                    "count": 1,
+                                    "name": "email",
+                                    "type": "Field",
+                                  },
+                                  "firstName": Object {
+                                    "count": 1,
+                                    "name": "firstName",
+                                    "type": "Field",
+                                  },
+                                  "lastName": Object {
+                                    "count": 1,
+                                    "name": "lastName",
+                                    "type": "Field",
+                                  },
+                                  "password": Object {
+                                    "count": 1,
+                                    "name": "password",
+                                    "type": "Field",
+                                  },
+                                  "passwordConfirmation": Object {
+                                    "count": 1,
+                                    "name": "passwordConfirmation",
+                                    "type": "Field",
+                                  },
+                                  "privacyPolicyAccepted": Object {
+                                    "count": 1,
+                                    "name": "privacyPolicyAccepted",
+                                    "type": "Field",
+                                  },
+                                  "referal": Object {
+                                    "count": 1,
+                                    "name": "referal",
+                                    "type": "Field",
+                                  },
+                                  "role": Object {
+                                    "count": 1,
+                                    "name": "role",
+                                    "type": "Field",
+                                  },
+                                },
                                 "reset": [Function],
-                                "resetSection": [Function],
                                 "sectionPrefix": undefined,
                                 "setSubmitFailed": [Function],
                                 "setSubmitSucceeded": [Function],
@@ -3233,7 +4077,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "submitFailed": false,
                                 "submitSucceeded": false,
                                 "submitting": false,
-                                "syncErrors": Object {},
+                                "syncErrors": Object {
+                                  "email": "Required",
+                                  "firstName": "Required",
+                                  "lastName": "Required",
+                                  "password": "Required",
+                                  "passwordConfirmation": "Required",
+                                  "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                  "referal": "Required",
+                                  "role": "Required",
+                                },
                                 "syncWarnings": Object {},
                                 "touch": [Function],
                                 "touchOnBlur": true,
@@ -3244,9 +4097,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                 "untouch": [Function],
                                 "updateSyncErrors": [Function],
                                 "updateSyncWarnings": [Function],
-                                "updateUnregisteredFields": false,
-                                "valid": true,
-                                "validExceptSubmit": true,
+                                "valid": false,
+                                "validExceptSubmit": false,
                                 "validate": [Function],
                                 "values": Object {},
                                 "warning": undefined,
@@ -3293,7 +4145,6 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "blur": [Function],
                                   "change": [Function],
                                   "clearAsyncError": [Function],
-                                  "clearFields": [Function],
                                   "clearSubmit": [Function],
                                   "clearSubmitErrors": [Function],
                                   "destroy": [Function],
@@ -3310,7 +4161,7 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "initialValues": undefined,
                                   "initialize": [Function],
                                   "initialized": false,
-                                  "invalid": false,
+                                  "invalid": true,
                                   "keepDirtyOnReinitialize": false,
                                   "persistentSubmitErrors": false,
                                   "pristine": true,
@@ -3318,9 +4169,54 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "register": [Function],
                                   "registerField": [Function],
                                   "registerInnerOnSubmit": [Function],
-                                  "registeredFields": undefined,
+                                  "registeredFields": Object {
+                                    "comment": Object {
+                                      "count": 1,
+                                      "name": "comment",
+                                      "type": "Field",
+                                    },
+                                    "email": Object {
+                                      "count": 1,
+                                      "name": "email",
+                                      "type": "Field",
+                                    },
+                                    "firstName": Object {
+                                      "count": 1,
+                                      "name": "firstName",
+                                      "type": "Field",
+                                    },
+                                    "lastName": Object {
+                                      "count": 1,
+                                      "name": "lastName",
+                                      "type": "Field",
+                                    },
+                                    "password": Object {
+                                      "count": 1,
+                                      "name": "password",
+                                      "type": "Field",
+                                    },
+                                    "passwordConfirmation": Object {
+                                      "count": 1,
+                                      "name": "passwordConfirmation",
+                                      "type": "Field",
+                                    },
+                                    "privacyPolicyAccepted": Object {
+                                      "count": 1,
+                                      "name": "privacyPolicyAccepted",
+                                      "type": "Field",
+                                    },
+                                    "referal": Object {
+                                      "count": 1,
+                                      "name": "referal",
+                                      "type": "Field",
+                                    },
+                                    "role": Object {
+                                      "count": 1,
+                                      "name": "role",
+                                      "type": "Field",
+                                    },
+                                  },
                                   "reset": [Function],
-                                  "resetSection": [Function],
                                   "sectionPrefix": undefined,
                                   "setSubmitFailed": [Function],
                                   "setSubmitSucceeded": [Function],
@@ -3336,7 +4232,16 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "submitFailed": false,
                                   "submitSucceeded": false,
                                   "submitting": false,
-                                  "syncErrors": Object {},
+                                  "syncErrors": Object {
+                                    "email": "Required",
+                                    "firstName": "Required",
+                                    "lastName": "Required",
+                                    "password": "Required",
+                                    "passwordConfirmation": "Required",
+                                    "privacyPolicyAccepted": "You need to confirm our privacy policy",
+                                    "referal": "Required",
+                                    "role": "Required",
+                                  },
                                   "syncWarnings": Object {},
                                   "touch": [Function],
                                   "touchOnBlur": true,
@@ -3347,26 +4252,34 @@ exports[`<Registration /> renders form correctly 1`] = `
                                   "untouch": [Function],
                                   "updateSyncErrors": [Function],
                                   "updateSyncWarnings": [Function],
-                                  "updateUnregisteredFields": false,
-                                  "valid": true,
-                                  "validExceptSubmit": true,
+                                  "valid": false,
+                                  "validExceptSubmit": false,
                                   "validate": [Function],
                                   "values": Object {},
                                   "warning": undefined,
                                 }
                               }
+                              _value={undefined}
+                              asyncError={undefined}
                               asyncValidating={false}
                               checkboxClassName="privacyPolicyOption"
                               checkboxLabel="I have read and accept the {privacyPolicy} of App Camps."
                               component={[Function]}
                               dirty={false}
                               dispatch={[Function]}
+                              initial={undefined}
                               label="Data protection"
                               name="privacyPolicyAccepted"
                               normalize={[Function]}
                               pristine={true}
                               required={true}
+                              state={undefined}
+                              submitError={undefined}
+                              submitFailed={undefined}
+                              submitting={undefined}
                               syncError="You need to confirm our privacy policy"
+                              syncWarning={undefined}
+                              value={undefined}
                             >
                               <CheckboxWithLabel
                                 autoFocus={false}
