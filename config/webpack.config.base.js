@@ -39,6 +39,7 @@ const config = {
     ],
     jsx: './index.jsx',
   },
+  mode: 'none',
   output: {
     path: path.join(baseDir, './public/frontend'),
     filename: 'bundle-[hash].js',
@@ -63,7 +64,6 @@ const config = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle-[hash].js' }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
       'process.env.TRACKJS_APPLICATION': JSON.stringify(TRACKJS_APPLICATION),

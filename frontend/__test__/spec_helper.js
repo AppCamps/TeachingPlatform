@@ -1,5 +1,5 @@
 import Faker from 'faker';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import MockLocalStorage from 'mock-localstorage';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
