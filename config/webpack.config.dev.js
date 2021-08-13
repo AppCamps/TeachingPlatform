@@ -7,6 +7,7 @@ const devConfig = require('./webpack.config.base').config;
 devConfig.entry.jsx = ['react-hot-loader/patch', devConfig.entry.jsx];
 devConfig.output.publicPath = 'https://localhost:8080/frontend/';
 
+devConfig.mode = 'development';
 devConfig.module.rules.push({
   test: /\.s?css$/,
   include: /frontend/,
@@ -22,7 +23,6 @@ devConfig.module.rules.push({
 });
 
 devConfig.plugins.push(
-  new webpack.NamedModulesPlugin(),
   new CircularDependencyPlugin({
     exclude: /node_modules/,
     include: /frontend/,
