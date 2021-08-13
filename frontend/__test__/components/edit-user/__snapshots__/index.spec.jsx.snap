@@ -30,7 +30,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
       forceUnregisterOnUnmount={false}
       form="editUserForm"
       getFormState={[Function]}
-      initialValues={undefined}
       keepDirtyOnReinitialize={false}
       persistentSubmitErrors={false}
       pure={true}
@@ -78,7 +77,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
         arraySplice={[Function]}
         arraySwap={[Function]}
         arrayUnshift={[Function]}
-        asyncErrors={undefined}
         asyncValidating={false}
         autofill={[Function]}
         blur={[Function]}
@@ -91,12 +89,10 @@ exports[`<EditUser /> renders form correctly 1`] = `
         dirty={false}
         dispatch={[Function]}
         enableReinitialize={false}
-        error={undefined}
         focus={[Function]}
         forceUnregisterOnUnmount={false}
         form="editUserForm"
         getFormState={[Function]}
-        initialValues={undefined}
         initialize={[Function]}
         initialized={false}
         invalid={true}
@@ -150,7 +146,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
         touch={[Function]}
         touchOnBlur={true}
         touchOnChange={false}
-        triggerSubmit={undefined}
         unregisterField={[Function]}
         untouch={[Function]}
         updateSyncErrors={[Function]}
@@ -169,7 +164,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
         validExceptSubmit={false}
         validate={[Function]}
         values={Object {}}
-        warning={undefined}
       >
         <EditUser
           anyTouched={false}
@@ -198,10 +192,8 @@ exports[`<EditUser /> renders form correctly 1`] = `
           destroy={[Function]}
           dirty={false}
           dispatch={[Function]}
-          error={undefined}
           form="editUserForm"
           handleSubmit={[Function]}
-          initialValues={undefined}
           initialize={[Function]}
           initialized={false}
           invalid={true}
@@ -213,7 +205,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
           submitSucceeded={false}
           submitting={false}
           touch={[Function]}
-          triggerSubmit={undefined}
           untouch={[Function]}
           user={
             Object {
@@ -227,7 +218,6 @@ exports[`<EditUser /> renders form correctly 1`] = `
           }
           valid={false}
           validate={[Function]}
-          warning={undefined}
         >
           <div
             className="container"
@@ -537,25 +527,16 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "warning": undefined,
                               }
                             }
-                            _value={undefined}
-                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
-                            initial={undefined}
                             label="Email"
                             name="email"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
-                            state={undefined}
-                            submitError={undefined}
-                            submitFailed={undefined}
-                            submitting={undefined}
                             syncError="Required"
-                            syncWarning={undefined}
-                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -913,25 +894,16 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "warning": undefined,
                               }
                             }
-                            _value={undefined}
-                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
-                            initial={undefined}
                             label="First name"
                             name="firstName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
-                            state={undefined}
-                            submitError={undefined}
-                            submitFailed={undefined}
-                            submitting={undefined}
                             syncError="Required"
-                            syncWarning={undefined}
-                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -1289,25 +1261,16 @@ exports[`<EditUser /> renders form correctly 1`] = `
                                 "warning": undefined,
                               }
                             }
-                            _value={undefined}
-                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
-                            initial={undefined}
                             label="Last name"
                             name="lastName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
-                            state={undefined}
-                            submitError={undefined}
-                            submitFailed={undefined}
-                            submitting={undefined}
                             syncError="Required"
-                            syncWarning={undefined}
-                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -1490,7 +1453,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
       forceUnregisterOnUnmount={false}
       form="editUserForm"
       getFormState={[Function]}
-      initialValues={undefined}
       keepDirtyOnReinitialize={false}
       persistentSubmitErrors={false}
       pure={true}
@@ -1539,7 +1501,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         arraySplice={[Function]}
         arraySwap={[Function]}
         arrayUnshift={[Function]}
-        asyncErrors={undefined}
         asyncValidating={false}
         autofill={[Function]}
         blur={[Function]}
@@ -1552,12 +1513,10 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         dirty={false}
         dispatch={[Function]}
         enableReinitialize={false}
-        error={undefined}
         focus={[Function]}
         forceUnregisterOnUnmount={false}
         form="editUserForm"
         getFormState={[Function]}
-        initialValues={undefined}
         initialize={[Function]}
         initialized={false}
         invalid={true}
@@ -1611,7 +1570,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         touch={[Function]}
         touchOnBlur={true}
         touchOnChange={false}
-        triggerSubmit={undefined}
         unregisterField={[Function]}
         untouch={[Function]}
         updateSyncErrors={[Function]}
@@ -1631,7 +1589,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
         validExceptSubmit={false}
         validate={[Function]}
         values={Object {}}
-        warning={undefined}
       >
         <EditUser
           anyTouched={false}
@@ -1660,10 +1617,8 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
           destroy={[Function]}
           dirty={false}
           dispatch={[Function]}
-          error={undefined}
           form="editUserForm"
           handleSubmit={[Function]}
-          initialValues={undefined}
           initialize={[Function]}
           initialized={false}
           invalid={true}
@@ -1675,7 +1630,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
           submitSucceeded={false}
           submitting={false}
           touch={[Function]}
-          triggerSubmit={undefined}
           untouch={[Function]}
           user={
             Object {
@@ -1690,7 +1644,6 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
           }
           valid={false}
           validate={[Function]}
-          warning={undefined}
         >
           <div
             className="container"
@@ -2002,25 +1955,16 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "warning": undefined,
                               }
                             }
-                            _value={undefined}
-                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
-                            initial={undefined}
                             label="Email"
                             name="email"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
-                            state={undefined}
-                            submitError={undefined}
-                            submitFailed={undefined}
-                            submitting={undefined}
                             syncError="Required"
-                            syncWarning={undefined}
-                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -2380,25 +2324,16 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "warning": undefined,
                               }
                             }
-                            _value={undefined}
-                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
-                            initial={undefined}
                             label="First name"
                             name="firstName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
-                            state={undefined}
-                            submitError={undefined}
-                            submitFailed={undefined}
-                            submitting={undefined}
                             syncError="Required"
-                            syncWarning={undefined}
-                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}
@@ -2758,25 +2693,16 @@ exports[`<EditUser /> shows info for unconfirmed email 1`] = `
                                 "warning": undefined,
                               }
                             }
-                            _value={undefined}
-                            asyncError={undefined}
                             asyncValidating={false}
                             component={[Function]}
                             dirty={false}
                             dispatch={[Function]}
-                            initial={undefined}
                             label="Last name"
                             name="lastName"
                             normalize={[Function]}
                             pristine={true}
                             required={true}
-                            state={undefined}
-                            submitError={undefined}
-                            submitFailed={undefined}
-                            submitting={undefined}
                             syncError="Required"
-                            syncWarning={undefined}
-                            value={undefined}
                           >
                             <InputWithLabel
                               autoFocus={false}

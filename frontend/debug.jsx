@@ -5,7 +5,7 @@ import { trackError as trackJsError, log as trackJsLog } from './services/trackj
 export function trackError(error) {
   if (process.env.NODE_ENV === 'production') {
     trackJsError(error);
-  } else {
+  } else if (process.env.NODE_ENV === 'development') {
     // eslint-disable-next-line no-console
     console.error(error);
   }
