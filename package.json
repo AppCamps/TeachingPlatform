@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "8.17.0"
+    "node": "10.24.1"
   },
   "greenkeeper": {
     "ignore": [
@@ -81,7 +81,7 @@
     "redux-saga-test-plan": "3.7.0",
     "rucksack-css": "^1.0.2",
     "sass-loader": "7.3.1",
-    "sass-variable-loader": "0.1.2",
+    "sass-variable-loader": "^0.1.2",
     "style-loader": "0.23.1",
     "susy": "^2.2.12",
     "url-loader": "2.3.0",

@@ -1,18 +1,21 @@
 # AppCamps Teaching Platform
 
 ## Dependencies
+
 - ruby 2.7.4 + bundler
-- node 8.17.0 + yarn
+- node 10.24.1 + yarn
 - postgres 9.6
 - mysql
 - openssl
 
 ## Installation
 
-* [Installation Instructions](docs/Installation.md)
+- [Installation Instructions](docs/Installation.md)
 
 ## I18n
-* [I18n Information](docs/I18n.md)
+
+- [I18n Information](docs/I18n.md)
 
 ## Deployment
-* [Deploy to Heroku](docs/Deployment.md)
+
+- [Deploy to Heroku](docs/Deployment.md)
