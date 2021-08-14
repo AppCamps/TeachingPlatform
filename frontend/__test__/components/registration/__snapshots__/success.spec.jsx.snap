@@ -3,7 +3,7 @@
 exports[`<Registration /> renders correctly with user firstName 1`] = `
 <RegistrationSuccess
   firstName="Thomas"
-  redirectToRegistrationPage={[Function]}
+  redirectToRegistrationPage={[MockFunction]}
 >
   <div
     className="container"
