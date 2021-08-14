@@ -63,7 +63,7 @@
     "faker": "^4.0.0",
     "favicons-webpack-plugin": "2.1.0",
     "file-loader": "^2.0.0",
-    "html-webpack-harddisk-plugin": "^1.0.2",
+    "html-webpack-harddisk-plugin": "^2.0.0",
     "html-webpack-plugin": "4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "23.6.0",
@@ -86,7 +86,7 @@
     "susy": "^2.2.12",
     "url-loader": "2.3.0",
     "uuid": "^8.3.2",
-    "webpack": "4.38.0",
+    "webpack": "4.41.5",
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.2"
   },
