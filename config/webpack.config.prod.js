@@ -1,24 +1,26 @@
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const webpackConfig = require('./webpack.config.base').config;
 
-const extractCss = new MiniCssExtractPlugin('styles-[contenthash].css');
+const extractCss = new ExtractTextPlugin('styles-[contenthash].css');
 
-webpackConfig.mode = 'production'
 webpackConfig.devtool = 'source-map';
 webpackConfig.module.rules.push({
   test: /\.s?css$/,
   include: /frontend/,
-  use: [
-    MiniCssExtractPlugin.loader,
-    'css-loader?modules&importLoaders=1&camelCase&localIdentName=[folder]__[local]__[hash:base64:5]',
-    'postcss-loader',
-    'sass-loader',
-  ],
+  loader: extractCss.extract({
+    fallback: 'style-loader',
+    use: [
+      'css-loader?modules&importLoaders=1&camelCase&localIdentName=[folder]__[local]__[hash:base64:5]',
+      'postcss-loader',
+      'sass-loader',
+    ],
+  }),
 });
 webpackConfig.plugins.push(
-  extractCss
+  extractCss,
+  new webpack.optimize.UglifyJsPlugin({ sourceMap: true })
 );
 
 module.exports = webpackConfig;
