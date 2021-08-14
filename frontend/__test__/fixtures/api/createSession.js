@@ -16,6 +16,7 @@ export const requestData = `
 {
   "data": {
     "type": "sessions",
+    "id": "undefined",
     "attributes": {
       "email": "${user.email}",
       "password": "password123"

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactPlayer from 'react-player/lazy';
+import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 
 import style from './style.scss';
@@ -22,7 +22,6 @@ const PlatformTips = (_props, { t }) => (
             url="https://player.vimeo.com/video/505620123"
             width="100%"
             height="534px"
-            controls={true}
           />
         </div>
         <p>
