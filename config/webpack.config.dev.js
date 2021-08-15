@@ -6,6 +6,7 @@ const devConfig = require('./webpack.config.base').config;
 
 devConfig.entry.jsx = ['react-hot-loader/patch', devConfig.entry.jsx];
 devConfig.output.publicPath = 'https://localhost:8080/frontend/';
+devConfig.mode = 'development';
 
 devConfig.module.rules.push({
   test: /\.s?css$/,
@@ -14,7 +15,14 @@ devConfig.module.rules.push({
     'style-loader',
     {
       loader: 'css-loader',
-      query: 'modules&sourceMap&importLoaders=1&camelCase&localIdentName=[folder]__[local]__[hash:base64:5]',
+      options: {
+        importLoaders: 1,
+        sourceMap: true,
+        modules: {
+          localIdentName: '[folder]__[local]__[hash:base64:5]',
+          exportLocalsConvention: 'camelCase',
+        },
+      },
     },
     'postcss-loader',
     'sass-loader',
@@ -22,12 +30,11 @@ devConfig.module.rules.push({
 });
 
 devConfig.plugins.push(
-  new webpack.NamedModulesPlugin(),
   new CircularDependencyPlugin({
     exclude: /node_modules/,
     include: /frontend/,
   }),
-  new HtmlWebpackHarddiskPlugin()
+  new HtmlWebpackHarddiskPlugin(),
 );
 
 devConfig.devServer = {
