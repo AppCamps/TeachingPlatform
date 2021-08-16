@@ -100,7 +100,7 @@ COMMAND="$2"
 [ ! has_remote ] && usage
 
 run_security_checks
-#show_undeployed_changes
+show_undeployed_changes
 backup_database
 deploy_changes
 migrate_database
