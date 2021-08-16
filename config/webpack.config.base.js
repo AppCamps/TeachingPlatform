@@ -45,6 +45,7 @@ const config = {
     publicPath: '/frontend/',
   },
   mode: 'none',
+  bail: true,
   module: {
     rules: [
       {

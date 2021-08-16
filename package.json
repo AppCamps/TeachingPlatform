@@ -18,8 +18,8 @@
     "test:coverage": "NODE_ENV=test jest --config config/jest.config.json --coverage",
     "test:watch": "NODE_ENV=test jest --config config/jest.config.json --watch",
     "start": "yarn run start:app",
-    "start:app": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --config config/webpack.config.dev.js --cert certs/www/webpack.crt --key certs/www/webpack.key",
-    "build": "NODE_ENV=production webpack --colors --bail --config config/webpack.config.prod.js",
+    "start:app": "webpack serve -d --history-api-fallback --hot --inline --progress --color --config config/webpack.config.dev.js --cert certs/www/webpack.crt --key certs/www/webpack.key",
+    "build": "webpack --node-env=production --color --config config/webpack.config.prod.js",
     "heroku-postbuild": "yarn run build",
     "translations:extract": "NODE_ENV=development i18n_extract --source=frontend --locales=config/locales/frontend --pattern=t",
     "translations:import": "NODE_ENV=development i18n_import  --locales=config/locales/frontend --translations=frontend",
@@ -88,8 +88,7 @@
     "susy": "^2.2.12",
     "url-loader": "^0.5.7",
     "uuid": "^3.0.1",
-    "webpack": "4.41.5",
-    "webpack-cli": "3.3.12",
+    "webpack": "^4.46.0",
     "webpack-dev-server": "3.11.2",
     "webpack-hot-middleware": "^2.25.0"
   },
@@ -139,6 +138,7 @@
     "spinkit": "^1.2.5",
     "string.prototype.startswith": "^0.2.0",
     "url-search-params-polyfill": "^2.0.1",
+    "webpack-cli": "^4.8.0",
     "whatwg-fetch": "^2.0.0"
   }
 }
