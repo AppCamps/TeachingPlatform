@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_01_082608) do
+ActiveRecord::Schema.define(version: 2021_08_17_091512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -202,7 +202,9 @@ ActiveRecord::Schema.define(version: 2021_07_01_082608) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.jsonb "metrics", default: {}, null: false
+    t.boolean "archived", default: false
     t.index ["metrics"], name: "index_school_classes_on_metrics", using: :gin
+    t.index ["user_id", "archived"], name: "index_school_classes_on_user_id_and_archived"
   end
 
   create_table "teaching_materials", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|

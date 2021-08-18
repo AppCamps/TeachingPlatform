@@ -24,13 +24,14 @@
 .class,
 .no-classes {
   @include class-container;
-  margin-bottom: 0.5em;
   background-color: $color-bg-white;
   clear: fix;
+  margin-bottom: 0.5em;
 }
 
 .no-classes,
 .no-courses {
+  margin-bottom: 1.5em;
   text-align: center;
   color: $color-font-light;
 }
@@ -132,6 +133,10 @@
   text-align: right;
 }
 
+.body-actions a:first-child {
+  margin-right: 1em;
+}
+
 .course:not(:first-child) {
   margin-top: 2em;
 }
@@ -163,4 +168,8 @@
 .bt-course {
   width: 160px;
   text-align: center;
+}
+.form-archive-class {
+  margin-right: 10px;
+  display: inline-block;
 }

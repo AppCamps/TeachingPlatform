@@ -5,7 +5,7 @@ import {
   classVisibilitySelector,
   openClassIdsSelector,
 } from '../../selectors/classes';
-import { fetchClasses, showAllClasses, showTopClasses, toggleClass } from '../../actions/classes';
+import { archiveClass, fetchClasses, showAllClasses, showTopClasses, toggleClass } from '../../actions/classes';
 import { fetchCourses } from '../../actions/courses';
 import { downloadCertificate } from '../../actions/certificate';
 
@@ -23,6 +23,7 @@ export function mapStateToProps(state) {
 
 export function mapDispatchToProps(dispatch) {
   return {
+    archiveClass: (klassId) => dispatch(archiveClass(klassId)),
     fetchClasses: () => dispatch(fetchClasses()),
     fetchCourses: () => dispatch(fetchCourses()),
     setShowAll: () => dispatch(showAllClasses()),

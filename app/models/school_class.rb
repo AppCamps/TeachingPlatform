@@ -84,6 +84,8 @@ class SchoolClass < ApplicationRecord
               allow_blank: true
             }
 
+  scope :not_archived, -> { where archived: false }
+
   def name
     class_name || group_name
   end

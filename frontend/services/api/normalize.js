@@ -19,6 +19,7 @@ function normalizeRecord(data) {
     id: data.id,
     ...data.attributes,
     ...relationships,
+    ...data.meta,
   };
   return {
     type: camelize(data.type),

@@ -103,4 +103,17 @@ describe SchoolClass do
       it { is_expected.not_to validate_presence_of(:school_year) }
     end
   end
+
+  describe 'scope' do
+    it 'non archived only' do
+      not_archived_1 = create(:school_class, :class)
+      not_archived_2 = create(:school_class, :group)
+      create(:school_class, :class, archived: true)
+      create(:school_class, :group, archived: true)
+      expected_class_ids = [not_archived_1.id, not_archived_2.id]
+
+      expect(SchoolClass.not_archived.length).to eql(2)
+      expect(SchoolClass.not_archived.ids).to match_array(expected_class_ids)
+    end
+  end
 end

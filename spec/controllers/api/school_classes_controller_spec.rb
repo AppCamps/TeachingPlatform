@@ -16,11 +16,13 @@ describe Api::SchoolClassesController, api: :authenticate do
       let(:action) { -> { get :index } }
     end
 
-    it 'returns SchoolClasses of user' do
+    it 'returns a users SchoolClasses without archived ones' do
       create_list(:school_class, 2, :class)
       create_list(:school_class, 2, :group)
       create_list(:school_class, 2, :class, user: user)
       create_list(:school_class, 2, :group, user: user)
+      create(:school_class, :class, user: user, archived: true)
+      create(:school_class, :group, user: user, archived: true)
 
       get :index
 
@@ -31,7 +33,7 @@ describe Api::SchoolClassesController, api: :authenticate do
       school_classes_data = document[:data]
       expect(school_classes_data.count).to be(4)
       expect(school_classes_data.map { |school_class| school_class[:id] })
-        .to match_array(user.reload.school_class_ids)
+        .to match_array(user.reload.school_classes.not_archived.ids)
     end
 
     it 'filters data' do
@@ -601,6 +603,43 @@ describe Api::SchoolClassesController, api: :authenticate do
         expect(school_class.metrics).to eql(params)
 
         expect(school_class.courses).to match_array([course])
+      end
+
+      it 'is marked as archived' do
+        class_params[:data] = class_params[:data].merge(meta:{archived: true}).with_indifferent_access
+        patch :update, params: class_params
+
+        school_class.reload
+
+        expect(school_class.archived).to eql(true)
+      end
+
+      it 'is not marked as archived when archived param is set to false' do
+        class_params[:data] = class_params[:data].merge(meta:{archived: false}).with_indifferent_access
+        patch :update, params: class_params
+        
+        school_class.reload
+
+        expect(school_class.archived).to eql(false)
+      end
+
+      it 'is not marked as archived when archived param is nil' do
+        class_params[:data] = class_params[:data].merge(meta:{archived: nil}).with_indifferent_access
+        patch :update, params: class_params
+
+        school_class.reload
+        expect(school_class.archived).to eql(false)
+      end
+
+      it 'is not marked as not archived when archived param is nil' do
+        school_class.archived = true
+        school_class.save
+
+        class_params[:data] = class_params[:data].merge(meta:{archived: nil}).with_indifferent_access
+        patch :update, params: class_params
+
+        school_class.reload
+        expect(school_class.archived).to eql(true)
       end
 
       it 'requires class_name' do

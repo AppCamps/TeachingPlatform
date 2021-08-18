@@ -65,6 +65,18 @@ export function updateClass(klassId, payload = {}) {
   };
 }
 
+export function archiveClass(klass) {
+  return (dispatch) => {
+    const klassData = ClassSerializer.serialize({ ...klass, id: klass.id });
+    klassData.data.meta.archived = true;
+    
+    return _updateClass(klass.id, klassData).then((result) => {
+      dispatch(apiFetched(result));
+      dispatch(push('/classes'));
+    });
+  };
+}
+
 export function markLessonAsComplete(klass, lesson) {
   const newKlass = { ...klass, completedLessons: [lesson.id] };
   const relationPayload = ClassSerializer.serialize(newKlass).data.relationships[

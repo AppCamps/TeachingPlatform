@@ -14,4 +14,10 @@ class SchoolClassSerializer < BaseSerializer
       SchoolClass::EXTRACURRICULAR_PROPERTIES
     ].flatten
   )
+
+  meta do
+    {
+      archived: object.archived
+    }
+  end
 end

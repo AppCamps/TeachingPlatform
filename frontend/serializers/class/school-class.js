@@ -22,6 +22,7 @@ const ClassSerializer = new Serializer('classes', {
     ref: (_object, lessonId) => lessonId,
     included: false,
   },
+  dataMeta: {}
 });
 
 export default ClassSerializer;

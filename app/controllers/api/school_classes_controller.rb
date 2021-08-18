@@ -15,6 +15,7 @@ module Api
       end
 
       school_classes = current_user.school_classes
+                                   .not_archived
                                    .where(class_filters)
                                    .order('school_classes.created_at ASC')
                                    .eager_load(:course_school_classes)
@@ -53,12 +54,12 @@ module Api
 
     def update # rubocop:disable Metrics/MethodLength, Metrics/AbcSize, Metrics/PerceivedComplexity
       JSONAPI.parse_resource!(params.permit!.to_h.except(:controller, :action, :id))
-
+      
       resource_type = attributes.require(:resource_type)
       properties = metrics_properties_for_resource_types(resource_type)
 
-      school_class.metrics =
-        MetricsConstructionService.new(attributes).call(*properties)
+      school_class.metrics = MetricsConstructionService.new(attributes).call(*properties)
+      school_class.archived = data["meta"]["archived"] if !data.dig(:meta, :archived).nil?
 
       if relationships[:courses] && relationships[:courses][:data].try(:any?)
         Course.transaction do
@@ -80,7 +81,8 @@ module Api
       if school_class.save
         render json: school_class,
                include: %i[courses completed_lessons],
-               status: :ok
+               dataMeta: {archived: school_class.archived},
+               status: :ok               
       else
         render json: school_class,
                status: :unprocessable_entity,

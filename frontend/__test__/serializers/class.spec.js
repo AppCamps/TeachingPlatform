@@ -14,6 +14,7 @@ describe('ClassSerializer', () => {
         data: {
           type: 'classes',
           id: schoolClass.id,
+          meta: {},
           attributes: {
             'resource-type': schoolClass.resourceType,
             'class-name': schoolClass.className,
@@ -48,6 +49,7 @@ describe('ClassSerializer', () => {
         data: {
           type: 'classes',
           id: extracurricularClass.id,
+          meta: {},
           attributes: {
             'resource-type': extracurricularClass.resourceType,
             'group-name': extracurricularClass.groupName,

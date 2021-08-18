@@ -17,6 +17,18 @@ describe User do
     it { is_expected.to have_many(:school_classes) }
     it { is_expected.to have_one(:current_locality).inverse_of(:user) }
     it { is_expected.to have_many(:localities) }
+
+    it 'retrieves archived and non archived school_classes' do
+      user               = build(:user)
+      not_archived_1     = create(:school_class, :class, user: user)
+      not_archived_2     = create(:school_class, :group, user: user)
+      archived_1         = create(:school_class, :class, user: user, archived: true)
+      archived_2         = create(:school_class, :group, user: user, archived: true)
+      all_class_ids      = [not_archived_1.id, not_archived_2.id, archived_1.id, archived_2.id]
+
+      expect(user.school_classes.length).to eql(4)
+      expect(user.school_classes.ids).to match_array(all_class_ids)
+    end
   end
 
   describe 'validations' do

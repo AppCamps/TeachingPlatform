@@ -93,7 +93,6 @@ class ClassForm extends Component {
   renderFormPage() {
     const { page } = this.state;
     const { formValues, onDataChanged } = this.props;
-
     const handleSubmit = (...args) => this.handleSubmit(...args);
 
     switch (page) {

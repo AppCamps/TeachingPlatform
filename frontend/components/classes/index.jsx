@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
+import autobind from 'autobind-decorator';
 import { Shape as ClassShape } from '../../models/class';
 import { NoClasses } from './no-classes';
 import Course from '../shared/course';
@@ -25,6 +25,41 @@ class Classes extends Component {
   handleClassClick(klass) {
     const { toggleClass } = this.props;
     toggleClass(klass);
+  }
+
+  @autobind
+  async handleSubmit(event, klass) {
+    event.preventDefault();
+    const { t } = this.context;
+    // eslint-disable-next-line no-alert
+    const archiveRequestConfirmed = confirm(t('Archive confirmation message'));
+
+    if (archiveRequestConfirmed) {
+      this.archiveClass(klass);
+    }
+  }
+
+  @autobind
+  async archiveClass(klass) {
+    const { archiveClass } = this.props;
+    try {
+      // The updateClass promise resolves after the change page action
+      // is called. It is necessary to change the state before and
+      // revert it if the promise rejects.
+      this.setState({
+        ...this.state,
+        isSubmitted: true,
+      });
+
+      klass.archived = true;
+      await archiveClass(klass);
+    } catch (e) {
+      // Did not submit successfully
+      this.setState({
+        ...this.state,
+        isSubmitted: false,
+      });
+    }
   }
 
   renderClass(klass) {
@@ -66,6 +101,11 @@ class Classes extends Component {
         <div className={style.body}>
           {renderedCourses}
           <div className={style.bodyActions}>
+            <form onSubmit={(event) => { this.handleSubmit(event, klass); }} className={style.formArchiveClass}>
+              <Button type="submit" isSecondary leftIcon="trash">
+                {t('Archive class')}
+              </Button>
+            </form>
             <Link to={`/classes/${klass.id}/edit`} button leftIcon="pencil">
               {t('Edit class')}
             </Link>
@@ -158,12 +198,13 @@ class Classes extends Component {
     const { classes, showAll, setShowAll } = this.props;
     const { t } = this.context;
 
-    if (!classes || classes.length === 0) {
+    const notArchivedClasses = classes.filter(klass => !klass.archived)
+
+    if (!notArchivedClasses || notArchivedClasses.length === 0) {
       return <NoClasses />;
     }
-
     // Show newest first
-    const sortedClasses = classes
+    const sortedClasses = notArchivedClasses
       // Creates a copy to not mutate original
       .slice()
       // Reverses order
@@ -216,6 +257,7 @@ class Classes extends Component {
 }
 
 Classes.propTypes = {
+  archiveClass: PropTypes.func.isRequired,
   fetchCourses: PropTypes.func.isRequired,
   fetchClasses: PropTypes.func.isRequired,
   downloadCertificate: PropTypes.func.isRequired,
