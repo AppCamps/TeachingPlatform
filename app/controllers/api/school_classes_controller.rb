@@ -59,7 +59,6 @@ module Api
       properties = metrics_properties_for_resource_types(resource_type)
 
       school_class.metrics = MetricsConstructionService.new(attributes).call(*properties)
-      school_class.archived = data["meta"]["archived"] if !data.dig(:meta, :archived).nil?
 
       if relationships[:courses] && relationships[:courses][:data].try(:any?)
         Course.transaction do
@@ -85,6 +84,24 @@ module Api
                status: :ok               
       else
         render json: school_class,
+               status: :unprocessable_entity,
+               serializer: ActiveModel::Serializer::ErrorSerializer
+      end
+    end
+
+    def archive
+      params.permit!
+      klass = current_user.school_classes.find(params[:class_id])
+      p klass
+      klass.archived = true
+
+      if klass.save
+        render json: klass,
+               include: %i[courses completed_lessons],
+               dataMeta: {archived: klass.archived},
+               status: :ok               
+      else
+        render json: klass,
                status: :unprocessable_entity,
                serializer: ActiveModel::Serializer::ErrorSerializer
       end

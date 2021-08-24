@@ -113,6 +113,13 @@ export function updateClass(klassId, payload) {
   }).then(normalize());
 }
 
+export function archiveClass(klassId) {
+  return fetch(`/api/classes/${klassId}/archive`, {
+    method: 'PUT',
+  }).then(normalize());
+}
+
+
 export function updateCompletedLessonsRelation(classId, payload) {
   return fetch(`/api/classes/${classId}/relationships/completed-lessons`, {
     method: 'PUT',

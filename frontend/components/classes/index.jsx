@@ -51,8 +51,7 @@ class Classes extends Component {
         isSubmitted: true,
       });
 
-      klass.archived = true;
-      await archiveClass(klass);
+      archiveClass(klass.id);
     } catch (e) {
       // Did not submit successfully
       this.setState({

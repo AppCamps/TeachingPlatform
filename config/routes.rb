@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     resource :locality, only: [:create]
     resources :posts, only: [:index]
     resources :classes, controller: :school_classes, only: %i[index update create] do
+      put 'archive'
       member do
         scope :relationships do
           put :completed_lessons,

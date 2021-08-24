@@ -606,39 +606,10 @@ describe Api::SchoolClassesController, api: :authenticate do
       end
 
       it 'is marked as archived' do
-        class_params[:data] = class_params[:data].merge(meta:{archived: true}).with_indifferent_access
-        patch :update, params: class_params
+        patch :archive, params: { class_id: school_class.id }
 
         school_class.reload
 
-        expect(school_class.archived).to eql(true)
-      end
-
-      it 'is not marked as archived when archived param is set to false' do
-        class_params[:data] = class_params[:data].merge(meta:{archived: false}).with_indifferent_access
-        patch :update, params: class_params
-        
-        school_class.reload
-
-        expect(school_class.archived).to eql(false)
-      end
-
-      it 'is not marked as archived when archived param is nil' do
-        class_params[:data] = class_params[:data].merge(meta:{archived: nil}).with_indifferent_access
-        patch :update, params: class_params
-
-        school_class.reload
-        expect(school_class.archived).to eql(false)
-      end
-
-      it 'is not marked as not archived when archived param is nil' do
-        school_class.archived = true
-        school_class.save
-
-        class_params[:data] = class_params[:data].merge(meta:{archived: nil}).with_indifferent_access
-        patch :update, params: class_params
-
-        school_class.reload
         expect(school_class.archived).to eql(true)
       end
 

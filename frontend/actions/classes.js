@@ -7,6 +7,7 @@ import {
   deleteCompletedLessonsRelation,
   createClass as _createClass,
   updateClass as _updateClass,
+  archiveClass as _archiveClass,
 } from '../services/api';
 import { apiFetched } from './api';
 
@@ -65,12 +66,9 @@ export function updateClass(klassId, payload = {}) {
   };
 }
 
-export function archiveClass(klass) {
+export function archiveClass(klassId) {
   return (dispatch) => {
-    const klassData = ClassSerializer.serialize({ ...klass, id: klass.id });
-    klassData.data.meta.archived = true;
-    
-    return _updateClass(klass.id, klassData).then((result) => {
+    return _archiveClass(klassId).then((result) => {
       dispatch(apiFetched(result));
       dispatch(push('/classes'));
     });
