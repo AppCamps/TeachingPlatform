@@ -99,7 +99,6 @@
     "autobind-decorator": "^2.4.0",
     "axios": "0.21.1",
     "babel-preset-env": "^1.6.1",
-    "bluebird": "^3.7.2",
     "camelize": "^1.0.0",
     "classnames": "^2.2.3",
     "enzyme-adapter-react-16": "^1.0.2",
