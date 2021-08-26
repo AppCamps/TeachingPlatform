@@ -7,7 +7,6 @@ import classNames from 'classnames';
 
 import { Shape as CourseSchoolClassShape } from '../../../../models/course-school-class';
 
-import { colors } from '../../../../config';
 import Number from '../../number';
 import HelpIcon from '../../help-icon';
 import FaIcon from '../../fa-icon';
@@ -26,7 +25,7 @@ class Certificate extends Component {
     const { t } = this.context;
     const { number, courseSchoolClass, isAvailable, color } = this.props;
 
-    const certColor = isAvailable ? color : colors.colorGray;
+    const certColor = isAvailable ? color : style.colorGray;
 
     const borderColor = certColor;
     const customStyle = {
@@ -103,7 +102,7 @@ Certificate.defaultProps = {
   isCompleted: false,
   isAvailable: false,
   isProgressIndicator: false,
-  color: colors.colorFontDefault,
+  color: style.colorFontDefault,
   courseSchoolClass: null,
   downloadCertificate: () => null,
 };

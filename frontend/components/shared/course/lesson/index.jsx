@@ -6,7 +6,6 @@ import flatMap from 'lodash.flatmap';
 
 import { Shape as LessonShape } from '../../../../models/lesson';
 
-import { colors } from '../../../../config';
 import Number from '../../number';
 
 import style from './style.scss';
@@ -82,7 +81,7 @@ Lesson.defaultProps = {
   lessonUrl: null,
   isCompleted: false,
   isProgressIndicator: false,
-  color: colors.colorFontDefault,
+  color: style.colorFontDefault,
 };
 
 

@@ -9,7 +9,6 @@ import factory from '../../../__factories__';
 
 import Lesson from '../../../../components/shared/course/lesson';
 import style from '../../../../components/shared/course/lesson/style.scss';
-import { colors } from '../../../../config';
 
 import Number from '../../../../components/shared/number';
 
@@ -62,7 +61,7 @@ describe('<Lesson/>', () => {
     expect(wrapper).to.have.props({
       lessonUrl: null,
       isProgressIndicator: false,
-      color: colors.colorFontDefault,
+      color: style.colorFontDefault,
     });
   });
 

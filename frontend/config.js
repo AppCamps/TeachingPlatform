@@ -1,12 +1,7 @@
 /* eslint-disable */
-import cssColors from '!!sass-variable-loader!./components/__css__/colors.scss';
-
 const t = t => t;
 
 class Config {
-  static get colors() {
-    return cssColors;
-  }
 
   static get constants() {
     return Object.freeze({
@@ -39,7 +34,6 @@ class Config {
   }
 }
 
-export const colors = Config.colors;
 export const constants = Config.constants;
 export const schoolTypes = Config.schoolTypes;
 export const translatedFormError = Config.translatedFormError;

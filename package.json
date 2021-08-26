@@ -85,7 +85,6 @@
     "redux-saga-test-plan": "^3.1.0",
     "rucksack-css": "^1.0.2",
     "sass-loader": "^10.1.1",
-    "sass-variable-loader": "^0.1.2",
     "sinon": "^2.3.6",
     "style-loader": "^2.0.0",
     "susy": "^2.2.12",

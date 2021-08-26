@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
-import { colors } from '../../../config';
-
 import style from './style.scss';
 
 function Title(props) {
@@ -37,7 +34,7 @@ function Title(props) {
 Title.defaultProps = {
   primary: false,
   tag: 'span',
-  color: colors.colorBlack,
+  color: style.colorBlack,
 };
 
 Title.propTypes = {
