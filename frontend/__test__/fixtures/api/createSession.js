@@ -16,7 +16,6 @@ export const requestData = `
 {
   "data": {
     "type": "sessions",
-    "id": "undefined",
     "attributes": {
       "email": "${user.email}",
       "password": "password123"
@@ -56,7 +55,6 @@ export const successResponse = `
 }
 `;
 /* eslint-enable max-len */
-
 export const normalizedSuccessResponse = normalize()(JSON.parse(successResponse));
 
 export const errorResponse = `
