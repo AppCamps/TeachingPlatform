@@ -31,7 +31,7 @@ export const translations = {
     'You did not add any courses yet': 'Du hast noch keine Kurse hinzugefügt',
     'Edit class': 'Klasse bearbeiten',
     'Archive class': 'Klasse archivieren',
-    'Archive confirmation message': 'Möchten sie diese Klasse wirklich archivieren?',
+    'Archive confirmation message': 'Möchtest Du diese Klasse wirklich archivieren?',
     'Not yet started': 'Noch nicht gestartet',
     'As soon as you mark the first lession as completed, you will see in the progress bar how far are you in the class.': 'Sobald du die erste Lektion als erledigt markiert hast, siehst du am Balken, wie weit du mit der Klasse bist',
     'Continue course': 'Kurs fortsetzen',
