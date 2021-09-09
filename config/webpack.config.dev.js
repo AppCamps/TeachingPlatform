@@ -38,8 +38,12 @@ devConfig.plugins.push(
 );
 
 devConfig.devServer = {
-  contentBase: './frontend',
-  https: true,
+  static: './frontend',
+  hot: true,
+  https: {
+    key: './certs/www/webpack.key',
+    cert: './certs/www/webpack.crt',
+  },
   headers: {
     'Access-Control-Allow-Origin': '*',
   },
