@@ -11,5 +11,6 @@
   "roots": ["<rootDir>/frontend/__test__/"],
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "setupFiles": ["raf/polyfill"],
-  "setupTestFrameworkScriptFile": "<rootDir>/frontend/__test__/spec_helper.js"
+  "setupFilesAfterEnv": ["<rootDir>/frontend/__test__/spec_helper.js"],
+  "transform": {"^.+\\.[jt]sx?$": "<rootDir>/node_modules/babel-jest"}
 }
