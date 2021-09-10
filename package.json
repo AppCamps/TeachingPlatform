@@ -133,7 +133,7 @@
     "redux-saga": "^0.15.4",
     "redux-thunk": "^2.1.0",
     "reselect": "^3.0.0",
-    "slugify": "^1.0.2",
+    "slugify": "^1.6.0",
     "spinkit": "^1.2.5",
     "string.prototype.startswith": "^1.0.0",
     "url-search-params-polyfill": "^8.1.1",
