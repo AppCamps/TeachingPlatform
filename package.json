@@ -135,8 +135,8 @@
     "reselect": "^3.0.0",
     "slugify": "^1.0.2",
     "spinkit": "^1.2.5",
-    "string.prototype.startswith": "^0.2.0",
-    "url-search-params-polyfill": "^2.0.1",
+    "string.prototype.startswith": "^1.0.0",
+    "url-search-params-polyfill": "^8.1.1",
     "whatwg-fetch": "^3.6.2"
   }
 }
