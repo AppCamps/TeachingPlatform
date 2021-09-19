@@ -10,29 +10,29 @@
     <script src="https://use.typekit.net/dvl8ume.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script>
-      if ('<%= process.env.NODE_ENV %>' === 'production') {
-        var ga_id = '<%= process.env.GOOGLE_ANALYTICS_ID %>';
-        if (!ga_id) {
-          console.error('ANALYTICS ID UNDEFINED');
-        } else {
-          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-          ga('create', ga_id, 'auto', {
-            anonymizeIp: true,
-          });
+      // if ('<%= process.env.NODE_ENV %>' === 'production') {
+      //   var ga_id = '<%= JSON.stringify(process.env.GOOGLE_ANALYTICS_ID) %>';
+      //   if (!ga_id) {
+      //     console.error('ANALYTICS ID UNDEFINED');
+      //   } else {
+      //     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      //     ga('create', ga_id, 'auto', {
+      //       anonymizeIp: true,
+      //     });
 
-          ga('require', 'cleanUrlTracker');
-          ga('require', 'eventTracker');
-          ga('require', 'impressionTracker');
-          ga('require', 'mediaQueryTracker');
-          ga('require', 'outboundFormTracker');
-          ga('require', 'outboundLinkTracker');
-          ga('require', 'pageVisibilityTracker');
-          ga('require', 'socialWidgetTracker');
-          ga('require', 'urlChangeTracker');
+      //     ga('require', 'cleanUrlTracker');
+      //     ga('require', 'eventTracker');
+      //     ga('require', 'impressionTracker');
+      //     ga('require', 'mediaQueryTracker');
+      //     ga('require', 'outboundFormTracker');
+      //     ga('require', 'outboundLinkTracker');
+      //     ga('require', 'pageVisibilityTracker');
+      //     ga('require', 'socialWidgetTracker');
+      //     ga('require', 'urlChangeTracker');
 
-          ga('send', 'pageview');
-        }
-      }
+      //     ga('send', 'pageview');
+      //   }
+      //}
     </script>
     <script async src='//www.google-analytics.com/analytics.js'></script>
     <script async src='//cdnjs.cloudflare.com/ajax/libs/autotrack/1.0.3/autotrack.js'></script>
