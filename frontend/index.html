@@ -11,7 +11,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script>
       if ('<%= process.env.NODE_ENV %>' === 'production') {
-        var ga_id = '<%= process.env.GOOGLE_ANALYTICS_ID %>';
+        var ga_id = <%= JSON.stringify(process.env.GOOGLE_ANALYTICS_ID) %>;
         if (!ga_id) {
           console.error('ANALYTICS ID UNDEFINED');
         } else {
