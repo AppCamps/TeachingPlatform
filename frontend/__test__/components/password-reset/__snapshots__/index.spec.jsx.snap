@@ -28,7 +28,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
       shouldWarn={[Function]}
       touchOnBlur={true}
       touchOnChange={false}
-      updateUnregisteredFields={false}
       validate={[Function]}
     >
       <Form(PasswordResetRequest)
@@ -62,7 +61,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
         blur={[Function]}
         change={[Function]}
         clearAsyncError={[Function]}
-        clearFields={[Function]}
         clearSubmit={[Function]}
         clearSubmitErrors={[Function]}
         destroy={[Function]}
@@ -92,7 +90,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
           }
         }
         reset={[Function]}
-        resetSection={[Function]}
         setSubmitFailed={[Function]}
         setSubmitSucceeded={[Function]}
         shouldAsyncValidate={[Function]}
@@ -120,7 +117,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
         untouch={[Function]}
         updateSyncErrors={[Function]}
         updateSyncWarnings={[Function]}
-        updateUnregisteredFields={false}
         valid={false}
         validExceptSubmit={false}
         validate={[Function]}
@@ -148,7 +144,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
           blur={[Function]}
           change={[Function]}
           clearAsyncError={[Function]}
-          clearFields={[Function]}
           clearSubmit={[Function]}
           clearSubmitErrors={[Function]}
           destroy={[Function]}
@@ -162,7 +157,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
           pristine={true}
           pure={true}
           reset={[Function]}
-          resetSection={[Function]}
           submit={[Function]}
           submitFailed={false}
           submitSucceeded={false}
@@ -245,7 +239,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                           "blur": [Function],
                           "change": [Function],
                           "clearAsyncError": [Function],
-                          "clearFields": [Function],
                           "clearSubmit": [Function],
                           "clearSubmitErrors": [Function],
                           "destroy": [Function],
@@ -262,7 +255,7 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                           "initialValues": undefined,
                           "initialize": [Function],
                           "initialized": false,
-                          "invalid": false,
+                          "invalid": true,
                           "keepDirtyOnReinitialize": false,
                           "persistentSubmitErrors": false,
                           "pristine": true,
@@ -270,9 +263,14 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                           "register": [Function],
                           "registerField": [Function],
                           "registerInnerOnSubmit": [Function],
-                          "registeredFields": undefined,
+                          "registeredFields": Object {
+                            "email": Object {
+                              "count": 1,
+                              "name": "email",
+                              "type": "Field",
+                            },
+                          },
                           "reset": [Function],
-                          "resetSection": [Function],
                           "sectionPrefix": undefined,
                           "setSubmitFailed": [Function],
                           "setSubmitSucceeded": [Function],
@@ -288,7 +286,9 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                           "submitFailed": false,
                           "submitSucceeded": false,
                           "submitting": false,
-                          "syncErrors": Object {},
+                          "syncErrors": Object {
+                            "email": "Required",
+                          },
                           "syncWarnings": Object {},
                           "touch": [Function],
                           "touchOnBlur": true,
@@ -299,9 +299,8 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                           "untouch": [Function],
                           "updateSyncErrors": [Function],
                           "updateSyncWarnings": [Function],
-                          "updateUnregisteredFields": false,
-                          "valid": true,
-                          "validExceptSubmit": true,
+                          "valid": false,
+                          "validExceptSubmit": false,
                           "validate": [Function],
                           "values": Object {},
                           "warning": undefined,
@@ -347,7 +346,6 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                             "blur": [Function],
                             "change": [Function],
                             "clearAsyncError": [Function],
-                            "clearFields": [Function],
                             "clearSubmit": [Function],
                             "clearSubmitErrors": [Function],
                             "destroy": [Function],
@@ -364,7 +362,7 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                             "initialValues": undefined,
                             "initialize": [Function],
                             "initialized": false,
-                            "invalid": false,
+                            "invalid": true,
                             "keepDirtyOnReinitialize": false,
                             "persistentSubmitErrors": false,
                             "pristine": true,
@@ -372,9 +370,14 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                             "register": [Function],
                             "registerField": [Function],
                             "registerInnerOnSubmit": [Function],
-                            "registeredFields": undefined,
+                            "registeredFields": Object {
+                              "email": Object {
+                                "count": 1,
+                                "name": "email",
+                                "type": "Field",
+                              },
+                            },
                             "reset": [Function],
-                            "resetSection": [Function],
                             "sectionPrefix": undefined,
                             "setSubmitFailed": [Function],
                             "setSubmitSucceeded": [Function],
@@ -390,7 +393,9 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                             "submitFailed": false,
                             "submitSucceeded": false,
                             "submitting": false,
-                            "syncErrors": Object {},
+                            "syncErrors": Object {
+                              "email": "Required",
+                            },
                             "syncWarnings": Object {},
                             "touch": [Function],
                             "touchOnBlur": true,
@@ -401,9 +406,8 @@ exports[`<PasswordResetRequest /> renders form correctly 1`] = `
                             "untouch": [Function],
                             "updateSyncErrors": [Function],
                             "updateSyncWarnings": [Function],
-                            "updateUnregisteredFields": false,
-                            "valid": true,
-                            "validExceptSubmit": true,
+                            "valid": false,
+                            "validExceptSubmit": false,
                             "validate": [Function],
                             "values": Object {},
                             "warning": undefined,

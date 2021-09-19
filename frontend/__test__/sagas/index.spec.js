@@ -114,20 +114,21 @@ describe('sagas', () => {
         it('*initializes services and redirects', () => {
           const testUser = factory.build('user', { token: '123', privacyPolicyAccepted: true });
           testSaga(handleAuthentication)
-            .next()
-            .select(userSelector)
-            .next(testUser)
-            .select(authenticationRedirectSelector)
-            .next('/courses')
-            .all(authenticatedUserEffects(testUser, '/courses'))
-            .finish()
-            .isDone();
+          .next()
+          .select(userSelector)
+          .next(testUser)
+          .select(authenticationRedirectSelector)
+          .next('/courses')
+          .all(authenticatedUserEffects(testUser, '/courses'))
+          .finish()
+          .isDone();
         });
       });
 
       describe('external login', () => {
-        beforeEach(() => {
-          Object.defineProperty(window, 'location', { value: jest.fn() });
+        const oldReplace = window.location.replace;
+        afterEach(() => {
+          window.location.replace = oldReplace;
         });
 
         it('*redirects to external service', () => {

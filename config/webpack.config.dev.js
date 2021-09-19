@@ -6,7 +6,6 @@ const devConfig = require('./webpack.config.base').config;
 
 devConfig.entry.jsx = ['react-hot-loader/patch', devConfig.entry.jsx];
 devConfig.output.publicPath = 'https://localhost:8080/frontend/';
-devConfig.mode = 'development';
 
 devConfig.module.rules.push({
   test: /\.s?css$/,
@@ -15,14 +14,7 @@ devConfig.module.rules.push({
     'style-loader',
     {
       loader: 'css-loader',
-      options: {
-        importLoaders: 1,
-        sourceMap: true,
-        modules: {
-          localIdentName: '[folder]__[local]__[hash:base64:5]',
-          exportLocalsConvention: 'camelCase',
-        },
-      },
+      query: 'modules&sourceMap&importLoaders=1&camelCase&localIdentName=[folder]__[local]__[hash:base64:5]',
     },
     'postcss-loader',
     'sass-loader',
@@ -30,27 +22,20 @@ devConfig.module.rules.push({
 });
 
 devConfig.plugins.push(
+  new webpack.NamedModulesPlugin(),
   new CircularDependencyPlugin({
     exclude: /node_modules/,
     include: /frontend/,
   }),
-  new HtmlWebpackHarddiskPlugin(),
+  new HtmlWebpackHarddiskPlugin()
 );
 
 devConfig.devServer = {
-  static: './frontend',
-  hot: true,
-  https: {
-    key: './certs/www/webpack.key',
-    cert: './certs/www/webpack.crt',
-  },
+  contentBase: './frontend',
+  https: true,
   headers: {
     'Access-Control-Allow-Origin': '*',
   },
-  allowedHosts: [
-    'teach.appcamps.localhost',
-    'localhost',
-  ],
 };
 
 devConfig.devtool = 'cheap-eval-source-map';

@@ -92,6 +92,7 @@ module Api
     def archive
       params.permit!
       klass = current_user.school_classes.find(params[:class_id])
+      p klass
       klass.archived = true
 
       if klass.save
