@@ -26,7 +26,7 @@ const PlatformTips = (_props, { t }) => (
         </div>
         <p>
           <a
-            href="https://drive.google.com/open?id=0BzMVvLOySsXMZGhhUjFVVXJpR3c"
+            href="https://drive.google.com/file/d/0BzMVvLOySsXMZGhhUjFVVXJpR3c/view?usp=sharing&resourcekey=0-qkp61RQLqU6cKTFwwHzwuw"
             target="_blank"
             rel="noopener noreferrer"
           >
