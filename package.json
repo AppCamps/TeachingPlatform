@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "8.17.0"
+    "node": "10.24.1"
   },
   "greenkeeper": {
     "ignore": [
@@ -23,11 +23,11 @@
     "heroku-postbuild": "yarn run build",
     "translations:extract": "NODE_ENV=development i18n_extract --source=frontend --locales=config/locales/frontend --pattern=t",
     "translations:import": "NODE_ENV=development i18n_import  --locales=config/locales/frontend --translations=frontend",
-    "auditjs": "auditjs -w .auditjs-whitelist -l error"
+    "auditjs": "auditjs ossi -w .auditjs-whitelist -l error"
   },
   "license": "MIT",
   "devDependencies": {
-    "auditjs": "3.2.4",
+    "auditjs": "^4.0.32",
     "axios-mock-adapter": "^1.9.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.0.0",
