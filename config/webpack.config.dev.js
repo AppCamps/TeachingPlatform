@@ -36,6 +36,9 @@ devConfig.devServer = {
   headers: {
     'Access-Control-Allow-Origin': '*',
   },
+  allowedHosts: [
+    '.appcamps.localhost',
+  ],
 };
 
 devConfig.devtool = 'cheap-eval-source-map';
