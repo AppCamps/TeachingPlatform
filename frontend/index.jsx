@@ -13,7 +13,6 @@ import './style.scss';
 
 const history = syncHistoryWithStore(browserHistory, store);
 
-
 ReactDOM.render(
   <HmrContainer>
     <Root store={store} history={history} />

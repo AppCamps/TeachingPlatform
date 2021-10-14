@@ -12,16 +12,22 @@ import { intializeTranslationUtils } from '../utils/translations';
 
 const sagaMiddleware = createSagaMiddleware();
 
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+    trace: true,
+    traceLimit: 25,
+}) || compose;
+
 const store = createStore(
   rootReducer,
   {},
-  compose(
+  composeEnhancers(
     applyMiddleware(
       thunk,
       routerMiddleware(browserHistory),
       sagaMiddleware,
     ),
-    window.devToolsExtension ? window.devToolsExtension() : f => f,
   ),
 );
 

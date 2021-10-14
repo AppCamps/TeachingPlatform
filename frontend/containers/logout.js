@@ -7,8 +7,7 @@ import {
 } from '../actions/authentication';
 
 export function mapDispatchToProps(dispatch) {
-  // dirty fix for redirection loop on '/logout' page load
-  const redirectToLogin = () => setTimeout(() => dispatch(push('/login')), 0);
+  const redirectToLogin = () => dispatch(push('/login'));
 
   return {
     logoutUser: () => (

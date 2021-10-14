@@ -1,4 +1,4 @@
-import { push } from 'react-router-redux';
+import { replace } from 'react-router-redux';
 import { SubmissionError } from 'redux-form';
 
 import {
@@ -40,7 +40,7 @@ export function emailConfirmation(confirmationToken) {
   return dispatch =>
     emailConfirmationApiCall(confirmationToken)
       .then(() => {
-        dispatch(push('/'));
+        dispatch(replace('/'));
         dispatch(
           requestNotification({
             type: notifications.success,
@@ -51,7 +51,7 @@ export function emailConfirmation(confirmationToken) {
       .catch((error) => {
         if (error instanceof SubmissionError) {
           if (error.errors.confirmationToken || error.errors.email) {
-            dispatch(push('/email-confirmation'));
+            dispatch(replace('/email-confirmation'));
 
             let errorMessage = t(emailConfirmationFailureInvalid);
             if (error.errors.confirmationToken === 'has expired, please request a new one') {

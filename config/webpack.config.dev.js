@@ -41,6 +41,6 @@ devConfig.devServer = {
   ],
 };
 
-devConfig.devtool = 'cheap-eval-source-map';
+devConfig.devtool = 'source-map'; // used by redux dev tools in order to show the trace.
 
 module.exports = devConfig;

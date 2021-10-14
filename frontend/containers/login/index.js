@@ -15,7 +15,6 @@ import { authenticationSelector } from '../../selectors/shared/authentication';
 export function mapStateToProps(state, ownProps) {
   const { query: { redirect } } = ownProps.location;
   const routeForRedirect = redirect || '/';
-
   return {
     redirectUrl: routeForRedirect,
     user: userSelector(state),

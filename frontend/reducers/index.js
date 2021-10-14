@@ -32,6 +32,7 @@ export default function (state = {}, action) {
       {
         // keep authentication state for session expired error message
         authentication: state.authentication,
+        routing: state.routing,
       },
       action,
     );

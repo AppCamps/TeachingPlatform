@@ -13,7 +13,6 @@ class Login extends Component {
       redirectUrl,
       authentication: { isAuthenticated, isLoggedOut },
     } = this.props;
-
     setAuthenticationRedirect(redirectUrl);
     if (!isAuthenticated && !isLoggedOut) {
       restoreUserSession();
