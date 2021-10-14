@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { translatedFormError } from '../../../utils/translations';
+import { translatedFormError } from "../../../utils/translations";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Label(props) {
   const { required, text, children } = props;
@@ -12,8 +12,8 @@ function Label(props) {
   return (
     <label htmlFor={htmlFor} className={style.label}>
       {text || children}
-      {required ? ' ' : null}
-      {required ? <abbr title={translatedFormError('required')}>*</abbr> : null}
+      {required ? " " : null}
+      {required ? <abbr title={translatedFormError("required")}>*</abbr> : null}
     </label>
   );
 }

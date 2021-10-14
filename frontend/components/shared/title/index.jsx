@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import { colors } from '../../../config';
+import { colors } from "../../../config";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Title(props) {
   const { primary, children, tag, color } = props;
 
-  const CustomTag = tag || 'span';
+  const CustomTag = tag || "span";
 
   const titleContainerClassNames = classNames({
     [style.titleContainer]: true,
@@ -27,16 +27,14 @@ function Title(props) {
 
   return (
     <div className={titleContainerClassNames} style={customStyle}>
-      <CustomTag className={titleClassNames}>
-        {children}
-      </CustomTag>
+      <CustomTag className={titleClassNames}>{children}</CustomTag>
     </div>
   );
 }
 
 Title.defaultProps = {
   primary: false,
-  tag: 'span',
+  tag: "span",
   color: colors.colorBlack,
 };
 

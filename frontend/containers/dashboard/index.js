@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import Dashboard from '../../components/dashboard';
-import { unreadPostsPresentSelector } from '../../selectors/posts';
+import Dashboard from "../../components/dashboard";
+import { unreadPostsPresentSelector } from "../../selectors/posts";
 
 export function mapStateToProps(state, ownProps) {
   return {

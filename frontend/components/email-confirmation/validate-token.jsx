@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import Spinner from '../shared/spinner';
+import Spinner from "../shared/spinner";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class EmailConfirmation extends Component {
-
   componentDidMount() {
     const { emailConfirmation, emailConfirmationToken } = this.props;
     return emailConfirmation(emailConfirmationToken);
@@ -17,8 +16,11 @@ class EmailConfirmation extends Component {
 
     return (
       <div className={style.container}>
-        <div className={style.tokenValidationInfo}style={{ textAlign: 'center', fontColor: 'gray' }}>
-          <Spinner visible /> {t('Validating email confirmation link...')}
+        <div
+          className={style.tokenValidationInfo}
+          style={{ textAlign: "center", fontColor: "gray" }}
+        >
+          <Spinner visible /> {t("Validating email confirmation link...")}
         </div>
       </div>
     );

@@ -1,9 +1,9 @@
-import { initializeApi, fetch, normalize, normalizeErrors } from './helpers';
+import { initializeApi, fetch, normalize, normalizeErrors } from "./helpers";
 
-import SessionSerializer from '../../serializers/session';
-import UserSerializer from '../../serializers/user';
-import UserRegistrationSerializer from '../../serializers/user/registration';
-import LocalitySerializer from '../../serializers/locality';
+import SessionSerializer from "../../serializers/session";
+import UserSerializer from "../../serializers/user";
+import UserRegistrationSerializer from "../../serializers/user/registration";
+import LocalitySerializer from "../../serializers/locality";
 
 // api has to be initialized with store in order to dispatch errors
 export { initializeApi };
@@ -15,8 +15,8 @@ function legacyError(result) {
 export function createUser(user) {
   const payload = UserRegistrationSerializer.serialize(user);
 
-  return fetch('/api/user', {
-    method: 'POST',
+  return fetch("/api/user", {
+    method: "POST",
     data: JSON.stringify(payload),
   })
     .then(normalize())
@@ -29,8 +29,8 @@ export function createSession(loginData) {
     password: loginData.password,
   });
 
-  return fetch('/api/session', {
-    method: 'POST',
+  return fetch("/api/session", {
+    method: "POST",
     data: JSON.stringify(payload),
   })
     .then(normalize())
@@ -38,30 +38,30 @@ export function createSession(loginData) {
 }
 
 export function getSession() {
-  return fetch('/api/session', {
-    method: 'GET',
+  return fetch("/api/session", {
+    method: "GET",
   })
     .then(normalize())
     .catch(normalizeErrors(legacyError));
 }
 
 export function deleteSession() {
-  return fetch('/api/session', {
-    method: 'DELETE',
+  return fetch("/api/session", {
+    method: "DELETE",
   })
     .then(normalize())
     .catch(normalizeErrors());
 }
 
 export function getCourses() {
-  return fetch('/api/courses', {
-    method: 'GET',
+  return fetch("/api/courses", {
+    method: "GET",
   }).then(normalize());
 }
 
 export function updateCourseSchoolClass(payload) {
   return fetch(`/api/course_school_classes/${payload.data.id}`, {
-    method: 'PUT',
+    method: "PUT",
     data: JSON.stringify(payload),
   })
     .then(normalize())
@@ -69,16 +69,16 @@ export function updateCourseSchoolClass(payload) {
 }
 
 export function getPreparationMaterials() {
-  return fetch('/api/preparation_materials', {
-    method: 'GET',
+  return fetch("/api/preparation_materials", {
+    method: "GET",
   }).then(normalize());
 }
 
 export function updateUser(user) {
   const payload = UserSerializer.serialize(user);
 
-  return fetch('/api/user', {
-    method: 'PUT',
+  return fetch("/api/user", {
+    method: "PUT",
     data: JSON.stringify(payload),
   })
     .then(normalize())
@@ -86,57 +86,56 @@ export function updateUser(user) {
 }
 
 export function getClasses() {
-  return fetch('/api/classes', {
-    method: 'GET',
+  return fetch("/api/classes", {
+    method: "GET",
   }).then(normalize());
 }
 
 export function getClassById(id) {
   return fetch(`/api/classes?filter[classes.id]=${id}`, {
-    method: 'GET',
+    method: "GET",
   }).then(normalize());
 }
 
 export function createClass(payload) {
   delete payload.data.id;
 
-  return fetch('/api/classes', {
-    method: 'POST',
+  return fetch("/api/classes", {
+    method: "POST",
     data: JSON.stringify(payload),
   }).then(normalize());
 }
 
 export function updateClass(klassId, payload) {
   return fetch(`/api/classes/${klassId}`, {
-    method: 'PUT',
+    method: "PUT",
     data: JSON.stringify(payload),
   }).then(normalize());
 }
 
 export function archiveClass(klassId) {
   return fetch(`/api/classes/${klassId}/archive`, {
-    method: 'PUT',
+    method: "PUT",
   }).then(normalize());
 }
 
-
 export function updateCompletedLessonsRelation(classId, payload) {
   return fetch(`/api/classes/${classId}/relationships/completed-lessons`, {
-    method: 'PUT',
+    method: "PUT",
     data: JSON.stringify(payload),
   }).then(normalize());
 }
 
 export function deleteCompletedLessonsRelation(classId, payload) {
   return fetch(`/api/classes/${classId}/relationships/completed-lessons`, {
-    method: 'DELETE',
+    method: "DELETE",
     data: JSON.stringify(payload),
   }).then(normalize());
 }
 
 export function getCountries() {
-  return fetch('/api/countries', {
-    method: 'GET',
+  return fetch("/api/countries", {
+    method: "GET",
   }).then(normalize());
 }
 
@@ -145,8 +144,8 @@ export function getPosts(fragments) {
   if (fragments.size) url += `&page[size]=${fragments.size}`;
 
   return fetch(url, {
-    method: 'GET',
-  }).then(result => ({
+    method: "GET",
+  }).then((result) => ({
     data: normalize()(result),
     links: result.links,
   }));
@@ -155,8 +154,8 @@ export function getPosts(fragments) {
 export function createLocality(locality) {
   const payload = LocalitySerializer.serialize(locality);
 
-  return fetch('/api/locality', {
-    method: 'POST',
+  return fetch("/api/locality", {
+    method: "POST",
     data: JSON.stringify(payload),
   })
     .then(normalize())
@@ -166,8 +165,8 @@ export function createLocality(locality) {
 export function passwordResetRequest(formData) {
   const payload = UserRegistrationSerializer.serialize(formData);
 
-  return fetch('/api/password-reset', {
-    method: 'POST',
+  return fetch("/api/password-reset", {
+    method: "POST",
     data: JSON.stringify(payload),
   });
 }
@@ -175,7 +174,7 @@ export function passwordResetRequest(formData) {
 export function passwordReset(formData, passwordResetToken) {
   const payload = UserRegistrationSerializer.serialize(formData);
   return fetch(`/api/password-reset/${passwordResetToken}`, {
-    method: 'PUT',
+    method: "PUT",
     data: JSON.stringify(payload),
   })
     .then(normalize(() => ({})))
@@ -185,8 +184,8 @@ export function passwordReset(formData, passwordResetToken) {
 export function emailConfirmationRequest(formData) {
   const payload = UserRegistrationSerializer.serialize(formData);
 
-  return fetch('/api/confirmations', {
-    method: 'POST',
+  return fetch("/api/confirmations", {
+    method: "POST",
     data: JSON.stringify(payload),
   });
 }
@@ -194,7 +193,7 @@ export function emailConfirmationRequest(formData) {
 export function emailConfirmation(emailConfirmationToken) {
   const payload = { data: {} };
   return fetch(`/api/confirmations/${emailConfirmationToken}`, {
-    method: 'PUT',
+    method: "PUT",
     data: JSON.stringify(payload),
   })
     .then(normalize(() => ({})))

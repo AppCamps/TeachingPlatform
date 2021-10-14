@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import { trackError as trackJsError, log as trackJsLog } from './services/trackjs';
+import {
+  trackError as trackJsError,
+  log as trackJsLog,
+} from "./services/trackjs";
 
 export function trackError(error) {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === "production") {
     trackJsError(error);
   } else {
     // eslint-disable-next-line no-console
@@ -12,7 +15,7 @@ export function trackError(error) {
 }
 
 export function log(...args) {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === "production") {
     trackJsLog(...args);
   } else {
     // eslint-disable-next-line no-console

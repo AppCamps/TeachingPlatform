@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { reduxForm, propTypes as reduxFormPropTypes } from 'redux-form';
-import classNames from 'classnames';
-import autobind from 'autobind-decorator';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { reduxForm, propTypes as reduxFormPropTypes } from "redux-form";
+import classNames from "classnames";
+import autobind from "autobind-decorator";
 
-import Course from '../../course';
-import Button from '../../button';
-import Spinner from '../../spinner';
+import Course from "../../course";
+import Button from "../../button";
+import Spinner from "../../spinner";
 
-import CheckIcon from './icons/check';
-import MinusIcon from './icons/minus';
-import PlusIcon from './icons/plus';
-import PlusInvertedIcon from './icons/plus-inverted';
+import CheckIcon from "./icons/check";
+import MinusIcon from "./icons/minus";
+import PlusIcon from "./icons/plus";
+import PlusInvertedIcon from "./icons/plus-inverted";
 
-import { Shape as TopicShape } from '../../../../models/topic';
-import TopicSelection from '../../../shared/topic-selection';
+import { Shape as TopicShape } from "../../../../models/topic";
+import TopicSelection from "../../../shared/topic-selection";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class AddCourses extends Component {
   constructor() {
@@ -40,7 +40,9 @@ class AddCourses extends Component {
 
   @autobind
   handleTopicFilterClick(topicSlug) {
-    const selectedTopic = this.props.topics.find(topic => topic.slug === topicSlug);
+    const selectedTopic = this.props.topics.find(
+      (topic) => topic.slug === topicSlug
+    );
     this.setState({ selectedTopic });
   }
 
@@ -52,9 +54,9 @@ class AddCourses extends Component {
       if (this.selectedCourses.includes(courseId)) {
         const updatedCourses = [...this.selectedCourses];
         updatedCourses.splice(this.selectedCourses.indexOf(courseId), 1);
-        this.props.change('courses', updatedCourses);
+        this.props.change("courses", updatedCourses);
       } else {
-        this.props.change('courses', this.selectedCourses.concat(courseId));
+        this.props.change("courses", this.selectedCourses.concat(courseId));
       }
 
       onDataChanged();
@@ -83,7 +85,7 @@ class AddCourses extends Component {
     const { courses } = topic;
 
     if (courses.length === 0) {
-      return t('No Courses found for topic {topic}', { topic: t(topic.title) });
+      return t("No Courses found for topic {topic}", { topic: t(topic.title) });
     }
 
     return courses.map((course) => {
@@ -115,9 +117,9 @@ class AddCourses extends Component {
 
       let courseButtonText;
       if (isSelected) {
-        courseButtonText = isHovered ? t('remove') : t('added');
+        courseButtonText = isHovered ? t("remove") : t("added");
       } else {
-        courseButtonText = t('add');
+        courseButtonText = t("add");
       }
 
       return (
@@ -160,13 +162,17 @@ class AddCourses extends Component {
     const { submitting, submitText, topics } = this.props;
     const { selectedTopic } = this.state;
 
-    const selectTopic = topic => this.handleTopicFilterClick(topic);
+    const selectTopic = (topic) => this.handleTopicFilterClick(topic);
 
     return (
       <div className={style.addCourses}>
-        <h2>{t('Choose topics and courses for class')}</h2>
+        <h2>{t("Choose topics and courses for class")}</h2>
         <div className={style.topicFilters}>
-          <TopicSelection selectedTopic={selectedTopic} topics={topics} selectTopic={selectTopic} />
+          <TopicSelection
+            selectedTopic={selectedTopic}
+            topics={topics}
+            selectTopic={selectTopic}
+          />
         </div>
         <div role="menu">{this.filteredCourses()}</div>
         <div className={style.actions}>
@@ -189,7 +195,7 @@ class AddCourses extends Component {
               disabled={submitting}
               leftIcon="angle-left"
             >
-              {t('Back')}
+              {t("Back")}
             </Button>
           </div>
           <div className={style.spinner}>
@@ -219,7 +225,7 @@ AddCourses.defaultProps = {
 };
 
 export default reduxForm({
-  fields: ['courses'],
-  form: 'classForm',
+  fields: ["courses"],
+  form: "classForm",
   destroyOnUnmount: false,
 })(AddCourses);

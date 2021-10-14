@@ -1,11 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function Check(props) {
   const { color } = props;
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2232.818 -1235.338 10.293 9.852">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="-2232.818 -1235.338 10.293 9.852"
+    >
       <path
         fill="none"
         stroke={color}
@@ -22,7 +25,7 @@ Check.propTypes = {
 };
 
 Check.defaultProps = {
-  color: 'white',
+  color: "white",
 };
 
 export default Check;

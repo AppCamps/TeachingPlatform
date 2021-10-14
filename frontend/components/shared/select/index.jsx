@@ -1,22 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Select, { Creatable } from 'react-select';
+import React from "react";
+import PropTypes from "prop-types";
+import Select, { Creatable } from "react-select";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function WrappedSelect(props, context) {
   const { t } = context;
 
-  const className = (props.hasError) ? style.error : '';
+  const className = props.hasError ? style.error : "";
 
   const defaultTexts = {
-    clearAllText: t('Clear all'),
-    clearValueText: t('Clear'),
-    addLabelText: t('Add label'),
-    noResultsText: t('No results found'),
-    placeholder: t('Please select'),
-    searchPromptText: t('Type to search'),
-    promptTextCreator: label => t('Add {label}', { label }),
+    clearAllText: t("Clear all"),
+    clearValueText: t("Clear"),
+    addLabelText: t("Add label"),
+    noResultsText: t("No results found"),
+    placeholder: t("Please select"),
+    searchPromptText: t("Type to search"),
+    promptTextCreator: (label) => t("Add {label}", { label }),
   };
 
   // Move priority options to the top of the list
@@ -36,7 +36,7 @@ function WrappedSelect(props, context) {
     return opt1Index - opt2Index;
   });
 
-  const Component = (props.creatable) ? Creatable : Select;
+  const Component = props.creatable ? Creatable : Select;
   return (
     <Component
       className={className}

@@ -1,6 +1,6 @@
-import { getPosts, updateUser } from '../services/api';
-import { apiFetched } from './api';
-import { paginationFetched } from './pagination';
+import { getPosts, updateUser } from "../services/api";
+import { apiFetched } from "./api";
+import { paginationFetched } from "./pagination";
 
 export function markPostsAsRead(user) {
   return (dispatch) => {
@@ -14,10 +14,10 @@ export function markPostsAsRead(user) {
 }
 
 export function fetchPosts(fragments, user) {
-  return dispatch =>
+  return (dispatch) =>
     getPosts(fragments).then((payload) => {
       dispatch(apiFetched(payload.data));
-      dispatch(paginationFetched('posts', payload.links));
+      dispatch(paginationFetched("posts", payload.links));
 
       if (user.unreadPostsPresent === true) {
         dispatch(markPostsAsRead(user));

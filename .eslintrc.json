@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "config/webpack.config.dev.js"
+      }
+    }
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "jsx-a11y", "import"],
+  "rules": {
+    "strict": 2,
+    "no-param-reassign": [2, { "props": false }],
+    "import/prefer-default-export": 0
+  },
+  "globals": {
+    "trackJs": true,
+    "ga": true
+  }
+}

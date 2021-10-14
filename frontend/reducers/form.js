@@ -1,9 +1,9 @@
-import { reducer } from 'redux-form';
+import { reducer } from "redux-form";
 
 import {
   AUTHENTICATION_LOGIN_FAILURE,
   AUTHENTICATION_LOGIN_SUCCESS,
-} from '../constants/authentication';
+} from "../constants/authentication";
 
 export default reducer.plugin({
   login: (state, action) => {

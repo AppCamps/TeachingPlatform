@@ -1,5 +1,5 @@
-import { createSelector } from 'reselect';
-import { ormSelector, createOrmSelector } from '../orm';
+import { createSelector } from "reselect";
+import { ormSelector, createOrmSelector } from "../orm";
 
 export const paramSelector = (state, parameter) => parameter;
 
@@ -12,10 +12,10 @@ export const classByIdSelector = createSelector(
     } catch (e) {
       return { id: classId };
     }
-  }),
+  })
 );
 
 export const completedLessonIdsSelector = createSelector(
   classByIdSelector,
-  klass => klass.completedLessons || [],
+  (klass) => klass.completedLessons || []
 );

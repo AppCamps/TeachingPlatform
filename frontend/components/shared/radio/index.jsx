@@ -1,12 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import { propTypes } from "redux-form";
+import classNames from "classnames";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function RadioInput(props) {
-  const { hasError, label, value, name, autoFocus, disabled, className } = props;
+  const { hasError, label, value, name, autoFocus, disabled, className } =
+    props;
 
   const optionClassNames = classNames({
     [`${style.label}`]: true,

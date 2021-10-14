@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import { attr, fk } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr, fk } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class User extends BaseModel {
   get fullName() {
@@ -15,7 +15,7 @@ class User extends BaseModel {
   }
 }
 
-User.modelName = 'User';
+User.modelName = "User";
 
 User.fields = {
   ...BaseModel.fields,
@@ -30,7 +30,7 @@ User.fields = {
   teacher: attr(),
   schoolClassesCount: attr(),
   unreadPostsPresent: attr(),
-  locality: fk('Locality'),
+  locality: fk("Locality"),
 };
 
 User.defaultProps = {

@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { updateUser } from '../../actions/user';
-import EditUserPasswordComponent from '../../components/edit-user/password';
-import { userSelector } from '../../selectors/shared/user';
+import { updateUser } from "../../actions/user";
+import EditUserPasswordComponent from "../../components/edit-user/password";
+import { userSelector } from "../../selectors/shared/user";
 
 export function mapStateToProps(state) {
   const user = userSelector(state);
@@ -14,8 +14,11 @@ export function mapStateToProps(state) {
 
 export function mapDispatchToProps(dispatch) {
   return {
-    updateUser: user => dispatch(updateUser(user)),
+    updateUser: (user) => dispatch(updateUser(user)),
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditUserPasswordComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(EditUserPasswordComponent);

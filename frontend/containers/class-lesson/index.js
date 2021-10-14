@@ -1,22 +1,25 @@
-import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
-import intersection from 'lodash.intersection';
+import { connect } from "react-redux";
+import { push } from "react-router-redux";
+import intersection from "lodash.intersection";
 
 import {
   fetchClassById,
   markLessonAsComplete,
   markLessonAsIncomplete,
-} from '../../actions/classes';
-import { fetchCourses } from '../../actions/courses';
-import ClassLesson from '../../components/class-lesson';
+} from "../../actions/classes";
+import { fetchCourses } from "../../actions/courses";
+import ClassLesson from "../../components/class-lesson";
 
 import {
   lessonBySlugSelector,
   nextLessonBySlugSelector,
   prevLessonBySlugSelector,
   lessonIdsSelector,
-} from '../../selectors/shared/lesson';
-import { classByIdSelector, completedLessonIdsSelector } from '../../selectors/shared/class';
+} from "../../selectors/shared/lesson";
+import {
+  classByIdSelector,
+  completedLessonIdsSelector,
+} from "../../selectors/shared/class";
 
 export function mapStateToProps(state, { params }) {
   const nextLesson = nextLessonBySlugSelector(state, params);
@@ -45,11 +48,13 @@ export function mapStateToProps(state, { params }) {
 
 export function mapDispatchToProps(dispatch) {
   return {
-    fetchClassById: id => dispatch(fetchClassById(id)),
+    fetchClassById: (id) => dispatch(fetchClassById(id)),
     fetchCourses: () => dispatch(fetchCourses()),
-    markLessonAsComplete: (klass, lesson) => dispatch(markLessonAsComplete(klass, lesson)),
-    markLessonAsIncomplete: (klass, lesson) => dispatch(markLessonAsIncomplete(klass, lesson)),
-    handleBackToClasses: () => dispatch(push('/classes')),
+    markLessonAsComplete: (klass, lesson) =>
+      dispatch(markLessonAsComplete(klass, lesson)),
+    markLessonAsIncomplete: (klass, lesson) =>
+      dispatch(markLessonAsIncomplete(klass, lesson)),
+    handleBackToClasses: () => dispatch(push("/classes")),
   };
 }
 

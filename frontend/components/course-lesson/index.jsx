@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { Shape as LessonShape } from '../../models/lesson';
+import { Shape as LessonShape } from "../../models/lesson";
 
-import NotFound from '../shared/not-found';
-import Link from '../shared/link';
-import Lesson from '../shared/lesson';
+import NotFound from "../shared/not-found";
+import Link from "../shared/link";
+import Lesson from "../shared/lesson";
 
 class CourseLesson extends Component {
   componentDidMount() {
@@ -19,8 +19,13 @@ class CourseLesson extends Component {
 
     return (
       <div>
-        <Link button to={`/topics/${topicSlug}`} isSecondary leftIcon="angle-left">
-          {t('back to course overview')}
+        <Link
+          button
+          to={`/topics/${topicSlug}`}
+          isSecondary
+          leftIcon="angle-left"
+        >
+          {t("back to course overview")}
         </Link>
       </div>
     );
@@ -29,7 +34,7 @@ class CourseLesson extends Component {
   render() {
     const { t } = this.context;
     const { lesson, prevLesson, nextLesson, topicSlug } = this.props;
-    const lessonUrl = linkedLesson =>
+    const lessonUrl = (linkedLesson) =>
       `/topics/${topicSlug}/${lesson.course.slug}/${linkedLesson.slug}`;
 
     if (lesson.isPersisted && !lesson.id) {
@@ -39,7 +44,7 @@ class CourseLesson extends Component {
     return (
       <Lesson
         lesson={lesson}
-        title={t('Course preview')}
+        title={t("Course preview")}
         prevLesson={prevLesson}
         nextLesson={nextLesson}
         course={lesson.course}

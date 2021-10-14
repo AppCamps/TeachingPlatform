@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import { trackError, log } from '../../debug';
+import { Component } from "react";
+import PropTypes from "prop-types";
+import { trackError, log } from "../../debug";
 
 class ErrorBoundary extends Component {
   state = {

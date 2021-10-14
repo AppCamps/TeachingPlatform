@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { userWithAuthenticationSelector } from '../../selectors/shared/user';
-import Layout from '../../components/app';
+import { userWithAuthenticationSelector } from "../../selectors/shared/user";
+import Layout from "../../components/app";
 
 function mapStateToProps(state) {
   return {
@@ -9,6 +9,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-)(Layout);
+export default connect(mapStateToProps)(Layout);

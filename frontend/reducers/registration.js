@@ -1,5 +1,5 @@
-import { REGISTRATION_SET_FIRST_NAME } from '../constants/registration';
-import { AUTHENTICATION_LOGIN_SUCCESS } from '../constants/authentication';
+import { REGISTRATION_SET_FIRST_NAME } from "../constants/registration";
+import { AUTHENTICATION_LOGIN_SUCCESS } from "../constants/authentication";
 
 const initialState = {
   firstName: null,

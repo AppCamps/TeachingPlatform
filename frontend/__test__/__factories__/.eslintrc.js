@@ -1,5 +1,5 @@
 module.exports = {
   rules: {
-    'func-names': 0,
+    "func-names": 0,
   },
-}
+};

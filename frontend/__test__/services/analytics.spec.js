@@ -1,8 +1,8 @@
-import { expect } from '../chai_helper';
+import { expect } from "../chai_helper";
 
-import { setAnalyticsUserId } from '../../services/analytics';
+import { setAnalyticsUserId } from "../../services/analytics";
 
-describe('analytics service', () => {
+describe("analytics service", () => {
   let calledArgs;
   beforeEach(() => {
     calledArgs = [];
@@ -15,11 +15,11 @@ describe('analytics service', () => {
     delete global.ga;
   });
 
-  describe('setAnalyticsUserId', () => {
-    it('sets userId for google analytics', () => {
-      setAnalyticsUserId('thoren-12');
+  describe("setAnalyticsUserId", () => {
+    it("sets userId for google analytics", () => {
+      setAnalyticsUserId("thoren-12");
 
-      expect(calledArgs[0]).to.deep.eql(['set', 'userId', 'thoren-12']);
+      expect(calledArgs[0]).to.deep.eql(["set", "userId", "thoren-12"]);
     });
   });
 });

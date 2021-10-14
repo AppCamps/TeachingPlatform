@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { propTypes } from "redux-form";
+import classNames from "classnames";
 
-import Input from '../../shared/input';
-import Label from '../label';
-import Error from '../../atoms/a-error';
+import Input from "../../shared/input";
+import Label from "../label";
+import Error from "../../atoms/a-error";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function InputWithLabel(props, context) {
   const { t } = context;
@@ -26,7 +26,7 @@ function InputWithLabel(props, context) {
   } = props;
   const name = props.name || input.name;
   let touched = false;
-  if (type === 'password') {
+  if (type === "password") {
     touched = meta && ((meta.active && input.value) || meta.touched);
   } else {
     touched = meta && meta.touched;

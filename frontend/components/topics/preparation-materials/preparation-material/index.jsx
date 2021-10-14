@@ -1,12 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import { Shape as PreparationMaterialShape } from '../../../../models/preparation-material';
-import FaIcon from '../../../shared/fa-icon';
+import { Shape as PreparationMaterialShape } from "../../../../models/preparation-material";
+import FaIcon from "../../../shared/fa-icon";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 const PreparationMaterial = (props) => {
-  const { icon, title, subtitle, description, link, topic: { color } } = props.preparationMaterial;
+  const {
+    icon,
+    title,
+    subtitle,
+    description,
+    link,
+    topic: { color },
+  } = props.preparationMaterial;
 
   const mediaBoxStyle = {
     backgroundColor: color,
@@ -21,7 +28,9 @@ const PreparationMaterial = (props) => {
         <div className={style.preparationMaterialInfoBox}>
           <h3 className={style.preparationMaterialTitle}>{title}</h3>
           <span className={style.preparationMaterialSubtitle}>{subtitle}</span>
-          <div className={style.preparationMaterialDescription}>{description}</div>
+          <div className={style.preparationMaterialDescription}>
+            {description}
+          </div>
         </div>
       </div>
     </a>

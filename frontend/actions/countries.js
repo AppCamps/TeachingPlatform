@@ -1,8 +1,8 @@
-import { getCountries } from '../services/api';
-import { apiFetched } from './api';
+import { getCountries } from "../services/api";
+import { apiFetched } from "./api";
 
 export function fetchCountries() {
-  return dispatch =>
+  return (dispatch) =>
     getCountries().then((payload) => {
       dispatch(apiFetched(payload));
     });

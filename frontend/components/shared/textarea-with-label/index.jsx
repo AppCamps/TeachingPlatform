@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { propTypes } from 'redux-form';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import { propTypes } from "redux-form";
 
-import TextArea from '../textarea';
-import Label from '../label';
-import Error from '../../atoms/a-error';
+import TextArea from "../textarea";
+import Label from "../label";
+import Error from "../../atoms/a-error";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function TextAreaWithLabel(props, context) {
   const { t } = context;
@@ -25,11 +25,7 @@ function TextAreaWithLabel(props, context) {
     <div className={containerClassNames}>
       <Label for={name} text={label} />
       {touched && error && <Error for={name}>{t(error)}</Error>}
-      <TextArea
-        {...input}
-        disabled={disabled}
-        placeholder={placeholder}
-      />
+      <TextArea {...input} disabled={disabled} placeholder={placeholder} />
     </div>
   );
 }

@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { activeNotificationsSelector } from '../../selectors/notifications';
+import { activeNotificationsSelector } from "../../selectors/notifications";
 
-import Notifications from '../../components/app/notifications';
+import Notifications from "../../components/app/notifications";
 
 export function mapStateToProps(state) {
   return {

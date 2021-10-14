@@ -1,1 +1,2 @@
-export const activeNotificationsSelector = state => state.notifications.active;
+export const activeNotificationsSelector = (state) =>
+  state.notifications.active;

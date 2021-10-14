@@ -1,6 +1,6 @@
-import { normalize } from '../../../services/api/helpers';
+import { normalize } from "../../../services/api/helpers";
 
-export const requestData = courseSchoolClass => `
+export const requestData = (courseSchoolClass) => `
 {
   "data": {
     "type": "course-school-classes",
@@ -12,7 +12,7 @@ export const requestData = courseSchoolClass => `
 }
 `;
 
-export const successResponse = courseSchoolClass => `
+export const successResponse = (courseSchoolClass) => `
 {
   "data": {
     "id": "${courseSchoolClass.id}",
@@ -39,5 +39,5 @@ export const successResponse = courseSchoolClass => `
 }
 `;
 
-export const normalizedSuccessResponse = courseSchoolClass =>
+export const normalizedSuccessResponse = (courseSchoolClass) =>
   normalize()(JSON.parse(successResponse(courseSchoolClass)));

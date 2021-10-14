@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Number(props) {
   const { number, color, invert } = props;

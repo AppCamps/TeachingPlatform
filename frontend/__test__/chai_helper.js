@@ -1,5 +1,5 @@
-import chai, { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme';
+import chai, { expect } from "chai";
+import chaiEnzyme from "chai-enzyme";
 
 chai.use(chaiEnzyme());
 chai.config.truncateThreshold = 0;

@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { mount } from 'enzyme';
+import { mount } from "enzyme";
 
-import Certificate from '../../../../components/shared/course/certificate';
+import Certificate from "../../../../components/shared/course/certificate";
 
 const translationContext = {
   context: {
@@ -14,34 +14,40 @@ const translationContext = {
   contextTypes: PropTypes.func.isRequire,
 };
 
-describe('<Certificate/>', () => {
+describe("<Certificate/>", () => {
   const defaultProps = {
     number: 42,
-    color: 'red',
+    color: "red",
   };
 
-  it('should render isAvailable false state', () => {
+  it("should render isAvailable false state", () => {
     const wrapper = mount(
       <Certificate {...defaultProps} isAvailable={false} />,
-      translationContext,
+      translationContext
     );
 
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render isAvailable true state', () => {
-    const wrapper = mount(<Certificate {...defaultProps} isAvailable />, translationContext);
+  it("should render isAvailable true state", () => {
+    const wrapper = mount(
+      <Certificate {...defaultProps} isAvailable />,
+      translationContext
+    );
 
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render isCompleted true state', () => {
-    const wrapper = mount(<Certificate {...defaultProps} isCompleted />, translationContext);
+  it("should render isCompleted true state", () => {
+    const wrapper = mount(
+      <Certificate {...defaultProps} isCompleted />,
+      translationContext
+    );
 
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('calls downloadCertificate with courseSchoolClass on click if isAvailable true', () => {
+  it("calls downloadCertificate with courseSchoolClass on click if isAvailable true", () => {
     const downloadCertificate = jest.fn();
     const courseSchoolClass = { certificateDownloaded: true };
 
@@ -52,10 +58,10 @@ describe('<Certificate/>', () => {
         courseSchoolClass={courseSchoolClass}
         downloadCertificate={downloadCertificate}
       />,
-      translationContext,
+      translationContext
     );
 
-    wrapper.find('a[role="button"]').simulate('click');
+    wrapper.find('a[role="button"]').simulate("click");
 
     expect(downloadCertificate.mock.calls).toHaveLength(1);
     expect(downloadCertificate.mock.calls[0]).toEqual([courseSchoolClass]);

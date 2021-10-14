@@ -1,4 +1,4 @@
-import { PAGINATION_FETCHED } from '../constants/pagination';
+import { PAGINATION_FETCHED } from "../constants/pagination";
 
 const paginationReducer = (state = {}, action) => {
   switch (action.type) {

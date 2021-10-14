@@ -1,5 +1,5 @@
-import { trackError } from '../debug';
-import { createLocality } from './locality';
+import { trackError } from "../debug";
+import { createLocality } from "./locality";
 
 import {
   AUTHENTICATION_SET_SESSION_EXPIRY,
@@ -12,11 +12,11 @@ import {
   AUTHENTICATION_INITIAL_LOCALITY_CREATED,
   AUTHENTICATION_PRIVACY_POLICY_ACCEPTED,
   AUTHENTICATION_SET_REDIRECT,
-} from '../constants/authentication';
-import { apiFetched } from '../actions/api';
+} from "../constants/authentication";
+import { apiFetched } from "../actions/api";
 
-import * as api from '../services/api';
-import { trackAnalyticsEvent } from '../services/analytics';
+import * as api from "../services/api";
+import { trackAnalyticsEvent } from "../services/analytics";
 
 export function setSessionExpiry(session) {
   return {
@@ -26,7 +26,8 @@ export function setSessionExpiry(session) {
 }
 
 export function logoutUser() {
-  return dispatch => api.deleteSession().catch(() => dispatch({ type: AUTHENTICATION_LOGOUT }));
+  return (dispatch) =>
+    api.deleteSession().catch(() => dispatch({ type: AUTHENTICATION_LOGOUT }));
 }
 
 export function loginUserRequest() {
@@ -49,12 +50,15 @@ export function loginUserFailure(payload = null) {
 }
 
 export function expireUserSession() {
-  return dispatch =>
+  return (dispatch) =>
     dispatch(logoutUser()).then(() =>
-      dispatch(loginUserFailure({
-        code: 'session_expired',
-        title: 'Your session has expired',
-      })));
+      dispatch(
+        loginUserFailure({
+          code: "session_expired",
+          title: "Your session has expired",
+        })
+      )
+    );
 }
 
 export function loginUserSuccess(payload) {
@@ -102,7 +106,7 @@ export function loginUser(formData) {
 }
 
 export function restoreUserSession() {
-  return dispatch =>
+  return (dispatch) =>
     api
       .getSession()
       .then((payload) => {
@@ -124,15 +128,18 @@ export function loginPrivacyPolicyAccepted() {
 
 export function declinePrivacyPolicy() {
   return (dispatch) => {
-    trackAnalyticsEvent('PrivacyPolicy', 'decline');
+    trackAnalyticsEvent("PrivacyPolicy", "decline");
     return dispatch(logoutUser());
   };
 }
 
 export function acceptPrivacyPolicy(user) {
-  const userWithAcceptedPrivacyPolicy = { ...user, privacyPolicyAccepted: true };
+  const userWithAcceptedPrivacyPolicy = {
+    ...user,
+    privacyPolicyAccepted: true,
+  };
 
-  return dispatch =>
+  return (dispatch) =>
     api.updateUser(userWithAcceptedPrivacyPolicy).then((payload) => {
       if (payload.errors) {
         return Promise.reject(payload.errors[0]);
@@ -140,7 +147,7 @@ export function acceptPrivacyPolicy(user) {
 
       dispatch(apiFetched(payload));
       dispatch(loginPrivacyPolicyAccepted());
-      trackAnalyticsEvent('PrivacyPolicy', 'accept');
+      trackAnalyticsEvent("PrivacyPolicy", "accept");
 
       return Promise.resolve();
     });
@@ -160,6 +167,8 @@ export function setAuthenticationRedirect(route) {
 }
 
 export function createInitialLocality(locality) {
-  return dispatch =>
-    dispatch(createLocality(locality)).then(() => dispatch(initialLocalityCreated()));
+  return (dispatch) =>
+    dispatch(createLocality(locality)).then(() =>
+      dispatch(initialLocalityCreated())
+    );
 }

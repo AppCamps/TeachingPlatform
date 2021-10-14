@@ -1,10 +1,10 @@
-import { expect } from '../chai_helper';
+import { expect } from "../chai_helper";
 
-import { isAuthenticated } from '../../services/auth';
+import { isAuthenticated } from "../../services/auth";
 
-describe('Auth', () => {
-  describe('isAuthenticated', () => {
-    it('requires a user with privacyPolicyAccepted and locality', () => {
+describe("Auth", () => {
+  describe("isAuthenticated", () => {
+    it("requires a user with privacyPolicyAccepted and locality", () => {
       const user = {};
       expect(isAuthenticated(user)).to.equal(false);
       expect(isAuthenticated({ privacyPolicyAccepted: true })).to.equal(false);

@@ -1,4 +1,4 @@
-import { normalize } from '../../../services/api/helpers';
+import { normalize } from "../../../services/api/helpers";
 
 /* eslint-disable */
 export const successResponse = `
@@ -47,4 +47,6 @@ export const successResponse = `
 }
 `;
 
-export const normalizedSuccessResponse = normalize()(JSON.parse(successResponse));
+export const normalizedSuccessResponse = normalize()(
+  JSON.parse(successResponse)
+);

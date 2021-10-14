@@ -1,16 +1,16 @@
-import { normalize } from '../../../services/api/helpers';
+import { normalize } from "../../../services/api/helpers";
 
-import factory from '../../__factories__';
+import factory from "../../__factories__";
 
-export const user = factory.build('registration', {
-  email: 'test1@appcamps.de',
-  firstName: 'Test',
-  lastName: 'User',
-  role: 'role_teacher',
+export const user = factory.build("registration", {
+  email: "test1@appcamps.de",
+  firstName: "Test",
+  lastName: "User",
+  role: "role_teacher",
   privacyPolicyAccepted: true,
-  referal: 'test123',
-  password: 'testtest',
-  passwordConfirmation: 'testtest',
+  referal: "test123",
+  password: "testtest",
+  passwordConfirmation: "testtest",
 });
 
 export const requestData = `
@@ -47,7 +47,9 @@ export const successResponse = `
 }
 `;
 
-export const normalizedSuccessResponse = normalize()(JSON.parse(successResponse));
+export const normalizedSuccessResponse = normalize()(
+  JSON.parse(successResponse)
+);
 
 export const errorResponse = `
 {
@@ -64,6 +66,6 @@ export const errorResponse = `
 
 export const normalizedErrorResponse = {
   errors: {
-    email: 'has already been taken',
+    email: "has already been taken",
   },
 };

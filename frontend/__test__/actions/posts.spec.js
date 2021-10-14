@@ -1,32 +1,32 @@
 /* eslint no-underscore-dangle: 0 */
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
 
-import { fetchPosts, __RewireAPI__ as RewireAPI } from '../../actions/posts';
+import { fetchPosts, __RewireAPI__ as RewireAPI } from "../../actions/posts";
 
-import { API_FETCHED } from '../../constants/api';
-import { PAGINATION_FETCHED } from '../../constants/pagination';
+import { API_FETCHED } from "../../constants/api";
+import { PAGINATION_FETCHED } from "../../constants/pagination";
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('actions/posts', () => {
-  describe('fetchPosts', () => {
-    it('should fetch courses from api and dispatch coursesFetched and dispatch updateUser with unreadPostsPresent: false', () => {
+describe("actions/posts", () => {
+  describe("fetchPosts", () => {
+    it("should fetch courses from api and dispatch coursesFetched and dispatch updateUser with unreadPostsPresent: false", () => {
       const postsApiResponse = {
         data: [
           {
             posts: [
               {
-                '1234-5678': {
-                  title: 'hellp',
+                "1234-5678": {
+                  title: "hellp",
                 },
               },
             ],
           },
         ],
         links: {
-          self: 'page[number]=2&page[size]=5',
+          self: "page[number]=2&page[size]=5",
         },
       };
 
@@ -35,7 +35,7 @@ describe('actions/posts', () => {
           users: [
             {
               12: {
-                firstName: 'Mario',
+                firstName: "Mario",
                 unreadPostsPresent: false,
               },
             },
@@ -46,8 +46,8 @@ describe('actions/posts', () => {
       const getPostsMock = jest.fn(() => Promise.resolve(postsApiResponse));
       const updateUserMock = jest.fn(() => Promise.resolve(userApiResponse));
 
-      RewireAPI.__Rewire__('getPosts', getPostsMock);
-      RewireAPI.__Rewire__('updateUser', updateUserMock);
+      RewireAPI.__Rewire__("getPosts", getPostsMock);
+      RewireAPI.__Rewire__("updateUser", updateUserMock);
 
       const expectedActions = [
         {
@@ -56,8 +56,8 @@ describe('actions/posts', () => {
             {
               posts: [
                 {
-                  '1234-5678': {
-                    title: 'hellp',
+                  "1234-5678": {
+                    title: "hellp",
                   },
                 },
               ],
@@ -66,7 +66,7 @@ describe('actions/posts', () => {
         },
         {
           type: PAGINATION_FETCHED,
-          identifier: 'posts',
+          identifier: "posts",
           payload: {
             current: 2,
             size: 5,
@@ -80,7 +80,7 @@ describe('actions/posts', () => {
               users: [
                 {
                   12: {
-                    firstName: 'Mario',
+                    firstName: "Mario",
                     unreadPostsPresent: false,
                   },
                 },
@@ -91,7 +91,7 @@ describe('actions/posts', () => {
       ];
 
       const fragments = { number: 2, size: 5 };
-      const user = { id: '12', firstName: 'Mario', unreadPostsPresent: true };
+      const user = { id: "12", firstName: "Mario", unreadPostsPresent: true };
 
       const store = mockStore({ api: { posts: {} } });
 
@@ -99,34 +99,36 @@ describe('actions/posts', () => {
         expect(getPostsMock.mock.calls.length).toBe(1);
         expect(getPostsMock.mock.calls[0]).toEqual([fragments]);
         expect(updateUserMock.mock.calls.length).toBe(1);
-        expect(updateUserMock.mock.calls[0]).toEqual([{ ...user, unreadPostsPresent: false }]);
+        expect(updateUserMock.mock.calls[0]).toEqual([
+          { ...user, unreadPostsPresent: false },
+        ]);
         expect(store.getActions()).toEqual(expectedActions);
       });
     });
 
-    it('not updateUser with unreadPostsPresent: false if unreadPostsPresent was false', () => {
+    it("not updateUser with unreadPostsPresent: false if unreadPostsPresent was false", () => {
       const postsApiResponse = {
         data: [
           {
             posts: [
               {
-                '1234-5678': {
-                  title: 'hellp',
+                "1234-5678": {
+                  title: "hellp",
                 },
               },
             ],
           },
         ],
         links: {
-          self: 'page[number]=2&page[size]=5',
+          self: "page[number]=2&page[size]=5",
         },
       };
 
       const getPostsMock = jest.fn(() => Promise.resolve(postsApiResponse));
       const updateUserMock = jest.fn();
 
-      RewireAPI.__Rewire__('getPosts', getPostsMock);
-      RewireAPI.__Rewire__('updateUser', updateUserMock);
+      RewireAPI.__Rewire__("getPosts", getPostsMock);
+      RewireAPI.__Rewire__("updateUser", updateUserMock);
 
       const expectedActions = [
         {
@@ -135,8 +137,8 @@ describe('actions/posts', () => {
             {
               posts: [
                 {
-                  '1234-5678': {
-                    title: 'hellp',
+                  "1234-5678": {
+                    title: "hellp",
                   },
                 },
               ],
@@ -145,7 +147,7 @@ describe('actions/posts', () => {
         },
         {
           type: PAGINATION_FETCHED,
-          identifier: 'posts',
+          identifier: "posts",
           payload: {
             current: 2,
             size: 5,
@@ -155,7 +157,7 @@ describe('actions/posts', () => {
       ];
 
       const fragments = { number: 2, size: 5 };
-      const user = { id: '12', firstName: 'Mario', unreadPostsPresent: false };
+      const user = { id: "12", firstName: "Mario", unreadPostsPresent: false };
 
       const store = mockStore({ api: { posts: {} } });
 

@@ -1,4 +1,4 @@
-import { translations } from '../translations';
+import { translations } from "../translations";
 
 let getState = null;
 export function intializeTranslationUtils(store) {
@@ -6,7 +6,7 @@ export function intializeTranslationUtils(store) {
 }
 
 export function t(templateKey, interpolationObject) {
-  const { lang } = getState ? getState().i18nState : 'de';
+  const { lang } = getState ? getState().i18nState : "de";
 
   let templateString = templateKey;
   if (translations[lang] && translations[lang][templateKey]) {
@@ -18,28 +18,29 @@ export function t(templateKey, interpolationObject) {
     return templateString;
   }
 
-  return matches
-    .reduce((memo, match) => {
-      const key = match.replace(/[{}]/g, '');
-      const replaceString = interpolationObject[key];
+  return matches.reduce((memo, match) => {
+    const key = match.replace(/[{}]/g, "");
+    const replaceString = interpolationObject[key];
 
-      if (!replaceString) {
-        throw new Error(`Could not translate '${templateString}' missing replacement for ${key}.`);
-      }
+    if (!replaceString) {
+      throw new Error(
+        `Could not translate '${templateString}' missing replacement for ${key}.`
+      );
+    }
 
-      return memo.replace(new RegExp(match), replaceString);
-    }, templateString);
+    return memo.replace(new RegExp(match), replaceString);
+  }, templateString);
 }
 
 function formErrors() {
   return {
-    required: t('Required'),
-    invalid: t('Invalid'),
-    notAnEmail: t('Not an email'),
-    notEqual: t('Not equal'),
-    privacyPolicyNotAccepted: t('You need to confirm our privacy policy'),
-    minimumCharCount: t('At least 8 chars'),
-    alreadyExists: t('has already been taken'),
+    required: t("Required"),
+    invalid: t("Invalid"),
+    notAnEmail: t("Not an email"),
+    notEqual: t("Not equal"),
+    privacyPolicyNotAccepted: t("You need to confirm our privacy policy"),
+    minimumCharCount: t("At least 8 chars"),
+    alreadyExists: t("has already been taken"),
   };
 }
 

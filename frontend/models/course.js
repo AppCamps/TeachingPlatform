@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import { attr, fk, many } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr, fk, many } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Course extends BaseModel {}
-Course.modelName = 'Course';
+Course.modelName = "Course";
 
 Course.fields = {
   ...BaseModel.fields,
@@ -14,21 +14,21 @@ Course.fields = {
   description: attr(),
   slug: attr(),
   certificate: attr(),
-  topic: fk('Topic', 'courses'),
+  topic: fk("Topic", "courses"),
   // lessons: many('Lesson', 'course') (declared by Lesson)
   schoolClasses: many({
-    to: 'Class',
-    through: 'CourseSchoolClass',
-    relatedName: 'courses',
-    throughFields: ['schoolClass', 'course'],
+    to: "Class",
+    through: "CourseSchoolClass",
+    relatedName: "courses",
+    throughFields: ["schoolClass", "course"],
   }),
 };
 
 Course.defaultProps = {
   ...BaseModel.defaultProps,
-  title: '',
+  title: "",
   position: null,
-  description: '',
+  description: "",
   slug: null,
 };
 

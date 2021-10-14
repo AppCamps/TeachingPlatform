@@ -1,9 +1,9 @@
-import { expect } from '../../chai_helper';
-import { mapStateToProps } from '../../../containers/app/notifications';
+import { expect } from "../../chai_helper";
+import { mapStateToProps } from "../../../containers/app/notifications";
 
-describe('Notifications Container', () => {
-  describe('mapStateToProps', () => {
-    it('returns the active notifications', () => {
+describe("Notifications Container", () => {
+  describe("mapStateToProps", () => {
+    it("returns the active notifications", () => {
       const state = {
         notifications: {
           active: [1, 2],

@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types';
-import { attr } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Topic extends BaseModel {}
 
-Topic.modelName = 'Topic';
-Topic.sortFn = klass => new Topic(klass).title.toLowerCase();
+Topic.modelName = "Topic";
+Topic.sortFn = (klass) => new Topic(klass).title.toLowerCase();
 
 Topic.fields = {
   ...BaseModel.fields,
@@ -20,7 +20,7 @@ Topic.fields = {
 Topic.defaultProps = {
   ...BaseModel.defaultProps,
   id: null,
-  title: '',
+  title: "",
 };
 
 const Shape = PropTypes.shape({

@@ -1,12 +1,12 @@
-import { delay } from 'redux-saga';
-import { call, put, takeEvery, fork, select, all } from 'redux-saga/effects';
-import { LOCATION_CHANGE } from 'react-router-redux';
+import { delay } from "redux-saga";
+import { call, put, takeEvery, fork, select, all } from "redux-saga/effects";
+import { LOCATION_CHANGE } from "react-router-redux";
 
-import { NOTIFICATION_DISPLAY_REQUEST } from '../constants/notifications';
+import { NOTIFICATION_DISPLAY_REQUEST } from "../constants/notifications";
 
-import { activeNotificationsSelector } from '../selectors/notifications';
+import { activeNotificationsSelector } from "../selectors/notifications";
 
-import { showNotification, hideNotification } from '../actions/notifications';
+import { showNotification, hideNotification } from "../actions/notifications";
 
 export const NOTIFICATIONS_MAX = 2;
 export const NOTIFICATIONS_DISPLAY_TIME = 10000;
@@ -16,7 +16,9 @@ let activeNotifications = [];
 
 export function* handleLocationChange() {
   const displayedNotifications = yield select(activeNotificationsSelector);
-  const notificationToCancel = displayedNotifications.filter(notif => notif.hideOnLocationChange);
+  const notificationToCancel = displayedNotifications.filter(
+    (notif) => notif.hideOnLocationChange
+  );
 
   // eslint-disable-next-line guard-for-in, no-restricted-syntax
   for (const index in notificationToCancel) {
@@ -27,20 +29,26 @@ export function* handleLocationChange() {
 
 export function* displayNotification(notification) {
   if (activeNotifications.length >= NOTIFICATIONS_MAX) {
-    throw new Error(`can't display more than ${NOTIFICATIONS_MAX} at the same time`);
+    throw new Error(
+      `can't display more than ${NOTIFICATIONS_MAX} at the same time`
+    );
   }
   activeNotifications = [...activeNotifications, notification];
   yield put(showNotification(notification));
   yield call(delay, notification.displayTime || NOTIFICATIONS_DISPLAY_TIME);
   yield put(hideNotification(notification));
-  activeNotifications = activeNotifications.filter(n => n !== notification);
+  activeNotifications = activeNotifications.filter((n) => n !== notification);
 }
 
 export function* notificationScheduler() {
   // eslint-disable-next-line no-constant-condition
   while (true) {
-    if (activeNotifications.length < NOTIFICATIONS_MAX && pendingNotifications.length > 0) {
-      const [firstNotification, ...remainingNotifications] = pendingNotifications;
+    if (
+      activeNotifications.length < NOTIFICATIONS_MAX &&
+      pendingNotifications.length > 0
+    ) {
+      const [firstNotification, ...remainingNotifications] =
+        pendingNotifications;
       pendingNotifications = remainingNotifications;
       yield fork(displayNotification, firstNotification);
 
@@ -74,4 +82,4 @@ export default function* watchNofitications() {
 export const setTest = (varName, value) => {
   eval(`${varName} = value`);
 };
-export const getTest = varName => eval(`${varName}`);
+export const getTest = (varName) => eval(`${varName}`);

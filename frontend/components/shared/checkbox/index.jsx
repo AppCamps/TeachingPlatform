@@ -1,12 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import { propTypes } from "redux-form";
+import classNames from "classnames";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Checkbox(props) {
-  const { label, value, name, autoFocus, disabled, className, hasError } = props;
+  const { label, value, name, autoFocus, disabled, className, hasError } =
+    props;
 
   const optionClassNames = classNames({
     [`${style.label}`]: true,
@@ -39,10 +40,7 @@ function Checkbox(props) {
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool,
-  ]).isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]).isRequired,
   label: PropTypes.node.isRequired,
   className: PropTypes.string,
   autoFocus: PropTypes.bool,

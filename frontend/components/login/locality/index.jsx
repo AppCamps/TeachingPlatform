@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import LocalityForm from '../../shared/locality-form';
+import LocalityForm from "../../shared/locality-form";
 
-import { Shape as UserShape } from '../../../models/user';
-import { Shape as CountryShape } from '../../../models/country';
+import { Shape as UserShape } from "../../../models/user";
+import { Shape as CountryShape } from "../../../models/country";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function CreateLocality(props, context) {
   const { t } = context;
@@ -14,12 +14,12 @@ function CreateLocality(props, context) {
   return (
     <div className={style.container}>
       <div className={style.locality}>
-        <h1 className={style.heading}>
-          {t('Welcome to App Camps')}
-        </h1>
+        <h1 className={style.heading}>{t("Welcome to App Camps")}</h1>
         <div className={style.localityForm}>
           <p className={style.info}>
-            {t('It is crucial for us to know, where our materials are used. Before you can setup your classes, we need you to tell us a bit more about you.')}
+            {t(
+              "It is crucial for us to know, where our materials are used. Before you can setup your classes, we need you to tell us a bit more about you."
+            )}
           </p>
           <LocalityForm {...props} />
         </div>
@@ -41,7 +41,7 @@ const OptionShape = PropTypes.arrayOf(
   PropTypes.shape({
     value: PropTypes.string,
     label: PropTypes.string,
-  }),
+  })
 );
 
 CreateLocality.propTypes = {

@@ -1,11 +1,11 @@
-import { connect } from 'react-redux';
-import { getFormValues } from 'redux-form';
+import { connect } from "react-redux";
+import { getFormValues } from "redux-form";
 
-import { createUser } from '../../actions/registration';
-import RegistrationComponent from '../../components/registration';
+import { createUser } from "../../actions/registration";
+import RegistrationComponent from "../../components/registration";
 
 export function mapStateToProps(state) {
-  const { role } = getFormValues('registration')(state) || {};
+  const { role } = getFormValues("registration")(state) || {};
 
   return {
     selectedRole: role,
@@ -14,8 +14,11 @@ export function mapStateToProps(state) {
 
 export function mapDispatchToProps(dispatch) {
   return {
-    createUser: user => dispatch(createUser(user)),
+    createUser: (user) => dispatch(createUser(user)),
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegistrationComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RegistrationComponent);

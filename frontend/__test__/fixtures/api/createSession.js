@@ -1,15 +1,15 @@
-import { normalize } from '../../../services/api/helpers';
+import { normalize } from "../../../services/api/helpers";
 
 export const user = {
-  id: '10',
-  email: 'hans@test.de',
+  id: "10",
+  email: "hans@test.de",
 };
 
 export const session = {
-  id: '',
-  token: 'abc123',
+  id: "",
+  token: "abc123",
   expireAfter: 10,
-  user: '10',
+  user: "10",
 };
 
 export const requestData = `
@@ -57,7 +57,9 @@ export const successResponse = `
 `;
 /* eslint-enable max-len */
 
-export const normalizedSuccessResponse = normalize()(JSON.parse(successResponse));
+export const normalizedSuccessResponse = normalize()(
+  JSON.parse(successResponse)
+);
 
 export const errorResponse = `
 {

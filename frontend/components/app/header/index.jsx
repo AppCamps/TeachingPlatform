@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { isAuthenticated } from '../../../services/auth';
+import { isAuthenticated } from "../../../services/auth";
 
-import Logo from '../../atoms/a-logo';
-import HeaderActions from './actions';
+import Logo from "../../atoms/a-logo";
+import HeaderActions from "./actions";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Header(props) {
   return (

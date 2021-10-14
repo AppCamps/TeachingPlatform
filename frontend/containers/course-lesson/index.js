@@ -1,13 +1,13 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { fetchCourses } from '../../actions/courses';
+import { fetchCourses } from "../../actions/courses";
 import {
   lessonBySlugSelector,
   nextLessonBySlugSelector,
   prevLessonBySlugSelector,
-} from '../../selectors/shared/lesson';
+} from "../../selectors/shared/lesson";
 
-import CourseLesson from '../../components/course-lesson';
+import CourseLesson from "../../components/course-lesson";
 
 export function mapStateToProps(state, { params }) {
   const lesson = lessonBySlugSelector(state, params);

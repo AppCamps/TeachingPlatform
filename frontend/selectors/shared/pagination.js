@@ -1,1 +1,2 @@
-export const paginationSelector = identifier => state => state.pagination[identifier] || {};
+export const paginationSelector = (identifier) => (state) =>
+  state.pagination[identifier] || {};

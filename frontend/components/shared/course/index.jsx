@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { Shape as TopicShape } from '../../../models/topic';
-import { Shape as CourseShape } from '../../../models/course';
+import { Shape as TopicShape } from "../../../models/topic";
+import { Shape as CourseShape } from "../../../models/course";
 
-import CourseTitle from '../../shared/course-title';
-import Lesson from './lesson';
-import Certificate from './certificate';
+import CourseTitle from "../../shared/course-title";
+import Lesson from "./lesson";
+import Certificate from "./certificate";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Course extends Component {
   isLessonCompleted(lesson) {
@@ -37,10 +37,17 @@ class Course extends Component {
   }
 
   render() {
-    const { course, course: { courseSchoolClass }, downloadCertificate, topic } = this.props;
+    const {
+      course,
+      course: { courseSchoolClass },
+      downloadCertificate,
+      topic,
+    } = this.props;
 
     const areAllLessonsComplete =
-      course.lessons.map(lesson => this.isLessonCompleted(lesson)).indexOf(false) === -1;
+      course.lessons
+        .map((lesson) => this.isLessonCompleted(lesson))
+        .indexOf(false) === -1;
 
     return (
       <div className={style.course}>

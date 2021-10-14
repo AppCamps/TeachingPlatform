@@ -1,8 +1,8 @@
-import { expect } from '../chai_helper';
+import { expect } from "../chai_helper";
 
-import { setTrackJsUserId } from '../../services/trackjs';
+import { setTrackJsUserId } from "../../services/trackjs";
 
-describe('analytics service', () => {
+describe("analytics service", () => {
   let calledArgs;
   beforeEach(() => {
     calledArgs = [];
@@ -17,11 +17,11 @@ describe('analytics service', () => {
     delete global.trackJs;
   });
 
-  describe('setAnalyticsUserId', () => {
-    it('sets userId for google analytics', () => {
-      setTrackJsUserId('thoren-12');
+  describe("setAnalyticsUserId", () => {
+    it("sets userId for google analytics", () => {
+      setTrackJsUserId("thoren-12");
 
-      expect(calledArgs[0]).to.deep.eql([{ userId: 'thoren-12' }]);
+      expect(calledArgs[0]).to.deep.eql([{ userId: "thoren-12" }]);
     });
   });
 });

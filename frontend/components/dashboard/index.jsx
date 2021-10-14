@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import classNames from 'classnames';
-import 'string.prototype.startswith';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router";
+import classNames from "classnames";
+import "string.prototype.startswith";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Dashboard extends Component {
   navLinks(currentPath) {
     const { t } = this.context;
     const componentDefinitions = [
-      { text: t('My classes'), path: '/classes' },
-      { text: t('Teaching material'), path: '/topics' },
-      { text: t('News'), path: '/posts' },
+      { text: t("My classes"), path: "/classes" },
+      { text: t("Teaching material"), path: "/topics" },
+      { text: t("News"), path: "/posts" },
     ];
     return componentDefinitions.map(({ text, path }) => {
       const isActive = currentPath.startsWith(path);
@@ -21,7 +21,7 @@ class Dashboard extends Component {
         [`${style.itemIsActive}`]: isActive,
       });
       let activityIndicator = null;
-      if (path === '/posts' && this.props.unreadPostsPresent) {
+      if (path === "/posts" && this.props.unreadPostsPresent) {
         activityIndicator = <span className={style.activityIndicator} />;
       }
 
@@ -37,7 +37,10 @@ class Dashboard extends Component {
   }
 
   render() {
-    const { location: { pathname }, children } = this.props;
+    const {
+      location: { pathname },
+      children,
+    } = this.props;
 
     return (
       <div>

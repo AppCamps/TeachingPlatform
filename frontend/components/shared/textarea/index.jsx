@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ResizingTextArea from 'react-textarea-autosize';
+import React from "react";
+import PropTypes from "prop-types";
+import ResizingTextArea from "react-textarea-autosize";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function TextArea(props) {
-  const TextAreaComponent = (props.resize) ? ResizingTextArea : 'textarea';
+  const TextAreaComponent = props.resize ? ResizingTextArea : "textarea";
 
   const { rows, disabled, placeholder } = props;
 

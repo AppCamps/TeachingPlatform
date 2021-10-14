@@ -1,4 +1,4 @@
-import { normalize } from '../../../services/api/helpers';
+import { normalize } from "../../../services/api/helpers";
 
 /* eslint-disable */
 export const successResponse = `

@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import { attr, fk } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr, fk } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class PreparationMaterial extends BaseModel {}
 
-PreparationMaterial.modelName = 'PreparationMaterial';
+PreparationMaterial.modelName = "PreparationMaterial";
 
 PreparationMaterial.fields = {
   ...BaseModel.fields,
@@ -17,16 +17,16 @@ PreparationMaterial.fields = {
   mediumType: attr(),
   icon: attr(),
   link: attr(),
-  topic: fk('Topic', 'preparationMaterials'),
+  topic: fk("Topic", "preparationMaterials"),
 };
 
 PreparationMaterial.defaultProps = {
   ...BaseModel.defaultProps,
   id: null,
   position: null,
-  title: '',
-  subtitle: '',
-  description: '',
+  title: "",
+  subtitle: "",
+  description: "",
   mediumType: null,
   icon: null,
   link: null,

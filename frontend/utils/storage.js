@@ -1,12 +1,10 @@
-
 export class LocalStorage {
-
   /**
    * @param w - window object
    * */
   constructor(w) {
     if (!LocalStorage.isSupported(w)) {
-      throw new Error('LocalStorage is not supported');
+      throw new Error("LocalStorage is not supported");
     }
     this.storage = w.localStorage;
   }
@@ -38,13 +36,12 @@ export class LocalStorage {
 }
 
 export class CookieStorage {
-
   /**
    * @param w - window object
    * */
   constructor(w) {
     if (!CookieStorage.isSupported(w)) {
-      throw new Error('Cookies are disabled');
+      throw new Error("Cookies are disabled");
     }
     this.doc = w.document;
   }
@@ -63,8 +60,10 @@ export class CookieStorage {
 
   get(key) {
     const cookieKey = `${key}=`;
-    const keyValues = decodeURIComponent(this.doc.cookie).split(';');
-    const match = keyValues.filter(keyValue => keyValue.startsWith(cookieKey));
+    const keyValues = decodeURIComponent(this.doc.cookie).split(";");
+    const match = keyValues.filter((keyValue) =>
+      keyValue.startsWith(cookieKey)
+    );
     if (match.length === 0) {
       return undefined;
     }
@@ -78,17 +77,16 @@ export class CookieStorage {
   }
 
   clear() {
-    const keyValues = decodeURIComponent(this.doc.cookie).split(';');
+    const keyValues = decodeURIComponent(this.doc.cookie).split(";");
     keyValues
       // Get keys from key value strings
-      .map(keyValue => keyValue.split('=')[0])
+      .map((keyValue) => keyValue.split("=")[0])
       // Remove all keys
-      .forEach(key => this.remove(key));
+      .forEach((key) => this.remove(key));
   }
 }
 
 export class MemoryStorage {
-
   /**
    * @param w - window object
    * */

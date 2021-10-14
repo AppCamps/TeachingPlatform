@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import autobind from 'autobind-decorator';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import autobind from "autobind-decorator";
 
-import Link from '../shared/link';
-import ClassForm, { FormShape } from '../shared/class-form';
+import Link from "../shared/link";
+import ClassForm, { FormShape } from "../shared/class-form";
 
-import { Shape as TopicShape } from '../../models/topic';
+import { Shape as TopicShape } from "../../models/topic";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class CreateClass extends Component {
-
   constructor(...args) {
     super(...args);
     this.state = {
@@ -23,7 +22,9 @@ class CreateClass extends Component {
   }
 
   componentDidMount() {
-    this.props.router.setRouteLeaveHook(this.props.route, () => this.routerWillLeave());
+    this.props.router.setRouteLeaveHook(this.props.route, () =>
+      this.routerWillLeave()
+    );
   }
 
   componentWillUnmount() {
@@ -54,7 +55,11 @@ class CreateClass extends Component {
     const { t } = this.context;
 
     if (!this.state.isSubmitted && this.props.dirty) {
-      return `${t('You did not save your data! Do you still want to leave the page?')}\n${t('(You can save the class in the third step, please scroll down.)')}`;
+      return `${t(
+        "You did not save your data! Do you still want to leave the page?"
+      )}\n${t(
+        "(You can save the class in the third step, please scroll down.)"
+      )}`;
     }
 
     return null;
@@ -68,20 +73,16 @@ class CreateClass extends Component {
       formValues,
       topics,
       handleSubmit: this.handleSubmit,
-      submitText: t('Create class'),
+      submitText: t("Create class"),
       editMode: false,
     };
 
     return (
       <div className={style.container}>
         <div className={style.createClass}>
-          <h1 className={style.heading}>
-            {t('Create a new class')}
-          </h1>
+          <h1 className={style.heading}>{t("Create a new class")}</h1>
           <div className={style.cancel}>
-            <Link to="/classes">
-              {t('cancel')}
-            </Link>
+            <Link to="/classes">{t("cancel")}</Link>
           </div>
           <ClassForm {...formProps} />
         </div>

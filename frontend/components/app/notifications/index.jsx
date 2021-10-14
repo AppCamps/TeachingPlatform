@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Notifications(props) {
   const { activeNotifications } = props;
@@ -32,9 +32,9 @@ function Notifications(props) {
 Notifications.propTypes = {
   activeNotifications: PropTypes.arrayOf(
     PropTypes.shape({
-      type: PropTypes.oneOf(['success', 'failure']),
+      type: PropTypes.oneOf(["success", "failure"]),
       text: PropTypes.string,
-    }),
+    })
   ),
 };
 

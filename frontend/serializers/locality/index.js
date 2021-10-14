@@ -1,9 +1,15 @@
-import { Serializer } from 'jsonapi-serializer';
+import { Serializer } from "jsonapi-serializer";
 
-const LocalitySerializer = new Serializer('localities', {
+const LocalitySerializer = new Serializer("localities", {
   attributes: [
-    'schoolType', 'schoolTypeCustom', 'schoolName', 'country',
-    'state', 'postalCode', 'city', 'subjects',
+    "schoolType",
+    "schoolTypeCustom",
+    "schoolName",
+    "country",
+    "state",
+    "postalCode",
+    "city",
+    "subjects",
   ],
 });
 

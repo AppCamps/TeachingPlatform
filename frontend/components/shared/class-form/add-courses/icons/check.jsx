@@ -1,12 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function CheckIcon(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="4074.157 3803.208 50 50">
       <defs>
         <mask id="cut-check">
-          <rect fill="white" x="4074.157" y="3803.208" width="100%" height="100%" />
+          <rect
+            fill="white"
+            x="4074.157"
+            y="3803.208"
+            width="100%"
+            height="100%"
+          />
           <path
             fill="white"
             stroke="black"

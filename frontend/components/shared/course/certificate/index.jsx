@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import autobind from 'autobind-decorator';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router";
+import autobind from "autobind-decorator";
 
-import classNames from 'classnames';
+import classNames from "classnames";
 
-import { Shape as CourseSchoolClassShape } from '../../../../models/course-school-class';
+import { Shape as CourseSchoolClassShape } from "../../../../models/course-school-class";
 
-import { colors } from '../../../../config';
-import Number from '../../number';
-import HelpIcon from '../../help-icon';
-import FaIcon from '../../fa-icon';
+import { colors } from "../../../../config";
+import Number from "../../number";
+import HelpIcon from "../../help-icon";
+import FaIcon from "../../fa-icon";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Certificate extends Component {
   @autobind
@@ -44,23 +44,23 @@ class Certificate extends Component {
           <Number
             number={number}
             color={certColor}
-            invert={courseSchoolClass && courseSchoolClass.certificateDownloaded}
+            invert={
+              courseSchoolClass && courseSchoolClass.certificateDownloaded
+            }
           />
         </div>
         <div className={style.certificateTitle}>
           {!isAvailable && (
             <span>
-              <FaIcon icon="lock" />{' '}
+              <FaIcon icon="lock" />{" "}
             </span>
           )}
-          {t('Certificates')}
+          {t("Certificates")}
         </div>
         <div className={style.info}>
-          {!isAvailable ? (
-            t('Available when all lessons are completed.')
-          ) : (
-            t('Click here to download your template.')
-          )}
+          {!isAvailable
+            ? t("Available when all lessons are completed.")
+            : t("Click here to download your template.")}
         </div>
       </div>
     );
@@ -76,7 +76,7 @@ class Certificate extends Component {
     return (
       <div className={style.certificate}>
         <span className={style.help}>
-          <Link to="/help/certificates" title={t('Click to get help')}>
+          <Link to="/help/certificates" title={t("Click to get help")}>
             <HelpIcon />
           </Link>
         </span>

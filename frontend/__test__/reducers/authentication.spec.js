@@ -1,4 +1,4 @@
-import { expect } from '../chai_helper';
+import { expect } from "../chai_helper";
 
 import {
   AUTHENTICATION_LOGIN_REQUEST,
@@ -7,37 +7,38 @@ import {
   AUTHENTICATION_LOGIN_REDIRECT,
   AUTHENTICATION_LOGOUT,
   AUTHENTICATION_SET_REDIRECT,
-} from '../../constants/authentication';
+} from "../../constants/authentication";
 
-import authenticationReducer from '../../reducers/authentication';
+import authenticationReducer from "../../reducers/authentication";
 
-describe('authenticationReducer', () => {
-  it('should return the initial state', () => {
-    expect(
-      authenticationReducer(undefined, { type: 'none' }),
-    ).to.deep.equal({
+describe("authenticationReducer", () => {
+  it("should return the initial state", () => {
+    expect(authenticationReducer(undefined, { type: "none" })).to.deep.equal({
       isAuthenticating: false,
       isAuthenticated: false,
       isRedirecting: false,
       isLoggedOut: false,
       error: null,
-      redirect: '/',
+      redirect: "/",
     });
   });
 
-  it('should return the state for unmatched action', () => {
-    const testState = { state: 'test' };
-    expect(
-      authenticationReducer(testState, { type: 'something' }),
-    ).to.equal(testState);
+  it("should return the state for unmatched action", () => {
+    const testState = { state: "test" };
+    expect(authenticationReducer(testState, { type: "something" })).to.equal(
+      testState
+    );
   });
 
   describe(AUTHENTICATION_LOGIN_REQUEST, () => {
-    it('should set isAuthenticating to true', () => {
+    it("should set isAuthenticating to true", () => {
       expect(
-        authenticationReducer({}, {
-          type: AUTHENTICATION_LOGIN_REQUEST,
-        }),
+        authenticationReducer(
+          {},
+          {
+            type: AUTHENTICATION_LOGIN_REQUEST,
+          }
+        )
       ).to.deep.equal({
         isAuthenticating: true,
         isAuthenticated: false,
@@ -49,18 +50,18 @@ describe('authenticationReducer', () => {
   });
 
   describe(AUTHENTICATION_LOGIN_SUCCEEDED, () => {
-    it('should set set isAuthenticating to false', () => {
+    it("should set set isAuthenticating to false", () => {
       expect(
         authenticationReducer(
           {
             isAuthenticating: true,
             isAuthenticated: false,
-            error: 'smth',
+            error: "smth",
           },
           {
             type: AUTHENTICATION_LOGIN_SUCCEEDED,
-          },
-        ),
+          }
+        )
       ).to.deep.equal({
         isAuthenticating: false,
         isAuthenticated: true,
@@ -71,7 +72,7 @@ describe('authenticationReducer', () => {
   });
 
   describe(AUTHENTICATION_LOGIN_FAILURE, () => {
-    it('should set isAuthenticating to false', () => {
+    it("should set isAuthenticating to false", () => {
       expect(
         authenticationReducer(
           {
@@ -80,27 +81,27 @@ describe('authenticationReducer', () => {
           },
           {
             type: AUTHENTICATION_LOGIN_FAILURE,
-            payload: { title: 'error' },
-          },
-        ),
+            payload: { title: "error" },
+          }
+        )
       ).to.deep.equal({
         isAuthenticating: false,
         isAuthenticated: false,
         isRedirecting: false,
-        error: { title: 'error' },
+        error: { title: "error" },
       });
     });
   });
 
   describe(AUTHENTICATION_LOGIN_REDIRECT, () => {
-    it('should set isAuthenticating to false', () => {
+    it("should set isAuthenticating to false", () => {
       expect(
         authenticationReducer(
           {},
           {
             type: AUTHENTICATION_LOGIN_REDIRECT,
-          },
-        ),
+          }
+        )
       ).to.deep.equal({
         isAuthenticating: false,
         isAuthenticated: true,
@@ -111,7 +112,7 @@ describe('authenticationReducer', () => {
   });
 
   describe(AUTHENTICATION_LOGOUT, () => {
-    it('should set isAuthenticating to false', () => {
+    it("should set isAuthenticating to false", () => {
       expect(
         authenticationReducer(
           {
@@ -122,32 +123,32 @@ describe('authenticationReducer', () => {
           },
           {
             type: AUTHENTICATION_LOGOUT,
-          },
-        ),
+          }
+        )
       ).to.deep.equal({
         isAuthenticating: false,
         isAuthenticated: false,
         isRedirecting: false,
         isLoggedOut: true,
         error: null,
-        redirect: '/',
+        redirect: "/",
       });
     });
   });
 
   describe(AUTHENTICATION_SET_REDIRECT, () => {
-    it('should set redirect', () => {
+    it("should set redirect", () => {
       expect(
         authenticationReducer(
           {
-            redirect: '/',
+            redirect: "/",
           },
           {
             type: AUTHENTICATION_SET_REDIRECT,
-            payload: '/test',
-          },
-        ),
-      ).to.deep.equal({ redirect: '/test' });
+            payload: "/test",
+          }
+        )
+      ).to.deep.equal({ redirect: "/test" });
     });
   });
 });

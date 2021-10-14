@@ -2,7 +2,7 @@ import {
   NOTIFICATION_SHOW,
   NOTIFICATION_HIDE,
   NOTIFICATION_DISPLAY_REQUEST,
-} from '../constants/notifications';
+} from "../constants/notifications";
 
 export function showNotification(definition) {
   return {

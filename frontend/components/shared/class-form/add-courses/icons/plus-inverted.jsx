@@ -1,12 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function PlusInvertedIcon(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="2476.702 2281.591 50 50">
       <defs>
         <mask id="cut-plus">
-          <rect fill="white" x="2476.702" y="2281.591" width="100%" height="100%" />
+          <rect
+            fill="white"
+            x="2476.702"
+            y="2281.591"
+            width="100%"
+            height="100%"
+          />
           <g transform="translate(2477.5 2282.5)">
             <line
               stroke="black"

@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import reactParser from 'html-react-parser';
-import { Link } from 'react-router';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import reactParser from "html-react-parser";
+import { Link } from "react-router";
+import classNames from "classnames";
 
-import Title from '../../shared/title';
-import FaIcon from '../../shared/fa-icon';
+import Title from "../../shared/title";
+import FaIcon from "../../shared/fa-icon";
 
-import { Shape as CourseShape } from '../../../models/course';
-import { Shape as LessonShape } from '../../../models/lesson';
+import { Shape as CourseShape } from "../../../models/course";
+import { Shape as LessonShape } from "../../../models/lesson";
 
-import { isInternalCardLink } from '../../../utils';
+import { isInternalCardLink } from "../../../utils";
 
-import TeachingMaterial from './teaching-material';
+import TeachingMaterial from "./teaching-material";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Lesson extends Component {
   lessonContent() {
@@ -25,11 +25,14 @@ class Lesson extends Component {
     }
 
     const renderedMaterials = teachingMaterials
-      .filter(tm => tm.lessonContent)
+      .filter((tm) => tm.lessonContent)
       .map((teachingMaterial, index) => {
         const number = index + 1;
         return (
-          <div key={`content-${teachingMaterial.id}`} className={style.lessonMaterial}>
+          <div
+            key={`content-${teachingMaterial.id}`}
+            className={style.lessonMaterial}
+          >
             <TeachingMaterial {...{ teachingMaterial, number }} />
           </div>
         );
@@ -37,7 +40,7 @@ class Lesson extends Component {
 
     return (
       <div className={style.lessonContent}>
-        <Title>{t('Lesson content')}</Title>
+        <Title>{t("Lesson content")}</Title>
         <div>{renderedMaterials}</div>
       </div>
     );
@@ -50,9 +53,11 @@ class Lesson extends Component {
       return null;
     }
 
-    const mistakes = commonMistakes.map(commonMistake => (
+    const mistakes = commonMistakes.map((commonMistake) => (
       <li key={commonMistake.id}>
-        <div className={style.lessonCommonMistakeProblem}>{commonMistake.problem}</div>
+        <div className={style.lessonCommonMistakeProblem}>
+          {commonMistake.problem}
+        </div>
         <div className={style.lessonCommonMistakeSolution}>
           {reactParser(commonMistake.solution)}
         </div>
@@ -65,7 +70,7 @@ class Lesson extends Component {
           <span className={style.lessonHintIcon}>
             <FaIcon icon="exclamation-triangle" />
           </span>
-          <dfn>{t('Common mistakes')}</dfn>
+          <dfn>{t("Common mistakes")}</dfn>
         </dt>
         <dd className={style.lessonHintDescription}>
           <ul>{mistakes}</ul>
@@ -76,7 +81,9 @@ class Lesson extends Component {
 
   teachingMaterials() {
     const { teachingMaterials } = this.props.lesson;
-    const filteredTeachingMaterials = (teachingMaterials || []).filter(tm => tm.listingItem && !isInternalCardLink(tm.link));
+    const filteredTeachingMaterials = (teachingMaterials || []).filter(
+      (tm) => tm.listingItem && !isInternalCardLink(tm.link)
+    );
 
     if (filteredTeachingMaterials.length === 0) {
       return null;
@@ -84,7 +91,7 @@ class Lesson extends Component {
 
     return filteredTeachingMaterials.map((teachingMaterial) => {
       let icon = null;
-      if (teachingMaterial.listingIcon && teachingMaterial.listingIcon !== '') {
+      if (teachingMaterial.listingIcon && teachingMaterial.listingIcon !== "") {
         icon = (
           <span className={style.lessonHintIcon}>
             <FaIcon icon={teachingMaterial.listingIcon} />
@@ -99,7 +106,11 @@ class Lesson extends Component {
             <dfn>{teachingMaterial.listingTitle}</dfn>
           </dt>
           <dd className={style.lessonHintDescription}>
-            <a href={teachingMaterial.link} rel="noopener noreferrer" target="_blank">
+            <a
+              href={teachingMaterial.link}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               {teachingMaterial.link}
             </a>
           </dd>
@@ -113,7 +124,7 @@ class Lesson extends Component {
 
     return (
       <div className={style.lessonInfo}>
-        <Title>{t('Lesson links & hints')}</Title>
+        <Title>{t("Lesson links & hints")}</Title>
         <dl>
           {this.commonMistakes()}
           {this.teachingMaterials()}
@@ -130,24 +141,27 @@ class Lesson extends Component {
       const prevLessonClassNames = classNames({
         [`${style.lessonNavigationFarther}`]: nextLesson,
       });
-      lessonLinks.push(<span key={prevLesson.id} className={prevLessonClassNames}>
-        <FaIcon icon="angle-left" />{' '}
-        <Link to={lessonUrl(prevLesson)}>{t('previous lesson')}</Link>
-                       </span>);
+      lessonLinks.push(
+        <span key={prevLesson.id} className={prevLessonClassNames}>
+          <FaIcon icon="angle-left" />{" "}
+          <Link to={lessonUrl(prevLesson)}>{t("previous lesson")}</Link>
+        </span>
+      );
     }
     if (nextLesson) {
-      lessonLinks.push(<span key={nextLesson.id}>
-        <Link to={lessonUrl(nextLesson)}>{t('next lesson')}</Link> <FaIcon icon="angle-right" />
-                       </span>);
+      lessonLinks.push(
+        <span key={nextLesson.id}>
+          <Link to={lessonUrl(nextLesson)}>{t("next lesson")}</Link>{" "}
+          <FaIcon icon="angle-right" />
+        </span>
+      );
     }
     return lessonLinks;
   }
 
   render() {
     const { t } = this.context;
-    const {
-      course, lesson, lessonActions, title, courseProgress,
-    } = this.props;
+    const { course, lesson, lessonActions, title, courseProgress } = this.props;
     const topic = course.topic;
 
     return (
@@ -159,15 +173,24 @@ class Lesson extends Component {
               {courseProgress && (
                 <span className={style.courseProgress}>
                   (
-                  {t('completed {completedLessons} of {totalLessons} lessons', courseProgress)}
+                  {t(
+                    "completed {completedLessons} of {totalLessons} lessons",
+                    courseProgress
+                  )}
                   )
                 </span>
               )}
             </h1>
-            <div className={style.lessonNavigation}>{this.lessonNavigation()}</div>
+            <div className={style.lessonNavigation}>
+              {this.lessonNavigation()}
+            </div>
             <h2 className={style.topicTitle}>{t(topic.title)}</h2>
-            <h3 className={style.title}>{`${course.title} - ${lesson.title}`}</h3>
-            <div className={style.lessonDescription}>{reactParser(lesson.description || '')}</div>
+            <h3
+              className={style.title}
+            >{`${course.title} - ${lesson.title}`}</h3>
+            <div className={style.lessonDescription}>
+              {reactParser(lesson.description || "")}
+            </div>
             {this.lessonContent()}
             <div className={style.lessonActions}>{lessonActions}</div>
           </div>

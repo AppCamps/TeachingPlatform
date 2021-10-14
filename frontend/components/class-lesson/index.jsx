@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import autobind from 'autobind-decorator';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import autobind from "autobind-decorator";
 
-import { Shape as ClassShape } from '../../models/class';
-import { Shape as LessonShape } from '../../models/lesson';
+import { Shape as ClassShape } from "../../models/class";
+import { Shape as LessonShape } from "../../models/lesson";
 
-import NotFound from '../shared/not-found';
-import Button from '../shared/button';
-import Lesson from '../shared/lesson';
-import Spinner from '../shared/spinner';
+import NotFound from "../shared/not-found";
+import Button from "../shared/button";
+import Lesson from "../shared/lesson";
+import Spinner from "../shared/spinner";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class ClassLesson extends Component {
   constructor() {
@@ -31,9 +31,7 @@ class ClassLesson extends Component {
   showSpinner(key, action) {
     this.setState({ [`${key}`]: true });
     const setFalse = () => this.setState({ [`${key}`]: false });
-    action()
-      .then(setFalse)
-      .catch(setFalse);
+    action().then(setFalse).catch(setFalse);
   }
 
   @autobind
@@ -41,7 +39,9 @@ class ClassLesson extends Component {
     const { lesson, markLessonAsComplete } = this.props;
     const klass = this.props.class;
 
-    this.showSpinner('fetchingCompleteLesson', () => markLessonAsComplete(klass, lesson));
+    this.showSpinner("fetchingCompleteLesson", () =>
+      markLessonAsComplete(klass, lesson)
+    );
   }
 
   @autobind
@@ -53,7 +53,9 @@ class ClassLesson extends Component {
     const { lesson, markLessonAsIncomplete } = this.props;
     const klass = this.props.class;
 
-    this.showSpinner('fetchingIncompleteLesson', () => markLessonAsIncomplete(klass, lesson));
+    this.showSpinner("fetchingIncompleteLesson", () =>
+      markLessonAsIncomplete(klass, lesson)
+    );
   }
 
   toggleLessonButtons() {
@@ -68,14 +70,14 @@ class ClassLesson extends Component {
     if (klass.completedLessons.includes(lesson.id)) {
       return (
         <div className={style.completedLesson}>
-          <div>{t('This lesson was tagged as completed.')}</div>
+          <div>{t("This lesson was tagged as completed.")}</div>
           <div>
             <a
               onClick={this.handleIncompleteLessonClicked}
               className={style.incompleteLink}
               tabIndex="0"
             >
-              {t('Undo')}
+              {t("Undo")}
             </a>
           </div>
         </div>
@@ -93,7 +95,7 @@ class ClassLesson extends Component {
           leftIcon="check"
           disabled={this.state.isFetching}
         >
-          {t('Tag lesson as completed')}
+          {t("Tag lesson as completed")}
         </Button>
       </div>
     );
@@ -106,8 +108,12 @@ class ClassLesson extends Component {
     return (
       <div>
         <div className={style.backButton}>
-          <Button onClick={handleBackToClasses} isSecondary leftIcon="angle-left">
-            {t('back to my classes')}
+          <Button
+            onClick={handleBackToClasses}
+            isSecondary
+            leftIcon="angle-left"
+          >
+            {t("back to my classes")}
           </Button>
         </div>
         {this.toggleLessonButtons()}
@@ -116,13 +122,23 @@ class ClassLesson extends Component {
   }
 
   render() {
-    const { lesson, lesson: { course }, nextLesson, prevLesson, courseProgress } = this.props;
+    const {
+      lesson,
+      lesson: { course },
+      nextLesson,
+      prevLesson,
+      courseProgress,
+    } = this.props;
     const klass = this.props.class;
-    const lessonUrl = linkedLesson => `/classes/${klass.id}/${course.slug}/${linkedLesson.slug}`;
+    const lessonUrl = (linkedLesson) =>
+      `/classes/${klass.id}/${course.slug}/${linkedLesson.slug}`;
 
     const records = [klass, lesson];
 
-    if (records.some(record => record.isPersisted) && records.some(record => !record.id)) {
+    if (
+      records.some((record) => record.isPersisted) &&
+      records.some((record) => !record.id)
+    ) {
       return <NotFound />;
     }
 

@@ -1,9 +1,16 @@
-import { Serializer } from 'jsonapi-serializer';
+import { Serializer } from "jsonapi-serializer";
 
-const UserRegistrationSerializer = new Serializer('users', {
+const UserRegistrationSerializer = new Serializer("users", {
   attributes: [
-    'role', 'email', 'firstName', 'lastName', 'referal', 'comment',
-    'password', 'passwordConfirmation', 'privacyPolicyAccepted',
+    "role",
+    "email",
+    "firstName",
+    "lastName",
+    "referal",
+    "comment",
+    "password",
+    "passwordConfirmation",
+    "privacyPolicyAccepted",
   ],
 });
 

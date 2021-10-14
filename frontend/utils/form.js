@@ -1,6 +1,6 @@
 export function isNumber(value, previousValue) {
   if (!value) {
-    return '';
+    return "";
   }
   const parsedValue = parseInt(value, 10);
   if (isNaN(parsedValue)) return previousValue;
@@ -9,7 +9,7 @@ export function isNumber(value, previousValue) {
 
 export function isGreaterThan(min) {
   return (value, previousValue) => {
-    if (!value) return '';
+    if (!value) return "";
     const parsedValue = isNumber(value, previousValue);
     return parsedValue > min ? parsedValue.toString() : previousValue;
   };
@@ -17,7 +17,7 @@ export function isGreaterThan(min) {
 
 export function isLowerThan(max) {
   return (value, previousValue) => {
-    if (!value) return '';
+    if (!value) return "";
     const parsedValue = isNumber(value, previousValue);
     return parsedValue < max ? parsedValue.toString() : previousValue;
   };
@@ -25,9 +25,11 @@ export function isLowerThan(max) {
 
 export function isInRange(min, max) {
   return (value, previousValue) => {
-    if (!value) return '';
+    if (!value) return "";
 
     const parsedValue = isNumber(value, previousValue);
-    return parsedValue > min - 1 && parsedValue < max + 1 ? parsedValue.toString() : previousValue;
+    return parsedValue > min - 1 && parsedValue < max + 1
+      ? parsedValue.toString()
+      : previousValue;
   };
 }

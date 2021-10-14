@@ -1,5 +1,5 @@
-import orm from '../orm';
-import factory from './__factories__';
+import orm from "../orm";
+import factory from "./__factories__";
 
 class TestStore {
   constructor(state = {}) {

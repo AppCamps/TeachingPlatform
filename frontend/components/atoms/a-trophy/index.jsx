@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 /* eslint-disable import/no-webpack-loader-syntax */
-import image from '!file-loader?name=[name]-[hash].[ext]!./icon_kursbeendet.png';
-import image2x from '!file-loader?name=[name]-[hash].[ext]!./icon_kursbeendet@2x.png';
+import image from "!file-loader?name=[name]-[hash].[ext]!./icon_kursbeendet.png";
+import image2x from "!file-loader?name=[name]-[hash].[ext]!./icon_kursbeendet@2x.png";
 /* eslint-enable import/no-webpack-loader-syntax */
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Trophy({ text }) {
   return (

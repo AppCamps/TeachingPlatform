@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
+import { connect } from "react-redux";
+import { push } from "react-router-redux";
 
-import RegistrationSuccessComponent from '../../components/registration/success';
-import { registrationFirstNameSelector } from '../../selectors/registration';
+import RegistrationSuccessComponent from "../../components/registration/success";
+import { registrationFirstNameSelector } from "../../selectors/registration";
 
 export function mapStateToProps(state) {
   return {
@@ -12,8 +12,11 @@ export function mapStateToProps(state) {
 
 export function mapDispatchToProps(dispatch) {
   return {
-    redirectToRegistrationPage: () => dispatch(push('/registration')),
+    redirectToRegistrationPage: () => dispatch(push("/registration")),
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegistrationSuccessComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RegistrationSuccessComponent);

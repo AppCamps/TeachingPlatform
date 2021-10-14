@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { reduxForm, propTypes as reduxFormPropTypes } from 'redux-form';
-import autobind from 'autobind-decorator';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { reduxForm, propTypes as reduxFormPropTypes } from "redux-form";
+import autobind from "autobind-decorator";
 
-import Button from '../../button';
+import Button from "../../button";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class ChoseClassTypeComponent extends Component {
   @autobind
   handleOnSchoolClassClick() {
-    this.changeValueAndSubmit('school_class');
+    this.changeValueAndSubmit("school_class");
   }
 
   @autobind
   handleOnExtracurricularClick() {
-    this.changeValueAndSubmit('extracurricular');
+    this.changeValueAndSubmit("extracurricular");
   }
 
   changeValueAndSubmit(value) {
@@ -27,24 +27,26 @@ class ChoseClassTypeComponent extends Component {
       return;
     }
 
-    change('resourceType', value);
+    change("resourceType", value);
     onDataChanged();
 
     // call handleSubmit after value has been set + propagated
-    setTimeout(() => { handleSubmit(); }, 0);
+    setTimeout(() => {
+      handleSubmit();
+    }, 0);
   }
 
   render() {
     const { t } = this.context;
     const { resourceType } = this.props.formValues;
 
-    const isSchoolClassSelected = resourceType === 'school_class';
-    const isExtracurricularSelected = resourceType === 'extracurricular';
+    const isSchoolClassSelected = resourceType === "school_class";
+    const isExtracurricularSelected = resourceType === "extracurricular";
 
     return (
       <div className={style.chooseClassType}>
         <form>
-          <h2>{t('Where will the class take place')}?</h2>
+          <h2>{t("Where will the class take place")}?</h2>
           <div>
             <div className={style.buttonContainer}>
               <Button
@@ -52,7 +54,7 @@ class ChoseClassTypeComponent extends Component {
                 isSecondary={!isSchoolClassSelected}
                 onClick={this.handleOnSchoolClassClick}
               >
-                {t('School class')}
+                {t("School class")}
               </Button>
             </div>
             <div className={style.buttonContainer}>
@@ -61,7 +63,7 @@ class ChoseClassTypeComponent extends Component {
                 isSecondary={!isExtracurricularSelected}
                 onClick={this.handleOnExtracurricularClick}
               >
-                {t('Extracurricular')}
+                {t("Extracurricular")}
               </Button>
             </div>
           </div>
@@ -85,7 +87,7 @@ ChoseClassTypeComponent.defaultProps = {
 };
 
 export default reduxForm({
-  form: 'classForm',
+  form: "classForm",
   enableReinitialize: false,
   keepDirtyOnReinitialize: true,
   destroyOnUnmount: false,

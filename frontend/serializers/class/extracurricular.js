@@ -1,17 +1,17 @@
-import { Serializer } from 'jsonapi-serializer';
+import { Serializer } from "jsonapi-serializer";
 
-const ExtracurricularSerializer = new Serializer('classes', {
+const ExtracurricularSerializer = new Serializer("classes", {
   nullIfMissing: true,
   attributes: [
-    'resourceType',
-    'groupName',
-    'year',
-    'age',
-    'plannedExtracurricularUsage',
-    'girlCount',
-    'boyCount',
-    'courses',
-    'completedLessons',
+    "resourceType",
+    "groupName",
+    "year",
+    "age",
+    "plannedExtracurricularUsage",
+    "girlCount",
+    "boyCount",
+    "courses",
+    "completedLessons",
   ],
   courses: {
     ref: (_object, courseId) => courseId,
@@ -21,7 +21,7 @@ const ExtracurricularSerializer = new Serializer('classes', {
     ref: (_object, lessonId) => lessonId,
     included: false,
   },
-  dataMeta: {}
+  dataMeta: {},
 });
 
 export default ExtracurricularSerializer;

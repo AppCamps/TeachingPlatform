@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import { attr, fk } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr, fk } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class TeachingMaterial extends BaseModel {
   get isVideo() {
-    return this.mediumType === 'medium_type_video';
+    return this.mediumType === "medium_type_video";
   }
 
   get includeRef() {
@@ -15,7 +15,7 @@ class TeachingMaterial extends BaseModel {
   }
 }
 
-TeachingMaterial.modelName = 'TeachingMaterial';
+TeachingMaterial.modelName = "TeachingMaterial";
 
 TeachingMaterial.fields = {
   ...BaseModel.fields,
@@ -32,21 +32,21 @@ TeachingMaterial.fields = {
   listingIcon: attr(),
   lessonContent: attr(),
   listingItem: attr(),
-  lesson: fk('Lesson', 'teachingMaterials'),
+  lesson: fk("Lesson", "teachingMaterials"),
 };
 
 TeachingMaterial.defaultProps = {
   ...BaseModel.defaultProps,
   id: null,
   position: null,
-  title: '',
-  subtitle: '',
-  description: '',
+  title: "",
+  subtitle: "",
+  description: "",
   mediumType: null,
   icon: null,
   link: null,
   image: null,
-  listingTitle: '',
+  listingTitle: "",
   listingIcon: null,
   lessonContent: false,
   listingItem: false,

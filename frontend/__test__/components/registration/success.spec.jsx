@@ -1,21 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { mount } from 'enzyme';
+import { mount } from "enzyme";
 
-import { expect } from '../../chai_helper';
+import { expect } from "../../chai_helper";
 
-import { t } from '../../../utils/translations';
+import { t } from "../../../utils/translations";
 
-import RegistrationSuccess from '../../../components/registration/success';
+import RegistrationSuccess from "../../../components/registration/success";
 
-describe('<Registration />', () => {
+describe("<Registration />", () => {
   let redirectToRegistrationPageMock;
   beforeEach(() => {
     redirectToRegistrationPageMock = jest.fn();
   });
 
-  const setupWrapper = props => (
+  const setupWrapper = (props) =>
     mount(
       <RegistrationSuccess
         {...{
@@ -28,18 +28,17 @@ describe('<Registration />', () => {
           t,
         },
         childContextTypes: { t: PropTypes.func },
-      },
-    )
-  );
+      }
+    );
 
-  it('renders correctly with user firstName', () => {
-    const wrapper = setupWrapper({ firstName: 'Thomas' });
+  it("renders correctly with user firstName", () => {
+    const wrapper = setupWrapper({ firstName: "Thomas" });
 
-    expect(wrapper).to.contain.text('Thomas');
+    expect(wrapper).to.contain.text("Thomas");
     global.expect(wrapper).toMatchSnapshot();
   });
 
-  it('redirects to Registration and renders nothing if no user is given', () => {
+  it("redirects to Registration and renders nothing if no user is given", () => {
     const wrapper = setupWrapper({ firstName: null });
 
     expect(wrapper.children()).to.have.length(0);

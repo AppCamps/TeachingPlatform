@@ -1,22 +1,22 @@
-import { expect } from '../chai_helper';
-import TestStore from '../orm-helper';
+import { expect } from "../chai_helper";
+import TestStore from "../orm-helper";
 
-describe('Lesson', () => {
+describe("Lesson", () => {
   let store;
   beforeEach(() => {
     store = new TestStore({});
   });
 
-  it('slug', () => {
+  it("slug", () => {
     const { factory } = store;
-    const lesson = factory.create('lesson', { title: null });
+    const lesson = factory.create("lesson", { title: null });
 
     expect(lesson.slug).to.eql(null);
 
-    lesson.set('title', '!*einführung_App development');
-    expect(lesson.slug).to.eql('einfhrung_app-development');
+    lesson.set("title", "!*einführung_App development");
+    expect(lesson.slug).to.eql("einfhrung_app-development");
 
-    lesson.set('title', 'HTML & CSS');
-    expect(lesson.slug).to.eql('html-css');
+    lesson.set("title", "HTML & CSS");
+    expect(lesson.slug).to.eql("html-css");
   });
 });

@@ -1,4 +1,4 @@
-import constants from '../constants/preparations';
+import constants from "../constants/preparations";
 
 const initialState = {
   selectedTopicId: null,

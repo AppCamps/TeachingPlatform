@@ -1,9 +1,9 @@
-import { connect } from 'react-redux';
-import Posts from '../../components/posts';
+import { connect } from "react-redux";
+import Posts from "../../components/posts";
 
-import { fetchPosts } from '../../actions/posts';
-import { postsSelector, postsPaginationSelector } from '../../selectors/posts';
-import { userSelector } from '../../selectors/shared/user';
+import { fetchPosts } from "../../actions/posts";
+import { postsSelector, postsPaginationSelector } from "../../selectors/posts";
+import { userSelector } from "../../selectors/shared/user";
 
 export function mapStateToProps(state) {
   const pagination = postsPaginationSelector(state);

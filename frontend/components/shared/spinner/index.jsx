@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Spinner extends Component {
   classNames() {
@@ -14,9 +14,7 @@ class Spinner extends Component {
   }
 
   render() {
-    return (
-      <div className={this.classNames()} />
-    );
+    return <div className={this.classNames()} />;
   }
 }
 

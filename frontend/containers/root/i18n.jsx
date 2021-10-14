@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import flatMap from 'lodash.flatmap';
-import deepForceUpdate from 'react-deep-force-update';
+import flatMap from "lodash.flatmap";
+import deepForceUpdate from "react-deep-force-update";
 
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 class I18n extends React.Component {
   constructor(props) {
@@ -24,21 +24,25 @@ class I18n extends React.Component {
 
     function replaceText(_text, _key, _element) {
       const textArray = _text.split(`{${_key}}`);
-      return [textArray[0], React.cloneElement(_element, { key: _key }), textArray[1]];
+      return [
+        textArray[0],
+        React.cloneElement(_element, { key: _key }),
+        textArray[1],
+      ];
     }
 
     if (params !== undefined) {
       for (const k in params) {
-        if (!['string', 'number'].includes(typeof params[k])) {
-          if (typeof translation === 'string') {
+        if (!["string", "number"].includes(typeof params[k])) {
+          if (typeof translation === "string") {
             translation = replaceText(translation, k, params[k]);
           } else if (Array.isArray(translation)) {
             translation = flatMap(translation, (_text) => {
-              if (typeof _text !== 'string') {
+              if (typeof _text !== "string") {
                 return _text;
               }
 
-              const reg = new RegExp(`{${k}}`, 'g');
+              const reg = new RegExp(`{${k}}`, "g");
               if (_text.match(reg)) {
                 return replaceText(_text, k, params[k]);
               }
@@ -46,7 +50,7 @@ class I18n extends React.Component {
             });
           }
         } else {
-          const reg = new RegExp(`{${k}}`, 'g');
+          const reg = new RegExp(`{${k}}`, "g");
           translation = translation.replace(reg, params[k]);
         }
       }
@@ -63,7 +67,7 @@ class I18n extends React.Component {
     }
 
     const message = langMessages[textKey];
-    if (message === undefined || message === '') {
+    if (message === undefined || message === "") {
       return this.params(textKey, params);
     }
 
@@ -89,6 +93,6 @@ I18n.propTypes = {
   translations: PropTypes.object.isRequired,
 };
 
-export default connect(state => ({
+export default connect((state) => ({
   lang: state.i18nState.lang,
 }))(I18n);

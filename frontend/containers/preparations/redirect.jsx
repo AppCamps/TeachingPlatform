@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { replace } from 'react-router-redux';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { replace } from "react-router-redux";
 
 export function mapStateToProps(state, { params: { topicSlug } }) {
   return {
@@ -11,7 +11,8 @@ export function mapStateToProps(state, { params: { topicSlug } }) {
 
 export function mapDispatchToProps(dispatch) {
   return {
-    redirect: topicSlug => dispatch(replace(`/topics/${topicSlug}/preparations`)),
+    redirect: (topicSlug) =>
+      dispatch(replace(`/topics/${topicSlug}/preparations`)),
   };
 }
 

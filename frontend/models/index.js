@@ -1,7 +1,7 @@
-import { Model, attr } from 'redux-orm';
-import propTypesMixin from 'redux-orm-proptypes';
+import { Model, attr } from "redux-orm";
+import propTypesMixin from "redux-orm-proptypes";
 
-const defaultModifier = rel => rel;
+const defaultModifier = (rel) => rel;
 
 /* all models must be added to ../orm.js */
 class BaseModel extends Model {
@@ -34,7 +34,9 @@ class BaseModel extends Model {
 
     relations.forEach((relation) => {
       const relationObject = modifier(this[relation]);
-      clone[relation] = relationObject.toModelArray().map(relModel => relModel.includeRef);
+      clone[relation] = relationObject
+        .toModelArray()
+        .map((relModel) => relModel.includeRef);
     });
 
     return clone;

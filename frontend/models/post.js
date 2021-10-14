@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import { attr } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Post extends BaseModel {}
-Post.modelName = 'Post';
+Post.modelName = "Post";
 
 Post.fields = {
   ...BaseModel.fields,
@@ -19,8 +19,8 @@ Post.fields = {
 Post.defaultProps = {
   ...BaseModel.defaultProps,
   id: null,
-  title: '',
-  content: '',
+  title: "",
+  content: "",
   teaserImageUrl: null,
   pinned: false,
 };

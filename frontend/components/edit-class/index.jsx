@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import autobind from 'autobind-decorator';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import autobind from "autobind-decorator";
 
-import Link from '../shared/link';
-import ClassForm from '../shared/class-form';
+import Link from "../shared/link";
+import ClassForm from "../shared/class-form";
 
-import { Shape as ClassShape } from '../../models/class';
+import { Shape as ClassShape } from "../../models/class";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class EditClass extends Component {
   constructor() {
@@ -26,7 +26,9 @@ class EditClass extends Component {
   }
 
   componentDidMount() {
-    this.props.router.setRouteLeaveHook(this.props.route, () => this.routerWillLeave());
+    this.props.router.setRouteLeaveHook(this.props.route, () =>
+      this.routerWillLeave()
+    );
   }
 
   componentWillUpdate({ klass, initializeForm }, { didSetInitialValue }) {
@@ -75,7 +77,9 @@ class EditClass extends Component {
     const { t } = this.context;
 
     if (this.state.isDirty && !this.state.isSubmitted) {
-      return `${t('You did not save your changes! Do you still want to leave the page?')}\n${t('(You can save in the third step, please scroll down.)')}`;
+      return `${t(
+        "You did not save your changes! Do you still want to leave the page?"
+      )}\n${t("(You can save in the third step, please scroll down.)")}`;
     }
 
     return null;
@@ -88,7 +92,7 @@ class EditClass extends Component {
       formValues: this.props.formValues,
       topics: this.props.topics,
       handleSubmit: this.handleSubmit,
-      submitText: t('Save'),
+      submitText: t("Save"),
       onDataChanged: this.onDataChanged,
       editMode: true,
     };
@@ -96,13 +100,9 @@ class EditClass extends Component {
     return (
       <div className={style.container}>
         <div className={style.editClass}>
-          <h1 className={style.heading}>
-            {t('Edit class')}
-          </h1>
+          <h1 className={style.heading}>{t("Edit class")}</h1>
           <div className={style.cancel}>
-            <Link to="/classes">
-              {t('cancel')}
-            </Link>
+            <Link to="/classes">{t("cancel")}</Link>
           </div>
           <ClassForm {...formProps} />
         </div>

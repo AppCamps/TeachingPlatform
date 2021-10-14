@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { connect } from 'react-redux';
-import { replace } from 'react-router-redux';
+import { connect } from "react-redux";
+import { replace } from "react-router-redux";
 
-import { fetchCourses as fetchCoursesAction } from '../../actions/courses';
-import { courseBySlugSelector } from '../../selectors/shared/course';
+import { fetchCourses as fetchCoursesAction } from "../../actions/courses";
+import { courseBySlugSelector } from "../../selectors/shared/course";
 
 export function mapStateToProps(state, { params }) {
   const course = courseBySlugSelector(state, params);
@@ -64,4 +64,7 @@ CourseLessonRedirect.defaultProps = {
   topicSlug: null,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CourseLessonRedirect);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CourseLessonRedirect);

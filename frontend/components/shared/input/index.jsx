@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import { propTypes } from "redux-form";
+import classNames from "classnames";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Input(props) {
   const { hasError, name, type, autoFocus } = props;
@@ -36,7 +36,7 @@ Input.propTypes = {
 
 Input.defaultProps = {
   ...propTypes.input,
-  type: 'text',
+  type: "text",
   autoFocus: false,
   hasError: false,
 };

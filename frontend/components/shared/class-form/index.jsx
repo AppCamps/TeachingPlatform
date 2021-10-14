@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import autobind from 'autobind-decorator';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import autobind from "autobind-decorator";
+import classNames from "classnames";
 
-import ChooseClassTypeComponent from './choose-class-type';
-import AddClassInformationsComponent from './add-class-informations';
-import AddExtracurricularInformationsComponent from './add-extracurricular-informations';
-import AddCoursesComponent from './add-courses';
+import ChooseClassTypeComponent from "./choose-class-type";
+import AddClassInformationsComponent from "./add-class-informations";
+import AddExtracurricularInformationsComponent from "./add-extracurricular-informations";
+import AddCoursesComponent from "./add-courses";
 
-import { Shape as TopicShape } from '../../../models/topic';
+import { Shape as TopicShape } from "../../../models/topic";
 
-import FaIcon from '../fa-icon';
-import Button from '../button';
+import FaIcon from "../fa-icon";
+import Button from "../button";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class ClassForm extends Component {
   constructor(props) {
@@ -68,7 +68,11 @@ class ClassForm extends Component {
     const changePage = editMode ? () => this.setPage(page) : undefined;
 
     return (
-      <Button key={page} className={this.stepClassNames(page)} onClick={changePage}>
+      <Button
+        key={page}
+        className={this.stepClassNames(page)}
+        onClick={changePage}
+      >
         <span className={style.doneIcon}>
           <FaIcon icon="check" />
         </span>
@@ -82,12 +86,14 @@ class ClassForm extends Component {
     const { t } = this.context;
 
     const tabs = [
-      { page: 1, title: t('Choose class type') },
-      { page: 2, title: t('Add class information') },
-      { page: 3, title: t('Choose courses') },
+      { page: 1, title: t("Choose class type") },
+      { page: 2, title: t("Add class information") },
+      { page: 3, title: t("Choose courses") },
     ];
 
-    return <div>{tabs.map(({ page, title }) => this.renderTab(page, title))}</div>;
+    return (
+      <div>{tabs.map(({ page, title }) => this.renderTab(page, title))}</div>
+    );
   }
 
   renderFormPage() {
@@ -97,7 +103,7 @@ class ClassForm extends Component {
 
     switch (page) {
       case 2:
-        if (formValues.resourceType === 'extracurricular') {
+        if (formValues.resourceType === "extracurricular") {
           return (
             <AddExtracurricularInformationsComponent
               previousPage={this.previousPage}
@@ -150,7 +156,7 @@ class ClassForm extends Component {
 }
 
 const FormShape = PropTypes.shape({
-  resourceType: PropTypes.oneOf(['school_class', 'extracurricular']),
+  resourceType: PropTypes.oneOf(["school_class", "extracurricular"]),
   className: PropTypes.string,
   schoolYear: PropTypes.string,
   grade: PropTypes.string,

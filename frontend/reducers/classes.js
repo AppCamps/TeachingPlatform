@@ -1,4 +1,4 @@
-import { SHOW_ALL, SHOW_TOP, TOGGLE_CLASS } from '../constants/classes';
+import { SHOW_ALL, SHOW_TOP, TOGGLE_CLASS } from "../constants/classes";
 
 export const initialState = {
   showAll: false,
@@ -7,7 +7,7 @@ export const initialState = {
 
 function toggleClassId(openedClassIds, id) {
   if (Array.includes(openedClassIds, id)) {
-    return openedClassIds.filter(klassId => klassId !== id);
+    return openedClassIds.filter((klassId) => klassId !== id);
   }
   return openedClassIds.concat(id);
 }

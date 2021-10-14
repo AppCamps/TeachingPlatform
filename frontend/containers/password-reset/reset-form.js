@@ -1,12 +1,12 @@
-import { connect } from 'react-redux';
-import get from 'lodash.get';
-import PasswordResetForm from '../../components/password-reset/reset-form';
+import { connect } from "react-redux";
+import get from "lodash.get";
+import PasswordResetForm from "../../components/password-reset/reset-form";
 
-import { passwordReset } from '../../actions/password-reset';
+import { passwordReset } from "../../actions/password-reset";
 
 export function mapStateToProps(state, ownProps) {
   return {
-    passwordResetToken: get(ownProps, 'params.passwordResetToken'),
+    passwordResetToken: get(ownProps, "params.passwordResetToken"),
   };
 }
 

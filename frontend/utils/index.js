@@ -1,10 +1,10 @@
-import originalSlugify from 'slugify';
+import originalSlugify from "slugify";
 
 export function slugify(originalString) {
   if (!originalString) {
     return null;
   }
-  const stringForSlug = originalString.replace(/[^A-Za-z0-9_\s]/g, '');
+  const stringForSlug = originalString.replace(/[^A-Za-z0-9_\s]/g, "");
   return originalSlugify(stringForSlug.toLowerCase());
 }
 
@@ -17,13 +17,15 @@ export function lowerCaseFirstLetter(originalString) {
 
 export function cleanRegExpString(originalString) {
   const stringCopy = originalString;
-  if (stringCopy.startsWith('/') && stringCopy.endsWith('/')) {
+  if (stringCopy.startsWith("/") && stringCopy.endsWith("/")) {
     return stringCopy.slice(1, stringCopy.length - 1);
   }
   return stringCopy;
 }
 
-const internalCardTester = new RegExp(/^https?:\/\/.*teach.*\.appcamps\.de\/karten\/.*/);
+const internalCardTester = new RegExp(
+  /^https?:\/\/.*teach.*\.appcamps\.de\/karten\/.*/
+);
 
 /*
  * Checks if link is an internal link to embedded cards.
@@ -45,8 +47,8 @@ export function isInternalCardLink(link) {
  * @returns { url: string, code: string }
  */
 export function parseInternalCardLink(link) {
-  const code = link.split('/karten/')[1];
-  const url = link.replace(`/${code}`, '').replace(/^https?:\/\//, '');
+  const code = link.split("/karten/")[1];
+  const url = link.replace(`/${code}`, "").replace(/^https?:\/\//, "");
   return {
     code,
     url,

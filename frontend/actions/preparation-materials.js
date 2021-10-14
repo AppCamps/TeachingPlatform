@@ -1,8 +1,8 @@
-import { getPreparationMaterials } from '../services/api';
-import { apiFetched } from './api';
+import { getPreparationMaterials } from "../services/api";
+import { apiFetched } from "./api";
 
 export function fetchPreparationMaterials() {
-  return dispatch =>
+  return (dispatch) =>
     getPreparationMaterials().then((payload) => {
       dispatch(apiFetched(payload));
     });

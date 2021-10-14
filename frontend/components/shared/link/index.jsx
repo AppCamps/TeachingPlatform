@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router";
+import classNames from "classnames";
 
-import FaIcon from '../fa-icon';
+import FaIcon from "../fa-icon";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class LinkWrapper extends Component {
   classNames() {
@@ -27,7 +27,7 @@ class LinkWrapper extends Component {
     if (icon) {
       const classes = classNames({
         [`${style[iconName]}`]: true,
-        [`${style.large}`]: icon.startsWith('angle-'),
+        [`${style.large}`]: icon.startsWith("angle-"),
       });
 
       return (
@@ -53,7 +53,7 @@ class LinkWrapper extends Component {
 
     let LinkComponent;
     if (this.props.href) {
-      LinkComponent = 'a';
+      LinkComponent = "a";
     } else {
       LinkComponent = Link;
     }
@@ -61,9 +61,9 @@ class LinkWrapper extends Component {
     /* eslint-disable jsx-a11y/anchor-has-content */
     return (
       <LinkComponent className={this.classNames()} {...linkProps}>
-        {this.icon('left')}
+        {this.icon("left")}
         {this.props.children}
-        {this.icon('right')}
+        {this.icon("right")}
       </LinkComponent>
     );
     /* eslint-enable jsx-a11y/anchor-has-content */

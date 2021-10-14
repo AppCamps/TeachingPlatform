@@ -5,7 +5,7 @@ import {
   AUTHENTICATION_LOGIN_REDIRECT,
   AUTHENTICATION_LOGOUT,
   AUTHENTICATION_SET_REDIRECT,
-} from '../constants/authentication';
+} from "../constants/authentication";
 
 const initialState = {
   isAuthenticating: false,
@@ -13,7 +13,7 @@ const initialState = {
   isRedirecting: false,
   isLoggedOut: false,
   error: null,
-  redirect: '/',
+  redirect: "/",
 };
 
 const authenticationReducer = (authenticationState, action) => {

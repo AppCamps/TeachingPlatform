@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Field, reduxForm, propTypes } from 'redux-form';
-import autobind from 'autobind-decorator';
-import Container from '../../shared/container';
-import Button from '../../shared/button';
-import InputWithLabel from '../../shared/input-with-label';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Field, reduxForm, propTypes } from "redux-form";
+import autobind from "autobind-decorator";
+import Container from "../../shared/container";
+import Button from "../../shared/button";
+import InputWithLabel from "../../shared/input-with-label";
 
-import style from './style.scss';
-import { translatedFormError } from '../../../utils/translations';
+import style from "./style.scss";
+import { translatedFormError } from "../../../utils/translations";
 
 class InputCodePage extends Component {
-
   @autobind
   onSubmit({ code }) {
     const { setCode } = this.props;
@@ -29,13 +28,18 @@ class InputCodePage extends Component {
               component={InputWithLabel}
               disabled={submitting}
               name="code"
-              label={t('Code')}
+              label={t("Code")}
               required
             />
             <div>
               <span>
-                <Button isAction type="submit" disabled={submitting} rightIcon="angle-right">
-                  {t('To the card')}
+                <Button
+                  isAction
+                  type="submit"
+                  disabled={submitting}
+                  rightIcon="angle-right"
+                >
+                  {t("To the card")}
                 </Button>
               </span>
             </div>
@@ -60,13 +64,13 @@ const validate = (values) => {
   const { code } = values;
 
   if (!code) {
-    errors.code = translatedFormError('required');
+    errors.code = translatedFormError("required");
   }
 
   return errors;
 };
 
 export default reduxForm({
-  form: 'passwordResetRequestForm',
+  form: "passwordResetRequestForm",
   validate,
 })(InputCodePage);

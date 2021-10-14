@@ -1,14 +1,14 @@
-import { normalize } from '../../../services/api/helpers';
+import { normalize } from "../../../services/api/helpers";
 
 export const user = {
-  id: '22',
-  email: 'Kennith_Parker98@hotmail.com',
-  firstName: 'Dariana',
-  lastName: 'Bashirian',
+  id: "22",
+  email: "Kennith_Parker98@hotmail.com",
+  firstName: "Dariana",
+  lastName: "Bashirian",
   privacyPolicyAccepted: true,
-  currentPassword: 'asdasdasd',
-  password: 'testtest',
-  passwordConfirmation: 'testtest',
+  currentPassword: "asdasdasd",
+  password: "testtest",
+  passwordConfirmation: "testtest",
 };
 
 export const requestData = `
@@ -48,7 +48,9 @@ export const successResponse = `
 }
 `;
 
-export const normalizedSuccessResponse = normalize()(JSON.parse(successResponse));
+export const normalizedSuccessResponse = normalize()(
+  JSON.parse(successResponse)
+);
 
 export const errorResponse = `
 {
@@ -65,6 +67,6 @@ export const errorResponse = `
 
 export const normalizedErrorResponse = {
   errors: {
-    email: 'has already been taken',
+    email: "has already been taken",
   },
 };

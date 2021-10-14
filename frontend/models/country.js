@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import { attr } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Country extends BaseModel {}
-Country.modelName = 'Country';
-Country.collectionKey = 'countries';
+Country.modelName = "Country";
+Country.collectionKey = "countries";
 
 Country.fields = {
   ...BaseModel.fields,

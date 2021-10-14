@@ -1,1 +1,1 @@
-export const API_FETCHED = 'API_FETCHED';
+export const API_FETCHED = "API_FETCHED";

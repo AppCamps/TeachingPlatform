@@ -1,16 +1,16 @@
-import { connect } from 'react-redux';
-import { getFormValues } from 'redux-form';
+import { connect } from "react-redux";
+import { getFormValues } from "redux-form";
 
-import { schoolTypes } from '../../config';
+import { schoolTypes } from "../../config";
 
-import LocalityComponent from '../../components/login/locality';
-import { countriesSelector } from '../../selectors/shared/countries';
-import { userSelector } from '../../selectors/shared/user';
-import { fetchCountries } from '../../actions/countries';
-import { createInitialLocality } from '../../actions/authentication';
+import LocalityComponent from "../../components/login/locality";
+import { countriesSelector } from "../../selectors/shared/countries";
+import { userSelector } from "../../selectors/shared/user";
+import { fetchCountries } from "../../actions/countries";
+import { createInitialLocality } from "../../actions/authentication";
 
 export function mapStateToProps(state) {
-  const formValues = getFormValues('localityForm')(state) || {};
+  const formValues = getFormValues("localityForm")(state) || {};
   const { country, schoolType } = formValues;
   const countries = countriesSelector(state);
 
@@ -19,11 +19,16 @@ export function mapStateToProps(state) {
     schoolTypeCustom = schoolType;
   }
 
-  const countryOptions = countries.map(({ value, name }) => ({ value, label: name }));
-  const selectedCountry = countries.find(c => country === c.value);
+  const countryOptions = countries.map(({ value, name }) => ({
+    value,
+    label: name,
+  }));
+  const selectedCountry = countries.find((c) => country === c.value);
   const states = selectedCountry ? selectedCountry.states : {};
-  const stateOptions =
-    Object.keys(states).map(key => ({ value: key.toUpperCase(), label: states[key] }));
+  const stateOptions = Object.keys(states).map((key) => ({
+    value: key.toUpperCase(),
+    label: states[key],
+  }));
 
   return {
     formValues,
@@ -38,7 +43,7 @@ export function mapStateToProps(state) {
 
 export function mapDispatchToProps(dispatch) {
   return {
-    createLocality: formData => dispatch(createInitialLocality(formData)),
+    createLocality: (formData) => dispatch(createInitialLocality(formData)),
     fetchCountries: () => dispatch(fetchCountries()),
   };
 }

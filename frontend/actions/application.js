@@ -1,4 +1,7 @@
-import { APPLICATION_BOOTED, APPLICATION_STATE_RESET } from '../constants/application';
+import {
+  APPLICATION_BOOTED,
+  APPLICATION_STATE_RESET,
+} from "../constants/application";
 
 export function applicationBooted() {
   return {

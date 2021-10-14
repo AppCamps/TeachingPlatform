@@ -1,6 +1,6 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import CardsPage from '../../components/pages/p-cards';
+import CardsPage from "../../components/pages/p-cards";
 
 function mapStateToProps(_, { params: { code } }) {
   return {

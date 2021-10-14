@@ -1,5 +1,5 @@
-import { createSelector } from 'reselect';
-import { courseBySlugSelector } from './course';
+import { createSelector } from "reselect";
+import { courseBySlugSelector } from "./course";
 
 export const lessonSlugSelector = (state, props) => props.lessonSlug;
 
@@ -11,31 +11,36 @@ export const lessonBySlugSelector = createSelector(
       return { course: { topic: {} } };
     }
 
-    const lesson = course.lessons.toModelArray().find(_lesson => _lesson.slug === lessonSlug);
+    const lesson = course.lessons
+      .toModelArray()
+      .find((_lesson) => _lesson.slug === lessonSlug);
 
     if (!lesson) {
       return { isPersisted: true };
     }
 
     lesson.includeMany({
-      relations: ['teachingMaterials', 'commonMistakes'],
-      modifier: rel => rel.orderBy('position'),
+      relations: ["teachingMaterials", "commonMistakes"],
+      modifier: (rel) => rel.orderBy("position"),
     });
 
-    course.includeFk('topic');
+    course.includeFk("topic");
     lesson.includeRef.course = course.includeRef;
 
     return lesson.includeRef;
-  },
+  }
 );
 
-export const lessonIdsSelector = createSelector(courseBySlugSelector, (course) => {
-  if (!course) {
-    return [];
-  }
+export const lessonIdsSelector = createSelector(
+  courseBySlugSelector,
+  (course) => {
+    if (!course) {
+      return [];
+    }
 
-  return course.lessons.toModelArray().map(_lesson => _lesson.id);
-});
+    return course.lessons.toModelArray().map((_lesson) => _lesson.id);
+  }
+);
 
 export const nextLessonBySlugSelector = createSelector(
   courseBySlugSelector,
@@ -45,14 +50,16 @@ export const nextLessonBySlugSelector = createSelector(
       return null;
     }
 
-    const lessons = course.lessons.orderBy('position').toModelArray();
-    const lessonIndex = lessons.findIndex(_lesson => _lesson.id === lesson.id);
+    const lessons = course.lessons.orderBy("position").toModelArray();
+    const lessonIndex = lessons.findIndex(
+      (_lesson) => _lesson.id === lesson.id
+    );
 
     if (lessonIndex < lessons.length - 1) {
       return lessons[lessonIndex + 1].includeRef;
     }
     return null;
-  },
+  }
 );
 
 export const prevLessonBySlugSelector = createSelector(
@@ -63,12 +70,14 @@ export const prevLessonBySlugSelector = createSelector(
       return null;
     }
 
-    const lessons = course.lessons.orderBy('position').toModelArray();
-    const lessonIndex = lessons.findIndex(_lesson => _lesson.id === lesson.id);
+    const lessons = course.lessons.orderBy("position").toModelArray();
+    const lessonIndex = lessons.findIndex(
+      (_lesson) => _lesson.id === lesson.id
+    );
 
     if (lessonIndex > 0) {
       return lessons[lessonIndex - 1].includeRef;
     }
     return null;
-  },
+  }
 );

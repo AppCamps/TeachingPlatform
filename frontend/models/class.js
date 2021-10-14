@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import { attr } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Class extends BaseModel {
   formValues() {
@@ -13,7 +13,7 @@ class Class extends BaseModel {
   }
 
   get isSchoolClass() {
-    return this.resourceType === 'school_class';
+    return this.resourceType === "school_class";
   }
 
   get title() {
@@ -32,9 +32,9 @@ class Class extends BaseModel {
     });
   }
 }
-Class.modelName = 'Class';
-Class.collectionKey = 'classes';
-Class.sortFn = klass => new Class(klass).title.toLowerCase();
+Class.modelName = "Class";
+Class.collectionKey = "classes";
+Class.sortFn = (klass) => new Class(klass).title.toLowerCase();
 
 Class.fields = {
   ...BaseModel.fields,

@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import { attr, fk } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr, fk } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Locality extends BaseModel {}
-Locality.modelName = 'Locality';
-Locality.collectionKey = 'localities';
+Locality.modelName = "Locality";
+Locality.collectionKey = "localities";
 
 Locality.fields = {
   ...BaseModel.fields,
@@ -16,7 +16,7 @@ Locality.fields = {
   state: attr(),
   city: attr(),
   postalCode: attr(),
-  user: fk('User'),
+  user: fk("User"),
 };
 
 Locality.defaultProps = {

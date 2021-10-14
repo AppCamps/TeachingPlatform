@@ -1,18 +1,18 @@
-import { expect } from '../chai_helper';
+import { expect } from "../chai_helper";
 
-import { paginationFetched } from '../../actions/pagination';
-import { PAGINATION_FETCHED } from '../../constants/pagination';
+import { paginationFetched } from "../../actions/pagination";
+import { PAGINATION_FETCHED } from "../../constants/pagination";
 
-describe('paginationiFetched', () => {
-  it('returns action with payload', () => {
+describe("paginationiFetched", () => {
+  it("returns action with payload", () => {
     const links = {
-      self: 'https://asd.asd/asd?page[number]=2&page[size]=1',
-      next: 'https://asd.asd/asd?page[number]=3&page[size]=1',
-      prev: 'https://asd.asd/asd?page[number]=1&page[size]=1',
+      self: "https://asd.asd/asd?page[number]=2&page[size]=1",
+      next: "https://asd.asd/asd?page[number]=3&page[size]=1",
+      prev: "https://asd.asd/asd?page[number]=1&page[size]=1",
     };
-    expect(paginationFetched('records', links)).to.deep.equal({
+    expect(paginationFetched("records", links)).to.deep.equal({
       type: PAGINATION_FETCHED,
-      identifier: 'records',
+      identifier: "records",
       payload: {
         size: 1,
         current: 2,

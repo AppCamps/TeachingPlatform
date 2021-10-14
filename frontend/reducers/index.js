@@ -1,17 +1,17 @@
-import { combineReducers } from 'redux';
-import { routerReducer as routing } from 'react-router-redux';
-import { reducer as form } from 'redux-form';
+import { combineReducers } from "redux";
+import { routerReducer as routing } from "react-router-redux";
+import { reducer as form } from "redux-form";
 
-import orm from './orm';
-import i18nState from './i18n';
-import authentication from './authentication';
-import pagination from './pagination';
-import preparations from './preparations';
-import notifications from './notifications';
-import classes from './classes';
-import registration from './registration';
+import orm from "./orm";
+import i18nState from "./i18n";
+import authentication from "./authentication";
+import pagination from "./pagination";
+import preparations from "./preparations";
+import notifications from "./notifications";
+import classes from "./classes";
+import registration from "./registration";
 
-import { APPLICATION_STATE_RESET } from '../constants/application';
+import { APPLICATION_STATE_RESET } from "../constants/application";
 
 const rootReducer = combineReducers({
   routing,
@@ -34,7 +34,7 @@ export default function (state = {}, action) {
         authentication: state.authentication,
         routing: state.routing,
       },
-      action,
+      action
     );
   }
   return rootReducer(state, action);

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import LoginForm from './login-form';
-import AcceptPrivacyPolicy from './accept-privacy-policy';
-import LocalityForm from '../../containers/login/locality';
+import LoginForm from "./login-form";
+import AcceptPrivacyPolicy from "./accept-privacy-policy";
+import LocalityForm from "../../containers/login/locality";
 
 class Login extends Component {
   componentDidMount() {
@@ -21,12 +21,17 @@ class Login extends Component {
 
   render() {
     const {
-      user, loginUser, emailConfirmationRequest,
+      user,
+      loginUser,
+      emailConfirmationRequest,
       authentication: { error, isRedirecting },
-      acceptPrivacyPolicy, declinePrivacyPolicy,
+      acceptPrivacyPolicy,
+      declinePrivacyPolicy,
     } = this.props;
 
-    if (isRedirecting) { return null; }
+    if (isRedirecting) {
+      return null;
+    }
 
     if (user) {
       if (!user.privacyPolicyAccepted) {
@@ -36,9 +41,7 @@ class Login extends Component {
           />
         );
       } else if (user && !user.locality) {
-        return (
-          <LocalityForm />
-        );
+        return <LocalityForm />;
       }
     }
 

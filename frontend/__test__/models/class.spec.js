@@ -1,15 +1,15 @@
-import { expect } from '../chai_helper';
-import TestStore from '../orm-helper';
+import { expect } from "../chai_helper";
+import TestStore from "../orm-helper";
 
-describe('Class', () => {
+describe("Class", () => {
   let store;
   beforeEach(() => {
     store = new TestStore({});
   });
 
-  it('returns formValues', () => {
+  it("returns formValues", () => {
     const { factory } = store;
-    const klass = factory.create('schoolClass');
+    const klass = factory.create("schoolClass");
 
     const expectation = {
       id: klass.id,

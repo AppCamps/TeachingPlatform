@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import PreparationMaterial from './preparation-material';
-import { Shape as PreparationMaterialShape } from '../../../models/preparation-material';
+import PreparationMaterial from "./preparation-material";
+import { Shape as PreparationMaterialShape } from "../../../models/preparation-material";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Preparations extends Component {
   renderPreparationMaterials() {
@@ -12,10 +12,10 @@ class Preparations extends Component {
     const { preparationMaterials } = this.props;
 
     if (!preparationMaterials || preparationMaterials.length === 0) {
-      return `${t('There are no preparation materials for this topic.')}`;
+      return `${t("There are no preparation materials for this topic.")}`;
     }
 
-    return preparationMaterials.map(preparationMaterial => (
+    return preparationMaterials.map((preparationMaterial) => (
       <div key={preparationMaterial.id} className={style.preparationMaterial}>
         <PreparationMaterial preparationMaterial={preparationMaterial} />
       </div>
@@ -26,7 +26,11 @@ class Preparations extends Component {
     const { t } = this.context;
     return (
       <div className={style.container}>
-        <p>{t('Here are important informations and materials to prepare your lessons.')}</p>
+        <p>
+          {t(
+            "Here are important informations and materials to prepare your lessons."
+          )}
+        </p>
         <div>{this.renderPreparationMaterials()}</div>
       </div>
     );
@@ -34,7 +38,9 @@ class Preparations extends Component {
 }
 
 Preparations.propTypes = {
-  preparationMaterials: PropTypes.arrayOf(PropTypes.shape(PreparationMaterialShape)),
+  preparationMaterials: PropTypes.arrayOf(
+    PropTypes.shape(PreparationMaterialShape)
+  ),
 };
 
 Preparations.defaultProps = {

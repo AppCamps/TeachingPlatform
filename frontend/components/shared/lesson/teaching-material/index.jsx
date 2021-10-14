@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { Shape as TeachingMaterialShape } from '../../../../models/teaching-material';
+import { Shape as TeachingMaterialShape } from "../../../../models/teaching-material";
 
-import { isInternalCardLink } from '../../../../utils';
-import Number from '../../../shared/number';
+import { isInternalCardLink } from "../../../../utils";
+import Number from "../../../shared/number";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class TeachingMaterial extends Component {
-  static TARGET_ID = 'appcamps-presentation';
+  static TARGET_ID = "appcamps-presentation";
 
   linkWrapper(children) {
     const { teachingMaterial } = this.props;
@@ -22,7 +22,10 @@ class TeachingMaterial extends Component {
           </a>
         </div>
       );
-    } else if (teachingMaterial.link && isInternalCardLink(teachingMaterial.link)) {
+    } else if (
+      teachingMaterial.link &&
+      isInternalCardLink(teachingMaterial.link)
+    ) {
       return (
         <div>
           <a
@@ -42,18 +45,20 @@ class TeachingMaterial extends Component {
   render() {
     const { teachingMaterial, number } = this.props;
 
-    return this.linkWrapper(<div>
+    return this.linkWrapper(
       <div>
-        <Number number={number} />
-        <span className={style.title}>{teachingMaterial.title}</span>
-        <span className={style.subtitle}>{teachingMaterial.subtitle}</span>
+        <div>
+          <Number number={number} />
+          <span className={style.title}>{teachingMaterial.title}</span>
+          <span className={style.subtitle}>{teachingMaterial.subtitle}</span>
+        </div>
+        <img
+          className={style.previewImage}
+          src={teachingMaterial.image}
+          alt={teachingMaterial.title}
+        />
       </div>
-      <img
-        className={style.previewImage}
-        src={teachingMaterial.image}
-        alt={teachingMaterial.title}
-      />
-                            </div>);
+    );
   }
 }
 

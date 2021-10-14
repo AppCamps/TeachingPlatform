@@ -1,16 +1,16 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from "react";
+import { shallow } from "enzyme";
 
-import { expect } from '../../chai_helper';
+import { expect } from "../../chai_helper";
 
-import CreateClass from '../../../components/create-class';
+import CreateClass from "../../../components/create-class";
 
-import Link from '../../../components/shared/link';
-import ClassForm from '../../../components/shared/class-form';
+import Link from "../../../components/shared/link";
+import ClassForm from "../../../components/shared/class-form";
 
-import style from '../../../components/create-class/style.scss';
+import style from "../../../components/create-class/style.scss";
 
-describe('<CreateClass />', () => {
+describe("<CreateClass />", () => {
   const defaultProps = {
     fetchCourses: jest.fn(),
     user: { locality: true },
@@ -21,16 +21,19 @@ describe('<CreateClass />', () => {
     route: {},
   };
 
-  it('calls destroyForm on unmount', () => {
+  it("calls destroyForm on unmount", () => {
     const destroyForm = jest.fn();
 
-    const wrapper = shallow(<CreateClass {...defaultProps} destroyForm={destroyForm} />, {
-      context: {
-        t(translation) {
-          return translation;
+    const wrapper = shallow(
+      <CreateClass {...defaultProps} destroyForm={destroyForm} />,
+      {
+        context: {
+          t(translation) {
+            return translation;
+          },
         },
-      },
-    });
+      }
+    );
 
     expect(destroyForm.mock.calls.length).to.eql(0);
 
@@ -39,7 +42,7 @@ describe('<CreateClass />', () => {
     expect(destroyForm.mock.calls.length).to.eql(1);
   });
 
-  it('renders a cancel link', () => {
+  it("renders a cancel link", () => {
     const wrapper = shallow(<CreateClass {...defaultProps} />, {
       context: {
         t(translation) {
@@ -50,11 +53,11 @@ describe('<CreateClass />', () => {
 
     const link = wrapper.find(`.${style.cancel}`).find(Link);
 
-    expect(link.prop('to')).to.equal('/classes');
-    expect(link.children().first()).to.have.text('cancel');
+    expect(link.prop("to")).to.equal("/classes");
+    expect(link.children().first()).to.have.text("cancel");
   });
 
-  it('calls fetchCourses on load', () => {
+  it("calls fetchCourses on load", () => {
     const fetchCourses = jest.fn();
 
     shallow(<CreateClass {...defaultProps} fetchCourses={fetchCourses} />, {
@@ -68,7 +71,7 @@ describe('<CreateClass />', () => {
     expect(fetchCourses.mock.calls.length).to.eql(1);
   });
 
-  it('forwards all props to ClassForm', () => {
+  it("forwards all props to ClassForm", () => {
     const formValues = {};
     const topics = [];
 
@@ -86,14 +89,14 @@ describe('<CreateClass />', () => {
             return translation;
           },
         },
-      },
+      }
     );
 
     const renderedClassForm = wrapper.find(ClassForm);
 
-    expect(renderedClassForm).to.have.prop('formValues', formValues);
-    expect(renderedClassForm).to.have.prop('topics', topics);
-    expect(renderedClassForm).to.have.prop('submitText', 'Create class');
-    expect(renderedClassForm.prop('handleSubmit')).to.be.a('function');
+    expect(renderedClassForm).to.have.prop("formValues", formValues);
+    expect(renderedClassForm).to.have.prop("topics", topics);
+    expect(renderedClassForm).to.have.prop("submitText", "Create class");
+    expect(renderedClassForm.prop("handleSubmit")).to.be.a("function");
   });
 });

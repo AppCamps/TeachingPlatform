@@ -1,43 +1,49 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Router, Route, Redirect, IndexRoute, IndexRedirect } from 'react-router';
+import React from "react";
+import PropTypes from "prop-types";
+import {
+  Router,
+  Route,
+  Redirect,
+  IndexRoute,
+  IndexRedirect,
+} from "react-router";
 
-import { requireLoggedInUser, requireLoggedOutUser } from './services/auth';
+import { requireLoggedInUser, requireLoggedOutUser } from "./services/auth";
 
-import App from './containers/app';
-import Login from './containers/login';
-import Logout from './containers/logout';
-import Registration from './containers/registration';
-import RegistrationSuccess from './containers/registration/success';
-import PasswordReset from './containers/password-reset';
-import PasswordResetForm from './containers/password-reset/reset-form';
-import EmailConfirmationValidateToken from './containers/email-confirmation/validate-token';
-import EmailConfirmationRequest from './containers/email-confirmation';
-import Dashboard from './containers/dashboard';
-import ShowCardCodePage from './containers/cards/show-code';
-import InputCardCodePage from './containers/cards/input-code';
-import Cards from './containers/cards';
-import Topics from './containers/topics';
-import CourseLesson from './containers/course-lesson';
-import LegacyCourseLessonRedirect from './containers/courses/redirect';
-import LegacyPreparationsRedirect from './containers/preparations/redirect';
-import PreparationMaterials from './containers/topics/preparation-materials';
-import CourseList from './containers/topics/course-list';
-import ClassLesson from './containers/class-lesson';
-import Classes from './containers/classes';
-import CreateClass from './containers/create-class';
-import EditClass from './containers/edit-class';
-import EditUser from './containers/edit-user';
-import EditUserPassword from './containers/edit-user/password';
-import EditUserLocality from './containers/edit-user/locality';
-import Help from './components/help';
-import HelpPlatformTips from './components/help/platform-tips';
-import HelpFAQ from './components/help/faq';
-import HelpContact from './components/help/contact';
-import HelpCertificates from './components/help/certificates';
-import Posts from './containers/posts';
+import App from "./containers/app";
+import Login from "./containers/login";
+import Logout from "./containers/logout";
+import Registration from "./containers/registration";
+import RegistrationSuccess from "./containers/registration/success";
+import PasswordReset from "./containers/password-reset";
+import PasswordResetForm from "./containers/password-reset/reset-form";
+import EmailConfirmationValidateToken from "./containers/email-confirmation/validate-token";
+import EmailConfirmationRequest from "./containers/email-confirmation";
+import Dashboard from "./containers/dashboard";
+import ShowCardCodePage from "./containers/cards/show-code";
+import InputCardCodePage from "./containers/cards/input-code";
+import Cards from "./containers/cards";
+import Topics from "./containers/topics";
+import CourseLesson from "./containers/course-lesson";
+import LegacyCourseLessonRedirect from "./containers/courses/redirect";
+import LegacyPreparationsRedirect from "./containers/preparations/redirect";
+import PreparationMaterials from "./containers/topics/preparation-materials";
+import CourseList from "./containers/topics/course-list";
+import ClassLesson from "./containers/class-lesson";
+import Classes from "./containers/classes";
+import CreateClass from "./containers/create-class";
+import EditClass from "./containers/edit-class";
+import EditUser from "./containers/edit-user";
+import EditUserPassword from "./containers/edit-user/password";
+import EditUserLocality from "./containers/edit-user/locality";
+import Help from "./components/help";
+import HelpPlatformTips from "./components/help/platform-tips";
+import HelpFAQ from "./components/help/faq";
+import HelpContact from "./components/help/contact";
+import HelpCertificates from "./components/help/certificates";
+import Posts from "./containers/posts";
 
-import NotFound from './components/shared/not-found';
+import NotFound from "./components/shared/not-found";
 
 function Routes({ history }) {
   return (
@@ -58,7 +64,10 @@ function Routes({ history }) {
             <IndexRoute component={PasswordReset} />
           </Route>
           <Route path="email-confirmation">
-            <Route path=":emailConfirmationToken" component={EmailConfirmationValidateToken} />
+            <Route
+              path=":emailConfirmationToken"
+              component={EmailConfirmationValidateToken}
+            />
             <IndexRoute component={EmailConfirmationRequest} />
           </Route>
         </Route>
@@ -67,11 +76,17 @@ function Routes({ history }) {
             <Route path="classes">
               <Route path="new" component={CreateClass} />
               <Route path=":classId/edit" component={EditClass} />
-              <Route path=":classId/:courseSlug/:lessonSlug" component={ClassLesson} />
+              <Route
+                path=":classId/:courseSlug/:lessonSlug"
+                component={ClassLesson}
+              />
               <IndexRoute component={Classes} />
             </Route>
             <Route path="courses">
-              <Route path=":courseSlug/:lessonSlug" component={LegacyCourseLessonRedirect} />
+              <Route
+                path=":courseSlug/:lessonSlug"
+                component={LegacyCourseLessonRedirect}
+              />
               <IndexRedirect to="/topics" />
             </Route>
             <Route path="preparations">

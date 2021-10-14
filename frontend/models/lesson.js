@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import { attr, fk, many } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr, fk, many } from "redux-orm";
 
-import { slugify } from '../utils';
+import { slugify } from "../utils";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Lesson extends BaseModel {
   get slug() {
@@ -16,7 +16,7 @@ class Lesson extends BaseModel {
     });
   }
 }
-Lesson.modelName = 'Lesson';
+Lesson.modelName = "Lesson";
 
 Lesson.fields = {
   ...BaseModel.fields,
@@ -24,17 +24,17 @@ Lesson.fields = {
   position: attr(),
   title: attr(),
   description: attr(),
-  expertises: many('Expertise', 'lessons'),
-  course: fk('Course', 'lessons'),
+  expertises: many("Expertise", "lessons"),
+  course: fk("Course", "lessons"),
   // teachingMaterials: many('TeachingMaterial', 'lesson'),  (declared by TeachingMaterial)
   // commonMistakes: many('CommonMistake', 'lesson'),  (declared by CommonMistake)
 };
 
 Lesson.defaultProps = {
   ...BaseModel.defaultProps,
-  title: '',
+  title: "",
   position: null,
-  description: '',
+  description: "",
 };
 
 const Shape = PropTypes.shape({

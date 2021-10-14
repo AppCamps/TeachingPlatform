@@ -1,38 +1,38 @@
-import { expect } from '../chai_helper';
-import factory from '../__factories__';
+import { expect } from "../chai_helper";
+import factory from "../__factories__";
 
-import ClassSerializer from '../../serializers/class';
+import ClassSerializer from "../../serializers/class";
 
-describe('ClassSerializer', () => {
-  describe('serialize', () => {
+describe("ClassSerializer", () => {
+  describe("serialize", () => {
     it('serializes resourceType: "school_class"', () => {
-      const schoolClass = factory.build('schoolClass', {
-        courses: ['2', '3'],
+      const schoolClass = factory.build("schoolClass", {
+        courses: ["2", "3"],
       });
 
       const expectation = {
         data: {
-          type: 'classes',
+          type: "classes",
           id: schoolClass.id,
           meta: {},
           attributes: {
-            'resource-type': schoolClass.resourceType,
-            'class-name': schoolClass.className,
-            'school-year': schoolClass.schoolYear,
+            "resource-type": schoolClass.resourceType,
+            "class-name": schoolClass.className,
+            "school-year": schoolClass.schoolYear,
             grade: schoolClass.grade,
-            'planned-school-usage': schoolClass.plannedSchoolUsage,
-            'school-subject': schoolClass.schoolSubject,
-            'girl-count': schoolClass.girlCount,
-            'boy-count': schoolClass.boyCount,
+            "planned-school-usage": schoolClass.plannedSchoolUsage,
+            "school-subject": schoolClass.schoolSubject,
+            "girl-count": schoolClass.girlCount,
+            "boy-count": schoolClass.boyCount,
           },
           relationships: {
             courses: {
-              data: schoolClass.courses.map(id => ({
+              data: schoolClass.courses.map((id) => ({
                 id,
-                type: 'courses',
+                type: "courses",
               })),
             },
-            'completed-lessons': {
+            "completed-lessons": {
               data: [],
             },
           },
@@ -43,38 +43,40 @@ describe('ClassSerializer', () => {
     });
 
     it('serializes resourceType: "extracurricular"', () => {
-      const extracurricularClass = factory.build('extracurricular');
+      const extracurricularClass = factory.build("extracurricular");
 
       const expectation = {
         data: {
-          type: 'classes',
+          type: "classes",
           id: extracurricularClass.id,
           meta: {},
           attributes: {
-            'resource-type': extracurricularClass.resourceType,
-            'group-name': extracurricularClass.groupName,
+            "resource-type": extracurricularClass.resourceType,
+            "group-name": extracurricularClass.groupName,
             year: extracurricularClass.year,
             age: extracurricularClass.age,
-            'planned-extracurricular-usage': extracurricularClass.plannedExtracurricularUsage,
-            'girl-count': extracurricularClass.girlCount,
-            'boy-count': extracurricularClass.boyCount,
+            "planned-extracurricular-usage":
+              extracurricularClass.plannedExtracurricularUsage,
+            "girl-count": extracurricularClass.girlCount,
+            "boy-count": extracurricularClass.boyCount,
           },
           relationships: {
             courses: {
-              data: extracurricularClass.courses.map(id => ({
+              data: extracurricularClass.courses.map((id) => ({
                 id,
-                type: 'courses',
+                type: "courses",
               })),
             },
-            'completed-lessons': {
+            "completed-lessons": {
               data: [],
             },
           },
         },
       };
 
-      expect(ClassSerializer.serialize(extracurricularClass))
-        .to.deep.eql(expectation);
+      expect(ClassSerializer.serialize(extracurricularClass)).to.deep.eql(
+        expectation
+      );
     });
   });
 });

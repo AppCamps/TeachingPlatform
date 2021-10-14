@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Field, reduxForm, propTypes } from 'redux-form';
-import { Link } from 'react-router';
-import autobind from 'autobind-decorator';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Field, reduxForm, propTypes } from "redux-form";
+import { Link } from "react-router";
+import autobind from "autobind-decorator";
 
-import { translatedFormError } from '../../utils/translations';
+import { translatedFormError } from "../../utils/translations";
 
-import Container from '../shared/container';
-import Button from '../shared/button';
-import Spinner from '../shared/spinner';
-import InputWithLabel from '../shared/input-with-label';
+import Container from "../shared/container";
+import Button from "../shared/button";
+import Spinner from "../shared/spinner";
+import InputWithLabel from "../shared/input-with-label";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class PasswordReset extends Component {
-
   @autobind
   onSubmit(formData) {
     const { passwordReset, passwordResetToken } = this.props;
@@ -28,14 +27,19 @@ class PasswordReset extends Component {
     return (
       <div className={style.container}>
         <Container>
-          <h1 className={style.heading}>{t('Password reset')}</h1>
-          <Link className={style.loginLink} to={'/'}>{t('cancel')}</Link>
-          <form className={style.passwordResetRequestForm} onSubmit={handleSubmit(this.onSubmit)}>
+          <h1 className={style.heading}>{t("Password reset")}</h1>
+          <Link className={style.loginLink} to={"/"}>
+            {t("cancel")}
+          </Link>
+          <form
+            className={style.passwordResetRequestForm}
+            onSubmit={handleSubmit(this.onSubmit)}
+          >
             <Field
               component={InputWithLabel}
               disabled={submitting}
               name="password"
-              label={t('Password')}
+              label={t("Password")}
               type="password"
               required
             />
@@ -43,15 +47,20 @@ class PasswordReset extends Component {
               component={InputWithLabel}
               disabled={submitting}
               name="passwordConfirmation"
-              label={t('Password confirmation')}
+              label={t("Password confirmation")}
               type="password"
               required
             />
             <div className={style.actions}>
               <span className={style.submit}>
                 <Spinner visible={submitting} />
-                <Button isAction type="submit" disabled={submitting} rightIcon="angle-right">
-                  {t('Send')}
+                <Button
+                  isAction
+                  type="submit"
+                  disabled={submitting}
+                  rightIcon="angle-right"
+                >
+                  {t("Send")}
                 </Button>
               </span>
             </div>
@@ -76,25 +85,25 @@ const validate = (values) => {
   const { password, passwordConfirmation } = values;
 
   if (!password) {
-    errors.password = translatedFormError('required');
+    errors.password = translatedFormError("required");
   }
 
   if (password && password.length < 8) {
-    errors.password = translatedFormError('minimumCharCount', { min: 8 });
+    errors.password = translatedFormError("minimumCharCount", { min: 8 });
   }
 
   if (!passwordConfirmation) {
-    errors.passwordConfirmation = translatedFormError('required');
+    errors.passwordConfirmation = translatedFormError("required");
   }
 
   if (password !== passwordConfirmation) {
-    errors.passwordConfirmation = translatedFormError('notEqual');
+    errors.passwordConfirmation = translatedFormError("notEqual");
   }
 
   return errors;
 };
 
 export default reduxForm({
-  form: 'passwordResetForm',
+  form: "passwordResetForm",
   validate,
 })(PasswordReset);

@@ -1,24 +1,24 @@
-import React from 'react';
-import { replace } from 'react-router-redux';
-import { shallow } from 'enzyme';
+import React from "react";
+import { replace } from "react-router-redux";
+import { shallow } from "enzyme";
 
-import TestStore from '../../orm-helper';
+import TestStore from "../../orm-helper";
 import {
   RedirectComponent,
   mapStateToProps,
   mapDispatchToProps,
-} from '../../../containers/preparations/redirect';
+} from "../../../containers/preparations/redirect";
 
-describe('Preparations/Redirect Container + Component', () => {
-  describe('mapStateToProps', () => {
+describe("Preparations/Redirect Container + Component", () => {
+  describe("mapStateToProps", () => {
     let store;
     beforeEach(() => {
       store = new TestStore();
     });
 
-    it('returns slug of topic', () => {
+    it("returns slug of topic", () => {
       const { factory } = store;
-      const topic = factory.create('topic');
+      const topic = factory.create("topic");
 
       const { topicSlug } = mapStateToProps(store.state, {
         params: { topicSlug: topic.slug },
@@ -28,27 +28,27 @@ describe('Preparations/Redirect Container + Component', () => {
     });
   });
 
-  describe('mapDispatchToProps', () => {
-    it('redirect', () => {
-      const dispatch = action => action;
+  describe("mapDispatchToProps", () => {
+    it("redirect", () => {
+      const dispatch = (action) => action;
       const actions = mapDispatchToProps(dispatch);
 
-      const topicSlug = 'topicSlug';
+      const topicSlug = "topicSlug";
       const result = actions.redirect(topicSlug);
 
       expect(result).toEqual(replace(`/topics/${topicSlug}/preparations`));
     });
   });
 
-  describe('Component', () => {
+  describe("Component", () => {
     function defaultProps() {
       return {
-        topicSlug: 'topicSlug',
+        topicSlug: "topicSlug",
         redirect: jest.fn(),
       };
     }
 
-    it('redirects to new url', () => {
+    it("redirects to new url", () => {
       const props = defaultProps();
       const { redirect } = props;
 
@@ -57,7 +57,7 @@ describe('Preparations/Redirect Container + Component', () => {
       expect(wrapper.equals(<div />)).toEqual(true);
 
       expect(redirect.mock.calls).toHaveLength(1);
-      expect(redirect.mock.calls[0]).toEqual(['topicSlug']);
+      expect(redirect.mock.calls[0]).toEqual(["topicSlug"]);
     });
   });
 });

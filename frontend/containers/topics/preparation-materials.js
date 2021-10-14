@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import Preparations from '../../components/topics/preparation-materials';
+import Preparations from "../../components/topics/preparation-materials";
 
-import { preparationMaterialsSelector } from '../../selectors/topics/preparation-materials';
+import { preparationMaterialsSelector } from "../../selectors/topics/preparation-materials";
 
 export function mapStateToProps(state, { params: { topicSlug } }) {
   return {

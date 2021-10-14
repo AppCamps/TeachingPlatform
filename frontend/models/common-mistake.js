@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import { attr, many } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr, many } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class CommonMistake extends BaseModel {}
-CommonMistake.modelName = 'CommonMistake';
+CommonMistake.modelName = "CommonMistake";
 
 CommonMistake.fields = {
   ...BaseModel.fields,
@@ -12,15 +12,15 @@ CommonMistake.fields = {
   position: attr(),
   problem: attr(),
   solution: attr(),
-  lessons: many('Lesson', 'commonMistakes'),
+  lessons: many("Lesson", "commonMistakes"),
 };
 
 CommonMistake.defaultProps = {
   ...BaseModel.defaultProps,
   id: null,
   position: null,
-  problem: '',
-  solution: '',
+  problem: "",
+  solution: "",
 };
 
 const Shape = PropTypes.shape({

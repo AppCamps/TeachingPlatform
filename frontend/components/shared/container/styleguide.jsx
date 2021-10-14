@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
 export default {
-  category: 'Atoms',
-  title: 'Container',
-  description: 'Container',
-  code:
-`<Container>
+  category: "Atoms",
+  title: "Container",
+  description: "Container",
+  code: `<Container>
   {children}
 </Container>`,
   props: {

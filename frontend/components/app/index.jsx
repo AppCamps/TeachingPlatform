@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Header from './header';
-import Notifications from '../../containers/app/notifications';
-import Footer from './footer';
+import Header from "./header";
+import Notifications from "../../containers/app/notifications";
+import Footer from "./footer";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function Layout(props) {
   const { user } = props;
@@ -14,9 +14,7 @@ function Layout(props) {
     <div>
       <Header user={user} />
       <Notifications />
-      <section className={style.container}>
-        {props.children}
-      </section>
+      <section className={style.container}>{props.children}</section>
       <Footer />
     </div>
   );

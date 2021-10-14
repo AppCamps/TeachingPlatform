@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { mount, shallow } from 'enzyme';
-import { expect } from '../../../chai_helper';
-import factory from '../../../__factories__';
+import { mount, shallow } from "enzyme";
+import { expect } from "../../../chai_helper";
+import factory from "../../../__factories__";
 
-import Course from '../../../../components/shared/course';
-import Lesson from '../../../../components/shared/course/lesson';
-import Certificate from '../../../../components/shared/course/certificate';
-import CourseTitle from '../../../../components/shared/course-title';
+import Course from "../../../../components/shared/course";
+import Lesson from "../../../../components/shared/course/lesson";
+import Certificate from "../../../../components/shared/course/certificate";
+import CourseTitle from "../../../../components/shared/course-title";
 
 const translationContext = {
   context: {
@@ -19,9 +19,9 @@ const translationContext = {
   childContextTypes: { t: PropTypes.func },
 };
 
-describe('<Course/>', () => {
-  const topic = factory.build('topic', {}, { coursesCount: 0 });
-  const course = factory.build('course', {}, { lessonsCount: 2 });
+describe("<Course/>", () => {
+  const topic = factory.build("topic", {}, { coursesCount: 0 });
+  const course = factory.build("course", {}, { lessonsCount: 2 });
   const lessons = course.lessons;
   topic.courses = [course];
 
@@ -33,25 +33,25 @@ describe('<Course/>', () => {
     lessonUrl,
   };
 
-  it('should contain CourseTitle', () => {
+  it("should contain CourseTitle", () => {
     const wrapper = mount(<Course {...defaultProps} />);
 
     expect(wrapper).to.contain(<CourseTitle course={course} topic={topic} />);
   });
 
-  describe('certificate', () => {
-    it('should not render Certificate not present on course', () => {
+  describe("certificate", () => {
+    it("should not render Certificate not present on course", () => {
       const courseWithCertificate = { ...course, certificate: false };
       const wrapper = mount(
         <Course {...defaultProps} course={courseWithCertificate} />,
-        translationContext,
+        translationContext
       );
 
       const certificateComponent = wrapper.find(Certificate);
       expect(certificateComponent).to.have.length(0);
     });
 
-    describe('props', () => {
+    describe("props", () => {
       const courseWithCertificate = { ...course, certificate: true };
 
       function createWrapper(props = {}) {
@@ -62,11 +62,11 @@ describe('<Course/>', () => {
             lessonCompletionCheck={() => false}
             {...props}
           />,
-          translationContext,
+          translationContext
         );
       }
 
-      it('should render Certificate if present on course', () => {
+      it("should render Certificate if present on course", () => {
         const wrapper = createWrapper();
 
         const certificateComponent = wrapper.find(Certificate);
@@ -74,7 +74,7 @@ describe('<Course/>', () => {
         expect(certificateComponent).to.have.length(1);
       });
 
-      it('should have the default props color and right number', () => {
+      it("should have the default props color and right number", () => {
         const wrapper = createWrapper();
 
         const certificateComponent = wrapper.find(Certificate);
@@ -87,7 +87,7 @@ describe('<Course/>', () => {
         });
       });
 
-      it('should not be available if not all lessons are complete ', () => {
+      it("should not be available if not all lessons are complete ", () => {
         const wrapper = createWrapper();
 
         const certificateComponent = wrapper.find(Certificate);
@@ -97,7 +97,7 @@ describe('<Course/>', () => {
         });
       });
 
-      it('should be available if not all lessons are complete ', () => {
+      it("should be available if not all lessons are complete ", () => {
         const wrapper = createWrapper({ lessonCompletionCheck: () => true });
 
         const certificateComponent = wrapper.find(Certificate);
@@ -107,8 +107,8 @@ describe('<Course/>', () => {
         });
       });
 
-      it('should have courseSchoolClass prop ', () => {
-        const courseSchoolClass = factory.build('courseSchoolClass');
+      it("should have courseSchoolClass prop ", () => {
+        const courseSchoolClass = factory.build("courseSchoolClass");
         courseWithCertificate.courseSchoolClass = courseSchoolClass;
 
         const wrapper = createWrapper({ courseWithCertificate });
@@ -120,8 +120,10 @@ describe('<Course/>', () => {
         });
       });
 
-      it('should be completed if certificateDownloadedCheck returns false ', () => {
-        const wrapper = createWrapper({ certificateDownloadedCheck: () => false });
+      it("should be completed if certificateDownloadedCheck returns false ", () => {
+        const wrapper = createWrapper({
+          certificateDownloadedCheck: () => false,
+        });
 
         const certificateComponent = wrapper.find(Certificate);
 
@@ -132,8 +134,8 @@ describe('<Course/>', () => {
     });
   });
 
-  describe('Lessons', () => {
-    it('should render Lessons', () => {
+  describe("Lessons", () => {
+    it("should render Lessons", () => {
       const wrapper = shallow(<Course {...defaultProps} />);
 
       const lesson1 = lessons[0];
@@ -154,44 +156,42 @@ describe('<Course/>', () => {
       });
     });
 
-    it('sets progressIndicators to true if lessonCompletionCheck is given', () => {
+    it("sets progressIndicators to true if lessonCompletionCheck is given", () => {
       const wrapper = shallow(<Course {...defaultProps} />);
 
       expect(wrapper.find(Lesson).at(0))
-        .to.have.prop('isProgressIndicator')
+        .to.have.prop("isProgressIndicator")
         .to.equal(false);
 
       wrapper.setProps({ lessonCompletionCheck: null });
       expect(wrapper.find(Lesson).at(0))
-        .to.have.prop('isProgressIndicator')
+        .to.have.prop("isProgressIndicator")
         .to.eql(false);
 
       wrapper.setProps({ lessonCompletionCheck: () => {} });
       expect(wrapper.find(Lesson).at(0))
-        .to.have.prop('isProgressIndicator')
+        .to.have.prop("isProgressIndicator")
         .to.eql(true);
     });
   });
 
-  it('sets isCompleted based on lessonCompletionCheck result', () => {
+  it("sets isCompleted based on lessonCompletionCheck result", () => {
     const wrapper = shallow(<Course {...defaultProps} />);
 
     expect(wrapper.find(Lesson).at(0))
-      .to.have.prop('isCompleted')
+      .to.have.prop("isCompleted")
       .to.eql(false);
 
     wrapper.setProps({ lessonCompletionCheck: () => true });
-    expect(wrapper.find(Lesson).at(0))
-      .to.have.prop('isCompleted')
-      .to.eql(true);
+    expect(wrapper.find(Lesson).at(0)).to.have.prop("isCompleted").to.eql(true);
 
     wrapper.setProps({ lessonCompletionCheck: () => false });
     expect(wrapper.find(Lesson).at(0))
-      .to.have.prop('isCompleted')
+      .to.have.prop("isCompleted")
       .to.eql(false);
   });
 
-  it('should have props given props', () => {
+  it("should have props given props", () => {
     const wrapper = mount(<Course {...defaultProps} />);
 
     expect(wrapper).to.have.props({

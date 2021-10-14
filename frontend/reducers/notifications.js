@@ -1,21 +1,19 @@
-import { NOTIFICATION_SHOW, NOTIFICATION_HIDE } from '../constants/notifications';
+import {
+  NOTIFICATION_SHOW,
+  NOTIFICATION_HIDE,
+} from "../constants/notifications";
 
 const notificationReducer = (state = { active: [] }, action) => {
   switch (action.type) {
     case NOTIFICATION_SHOW:
       return {
         ...state,
-        active: [
-          ...state.active,
-          action.payload,
-        ],
+        active: [...state.active, action.payload],
       };
     case NOTIFICATION_HIDE:
       return {
         ...state,
-        active: state.active.filter(
-          n => n !== action.payload,
-        ),
+        active: state.active.filter((n) => n !== action.payload),
       };
     default:
       return state;

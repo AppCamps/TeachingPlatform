@@ -1,24 +1,25 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import { propTypes } from 'redux-form';
-import Select from '../select';
-import Label from '../label';
-import Error from '../../atoms/a-error';
+import { propTypes } from "redux-form";
+import Select from "../select";
+import Label from "../label";
+import Error from "../../atoms/a-error";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 function getValue(value) {
-  return (value && typeof value === 'object') ? value.value : value;
+  return value && typeof value === "object" ? value.value : value;
 }
 
 class SelectWithLabel extends Component {
-  static displayName = 'SelectWithLabel'
+  static displayName = "SelectWithLabel";
 
   render() {
     const { t } = this.context;
-    const { className, input, label, meta, disabled, selectProps, required } = this.props;
+    const { className, input, label, meta, disabled, selectProps, required } =
+      this.props;
     const name = this.props.name || input.name;
     const error = meta && meta.error;
     const hasError = meta && meta.error && meta.touched;
@@ -31,8 +32,10 @@ class SelectWithLabel extends Component {
           simpleValue
           {...input}
           disabled={disabled}
-          onChange={value => input.onChange(getValue(value))}
-          onBlur={() => { input.onBlur(); }}
+          onChange={(value) => input.onChange(getValue(value))}
+          onBlur={() => {
+            input.onBlur();
+          }}
           value={input.value}
           hasError={hasError}
           {...selectProps}
@@ -50,7 +53,7 @@ SelectWithLabel.propTypes = {
 };
 
 SelectWithLabel.defaultProps = {
-  className: '',
+  className: "",
   selectProps: {},
 };
 

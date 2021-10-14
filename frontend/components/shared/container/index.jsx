@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Container extends Component {
   className() {
@@ -15,11 +15,7 @@ class Container extends Component {
   }
 
   render() {
-    return (
-      <div className={this.className()}>
-        {this.props.children}
-      </div>
-    );
+    return <div className={this.className()}>{this.props.children}</div>;
   }
 }
 

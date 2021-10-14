@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import { attr } from 'redux-orm';
+import PropTypes from "prop-types";
+import { attr } from "redux-orm";
 
-import BaseModel from '.';
+import BaseModel from ".";
 
 class Expertise extends BaseModel {}
-Expertise.modelName = 'Expertise';
+Expertise.modelName = "Expertise";
 
 Expertise.fields = {
   ...BaseModel.fields,
@@ -15,7 +15,7 @@ Expertise.fields = {
 
 Expertise.defaultProps = {
   ...BaseModel.defaultProps,
-  title: '',
+  title: "",
 };
 
 const Shape = PropTypes.shape({

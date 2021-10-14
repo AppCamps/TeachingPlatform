@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { propTypes } from "redux-form";
 
-import Radio from '../../shared/radio';
-import Label from '../label';
-import Error from '../../atoms/a-error';
+import Radio from "../../shared/radio";
+import Label from "../label";
+import Error from "../../atoms/a-error";
 
 class RadioWithLabel extends Component {
   radioButtons() {
-    const {
-      options, input, disabled, autoFocus, optionClassName, meta,
-    } = this.props;
+    const { options, input, disabled, autoFocus, optionClassName, meta } =
+      this.props;
     const name = this.props.name || input.name;
     const hasError = meta && meta.error && meta.touched;
 
@@ -41,9 +40,7 @@ class RadioWithLabel extends Component {
 
   render() {
     const { t } = this.context;
-    const {
-      label, meta, required, className,
-    } = this.props;
+    const { label, meta, required, className } = this.props;
     const name = this.props.name || this.props.input.name;
     const touched = meta && meta.touched;
     const error = meta && meta.error;

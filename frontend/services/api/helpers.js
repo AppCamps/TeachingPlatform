@@ -1,23 +1,26 @@
-import 'es6-promise/auto';
-import ExtendableError from 'es6-error';
+import "es6-promise/auto";
+import ExtendableError from "es6-error";
 
-import axios from 'axios';
+import axios from "axios";
 
-import { SubmissionError } from 'redux-form';
+import { SubmissionError } from "redux-form";
 
-import { log, trackError } from '../../debug';
-import { t } from '../../utils/translations';
-import { notifications } from '../../config';
+import { log, trackError } from "../../debug";
+import { t } from "../../utils/translations";
+import { notifications } from "../../config";
 
-import { requestNotification } from '../../actions/notifications';
+import { requestNotification } from "../../actions/notifications";
 
-import { normalize as normalizeFn, normalizeError as normalizeErrorFn } from './normalize';
+import {
+  normalize as normalizeFn,
+  normalizeError as normalizeErrorFn,
+} from "./normalize";
 
-axios.defaults.xsrfHeaderName = 'X-CSRF-TOKEN';
+axios.defaults.xsrfHeaderName = "X-CSRF-TOKEN";
 
 export class ApiRecordError extends ExtendableError {
   constructor(errors) {
-    super('An api request failed');
+    super("An api request failed");
     this.errors = errors;
   }
 }
@@ -39,13 +42,11 @@ function logResponse(response) {
     return;
   }
 
-  const requestId = headers['X-Request-Id'] || headers['x-request-id'];
+  const requestId = headers["X-Request-Id"] || headers["x-request-id"];
   log(
-    `${prependLog(
-      url,
-      method.toUpperCase(),
-      'Response',
-    )} Statuscode ${response.status} (Request ID: ${requestId})`,
+    `${prependLog(url, method.toUpperCase(), "Response")} Statuscode ${
+      response.status
+    } (Request ID: ${requestId})`
   );
 }
 
@@ -62,8 +63,8 @@ function handleError(result) {
       dispatch(
         requestNotification({
           type: notifications.failure,
-          text: t('Too many requests. Please try again in a few seconds.'),
-        }),
+          text: t("Too many requests. Please try again in a few seconds."),
+        })
       );
     }
     return Promise.reject(response.data);
@@ -73,22 +74,22 @@ function handleError(result) {
     requestNotification({
       type: notifications.failure,
       text: t(
-        'There was an Error processing your request. Please contact philipp@appcamps.de if the problem persists.',
+        "There was an Error processing your request. Please contact philipp@appcamps.de if the problem persists."
       ),
-    }),
+    })
   );
   throw Error(result);
 }
 
 export function fetch(endpoint, description) {
   if (!dispatch) {
-    throw new Error('Api service has not been initialized with store');
+    throw new Error("Api service has not been initialized with store");
   }
 
   description.url = endpoint;
   description.headers = {
-    'Content-Type': 'application/vnd.api+json',
-    Accept: 'application/vnd.api+json',
+    "Content-Type": "application/vnd.api+json",
+    Accept: "application/vnd.api+json",
     ...(description.headers || {}),
   };
   // send {} as data otherwise axios omits the Content-Type header
@@ -96,12 +97,9 @@ export function fetch(endpoint, description) {
     description.data = {};
   }
 
-  log(`${prependLog(endpoint, description.method, 'Request')}`);
+  log(`${prependLog(endpoint, description.method, "Request")}`);
 
-  return axios
-    .request(description)
-    .then(handleSuccess)
-    .catch(handleError);
+  return axios.request(description).then(handleSuccess).catch(handleError);
 }
 
 export function normalize(customNormalizeFunction) {
@@ -113,7 +111,10 @@ export function normalize(customNormalizeFunction) {
   };
 }
 
-export function normalizeErrors(customNormalizeErrorFn, throwSubmissionError = false) {
+export function normalizeErrors(
+  customNormalizeErrorFn,
+  throwSubmissionError = false
+) {
   return (response) => {
     if (customNormalizeErrorFn) {
       return Promise.reject(customNormalizeErrorFn(response));

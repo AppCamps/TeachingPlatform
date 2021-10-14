@@ -1,12 +1,12 @@
-import { normalize } from '../../../services/api/helpers';
+import { normalize } from "../../../services/api/helpers";
 
 export const locality = {
-  schoolType: 'school_type_university',
-  schoolName: 'App Camps',
-  country: 'country_de',
-  state: 'HH',
-  postalCode: '20357',
-  city: 'Hamburg',
+  schoolType: "school_type_university",
+  schoolName: "App Camps",
+  country: "country_de",
+  state: "HH",
+  postalCode: "20357",
+  city: "Hamburg",
 };
 
 export const requestData = `
@@ -56,7 +56,9 @@ export const successResponse = `
   ]
 }`;
 
-export const normalizedSuccessResponse = normalize()(JSON.parse(successResponse));
+export const normalizedSuccessResponse = normalize()(
+  JSON.parse(successResponse)
+);
 
 export const errorResponse = `
 {
@@ -73,6 +75,6 @@ export const errorResponse = `
 
 export const normalizedErrorResponse = {
   errors: {
-    postalCode: 'Invalid',
+    postalCode: "Invalid",
   },
 };

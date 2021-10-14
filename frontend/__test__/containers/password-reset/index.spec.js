@@ -1,14 +1,20 @@
-import { expect } from '../../chai_helper';
+import { expect } from "../../chai_helper";
 
-import { mapDispatchToProps, __RewireAPI__ as containerRewire } from '../../../containers/password-reset';
+import {
+  mapDispatchToProps,
+  __RewireAPI__ as containerRewire,
+} from "../../../containers/password-reset";
 
-describe('Password Reset Container', () => {
-  describe('mapDispatchToProps', () => {
-    it('passwordResetRequest', () => {
+describe("Password Reset Container", () => {
+  describe("mapDispatchToProps", () => {
+    it("passwordResetRequest", () => {
       const passwordResetRequestMock = jest.fn();
-      containerRewire.__Rewire__('passwordResetRequest', passwordResetRequestMock);
+      containerRewire.__Rewire__(
+        "passwordResetRequest",
+        passwordResetRequestMock
+      );
 
-      const dispatch = action => action;
+      const dispatch = (action) => action;
       const actions = mapDispatchToProps(dispatch);
 
       const formData = {};

@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import classNames from 'classnames';
-import flatMap from 'lodash.flatmap';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router";
+import classNames from "classnames";
+import flatMap from "lodash.flatmap";
 
-import { Shape as LessonShape } from '../../../../models/lesson';
+import { Shape as LessonShape } from "../../../../models/lesson";
 
-import { colors } from '../../../../config';
-import Number from '../../number';
+import { colors } from "../../../../config";
+import Number from "../../number";
 
-import style from './style.scss';
+import style from "./style.scss";
 
 class Lesson extends Component {
   expertises() {
@@ -18,21 +18,24 @@ class Lesson extends Component {
       return null;
     }
 
-    const renderedExpertises =
-      flatMap(expertises, expertise => (
-        [<span key={expertise.id}>{expertise.title}</span>, ', ']),
-      );
+    const renderedExpertises = flatMap(expertises, (expertise) => [
+      <span key={expertise.id}>{expertise.title}</span>,
+      ", ",
+    ]);
     renderedExpertises.pop();
 
-    return (
-      <div className={style.expertises}>
-        {renderedExpertises}
-      </div>
-    );
+    return <div className={style.expertises}>{renderedExpertises}</div>;
   }
 
   render() {
-    const { lesson, number, lessonUrl, isProgressIndicator, isCompleted, color } = this.props;
+    const {
+      lesson,
+      number,
+      lessonUrl,
+      isProgressIndicator,
+      isCompleted,
+      color,
+    } = this.props;
 
     const classes = classNames({
       [`${style.lessonProgress}`]: isProgressIndicator,
@@ -49,9 +52,7 @@ class Lesson extends Component {
         <div className={style.numberContainer} style={{ borderColor }}>
           <Number number={number} color={color} invert={isCompleted} />
         </div>
-        <div className={style.lessonTitle}>
-          {lesson.title}
-        </div>
+        <div className={style.lessonTitle}>{lesson.title}</div>
         {this.expertises()}
       </div>
     );
@@ -61,11 +62,7 @@ class Lesson extends Component {
       components = <Link to={link}>{components}</Link>;
     }
 
-    return (
-      <div className={style.lesson}>
-        {components}
-      </div>
-    );
+    return <div className={style.lesson}>{components}</div>;
   }
 }
 
@@ -84,6 +81,5 @@ Lesson.defaultProps = {
   isProgressIndicator: false,
   color: colors.colorFontDefault,
 };
-
 
 export default Lesson;

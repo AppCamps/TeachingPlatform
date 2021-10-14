@@ -1,52 +1,58 @@
-import { expect } from '../../chai_helper';
-import TestStore from '../../orm-helper';
+import { expect } from "../../chai_helper";
+import TestStore from "../../orm-helper";
 
 import {
   mapStateToProps,
   mapDispatchToProps,
   __RewireAPI__ as containerRewire,
-} from '../../../containers/course-lesson';
+} from "../../../containers/course-lesson";
 
-describe('mapStateToProps', () => {
+describe("mapStateToProps", () => {
   let store;
   beforeEach(() => {
     store = new TestStore();
   });
 
-  it('includes courseSlug', () => {
-    const props = mapStateToProps(store.state, { params: { courseSlug: 'testSlug' } });
-    expect(props.courseSlug).to.eql('testSlug');
+  it("includes courseSlug", () => {
+    const props = mapStateToProps(store.state, {
+      params: { courseSlug: "testSlug" },
+    });
+    expect(props.courseSlug).to.eql("testSlug");
   });
 
-  it('includes topicSlug', () => {
-    const props = mapStateToProps(store.state, { params: { topicSlug: 'testSlug' } });
-    expect(props.topicSlug).to.eql('testSlug');
+  it("includes topicSlug", () => {
+    const props = mapStateToProps(store.state, {
+      params: { topicSlug: "testSlug" },
+    });
+    expect(props.topicSlug).to.eql("testSlug");
   });
 
-  describe('lesson', () => {
-    describe('course', () => {
-      it('defaults to empty course with courseSlug from ownProps', () => {
+  describe("lesson", () => {
+    describe("course", () => {
+      it("defaults to empty course with courseSlug from ownProps", () => {
         const { state } = store;
 
-        const props = mapStateToProps(state, { params: { courseSlug: 'test' } });
+        const props = mapStateToProps(state, {
+          params: { courseSlug: "test" },
+        });
 
         expect(props.lesson.course).to.eql({ topic: {} });
       });
 
-      it('returns matching course for courseSlug', () => {
+      it("returns matching course for courseSlug", () => {
         const { factory, state } = store;
 
-        const course = factory.create('course');
-        course.includeFk('topic');
+        const course = factory.create("course");
+        course.includeFk("topic");
         const matchedCourse = course.includeRef;
 
         const lesson = factory.create(
-          'lesson',
+          "lesson",
           { course },
           {
             teachingMaterialsCount: 0,
             commonMistakes: 0,
-          },
+          }
         );
 
         const props = mapStateToProps(state, {
@@ -60,29 +66,29 @@ describe('mapStateToProps', () => {
       });
     });
 
-    it('defaults to undefined if slug does not match', () => {
+    it("defaults to undefined if slug does not match", () => {
       const { state } = store;
-      const props = mapStateToProps(state, { params: { lessonSlug: 'test' } });
+      const props = mapStateToProps(state, { params: { lessonSlug: "test" } });
       expect(props.lesson).to.eql({ course: { topic: {} } });
     });
 
-    it('returns matching lesson for lessonSlug', () => {
+    it("returns matching lesson for lessonSlug", () => {
       const { factory, state } = store;
 
-      const course = factory.create('course', {}, { lessonsCount: 0 });
-      course.includeFk('topic');
+      const course = factory.create("course", {}, { lessonsCount: 0 });
+      course.includeFk("topic");
 
       const matchedLesson = factory.create(
-        'lesson',
+        "lesson",
         { course },
         {
           commonMistakesCount: 0,
           expertisesCount: 0,
           teachingMaterialsCount: 0,
-        },
+        }
       );
       matchedLesson.includeMany({
-        relations: ['commonMistakes', 'teachingMaterials'],
+        relations: ["commonMistakes", "teachingMaterials"],
       });
       matchedLesson.includeRef.course = course.includeRef;
 
@@ -97,15 +103,15 @@ describe('mapStateToProps', () => {
     });
   });
 
-  describe('prevLesson and nextLesson', () => {
-    it('includes prevLesson and nextLesson', () => {
+  describe("prevLesson and nextLesson", () => {
+    it("includes prevLesson and nextLesson", () => {
       const { factory, state } = store;
 
-      const course = factory.create('course', {}, { lessonsCount: 0 });
-      course.includeFk('topic');
+      const course = factory.create("course", {}, { lessonsCount: 0 });
+      course.includeFk("topic");
 
       const lesson = factory.create(
-        'lesson',
+        "lesson",
         {
           course,
           position: 2,
@@ -113,10 +119,10 @@ describe('mapStateToProps', () => {
         {
           teachingMaterialsCount: 0,
           commonMistakes: 0,
-        },
+        }
       );
       const prevLesson = factory.create(
-        'lesson',
+        "lesson",
         {
           course,
           position: 1,
@@ -124,10 +130,10 @@ describe('mapStateToProps', () => {
         {
           teachingMaterialsCount: 0,
           commonMistakes: 0,
-        },
+        }
       );
       const nextLesson = factory.create(
-        'lesson',
+        "lesson",
         {
           course,
           position: 3,
@@ -135,7 +141,7 @@ describe('mapStateToProps', () => {
         {
           teachingMaterialsCount: 0,
           commonMistakes: 0,
-        },
+        }
       );
 
       const props = mapStateToProps(state, {
@@ -149,14 +155,14 @@ describe('mapStateToProps', () => {
       expect(props.nextLesson).to.eql(nextLesson.includeRef);
     });
 
-    it('does not include prevlesson for first lesson', () => {
+    it("does not include prevlesson for first lesson", () => {
       const { factory, state } = store;
 
-      const course = factory.create('course', {}, { lessonsCount: 0 });
-      course.includeFk('topic');
+      const course = factory.create("course", {}, { lessonsCount: 0 });
+      course.includeFk("topic");
 
       const lesson = factory.create(
-        'lesson',
+        "lesson",
         {
           course,
           position: 0,
@@ -164,10 +170,10 @@ describe('mapStateToProps', () => {
         {
           teachingMaterialsCount: 0,
           commonMistakes: 0,
-        },
+        }
       );
       factory.create(
-        'lesson',
+        "lesson",
         {
           course,
           position: 1,
@@ -175,7 +181,7 @@ describe('mapStateToProps', () => {
         {
           teachingMaterialsCount: 0,
           commonMistakes: 0,
-        },
+        }
       );
 
       const props = mapStateToProps(state, {
@@ -188,14 +194,14 @@ describe('mapStateToProps', () => {
       expect(props.prevLesson).to.eql(null);
     });
 
-    it('does not include nextLesson for last lesson', () => {
+    it("does not include nextLesson for last lesson", () => {
       const { factory, state } = store;
 
-      const course = factory.create('course', {}, { lessonsCount: 0 });
-      course.includeFk('topic');
+      const course = factory.create("course", {}, { lessonsCount: 0 });
+      course.includeFk("topic");
 
       const lesson = factory.create(
-        'lesson',
+        "lesson",
         {
           course,
           position: 1,
@@ -203,10 +209,10 @@ describe('mapStateToProps', () => {
         {
           teachingMaterialsCount: 0,
           commonMistakes: 0,
-        },
+        }
       );
       factory.create(
-        'lesson',
+        "lesson",
         {
           course,
           position: 0,
@@ -214,7 +220,7 @@ describe('mapStateToProps', () => {
         {
           teachingMaterialsCount: 0,
           commonMistakes: 0,
-        },
+        }
       );
 
       const props = mapStateToProps(state, {
@@ -227,26 +233,30 @@ describe('mapStateToProps', () => {
       expect(props.nextLesson).to.eql(null);
     });
 
-    it('defaults to null if course does not match', () => {
+    it("defaults to null if course does not match", () => {
       const { state } = store;
-      const props = mapStateToProps(state, { params: { courseSlug: 'undefined' } });
+      const props = mapStateToProps(state, {
+        params: { courseSlug: "undefined" },
+      });
       expect(props.prevLesson).to.eql(null);
       expect(props.nextLesson).to.eql(null);
     });
   });
 
-  describe('topic', () => {
-    it('defaults to undefined if course if does not match', () => {
+  describe("topic", () => {
+    it("defaults to undefined if course if does not match", () => {
       const { state } = store;
-      const props = mapStateToProps(state, { params: { courseSlug: 'undefined' } });
+      const props = mapStateToProps(state, {
+        params: { courseSlug: "undefined" },
+      });
       expect(props.topic).to.eql(undefined);
     });
 
-    it('includes matching topic in course', () => {
+    it("includes matching topic in course", () => {
       const { factory, state } = store;
-      const topic = factory.create('topic', {}, { coursesCount: 0 });
-      const course = factory.create('course', { topic }, { lessonsCount: 0 });
-      const lesson = factory.create('lesson', { course });
+      const topic = factory.create("topic", {}, { coursesCount: 0 });
+      const course = factory.create("course", { topic }, { lessonsCount: 0 });
+      const lesson = factory.create("lesson", { course });
 
       const props = mapStateToProps(state, {
         params: {
@@ -259,20 +269,26 @@ describe('mapStateToProps', () => {
     });
   });
 
-  describe('teachingMaterials', () => {
-    it('defaults to undefined if slug does not match', () => {
+  describe("teachingMaterials", () => {
+    it("defaults to undefined if slug does not match", () => {
       const { state } = store;
 
       const props = mapStateToProps(state, { params: {} });
       expect(props.lesson.teachingMaterials).to.eql(undefined);
     });
 
-    it('returns ordered teachingMaterials for lesson', () => {
+    it("returns ordered teachingMaterials for lesson", () => {
       const { factory, state } = store;
-      const course = factory.create('course');
-      const lesson = factory.create('lesson', { course });
-      const teachingMaterial2 = factory.create('teachingMaterial', { lesson, position: 2 });
-      const teachingMaterial1 = factory.create('teachingMaterial', { lesson, position: 1 });
+      const course = factory.create("course");
+      const lesson = factory.create("lesson", { course });
+      const teachingMaterial2 = factory.create("teachingMaterial", {
+        lesson,
+        position: 2,
+      });
+      const teachingMaterial1 = factory.create("teachingMaterial", {
+        lesson,
+        position: 1,
+      });
 
       const props = mapStateToProps(state, {
         params: {
@@ -288,19 +304,29 @@ describe('mapStateToProps', () => {
     });
   });
 
-  describe('commonMistakes', () => {
-    it('defaults to undefined if slug does not match', () => {
+  describe("commonMistakes", () => {
+    it("defaults to undefined if slug does not match", () => {
       const { state } = store;
       const props = mapStateToProps(state, { params: {} });
       expect(props.lesson.commonMistakes).to.eql(undefined);
     });
 
-    it('returns matching commonMistakes for lesson', () => {
+    it("returns matching commonMistakes for lesson", () => {
       const { factory, state } = store;
-      const course = factory.create('course');
-      const lesson = factory.create('lesson', { course }, { commonMistakesCount: 0 });
-      const commonMistake2 = factory.create('commonMistake', { lessons: [lesson], position: 2 });
-      const commonMistake1 = factory.create('commonMistake', { lessons: [lesson], position: 1 });
+      const course = factory.create("course");
+      const lesson = factory.create(
+        "lesson",
+        { course },
+        { commonMistakesCount: 0 }
+      );
+      const commonMistake2 = factory.create("commonMistake", {
+        lessons: [lesson],
+        position: 2,
+      });
+      const commonMistake1 = factory.create("commonMistake", {
+        lessons: [lesson],
+        position: 1,
+      });
 
       const props = mapStateToProps(state, {
         params: {
@@ -317,13 +343,13 @@ describe('mapStateToProps', () => {
   });
 });
 
-describe('mapDispatchToProps', () => {
-  it('fetchCourses', () => {
-    containerRewire.__Rewire__('fetchCourses', () => 'success');
+describe("mapDispatchToProps", () => {
+  it("fetchCourses", () => {
+    containerRewire.__Rewire__("fetchCourses", () => "success");
 
-    const dispatch = action => action;
+    const dispatch = (action) => action;
     const actions = mapDispatchToProps(dispatch);
 
-    expect(actions.fetchCourses()).to.equal('success');
+    expect(actions.fetchCourses()).to.equal("success");
   });
 });

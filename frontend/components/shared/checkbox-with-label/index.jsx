@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form';
+import React from "react";
+import PropTypes from "prop-types";
+import { propTypes } from "redux-form";
 
-import Checkbox from '../../shared/checkbox';
-import Label from '../label';
-import Error from '../../atoms/a-error';
+import Checkbox from "../../shared/checkbox";
+import Label from "../label";
+import Error from "../../atoms/a-error";
 
 function CheckboxWithLabel(props, context) {
   const { t } = context;
@@ -31,7 +31,14 @@ function CheckboxWithLabel(props, context) {
         {touched && error && <Error for={name}>{t(error)}</Error>}
       </div>
       <Checkbox
-        {...{ ...input, autoFocus, disabled, name, value, checked: input.value }}
+        {...{
+          ...input,
+          autoFocus,
+          disabled,
+          name,
+          value,
+          checked: input.value,
+        }}
         label={checkboxLabel}
         className={checkboxClassName}
         hasError={error && touched}

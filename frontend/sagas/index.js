@@ -1,18 +1,25 @@
-import { delay } from 'redux-saga';
-import { takeLatest, takeEvery, select, put, call, all } from 'redux-saga/effects';
+import { delay } from "redux-saga";
+import {
+  takeLatest,
+  takeEvery,
+  select,
+  put,
+  call,
+  all,
+} from "redux-saga/effects";
 
-import { LOCATION_CHANGE, replace } from 'react-router-redux';
+import { LOCATION_CHANGE, replace } from "react-router-redux";
 
-import { trackError } from '../debug';
+import { trackError } from "../debug";
 
-import { userSelector } from '../selectors/shared/user';
-import { authenticationRedirectSelector } from '../selectors/shared/authentication';
+import { userSelector } from "../selectors/shared/user";
+import { authenticationRedirectSelector } from "../selectors/shared/authentication";
 
-import { isAuthenticated } from '../services/auth';
-import { notifications } from '../config';
-import { t } from '../utils/translations';
+import { isAuthenticated } from "../services/auth";
+import { notifications } from "../config";
+import { t } from "../utils/translations";
 
-import watchNofitications from './notifications';
+import watchNofitications from "./notifications";
 
 import {
   AUTHENTICATION_SET_SESSION_EXPIRY,
@@ -20,15 +27,23 @@ import {
   AUTHENTICATION_PRIVACY_POLICY_ACCEPTED,
   AUTHENTICATION_INITIAL_LOCALITY_CREATED,
   AUTHENTICATION_LOGOUT,
-} from '../constants/authentication';
+} from "../constants/authentication";
 
-import { resetApplicationState } from '../actions/application';
-import { expireUserSession, loginUserSucceeded, loginUserRedirecting } from '../actions/authentication';
-import { requestNotification } from '../actions/notifications';
+import { resetApplicationState } from "../actions/application";
+import {
+  expireUserSession,
+  loginUserSucceeded,
+  loginUserRedirecting,
+} from "../actions/authentication";
+import { requestNotification } from "../actions/notifications";
 
-import { bootIntercom, updateIntercom, shutdownIntercom } from '../services/intercom';
-import { setTrackJsUserId } from '../services/trackjs';
-import { setAnalyticsUserId } from '../services/analytics';
+import {
+  bootIntercom,
+  updateIntercom,
+  shutdownIntercom,
+} from "../services/intercom";
+import { setTrackJsUserId } from "../services/trackjs";
+import { setAnalyticsUserId } from "../services/analytics";
 
 export function* handleAuthenticationsetSessionExpiry({ payload }) {
   try {
@@ -40,7 +55,9 @@ export function* handleAuthenticationsetSessionExpiry({ payload }) {
 }
 
 // eslint-disable-next-line no-useless-escape
-const validDomainRegExp = new RegExp(`^https?:\/\/([A-z0-9]*\.)*${process.env.DOMAIN}`);
+const validDomainRegExp = new RegExp(
+  `^https?:\/\/([A-z0-9]*\.)*${process.env.DOMAIN}`
+);
 
 export function* handleAuthentication() {
   try {
@@ -50,11 +67,13 @@ export function* handleAuthentication() {
       if (redirect.match(validDomainRegExp)) {
         yield all([
           put(loginUserRedirecting()),
-          put(requestNotification({
-            type: notifications.success,
-            text: t('Login successful. You will now be redirected...'),
-            displayTime: 60000,
-          })),
+          put(
+            requestNotification({
+              type: notifications.success,
+              text: t("Login successful. You will now be redirected..."),
+              displayTime: 60000,
+            })
+          ),
         ]);
         window.location.replace(redirect);
       } else {
@@ -94,7 +113,10 @@ export function* watchLocationChange() {
 }
 
 export function* watchAuthenticationsetSessionExpiry() {
-  yield takeLatest(AUTHENTICATION_SET_SESSION_EXPIRY, handleAuthenticationsetSessionExpiry);
+  yield takeLatest(
+    AUTHENTICATION_SET_SESSION_EXPIRY,
+    handleAuthenticationsetSessionExpiry
+  );
 }
 
 export function* watchAuthentication() {
