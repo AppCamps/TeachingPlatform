@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /* eslint-disable import/no-webpack-loader-syntax */
-import image1 from "!file-loader?name=[name]-[hash].[ext]!./image1.png";
-import image2 from "!file-loader?name=[name]-[hash].[ext]!./image2.png";
+import image1 from "!file-loader?name=[name]-[contenthash].[ext]!./image1.png";
+import image2 from "!file-loader?name=[name]-[contenthash].[ext]!./image2.png";
 /* eslint-enable import/no-webpack-loader-syntax */
 
 import style from "./style.scss";

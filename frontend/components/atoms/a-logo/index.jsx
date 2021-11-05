@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router";
 
 /* eslint-disable import/no-webpack-loader-syntax */
-import image from "!file-loader?name=[name]-[hash].[ext]!./logo.png";
-import image2x from "!file-loader?name=[name]-[hash].[ext]!./logo@2x.png";
+import image from "!file-loader?name=[name]-[contenthash].[ext]!./logo.png";
+import image2x from "!file-loader?name=[name]-[contenthash].[ext]!./logo@2x.png";
 /* eslint-enable import/no-webpack-loader-syntax */
 
 import style from "./style.scss";
