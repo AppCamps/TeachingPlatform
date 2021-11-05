@@ -1,46 +1,54 @@
-const webpack = require('webpack');
-const CircularDependencyPlugin = require('circular-dependency-plugin');
-const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const fs = require("fs");
+const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 
-const devConfig = require('./webpack.config.base').config;
+const devConfig = require("./webpack.config.base").config;
 
-devConfig.entry.jsx = ['react-hot-loader/patch', devConfig.entry.jsx];
-devConfig.output.publicPath = 'https://localhost:8080/frontend/';
+devConfig.output.publicPath = "https://localhost:8080/frontend/";
+devConfig.optimization.moduleIds = "named";
+devConfig.mode = "development";
 
 devConfig.module.rules.push({
   test: /\.s?css$/,
   include: /frontend/,
   use: [
-    'style-loader',
+    "style-loader",
     {
-      loader: 'css-loader',
-      query: 'modules&sourceMap&importLoaders=1&camelCase&localIdentName=[folder]__[local]__[hash:base64:5]',
+      loader: "css-loader",
+      options: {
+        modules: {
+          localIdentName: "[folder]__[local]__[hash:base64:5]",
+          exportLocalsConvention: "camelCase",
+        },
+        sourceMap: true,
+        importLoaders: 1,
+      },
     },
-    'postcss-loader',
-    'sass-loader',
+    "postcss-loader",
+    "sass-loader",
   ],
 });
 
-devConfig.plugins.push(
-  new webpack.NamedModulesPlugin(),
-  new CircularDependencyPlugin({
-    exclude: /node_modules/,
-    include: /frontend/,
-  }),
-  new HtmlWebpackHarddiskPlugin()
-);
+devConfig.plugins.push(new HtmlWebpackHarddiskPlugin());
 
 devConfig.devServer = {
-  contentBase: './frontend',
-  https: true,
-  headers: {
-    'Access-Control-Allow-Origin': '*',
+  static: "./frontend",
+  http2: true,
+  compress: true,
+  https: {
+    key: fs.readFileSync("certs/www/webpack.key"),
+    cert: fs.readFileSync("certs/www/webpack.crt"),
   },
-  allowedHosts: [
-    '.appcamps.localhost',
-  ],
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+  },
+  allowedHosts: [".appcamps.localhost"],
+  hot: true,
+  client: {
+    progress: true,
+    reconnect: 5,
+  },
 };
 
-devConfig.devtool = 'source-map'; // used by redux dev tools in order to show the trace.
+devConfig.devtool = "source-map"; // used by redux dev tools in order to show the trace.
 
 module.exports = devConfig;

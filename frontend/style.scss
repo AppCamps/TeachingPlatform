@@ -1,10 +1,10 @@
-@import './components/__css__/colors.scss';
-@import './components/__css__/grid.scss';
-@import './components/__css__/font-families.scss';
-@import './components/__css__/typography.scss';
+@import "./components/__css__/colors.scss";
+@import "./components/__css__/grid.scss";
+@import "./components/__css__/font-families.scss";
+@import "./components/__css__/typography.scss";
 
 :global {
-  @import '~normalize.css';
+  @import "~normalize.css";
 }
 
 body,
