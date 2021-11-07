@@ -32,16 +32,17 @@ show_undeployed_changes()
     git fetch $REMOTE
     local range="$REMOTE/master..$BRANCH"
     local commits=$(git log --reverse --pretty=format:'%h | %cr: %s (%an)' $range)
+    local last_commit_on_branch=$(git log -n1 --pretty=format:'%h | %cr: %s (%an)')
 
     if [ -z "$commits" ]; then
-        echo "Nothing to deploy"
-        exit 1
+        echo -e "Nothing new to deploy. Redeploying commit:\n"
+        echo -e "$last_commit_on_branch"
     else
         echo -e "Undeployed commits:\n"
         echo -e "$commits"
-        echo -e -n "\nPress enter to continue... "
-        read
     fi
+    echo -e -n "\nPress enter to continue... "
+    read
 }
 
 backup_database()
