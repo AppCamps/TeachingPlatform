@@ -117,7 +117,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: "./index.html",
       title: "App Camps - Programmieren im Unterricht",
-      filename: "../../app/views/teach/index.erb",
+      filename: "../../app/views/teach/index.html",
       alwaysWriteToDisk: true,
     }),
     new FaviconsWebpackPlugin({
