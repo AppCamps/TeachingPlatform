@@ -59,8 +59,20 @@ const config = {
         use: "babel-loader",
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|png|gif)$/,
         use: { loader: "url-loader", options: { limit: 25000 } },
+        include: /frontend/,
+      },
+      {
+        test: /\.svg$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              encoding: "base64",
+            },
+          },
+        ],
         include: /frontend/,
       },
     ],
