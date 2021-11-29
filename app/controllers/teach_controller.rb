@@ -6,7 +6,7 @@ class TeachController < ApplicationController
 
   def render_app
     respond_to do |format|
-      format.html { render 'teach/index.html', layout: false }
+      format.html { render file: "#{Rails.root}/app/views/teach/index.html", layout: false }
       format.all { head :not_found }
     end
   end

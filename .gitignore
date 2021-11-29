@@ -37,3 +37,4 @@ public/frontend
 coverage
 
 app/views/teach/index.erb
+app/views/teach/index.html
