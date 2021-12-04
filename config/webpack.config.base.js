@@ -60,7 +60,7 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif)$/,
-        use: { loader: "url-loader", options: { limit: 25000 } },
+        use: { loader: "url-loader" },
         include: /frontend/,
       },
       {
