@@ -59,8 +59,19 @@ const config = {
         use: "babel-loader",
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|png|gif)$/,
         use: { loader: "url-loader", options: { limit: 25000 } },
+        include: /frontend/,
+      },
+      {
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {
+            // make all svg images to work in IE
+            iesafe: true,
+          },
+        },
         include: /frontend/,
       },
     ],
