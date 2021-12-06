@@ -60,7 +60,12 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
-        use: { loader: "url-loader", options: { limit: 25000 } },
+        use: [
+          "file-loader",
+          {
+            loader: "image-webpack-loader",
+          },
+        ],
         include: /frontend/,
       },
     ],
