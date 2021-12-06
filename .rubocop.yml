@@ -1,12 +1,12 @@
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.7
   Exclude:
-    - '**/templates/**/*'
-    - 'vendor/**/*'
-    - 'node_modules/**/*'
-    - 'bin/**/*'
-    - 'actionpack/lib/action_dispatch/journey/parser.rb'
-    - 'db/schema.rb'
+    - "**/templates/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+    - "bin/**/*"
+    - "actionpack/lib/action_dispatch/journey/parser.rb"
+    - "db/schema.rb"
 
 Metrics/LineLength:
   Max: 100
