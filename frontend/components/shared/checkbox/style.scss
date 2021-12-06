@@ -1,16 +1,16 @@
-@import '../../__css__/animations.scss';
-@import '../../__css__/colors.scss';
-@import '../../__css__/font-families.scss';
-@import '../../__css__/typography.scss';
+@import "../../__css__/animations.scss";
+@import "../../__css__/colors.scss";
+@import "../../__css__/font-families.scss";
+@import "../../__css__/typography.scss";
 
 .label {
   @include font-size-default;
   box-sizing: border-box;
-  margin: .5em 0;
+  margin: 0.5em 0;
   line-height: 1.5em;
 
   &.error input + span {
-    box-shadow: 0 0 5px $color-red ! important;
+    box-shadow: 0 0 5px $color-red !important;
   }
 
   input {
@@ -21,7 +21,8 @@
       cursor: pointer;
     }
 
-    &:disabled, &:disabled + * {
+    &:disabled,
+    &:disabled + * {
       cursor: not-allowed;
     }
 
@@ -30,12 +31,12 @@
       outline: none;
 
       display: inline-block;
-      content: '';
+      content: "";
       width: 1.5em;
       height: 1.5em;
       background-color: $color-gray-light-4;
       border: 1px solid $color-gray-light-2;
-      margin-right: .5em;
+      margin-right: 0.5em;
       text-align: center;
       vertical-align: top;
     }
@@ -49,7 +50,7 @@
       content: "";
       height: 1.5em;
       width: 1.5em;
-      background-image: url(./checked.svg);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2232.818 -1235.338 10.293 9.852'%3e%3cdefs%3e%3cstyle%3e.a%7bfill:none;stroke:%237ab51e;stroke-width:1px;%7d%3c/style%3e%3c/defs%3e%3cpath class='a' d='M1383,1407.041l3.234,4.506,6.247-8.7' transform='translate(-3615.412 -2637.89)'/%3e%3c/svg%3e"); //./checked.svg
       background-repeat: no-repeat;
       background-position: center;
       background-size: 1em 1em;
