@@ -98,7 +98,7 @@
   },
   "dependencies": {
     "autobind-decorator": "^2.4.0",
-    "axios": "^0.21.4",
+    "axios": "^0.24.0",
     "bluebird": "^3.7.2",
     "camelize": "^1.0.0",
     "classnames": "^2.2.3",
