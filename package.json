@@ -106,7 +106,7 @@
     "es6-promise": "^4.2.8",
     "fetch": "^1.1.0",
     "html-react-parser": "^1.4.4",
-    "jsonapi-serializer": "^3.3.0",
+    "jsonapi-serializer": "^3.6.7",
     "lodash.chunk": "^4.2.0",
     "lodash.flatmap": "^4.5.0",
     "lodash.get": "^4.4.2",
