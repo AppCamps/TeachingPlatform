@@ -2,7 +2,7 @@ import { expect } from "../chai_helper";
 
 import { setTrackJsUserId } from "../../services/trackjs";
 
-describe("analytics service", () => {
+describe("trackjs service", () => {
   let calledArgs;
   beforeEach(() => {
     calledArgs = [];
@@ -17,8 +17,8 @@ describe("analytics service", () => {
     delete global.trackJs;
   });
 
-  describe("setAnalyticsUserId", () => {
-    it("sets userId for google analytics", () => {
+  describe("setTrackJsUserId", () => {
+    it("sets userId for trackjs", () => {
       setTrackJsUserId("thoren-12");
 
       expect(calledArgs[0]).to.deep.eql([{ userId: "thoren-12" }]);

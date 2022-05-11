@@ -43,7 +43,6 @@ import {
   shutdownIntercom,
 } from "../services/intercom";
 import { setTrackJsUserId } from "../services/trackjs";
-import { setAnalyticsUserId } from "../services/analytics";
 
 export function* handleAuthenticationsetSessionExpiry({ payload }) {
   try {
@@ -80,7 +79,6 @@ export function* handleAuthentication() {
         yield all([
           call(bootIntercom, user),
           call(setTrackJsUserId, user.id),
-          call(setAnalyticsUserId, user.id),
           put(loginUserSucceeded()),
           put(replace(redirect)),
         ]);

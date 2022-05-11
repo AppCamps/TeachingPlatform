@@ -12,11 +12,6 @@ require("dotenv").config({ silent: true });
 
 const NODE_ENV = process.env.NODE_ENV || "development";
 const TRACKJS_APPLICATION = process.env.TRACKJS_APPLICATION || NODE_ENV;
-const GOOGLE_ANALYTICS_ID = process.env.GOOGLE_ANALYTICS_ID;
-const GOOGLE_ANALYTICS_CONVERSION_ID =
-  process.env.GOOGLE_ANALYTICS_CONVERSION_ID;
-const GOOGLE_ANALYTICS_CONVERSION_LABEL =
-  process.env.GOOGLE_ANALYTICS_CONVERSION_LABEL;
 const VERSION =
   process.env.SOURCE_VERSION ||
   execSync("git log -n 1 --abbrev=15 --format=%h").toString().trim();
@@ -98,13 +93,6 @@ const config = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
       "process.env.TRACKJS_APPLICATION": JSON.stringify(TRACKJS_APPLICATION),
-      "process.env.GOOGLE_ANALYTICS_ID": JSON.stringify(GOOGLE_ANALYTICS_ID),
-      "process.env.GOOGLE_ANALYTICS_CONVERSION_ID": JSON.stringify(
-        GOOGLE_ANALYTICS_CONVERSION_ID
-      ),
-      "process.env.GOOGLE_ANALYTICS_CONVERSION_LABEL": JSON.stringify(
-        GOOGLE_ANALYTICS_CONVERSION_LABEL
-      ),
       "process.env.VERSION": JSON.stringify(VERSION),
       "process.env.INTERCOM_APP_ID": JSON.stringify(INTERCOM_APP_ID),
       "process.env.PREVIEW_FEATURES": JSON.stringify(PREVIEW_FEATURES),
