@@ -301,12 +301,6 @@ describe("authentication actions", () => {
 
     describe("sucess", () => {
       it("should make an api request and dispatch", () => {
-        const gaArgs = [];
-        ActionsRewireAPI.__Rewire__("trackAnalyticsEvent", (...args) => {
-          gaArgs.push(args);
-          return true;
-        });
-
         const user = factory.build("user", { privacyPolicyAccepted: false });
         const acceptedUser = { ...user, privacyPolicyAccepted: true };
 
@@ -335,7 +329,6 @@ describe("authentication actions", () => {
           .dispatch(acceptPrivacyPolicy(user, "redirect_url"))
           .then(() => {
             expect(updateUserMock.mock.calls[0]).to.eql([acceptedUser]);
-            expect(gaArgs[0]).to.deep.eql(["PrivacyPolicy", "accept"]);
 
             const calledActions = store
               .getActions()
@@ -350,19 +343,12 @@ describe("authentication actions", () => {
 
   describe("#declinePrivacyPolicy", () => {
     afterEach(() => {
-      ActionsRewireAPI.__ResetDependency__("trackAnalyticsEvent");
       ActionsRewireAPI.__ResetDependency__("api");
       delete window.trackJs;
     });
 
     describe("success", () => {
       it("should make an api request and dispatch", (done) => {
-        const gaArgs = [];
-        ActionsRewireAPI.__Rewire__("trackAnalyticsEvent", (...args) => {
-          gaArgs.push(args);
-          return true;
-        });
-
         ActionsRewireAPI.__Rewire__("api", {
           deleteSession: () => Promise.reject({}),
         });
@@ -380,8 +366,6 @@ describe("authentication actions", () => {
         store
           .dispatch(declinePrivacyPolicy(user, "token_123"))
           .then(() => {
-            expect(gaArgs[0]).to.deep.eql(["PrivacyPolicy", "decline"]);
-
             const calledActions = store.getActions();
             expect(calledActions).to.deep.eql(expectedActions);
 

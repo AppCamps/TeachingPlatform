@@ -33,7 +33,6 @@ import {
   shutdownIntercom,
 } from "../../services/intercom";
 import { setTrackJsUserId } from "../../services/trackjs";
-import { setAnalyticsUserId } from "../../services/analytics";
 
 import {
   AUTHENTICATION_SET_SESSION_EXPIRY,
@@ -101,7 +100,6 @@ describe("sagas", () => {
       const authenticatedUserEffects = (user, redirect) => [
         call(bootIntercom, user),
         call(setTrackJsUserId, user.id),
-        call(setAnalyticsUserId, user.id),
         put(loginUserSucceeded()),
         put(replace(redirect)),
       ];

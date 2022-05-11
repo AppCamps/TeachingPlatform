@@ -16,7 +16,6 @@ import {
 import { apiFetched } from "../actions/api";
 
 import * as api from "../services/api";
-import { trackAnalyticsEvent } from "../services/analytics";
 
 export function setSessionExpiry(session) {
   return {
@@ -128,7 +127,6 @@ export function loginPrivacyPolicyAccepted() {
 
 export function declinePrivacyPolicy() {
   return (dispatch) => {
-    trackAnalyticsEvent("PrivacyPolicy", "decline");
     return dispatch(logoutUser());
   };
 }
@@ -147,7 +145,6 @@ export function acceptPrivacyPolicy(user) {
 
       dispatch(apiFetched(payload));
       dispatch(loginPrivacyPolicyAccepted());
-      trackAnalyticsEvent("PrivacyPolicy", "accept");
 
       return Promise.resolve();
     });
