@@ -149,24 +149,15 @@ GEM
       railties (>= 5.0.0)
     faker (2.2.1)
       i18n (>= 0.8)
-    faraday (1.4.2)
-      faraday-em_http (~> 1.0)
-      faraday-em_synchrony (~> 1.0)
-      faraday-excon (~> 1.1)
-      faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.1)
-      multipart-post (>= 1.2, < 3)
+    faraday (2.6.0)
+      faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
-    faraday-em_http (1.0.0)
-    faraday-em_synchrony (1.0.0)
-    faraday-excon (1.1.0)
-    faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
+    faraday-net_http (3.0.1)
     ffi (1.15.1)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
-    gibbon (3.4.0)
-      faraday (>= 0.16.0)
+    gibbon (3.4.4)
+      faraday (>= 1.0)
       multi_json (>= 1.11.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -224,7 +215,6 @@ GEM
     mini_portile2 (2.5.3)
     minitest (5.14.4)
     multi_json (1.15.0)
-    multipart-post (2.1.1)
     mysql2 (0.4.10)
     nested_form (0.3.2)
     nio4r (2.5.8)
@@ -363,7 +353,7 @@ GEM
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     safely_block (0.3.0)
       errbase (>= 0.1.1)
     sass-rails (6.0.0)
@@ -445,7 +435,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   font-awesome-sass
-  gibbon
+  gibbon (= 3.4.4)
   jsonapi-parser
   lograge
   mandrill_mailer

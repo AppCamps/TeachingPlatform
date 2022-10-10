@@ -36,7 +36,7 @@ gem 'shrine', '3.4.0'
 gem 'lograge'
 gem 'passenger'
 
-gem 'gibbon'
+gem 'gibbon', '3.4.4'
 gem 'mandrill_mailer'
 gem 'rollbar'
 gem 'sucker_punch'
