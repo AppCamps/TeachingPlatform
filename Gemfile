@@ -67,7 +67,7 @@ group :test do
   gem 'database_cleaner'
   gem "factory_bot_rails"
   gem 'faker'
-  gem 'puma'
+  gem 'puma', '5.6.5'
   gem 'rspec-collection_matchers'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '3.1.3'

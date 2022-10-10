@@ -236,7 +236,7 @@ GEM
       pry (~> 0.9)
       slop (~> 3.0)
     public_suffix (4.0.6)
-    puma (5.5.2)
+    puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -444,7 +444,7 @@ DEPENDENCIES
   passenger
   pg
   pry-remote
-  puma
+  puma (= 5.6.5)
   rack-attack
   rails (~> 5.2.6)
   rails-i18n (~> 5.0.0)
