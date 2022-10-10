@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-- ruby 2.7.5 + bundler
+- ruby 2.7.6 + bundler
 - node 12.22.7 + yarn
 - postgres 9.6
 - mysql
