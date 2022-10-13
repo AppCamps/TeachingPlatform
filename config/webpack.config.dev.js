@@ -1,8 +1,11 @@
 const fs = require("fs");
 const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devConfig = require("./webpack.config.base").config;
-
+const miniCssExtractPlugin = new MiniCssExtractPlugin({
+  filename: "[name]-[contenthash].css",
+  chunkFilename: "[id]-[contenthash].css",
+});
 devConfig.output.publicPath = "https://localhost:8080/frontend/";
 devConfig.optimization.moduleIds = "named";
 devConfig.mode = "development";
@@ -11,7 +14,7 @@ devConfig.module.rules.push({
   test: /\.s?css$/,
   include: /frontend/,
   use: [
-    "style-loader",
+    MiniCssExtractPlugin.loader,
     {
       loader: "css-loader",
       options: {
@@ -28,7 +31,7 @@ devConfig.module.rules.push({
   ],
 });
 
-devConfig.plugins.push(new HtmlWebpackHarddiskPlugin());
+devConfig.plugins.push(new HtmlWebpackHarddiskPlugin(), miniCssExtractPlugin);
 
 devConfig.devServer = {
   static: "./frontend",
