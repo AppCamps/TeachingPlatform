@@ -101,7 +101,7 @@
     "axios": "0.27.2",
     "bluebird": "^3.7.2",
     "camelize": "^1.0.1",
-    "classnames": "^2.3.1",
+    "classnames": "2.3.2",
     "es6-error": "^4.1.1",
     "es6-promise": "^4.2.8",
     "fetch": "^1.1.0",
