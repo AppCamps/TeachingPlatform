@@ -1,9 +1,9 @@
 module.exports = {
   plugins: {
-    'rucksack-css': {
+    "rucksack-css": {
       autoprefixer: true,
     },
-    'postcss-calc': {
+    "postcss-calc": {
       warnWhenCannotResolve: false,
     },
   },

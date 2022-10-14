@@ -94,7 +94,7 @@
     "uuid": "^3.0.1",
     "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0"
+    "webpack-dev-server": "4.7.0"
   },
   "dependencies": {
     "autobind-decorator": "^2.4.0",
