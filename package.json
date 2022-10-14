@@ -115,7 +115,7 @@
     "lodash.reduce": "^4.6.0",
     "node-sass": "^7.0.1",
     "normalize.css": "^7.0.0",
-    "prop-types": "^15.5.10",
+    "prop-types": "15.8.1",
     "react": "^16.0.0",
     "react-deep-force-update": "^2.0.1",
     "react-dom": "16",
