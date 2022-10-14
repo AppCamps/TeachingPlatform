@@ -34,18 +34,21 @@ devConfig.module.rules.push({
 devConfig.plugins.push(new HtmlWebpackHarddiskPlugin(), miniCssExtractPlugin);
 
 devConfig.devServer = {
+  hot: true,
   static: "./frontend",
-  http2: true,
   compress: true,
-  https: {
-    key: fs.readFileSync("certs/www/webpack.key"),
-    cert: fs.readFileSync("certs/www/webpack.crt"),
+  host: "localhost",
+  allowedHosts: ".appcamps.localhost",
+  server: {
+    type: "https",
+    options: {
+      key: fs.readFileSync("certs/www/webpack.key"),
+      cert: fs.readFileSync("certs/www/webpack.crt"),
+    },
   },
   headers: {
     "Access-Control-Allow-Origin": "*",
   },
-  allowedHosts: [".appcamps.localhost"],
-  hot: true,
   client: {
     progress: true,
     reconnect: 5,
