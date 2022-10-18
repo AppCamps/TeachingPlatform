@@ -79,7 +79,7 @@
     "postcss-loader": "~7.0.1",
     "prettier": "^2.4.1",
     "raf": "^3.4.0",
-    "react-style-proptype": "^3.0.0",
+    "react-style-proptype": "3.2.2",
     "redux-mock-store": "^1.1.4",
     "redux-saga-test-plan": "^3.1.0",
     "rucksack-css": "^1.0.2",
