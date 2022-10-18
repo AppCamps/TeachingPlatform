@@ -3088,14 +3088,11 @@ exports[`<Registration /> renders form correctly 1`] = `
                                     rows={3}
                                     value=""
                                   >
-                                    <TextareaAutosize
+                                    <ForwardRef(TextareaAutosize)
                                       className="textarea"
                                       disabled={false}
-                                      onChange={[Function]}
-                                      onHeightChange={[Function]}
                                       placeholder={null}
                                       rows={3}
-                                      useCacheForDOMMeasurements={false}
                                     >
                                       <textarea
                                         className="textarea"
@@ -3103,13 +3100,8 @@ exports[`<Registration /> renders form correctly 1`] = `
                                         onChange={[Function]}
                                         placeholder={null}
                                         rows={3}
-                                        style={
-                                          Object {
-                                            "height": 0,
-                                          }
-                                        }
                                       />
-                                    </TextareaAutosize>
+                                    </ForwardRef(TextareaAutosize)>
                                   </TextArea>
                                 </div>
                               </TextAreaWithLabel>
