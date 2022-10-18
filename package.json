@@ -133,7 +133,6 @@
     "slugify": "^1.0.2",
     "spinkit": "^1.2.5",
     "string.prototype.startswith": "^0.2.0",
-    "url-search-params-polyfill": "^2.0.1",
-    "whatwg-fetch": "^2.0.0"
+    "url-search-params-polyfill": "^2.0.1"
   }
 }
