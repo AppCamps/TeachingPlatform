@@ -109,7 +109,7 @@
     "lodash.intersection": "^4.4.0",
     "lodash.pick": "^4.4.0",
     "lodash.reduce": "^4.6.0",
-    "node-sass": "^7.0.1",
+    "node-sass": "7.0.3",
     "normalize.css": "^7.0.0",
     "prop-types": "15.8.1",
     "react": "16.14.0",
