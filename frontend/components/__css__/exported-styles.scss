@@ -1,0 +1,9 @@
+// this file exists in order to get rid of sass-variable-loader npm package which is unmaintained
+
+@import "./colors.scss";
+
+:export {
+  colorBlack: $color-black;
+  colorGray: $color-gray;
+  colorFontDefault: $color-font-default;
+}

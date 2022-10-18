@@ -1,5 +1,5 @@
 /* eslint-disable */
-import cssColors from "!!sass-variable-loader!./components/__css__/colors.scss";
+import cssColors from "./components/__css__/exported-styles.scss";
 
 const t = (t) => t;
 
