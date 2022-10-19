@@ -1,4 +1,5 @@
 import React from "react";
+import { QRCode } from "react-qrcode-logo";
 import PropTypes from "prop-types";
 import { parseInternalCardLink } from "../../../utils";
 import Container from "../../shared/container";
@@ -22,6 +23,9 @@ export default function CardsPage({ encoded }, { t }) {
         <p className={style.showCodeLink}>
           <span>2. {t("Submit this code")}: </span>
           <b>{code}</b>
+          <div className={style.qrCodeContainer}>
+            <QRCode value={decoded} />
+          </div>
         </p>
       </Container>
     </div>

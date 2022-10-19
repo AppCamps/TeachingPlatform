@@ -1,7 +1,11 @@
-@import '../../__css__/typography.scss';
+@import "../../__css__/typography.scss";
 
 .form-container {
   margin-top: 128px;
+}
+
+.qrCodeContainer {
+  margin-left: 390px;
 }
 
 .show-code-text {
@@ -10,7 +14,7 @@
 
 .show-code-link {
   font-size: calc(#{$font-size-default} * 1.5);
-  
+
   span {
     display: inline-block;
     width: 400px;
