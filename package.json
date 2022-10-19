@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "auditjs": "^4.0.32",
+    "auditjs": "4.0.38",
     "axios-mock-adapter": "^1.9.0",
     "babel-core": "6.26.3",
     "babel-eslint": "^10.1.0",
