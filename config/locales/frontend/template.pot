@@ -119,7 +119,15 @@ msgid "back to my classes"
 msgstr ""
 
 #: frontend/components/classes/index.jsx
+msgid "Archive confirmation message"
+msgstr ""
+
+#: frontend/components/classes/index.jsx
 msgid "You did not add any courses yet"
+msgstr ""
+
+#: frontend/components/classes/index.jsx
+msgid "Archive class"
 msgstr ""
 
 #: frontend/components/classes/index.jsx
@@ -259,19 +267,16 @@ msgstr ""
 #: frontend/components/login/login-form/index.jsx
 #: frontend/components/password-reset/index.jsx
 #: frontend/components/registration/index.jsx
-#: frontend/components/registration/newsletters/index.jsx
 msgid "Email"
 msgstr ""
 
 #: frontend/components/edit-user/index.jsx
 #: frontend/components/registration/index.jsx
-#: frontend/components/registration/newsletters/index.jsx
 msgid "First name"
 msgstr ""
 
 #: frontend/components/edit-user/index.jsx
 #: frontend/components/registration/index.jsx
-#: frontend/components/registration/newsletters/index.jsx
 msgid "Last name"
 msgstr ""
 
@@ -298,7 +303,7 @@ msgid "Email confirmation"
 msgstr ""
 
 #: frontend/components/email-confirmation/index.jsx
-msgid "We will send you an email containing a link to confirm your email."
+msgid "We will send you an email containing a link to confirm your email. If you have not received an email, yet, please contact us at {supportEmail}"
 msgstr ""
 
 #: frontend/components/email-confirmation/index.jsx
@@ -420,7 +425,7 @@ msgid "Password reset"
 msgstr ""
 
 #: frontend/components/password-reset/index.jsx
-msgid "We will send you an email containing a link to reset your password."
+msgid "We will send you an email containing a link to reset your password. If you have not received an email, yet, please contact us at {supportEmail}"
 msgstr ""
 
 #: frontend/components/password-reset/reset-form.jsx
@@ -465,10 +470,6 @@ msgid "I accept to receive our newsletter per email (e.g notifications about new
 msgstr ""
 
 #: frontend/components/registration/index.jsx
-msgid "I will answer questionnaires to evaluate the quality of our teaching materials. Before and after the execution of every course there will be short questionnaires (approx. 5 minutes). To be able to provide our platform for free we need to collect metrics to prove that our teaching materials are working."
-msgstr ""
-
-#: frontend/components/registration/index.jsx
 msgid "Data protection"
 msgstr ""
 
@@ -486,6 +487,14 @@ msgstr ""
 
 #: frontend/components/registration/index.jsx
 msgid "We are sorry, but this platform was built with teachers and course instructors in mind. Nonetheless we provide a newsletter for students like you, where we will keep you informed about programming, computer science and technology."
+msgstr ""
+
+#: frontend/components/registration/index.jsx
+msgid "Please read our blog post"
+msgstr ""
+
+#: frontend/components/registration/index.jsx
+msgid "To blog post"
 msgstr ""
 
 #: frontend/components/registration/index.jsx
@@ -531,14 +540,6 @@ msgstr ""
 
 #: frontend/components/registration/newsletters/index.jsx
 msgid "Thank you for you interest in App Camps"
-msgstr ""
-
-#: frontend/components/registration/newsletters/index.jsx
-msgid "Subscribe to our {resourceName} newsletter"
-msgstr ""
-
-#: frontend/components/registration/newsletters/index.jsx
-msgid "Subscribe"
 msgstr ""
 
 #: frontend/components/registration/success/index.jsx

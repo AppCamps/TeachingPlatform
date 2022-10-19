@@ -163,8 +163,16 @@ msgid "back to my classes"
 msgstr "zur Klassenübersicht"
 
 #: frontend/components/classes/index.jsx
+msgid "Archive confirmation message"
+msgstr "Möchtest Du diese Klasse wirklich archivieren?"
+
+#: frontend/components/classes/index.jsx
 msgid "You did not add any courses yet"
 msgstr "Du hast noch keine Kurse hinzugefügt"
+
+#: frontend/components/classes/index.jsx
+msgid "Archive class"
+msgstr "Klasse archivieren"
 
 #: frontend/components/classes/index.jsx
 #: frontend/components/edit-class/index.jsx
@@ -319,19 +327,16 @@ msgstr "Gespeichert"
 #: frontend/components/login/login-form/index.jsx
 #: frontend/components/password-reset/index.jsx
 #: frontend/components/registration/index.jsx
-#: frontend/components/registration/newsletters/index.jsx
 msgid "Email"
 msgstr "E-Mail"
 
 #: frontend/components/edit-user/index.jsx
 #: frontend/components/registration/index.jsx
-#: frontend/components/registration/newsletters/index.jsx
 msgid "First name"
 msgstr "Vorname"
 
 #: frontend/components/edit-user/index.jsx
 #: frontend/components/registration/index.jsx
-#: frontend/components/registration/newsletters/index.jsx
 msgid "Last name"
 msgstr "Nachname"
 
@@ -358,7 +363,11 @@ msgid "Email confirmation"
 msgstr "E-Mail bestätigen"
 
 #: frontend/components/email-confirmation/index.jsx
-msgid "We will send you an email containing a link to confirm your email."
+#, fuzzy
+#| msgid "We will send you an email containing a link to confirm your email."
+msgid ""
+"We will send you an email containing a link to confirm your email. If you "
+"have not received an email, yet, please contact us at {supportEmail}"
 msgstr "Wir schicken dir eine E-Mail mit einem Link zum Bestätigen zu."
 
 #: frontend/components/email-confirmation/index.jsx
@@ -492,7 +501,11 @@ msgid "Password reset"
 msgstr "Passwort zurücksetzen"
 
 #: frontend/components/password-reset/index.jsx
-msgid "We will send you an email containing a link to reset your password."
+#, fuzzy
+#| msgid "We will send you an email containing a link to reset your password."
+msgid ""
+"We will send you an email containing a link to reset your password. If you "
+"have not received an email, yet, please contact us at {supportEmail}"
 msgstr ""
 "Wir schicken dir eine E-Mail mit einem Link zum zurücksetzen deines "
 "Passworts zu."
@@ -549,19 +562,6 @@ msgstr ""
 "{email} widerrufen werden."
 
 #: frontend/components/registration/index.jsx
-msgid ""
-"I will answer questionnaires to evaluate the quality of our teaching "
-"materials. Before and after the execution of every course there will be "
-"short questionnaires (approx. 5 minutes). To be able to provide our platform "
-"for free we need to collect metrics to prove that our teaching materials are "
-"working."
-msgstr ""
-"Ich beteilige mich an den Fragebögen zur Evaluation der Unterlagen. Vor und "
-"nach jeder Durchführung eines Kurses gibt es kurze Fragebögen (ca. 5 "
-"Minuten). Damit wir unser Angebot weiterhin kostenlos anbieten können "
-"brauchen wir Zahlen die belegen, wie die Unterlagen eingesetzt werden."
-
-#: frontend/components/registration/index.jsx
 msgid "Data protection"
 msgstr "Datenschutz"
 
@@ -588,6 +588,14 @@ msgstr ""
 "Schüler*innen haben bieten wir allerdings einen Newsletter an. Wir "
 "informieren über interessante Themen und Neuigkeiten rund um die Themen "
 "Programmieren, Informatik und Technologie."
+
+#: frontend/components/registration/index.jsx
+msgid "Please read our blog post"
+msgstr ""
+
+#: frontend/components/registration/index.jsx
+msgid "To blog post"
+msgstr ""
 
 #: frontend/components/registration/index.jsx
 msgid "parent"
@@ -640,14 +648,6 @@ msgstr "Ich bin"
 #: frontend/components/registration/newsletters/index.jsx
 msgid "Thank you for you interest in App Camps"
 msgstr "Danke für dein Interesse an App Camps"
-
-#: frontend/components/registration/newsletters/index.jsx
-msgid "Subscribe to our {resourceName} newsletter"
-msgstr "Abonniere unseren {resourceName}newsletter"
-
-#: frontend/components/registration/newsletters/index.jsx
-msgid "Subscribe"
-msgstr "Abonnieren"
 
 #: frontend/components/registration/success/index.jsx
 msgid "Registration success"
@@ -1030,6 +1030,24 @@ msgstr "Mindestens 8 Zeichen"
 #: frontend/utils/translations.js
 msgid "has already been taken"
 msgstr "Bereits vorhanden"
+
+#~ msgid ""
+#~ "I will answer questionnaires to evaluate the quality of our teaching "
+#~ "materials. Before and after the execution of every course there will be "
+#~ "short questionnaires (approx. 5 minutes). To be able to provide our "
+#~ "platform for free we need to collect metrics to prove that our teaching "
+#~ "materials are working."
+#~ msgstr ""
+#~ "Ich beteilige mich an den Fragebögen zur Evaluation der Unterlagen. Vor "
+#~ "und nach jeder Durchführung eines Kurses gibt es kurze Fragebögen (ca. 5 "
+#~ "Minuten). Damit wir unser Angebot weiterhin kostenlos anbieten können "
+#~ "brauchen wir Zahlen die belegen, wie die Unterlagen eingesetzt werden."
+
+#~ msgid "Subscribe to our {resourceName} newsletter"
+#~ msgstr "Abonniere unseren {resourceName}newsletter"
+
+#~ msgid "Subscribe"
+#~ msgstr "Abonnieren"
 
 #~ msgid "News & announcements"
 #~ msgstr "Neuigkeiten & Ankündigungen"
