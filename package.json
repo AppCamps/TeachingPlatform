@@ -125,7 +125,7 @@
     "redux": "4.0.5",
     "redux-auth-wrapper": "^1.0.0",
     "redux-form": "^7.4.0",
-    "redux-i18n": "^1.0.6",
+    "redux-i18n": "^1.5.25",
     "redux-orm": "^0.9.4",
     "redux-orm-proptypes": "^0.1.0",
     "redux-saga": "^0.15.4",
