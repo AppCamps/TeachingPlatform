@@ -31,11 +31,10 @@ msgstr ""
 #: frontend/actions/email-confirmation.js
 msgid ""
 "The confirmation of your email address was not successful. Please, contact "
-"us via philipp@appcamps.de so that we can confirm your account."
+"us via orga@appcamps.de so that we can confirm your account."
 msgstr ""
 "Die Bestätigung deiner E-Mail-Adresse war nicht erfolgreich. Bitte melde "
-"dich bei philipp@appcamps.de. Dann können wir deine E-Mail Adresse "
-"freischalten."
+"dich bei orga@appcamps.de. Dann können wir deine E-Mail Adresse freischalten."
 
 #: frontend/actions/email-confirmation.js
 msgid ""
@@ -997,11 +996,11 @@ msgstr "Zu viele Anfragen. Bitte versuchen sie es in ein paar Sekunden erneut."
 
 #: frontend/services/api/helpers.js
 msgid ""
-"There was an Error processing your request. Please contact philipp@appcamps."
-"de if the problem persists."
+"There was an Error processing your request. Please contact orga@appcamps.de "
+"if the problem persists."
 msgstr ""
-"Leider ist ein Fehler aufgetreten. Wende dich bitte an philipp@appcamps.de "
-"falls das Problem weiterhin besteht."
+"Es ist ein Fehler bei der Bearbeitung Ihrer Anfrage aufgetreten. Bitte "
+"kontaktieren Sie orga@appcamps.de, wenn das Problem weiterhin besteht."
 
 #: frontend/utils/translations.js
 msgid "Required"

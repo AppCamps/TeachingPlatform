@@ -2,7 +2,7 @@ export const translations = {
   'de': {
     'If the email is registered with App Camps and not confirmed yet you will soon receive a link to confirm it.': 'Falls die angegebene E-Mail-Adresse bei uns existiert bekommst du gleich einen Link zum Bestätigen deiner E-Mail-Adresse zugeschickt.',
     'Email confirmed. You may now login using your email and password.': 'Deine E-Mail-Adresse ist nun bestätigt. Du kannst dich jetzt mit deinem neuen Passwort anmelden.',
-    'The confirmation of your email address was not successful. Please, contact us via philipp@appcamps.de so that we can confirm your account.': 'Die Bestätigung deiner E-Mail-Adresse war nicht erfolgreich. Bitte melde dich bei philipp@appcamps.de. Dann können wir deine E-Mail Adresse freischalten.',
+    'The confirmation of your email address was not successful. Please, contact us via orga@appcamps.de so that we can confirm your account.': 'Die Bestätigung deiner E-Mail-Adresse war nicht erfolgreich. Bitte melde dich bei orga@appcamps.de. Dann können wir deine E-Mail Adresse freischalten.',
     'Your confirmation link has expired. Please restart the confirmation process.': 'Dein Bestätigungslink ist abgelaufen. Bitte starte denn Prozess erneut.',
     'If the email you provided is registered with App Camps you will soon receive an email containing a link to the reset form.': 'Falls die angegebene E-Mail-Adresse bei uns existiert bekommst du gleich einen Link zum zurücksetzen deines Passworts zugeschickt.',
     'Password successfully changed. You can now login with your new password.': 'Dein Passwort wurde erfolgreich geändert. Du kannst dich jetzt mit deinem neuen Passwort anmelden.',
@@ -208,7 +208,7 @@ export const translations = {
     'Special school': 'Förderschule',
     'Login successful. You will now be redirected...': 'Login erfolgreich. Sie werden jetzt weitergeleitet.',
     'Too many requests. Please try again in a few seconds.': 'Zu viele Anfragen. Bitte versuchen sie es in ein paar Sekunden erneut.',
-    'There was an Error processing your request. Please contact philipp@appcamps.de if the problem persists.': 'Leider ist ein Fehler aufgetreten. Wende dich bitte an philipp@appcamps.de falls das Problem weiterhin besteht.',
+    'There was an Error processing your request. Please contact orga@appcamps.de if the problem persists.': 'Es ist ein Fehler bei der Bearbeitung Ihrer Anfrage aufgetreten. Bitte kontaktieren Sie orga@appcamps.de, wenn das Problem weiterhin besteht.',
     'Required': 'Erforderlich',
     'Invalid': 'Ungültig',
     'Not an email': 'Keine E-Mail',
@@ -216,5 +216,9 @@ export const translations = {
     'You need to confirm our privacy policy': 'Du musst die Datenschutzbedingungen bestätigen',
     'At least 8 chars': 'Mindestens 8 Zeichen',
     'has already been taken': 'Bereits vorhanden',
+  },
+  'options': {
+    'plural_rule': 'n != 1',
+    'plural_number': '2',
   },
 }

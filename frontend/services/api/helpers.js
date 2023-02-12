@@ -74,7 +74,7 @@ function handleError(result) {
     requestNotification({
       type: notifications.failure,
       text: t(
-        "There was an Error processing your request. Please contact philipp@appcamps.de if the problem persists."
+        "There was an Error processing your request. Please contact orga@appcamps.de if the problem persists."
       ),
     })
   );

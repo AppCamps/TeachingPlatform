@@ -90,7 +90,7 @@ describe("Api", () => {
           expect(dispatchCalls[0][0]).to.eql(
             requestNotification({
               type: notifications.failure,
-              text: "There was an Error processing your request. Please contact philipp@appcamps.de if the problem persists.",
+              text: "There was an Error processing your request. Please contact orga@appcamps.de if the problem persists.",
             })
           );
 

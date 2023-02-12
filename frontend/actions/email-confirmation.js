@@ -18,7 +18,7 @@ const emailConfirmationSuccess = t(
   "Email confirmed. You may now login using your email and password."
 );
 const emailConfirmationFailureInvalid = t(
-  "The confirmation of your email address was not successful. Please, contact us via philipp@appcamps.de so that we can confirm your account."
+  "The confirmation of your email address was not successful. Please, contact us via orga@appcamps.de so that we can confirm your account."
 );
 const emailConfirmationFailureExpired = t(
   "Your confirmation link has expired. Please restart the confirmation process."

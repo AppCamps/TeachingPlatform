@@ -26,8 +26,8 @@ const FAQ = (props, { t }) => (
           können dir schnell antworten.
         </li>
         <li>
-          Du meldest dich per E-Mail bei Philipp Knodel:{" "}
-          <a href="mailto:philipp@appcamps.de">philipp@appcamps.de</a>
+          Du meldest dich per E-Mail bei unserem Team:{" "}
+          <a href="mailto:orga@appcamps.de">orga@appcamps.de</a>
         </li>
       </ol>
     </div>

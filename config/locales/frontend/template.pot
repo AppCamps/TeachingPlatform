@@ -7,7 +7,7 @@ msgid "Email confirmed. You may now login using your email and password."
 msgstr ""
 
 #: frontend/actions/email-confirmation.js
-msgid "The confirmation of your email address was not successful. Please, contact us via philipp@appcamps.de so that we can confirm your account."
+msgid "The confirmation of your email address was not successful. Please, contact us via orga@appcamps.de so that we can confirm your account."
 msgstr ""
 
 #: frontend/actions/email-confirmation.js
@@ -877,7 +877,7 @@ msgid "Too many requests. Please try again in a few seconds."
 msgstr ""
 
 #: frontend/services/api/helpers.js
-msgid "There was an Error processing your request. Please contact philipp@appcamps.de if the problem persists."
+msgid "There was an Error processing your request. Please contact orga@appcamps.de if the problem persists."
 msgstr ""
 
 #: frontend/utils/translations.js
