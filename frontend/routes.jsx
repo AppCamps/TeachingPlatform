@@ -36,11 +36,7 @@ import EditClass from "./containers/edit-class";
 import EditUser from "./containers/edit-user";
 import EditUserPassword from "./containers/edit-user/password";
 import EditUserLocality from "./containers/edit-user/locality";
-import Help from "./components/help";
-import HelpPlatformTips from "./components/help/platform-tips";
-import HelpFAQ from "./components/help/faq";
-import HelpContact from "./components/help/contact";
-import HelpCertificates from "./components/help/certificates";
+
 import Posts from "./containers/posts";
 
 import NotFound from "./components/shared/not-found";
@@ -104,12 +100,6 @@ function Routes({ history }) {
               <Route path="locality" component={EditUserLocality} />
               <Route path="password" component={EditUserPassword} />
               <IndexRoute component={EditUser} />
-            </Route>
-            <Route path="help" component={Help}>
-              <Route path="platform-tips" component={HelpPlatformTips} />
-              <Route path="faq" component={HelpFAQ} />
-              <Route path="contact" component={HelpContact} />
-              <Route path="certificates" component={HelpCertificates} />
             </Route>
             <Redirect path="skills" to="posts" />
             <Route path="posts" component={Posts} />

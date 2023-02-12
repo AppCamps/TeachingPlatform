@@ -1,6 +1,6 @@
-@import '../../../__css__/animations.scss';
-@import '../../../__css__/colors.scss';
-@import '../../../__css__/grid.scss';
+@import "../../../__css__/animations.scss";
+@import "../../../__css__/colors.scss";
+@import "../../../__css__/grid.scss";
 
 .list {
   display: inline-block;
@@ -54,7 +54,6 @@
   padding: 0;
 }
 
-.help:hover .dropdown,
 .user:hover .dropdown {
   display: block;
 }

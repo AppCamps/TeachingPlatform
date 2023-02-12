@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "../../../shared/link";
-import { FeatureToggle } from "../../../../debug";
 
 import FaIcon from "../../../shared/fa-icon";
 
@@ -20,23 +19,14 @@ function HeaderActions(props, context) {
     <ul className={style.list}>
       <li className={style.help}>
         <div>
-          <span className={style.name}>{t("Help")}</span>
-          <FaIcon icon={"angle-down"} />
+          <Link
+            to="https://appcamps.de/faq/"
+            target="_blank"
+            className={style.name}
+          >
+            {t("Help")}
+          </Link>
         </div>
-        <ul className={style.dropdown}>
-          <li className={style.dropdownItem}>
-            <Link to="/help/platform-tips">{t("Platform tips")}</Link>
-          </li>
-          <li className={style.dropdownItem}>
-            <Link to="/help/faq">{t("Frequently asked questions")}</Link>
-          </li>
-          <li className={style.dropdownItem}>
-            <Link to="/help/contact">{t("Contact team")}</Link>
-          </li>
-          <li className={style.dropdownItem}>
-            <Link to="/help/certificates">{t("Certificates")}</Link>
-          </li>
-        </ul>
       </li>
       <li className={style.user}>
         <Link to="/edit-user">
