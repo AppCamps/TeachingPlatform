@@ -4,17 +4,17 @@ source 'https://rubygems.org'
 ruby '2.7.6'
 
 gem 'rails', '5.2.8.1'
-gem 'rails-i18n', '~> 5.0.0'
+gem 'rails-i18n', '5.1.3'
 
 gem 'migration_data'
 gem 'pg'
 
 # user for data export
-gem 'mysql2', '~> 0.4.10' 
+gem 'mysql2', '0.5.5'
 
-gem 'bootstrap-sass'
-gem 'font-awesome-sass'
-gem 'sass-rails'
+gem 'bootstrap-sass', '3.4.1'
+gem 'font-awesome-sass', '6.5.1'
+gem 'sass-rails', '6.0.0'
 gem 'uglifier'
 
 gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
