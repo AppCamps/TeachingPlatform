@@ -21,7 +21,7 @@ gem 'bootstrap-wysihtml5-rails', '0.3.3.8'
 gem 'rails_admin', '2.1.1'
 gem 'rails_admin-i18n'
 
-gem 'devise'
+gem 'devise', '4.9.3'
 gem 'rack-attack'
 
 gem 'active_model_serializers', '0.10.6'
