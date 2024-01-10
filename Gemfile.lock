@@ -142,7 +142,7 @@ GEM
     erubi (1.12.0)
     erubis (2.7.0)
     excon (0.82.0)
-    execjs (2.8.1)
+    execjs (2.9.1)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -467,7 +467,7 @@ DEPENDENCIES
   simplecov
   sucker_punch
   timecop
-  uglifier
+  uglifier (= 4.2.0)
   webmock
 
 RUBY VERSION

@@ -15,7 +15,7 @@ gem 'mysql2', '0.5.5'
 gem 'bootstrap-sass', '3.4.1'
 gem 'font-awesome-sass', '6.5.1'
 gem 'sass-rails', '6.0.0'
-gem 'uglifier'
+gem 'uglifier', '4.2.0'
 
 gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
 gem 'rails_admin'
