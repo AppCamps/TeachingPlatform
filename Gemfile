@@ -17,8 +17,8 @@ gem 'font-awesome-sass', '6.5.1'
 gem 'sass-rails', '6.0.0'
 gem 'uglifier', '4.2.0'
 
-gem 'bootstrap-wysihtml5-rails', '> 0.3.1.24'
-gem 'rails_admin'
+gem 'bootstrap-wysihtml5-rails', '0.3.3.8'
+gem 'rails_admin', '2.1.1'
 gem 'rails_admin-i18n'
 
 gem 'devise'
