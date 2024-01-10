@@ -22,7 +22,7 @@ gem 'rails_admin', '2.1.1'
 gem 'rails_admin-i18n'
 
 gem 'devise', '4.9.3'
-gem 'rack-attack'
+gem 'rack-attack', '6.7.0'
 
 gem 'active_model_serializers', '0.10.6'
 gem 'jsonapi-parser'
