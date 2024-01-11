@@ -29,7 +29,7 @@ gem 'jsonapi-parser', '0.1.1'
 
 gem 'countries', '5.7.1'
 
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', '1.142.0'
 
 gem 'shrine', '3.4.0'
 
