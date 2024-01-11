@@ -46,7 +46,7 @@ gem 'erubis','2.7.0'
 
 gem 'scout_apm', '5.3.5'
 
-gem 'blazer'
+gem 'blazer', '2.6.5'
 
 group :development, :test do
   gem 'bundler-audit'
@@ -77,6 +77,6 @@ group :test do
 end
 
 group :production do
-  gem 'dalli'
-  gem 'rails_12factor'
+  gem 'dalli', '2.7.11'
+  gem 'rails_12factor', '0.0.3'
 end
