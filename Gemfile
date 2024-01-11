@@ -49,9 +49,9 @@ gem 'scout_apm', '5.3.5'
 gem 'blazer', '2.6.5'
 
 group :development, :test do
-  gem 'bundler-audit'
-  gem 'byebug'
-  gem 'dotenv-rails'
+  gem 'bundler-audit', '0.9.1'
+  gem 'byebug', '11.1.3'
+  gem 'dotenv-rails', '2.8.1'
   gem 'rubocop-rails_config'
   gem 'rubocop-rspec'
 end
