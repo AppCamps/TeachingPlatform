@@ -50,7 +50,7 @@ class CountryService
     @states = begin
       return nil if country_gem_instance.blank?
 
-      state_definition = country_gem_instance.states
+      state_definition = country_gem_instance.subdivisions
       state_definition.each_with_object({}) do |(key, definition), states_translations|
         states_translations[key] = definition['name']
       end
