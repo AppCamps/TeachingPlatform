@@ -31,7 +31,7 @@ gem 'countries', '5.7.1'
 
 gem 'aws-sdk-s3', '1.142.0'
 
-gem 'shrine', '3.4.0'
+gem 'shrine', '3.5.0'
 
 gem 'lograge'
 gem 'passenger'
