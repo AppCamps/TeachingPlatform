@@ -42,9 +42,9 @@ gem 'rollbar', '3.5.0'
 gem 'sucker_punch', '3.2.0'
 
 # deprecated in rails, but devise is calling it without declaring a dependency...
-gem 'erubis'
+gem 'erubis','2.7.0'
 
-gem 'scout_apm'
+gem 'scout_apm', '5.3.5'
 
 gem 'blazer'
 
