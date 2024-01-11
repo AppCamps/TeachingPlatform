@@ -25,9 +25,9 @@ gem 'devise', '4.9.3'
 gem 'rack-attack', '6.7.0'
 
 gem 'active_model_serializers', '0.10.6'
-gem 'jsonapi-parser'
+gem 'jsonapi-parser', '0.1.1'
 
-gem 'countries'
+gem 'countries', '5.7.1'
 
 gem 'aws-sdk-s3'
 

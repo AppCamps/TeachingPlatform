@@ -110,9 +110,8 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.2.2)
     content_disposition (1.0.0)
-    countries (4.0.0)
-      i18n_data (~> 0.13.0)
-      sixarm_ruby_unaccent (~> 1.1)
+    countries (5.7.1)
+      unaccent (~> 0.3)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -169,7 +168,6 @@ GEM
     hashdiff (1.0.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    i18n_data (0.13.0)
     jmespath (1.6.1)
     jquery-rails (4.6.0)
       rails-dom-testing (>= 1, < 3)
@@ -396,7 +394,6 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.3)
-    sixarm_ruby_unaccent (1.2.0)
     slop (3.6.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -417,6 +414,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
+    unaccent (0.4.0)
     unicode-display_width (2.0.0)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -444,7 +442,7 @@ DEPENDENCIES
   bundler-audit
   byebug
   capybara (>= 2.4.0)
-  countries
+  countries (= 5.7.1)
   dalli
   database_cleaner
   devise (= 4.9.3)
@@ -454,7 +452,7 @@ DEPENDENCIES
   faker
   font-awesome-sass (= 6.5.1)
   gibbon (= 3.4.4)
-  jsonapi-parser
+  jsonapi-parser (= 0.1.1)
   lograge
   mandrill_mailer
   migration_data
@@ -463,7 +461,7 @@ DEPENDENCIES
   pg
   pry-remote
   puma (= 5.6.5)
-  rack-attack
+  rack-attack (= 6.7.0)
   rails (= 5.2.8.1)
   rails-i18n (= 5.1.3)
   rails_12factor
