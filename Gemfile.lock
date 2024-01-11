@@ -317,7 +317,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.5)
-    rollbar (3.2.0)
+    rollbar (3.5.0)
     rspec-collection_matchers (1.2.0)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.10.1)
@@ -454,7 +454,7 @@ DEPENDENCIES
   gibbon (= 3.4.4)
   jsonapi-parser (= 0.1.1)
   lograge (= 0.14.0)
-  mandrill_mailer
+  mandrill_mailer (= 1.8.0)
   migration_data
   mysql2 (= 0.5.5)
   passenger (= 6.0.19)
@@ -467,7 +467,7 @@ DEPENDENCIES
   rails_12factor
   rails_admin (= 2.1.1)
   rails_admin-i18n
-  rollbar
+  rollbar (= 3.5.0)
   rspec-collection_matchers
   rspec-rails
   rubocop-rails_config

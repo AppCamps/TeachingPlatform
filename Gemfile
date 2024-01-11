@@ -37,8 +37,8 @@ gem 'lograge', '0.14.0'
 gem 'passenger', '6.0.19'
 
 gem 'gibbon', '3.4.4'
-gem 'mandrill_mailer'
-gem 'rollbar'
+gem 'mandrill_mailer', '1.8.0'
+gem 'rollbar', '3.5.0'
 gem 'sucker_punch'
 
 # deprecated in rails, but devise is calling it without declaring a dependency...
