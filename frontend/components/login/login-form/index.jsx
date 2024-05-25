@@ -103,6 +103,26 @@ class LoginForm extends Component {
 
     return (
       <div className={style.container}>
+        <p>
+          Hinweis: Diese Plattform wird im August 2024 abgeschaltet. Die App
+          Camps Unterlagen findest du ab sofort{" "}
+          <a
+            href="https://tools.fobizz.com/partners/36-appcamps"
+            target="_blank"
+            rel="noreferrer"
+          >
+            hier
+          </a>
+          . Auf unserem{" "}
+          <a
+            href="https://appcamps.de/2024/05/21/unser-unterrichtsmaterial-bei-fobizz/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Blog
+          </a>{" "}
+          erfährst du mehr.
+        </p>
         <Container>
           <h1 className={style.heading}>{t("Login")}</h1>
           <Link className={style.forgotPassword} to={passwordResetLink}>
