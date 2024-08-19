@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
     <script>
+      window.location.replace("https://tools.fobizz.com/partners/36-appcamps");
+    </script>
+    <script>
       <%= 'window._trackJS = ' + JSON.stringify(require('../config/trackjs.config.js').default) %>
     </script>
     <script async src="//cdn.trackjs.com/releases/current/tracker.js"></script>
